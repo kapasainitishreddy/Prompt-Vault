@@ -125,13 +125,69 @@ function renderPrompt(){
  const x=selected();if(!x)return;
  byId('academy-prompt').textContent=composePrompt(x,state.prompt);
 }
+
+function specialWebVisual(x){
+ const title=esc(x.title);
+ switch(x.kind){
+ case 'Personal':case 'Portfolio':
+  return '<div class="pv-special pv-work"><small>SELECTED WORK / DEMO</small><div class="pv-works"><span>01<br>INTERFACE</span><span>02<br>SYSTEMS</span><span>03<br>RESEARCH</span></div><b>Work first. Context follows.</b></div>';
+ case 'Commerce':
+  return '<div class="pv-special pv-commerce"><small>PRODUCT / MOCK CATALOG</small><div class="pv-product-grid"><span>OBJECT<br>01</span><span>OBJECT<br>02</span><span>OBJECT<br>03</span></div><button type="button" data-demo="secondary">Review choices ↗</button></div>';
+ case 'Documentation':
+  return '<div class="pv-special pv-doc"><small>QUICK START / SAMPLE</small><code>npm install your-library<br>&gt; createProject()<br>✓ read the guide first</code><button data-demo="secondary" type="button">View documentation ↗</button></div>';
+ case 'Editorial':
+  return '<div class="pv-special pv-edit"><small>THE READING ROOM</small><b>A thoughtful idea<br>deserves good space.</b><p>Column width, meaningful headings, readable line spacing and clear authorship.</p></div>';
+ case 'Company':
+  return '<div class="pv-special pv-company"><small>WHO WE HELP</small><div class="pv-works"><span>TEAMS</span><span>PARTNERS</span><span>PEOPLE</span></div><b>Route each visitor to a real next step.</b></div>';
+ case 'Service':
+  return '<div class="pv-special pv-services"><small>SERVICES / ILLUSTRATIVE</small><b>Explore a service, check fit, reach out.</b><button data-demo="secondary" type="button">Ask about availability ↗</button></div>';
+ case 'Organization':
+  return '<div class="pv-special pv-company"><small>MISSION / ACCOUNTABILITY</small><b>People first.</b><p>Show programs, eligibility and sourced impact, never invented numbers.</p></div>';
+ case 'Event':
+  return '<div class="pv-special pv-event"><small>SCHEDULE SAMPLE</small><b>DAY 01 → DAY 02</b><p>Real schedules must include timezone and update status.</p></div>';
+ case 'Marketplace':
+  return '<div class="pv-special pv-market"><small>FIND / FILTER / COMPARE</small><div class="pv-search-stub">Search a category… ⌕</div><div class="pv-works"><span>FILTER</span><span>COMPARE</span><span>CONTACT</span></div></div>';
+ default:
+  return '<div class="pv-special pv-product"><small>'+title.toUpperCase()+' / MOCKUP</small><div class="pv-product-shape"><span>PROTOTYPE<br>01</span></div><b>Demonstrate the actual user outcome.</b></div>';
+ }
+}
+function specialAppVisual(x){
+ switch(x.kind){
+ case 'Productivity':
+  return '<div class="pv-app-special pv-checks"><label><input type="checkbox" data-checked-demo> Plan a meaningful task</label><label><input type="checkbox" data-checked-demo> Make it easy to find</label><label><input type="checkbox" data-checked-demo> Recover an action</label></div>';
+ case 'Education':
+  return '<div class="pv-app-special pv-quiz"><small>LEARNING / SAMPLE</small><strong>One idea, one exercise</strong><button type="button" data-demo="secondary">Check understanding ✓</button></div>';
+ case 'Lifestyle':
+  return '<div class="pv-app-special pv-wellness"><small>GENTLE CHECK-IN</small><strong>What matters today?</strong><div><span>Rest</span><span>Focus</span><span>Reflect</span></div></div>';
+ case 'Commerce':
+  return '<div class="pv-app-special pv-shop"><small>MOCK PRODUCT</small><strong>Illustrative object</strong><span>IMAGE / DETAILS</span><button type="button" data-demo="secondary">Review cart ↗</button></div>';
+ case 'Finance':
+  return '<div class="pv-app-special pv-finance"><small>DEMO DATA / NOT ACTUAL BALANCES</small><div class="pv-spark"><span></span><span></span><span></span><span></span><span></span></div><strong>Understand every number.</strong></div>';
+ case 'Social':
+  return '<div class="pv-app-special pv-chat"><small>DEMO CONVERSATION</small><p>Make consent and control visible.</p><p>Reply with context, not pressure.</p></div>';
+ case 'AI':
+  return '<div class="pv-app-special pv-ai"><small>NOT A LIVE AI MODEL</small><strong>What could help right now?</strong><button type="button" data-demo="secondary">Inspect sources and privacy</button></div>';
+ case 'Creator':
+  return '<div class="pv-app-special pv-edit"><small>MOCK CREATOR TIMELINE</small><div class="pv-timeline"><span>CLIP 1</span><span>CLIP 2</span><span>AUDIO</span></div><strong>Preview before export.</strong></div>';
+ case 'Travel':
+  return '<div class="pv-app-special pv-journey"><small>DEMO ITINERARY</small><strong>START → ARRIVE</strong><p>Date, time zone, fees, cancellation and confirmation all matter.</p></div>';
+ case 'Content':
+  return '<div class="pv-app-special pv-reading"><small>YOUR LIBRARY / DEMO</small><strong>A chapter with breathing room.</strong><p>Type size, theme, progress, offline state.</p></div>';
+ case 'B2B':
+  return '<div class="pv-app-special pv-ops"><small>INTERNAL RECORD / EXAMPLE</small><div class="pv-works"><span>OPEN</span><span>REVIEW</span><span>DONE</span></div><strong>Every edit needs a status.</strong></div>';
+ case 'Entertainment':
+  return '<div class="pv-app-special pv-media"><small>DEMO PLAYBACK</small><div>▶</div><strong>Captions · Seek · Audio tracks</strong></div>';
+ default:return '<div class="pv-app-special"><small>WORKING SCREEN STUDY</small><strong>Clear task, visible feedback.</strong></div>';
+ }
+}
+
 function previewWebsite(x,s){
  const primary=s||x.steps[0];
  const safeTitle=esc(x.title), title=esc(primary.name);
  const why=esc(primary.why),i=state.step+1,total=x.steps.length;
  return '<div class="pv-web-demo"><div class="pv-web-header"><span>ATLAS / '+safeTitle+'</span><button type="button" data-demo="menu">MENU ↗</button></div>'+
   '<div class="pv-web-hero"><small>'+String(i).padStart(2,'0')+' / '+String(total).padStart(2,'0')+' · INTERACTIVE DESIGN STUDY</small><h3>'+title+'<br><em>with intention.</em></h3><p>'+why+'</p><button type="button" class="pv-action" data-demo="primary">See how it works ↗</button></div>'+
-  '<div class="pv-web-section"><small>THE USER JOB</small><strong>'+esc(x.job.length>50?x.job.slice(0,47)+'…':x.job)+'</strong><p>'+esc(x.lens)+'</p><div class="pv-web-grid"><span class="pv-web-tile">CLARITY</span><span class="pv-web-tile">UTILITY</span><span class="pv-web-tile">PROOF</span></div></div>'+
+  '<div class="pv-web-section"><small>THE USER JOB</small><strong>'+esc(x.job.length>50?x.job.slice(0,47)+'…':x.job)+'</strong><p>'+esc(x.lens)+'</p>'+specialWebVisual(x)+'</div>'+
   '<div class="pv-web-section"><small>SKILL IN FOCUS</small><strong>'+esc(primary.skill)+'</strong><p>Example layout only. Real content and evidence must come from your project.</p></div>'+
   '<div class="pv-web-feedback" id="demo-feedback" role="status">Try MENU or See how it works.</div>'+
   '<div class="pv-web-foot"><span>ORIGINAL HTML/CSS STUDY</span><span>NO REAL PURCHASES ↗</span></div></div>';
@@ -141,7 +197,7 @@ function previewApp(x,s){
  return '<div class="pv-app-demo"><div class="pv-app-top"><span>'+esc(state.platform==='ios'?'9:41 · iOS DEMO':'9:41 · ANDROID DEMO')+'</span><span>●●● ▮</span></div>'+
   '<h3>'+esc(primary.name)+'</h3><p class="pv-step-intro">'+esc(primary.why)+'</p>'+
   '<div class="pv-app-card"><small>SCREEN '+num+' / '+String(x.steps.length).padStart(2,'0')+'</small><strong>'+esc(x.title)+'</strong><small>INTERACTIVE STUDY · MOCK DATA</small></div>'+
-  '<div class="pv-app-lines" aria-hidden="true"><span></span><span></span><span></span></div>'+
+  ''+specialAppVisual(x)+''+
   '<button class="pv-app-next" type="button" data-demo="primary">'+(state.step===x.steps.length-1?'Try final state ✓':'Try this action ↗')+'</button>'+
   '<div class="pv-app-feedback" id="demo-feedback" role="status">Try the main action to preview feedback.</div>'+
   '<div class="pv-app-nav"><span>HOME</span><span>EXPLORE</span><span>SETTINGS</span></div></div>';
