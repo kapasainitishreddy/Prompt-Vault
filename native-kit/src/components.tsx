@@ -40,7 +40,7 @@ export function KitProgress({value,p}:{value:number;p:Palette}){
 const amount=Math.max(0,Math.min(1,value));
 return <View accessibilityRole="progressbar" accessibilityValue={{min:0,max:100,now:Math.round(amount*100)}}
 style={{height:9,backgroundColor:p.faint,borderRadius:8,overflow:"hidden"}}>
-<View style={{width:String(amount*100)+"%",height:9,backgroundColor:p.accent,borderRadius:8}}/></View>;}
+<View style={{width:`${amount*100}%` as const,height:9,backgroundColor:p.accent,borderRadius:8}}/></View>;}
 export function KitNotice({text,p}:{text:string;p:Palette}){
 return <View accessibilityRole="alert" style={{borderWidth:1,borderColor:p.border,backgroundColor:p.faint,padding:14,borderRadius:14}}>
 <Text style={{color:p.text,lineHeight:21}}>{text}</Text></View>;}
