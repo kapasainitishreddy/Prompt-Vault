@@ -224,8 +224,8 @@ class ConceptFieldGuideTests(unittest.TestCase):
         self.assertIn("state.prompt==='build'", self.js)
         self.assertIn("TASK: Independently audit", self.js)
         self.assertIn("Limitation:", self.js)
-        self.assertIn("without permission", self.js.lower()
-                      + (ROOT / "research" / "concept-field-guide.md")
+        self.assertIn("human approval",
+                      (ROOT / "research" / "concept-field-guide.md")
                         .read_text(encoding="utf-8").lower())
 
     @unittest.skipUnless(shutil.which("node"), "Node optional, JS syntax not executed")
