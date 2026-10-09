@@ -1,3 +1,9 @@
+## Mobile Studio and Expo Native Kit (October 9, 2026)
+
+[Mobile Studio](mobile-studio.html) provides 32 browser-interactive app patterns and 20 ordered app journeys, with real UI interaction demonstrations, source inspector, iOS/Android-inspired frames, light/dark and normal/success/error states and prompt copying. The static default screen stays visible if catalog fetch fails.
+
+[Expo Native Kit](../native-kit/README.md) contains React Native TypeScript source, 32 local pattern demos, 20 connected journeys and reusable primitives. Auth, payments, permissions, file upload, model calls, remote sync and account deletion are explicit non-production simulations. Physical-device QA and real-service integration remain separate work.
+
 ## Product tours and newcomer FAQ (October 9, 2026)
 
 - [FAQ](faq.html): 23 plain-language questions in four topics; native expanding answers without JavaScript plus optional client-side search. Five answers also appear on the homepage.
