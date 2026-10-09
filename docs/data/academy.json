@@ -2788,6 +2788,272 @@
       "track": "ai",
       "value": "Frontend access to hosted AI",
       "license": "User-pays model; check SDK rights"
+    },
+    {
+      "name": "Tailwind CSS",
+      "url": "https://github.com/tailwindlabs/tailwindcss",
+      "track": "website",
+      "value": "Utility-first responsive styling",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Headless UI",
+      "url": "https://github.com/tailwindlabs/headlessui",
+      "track": "website",
+      "value": "Accessible unstyled React/Vue primitives",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "daisyUI",
+      "url": "https://github.com/saadeghi/daisyui",
+      "track": "website",
+      "value": "Themeable Tailwind component layer",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "HeroUI",
+      "url": "https://github.com/heroui-inc/heroui",
+      "track": "website",
+      "value": "Accessible React component system",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Chakra UI",
+      "url": "https://github.com/chakra-ui/chakra-ui",
+      "track": "website",
+      "value": "Accessible React components and tokens",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Ark UI",
+      "url": "https://github.com/chakra-ui/ark",
+      "track": "website",
+      "value": "Headless accessible component patterns",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Shoelace",
+      "url": "https://github.com/shoelace-style/shoelace",
+      "track": "website",
+      "value": "Framework-neutral Web Components",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Fluent UI",
+      "url": "https://github.com/microsoft/fluentui",
+      "track": "website",
+      "value": "Enterprise patterns and components",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Carbon Design System",
+      "url": "https://github.com/carbon-design-system/carbon",
+      "track": "website",
+      "value": "Data-dense enterprise UI patterns",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Ant Design",
+      "url": "https://github.com/ant-design/ant-design",
+      "track": "website",
+      "value": "Form and admin interface patterns",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "PrimeReact",
+      "url": "https://github.com/primefaces/primereact",
+      "track": "website",
+      "value": "Advanced tables and UI elements",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Storybook",
+      "url": "https://github.com/storybookjs/storybook",
+      "track": "tools",
+      "value": "Isolated component visual states and documentation",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Playwright",
+      "url": "https://github.com/microsoft/playwright",
+      "track": "tools",
+      "value": "Browser-based cross-device testing",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "axe-core",
+      "url": "https://github.com/dequelabs/axe-core",
+      "track": "tools",
+      "value": "Automated accessibility checks, not certification",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Lighthouse",
+      "url": "https://github.com/GoogleChrome/lighthouse",
+      "track": "tools",
+      "value": "Website auditing, performance guidance",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "React Spring",
+      "url": "https://github.com/pmndrs/react-spring",
+      "track": "motion",
+      "value": "Spring-based gesture and interaction animation",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Anime.js",
+      "url": "https://github.com/juliangarnier/anime",
+      "track": "motion",
+      "value": "Timeline-based animation",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "AutoAnimate",
+      "url": "https://github.com/formkit/auto-animate",
+      "track": "motion",
+      "value": "Small DOM layout transitions",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Lenis",
+      "url": "https://github.com/darkroomengineering/lenis",
+      "track": "motion",
+      "value": "Optional smoother scrolling; consider native UX",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Theatre.js",
+      "url": "https://github.com/theatre-js/theatre",
+      "track": "motion",
+      "value": "Sequenced 3D and motion authoring",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "PixiJS",
+      "url": "https://github.com/pixijs/pixijs",
+      "track": "motion",
+      "value": "Hardware accelerated canvas and 2D scenes",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "OGL",
+      "url": "https://github.com/oframe/ogl",
+      "track": "3d",
+      "value": "Lightweight WebGL rendering",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Babylon.js",
+      "url": "https://github.com/BabylonJS/Babylon.js",
+      "track": "3d",
+      "value": "3D engine with input and rendering",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "PlayCanvas Engine",
+      "url": "https://github.com/playcanvas/engine",
+      "track": "3d",
+      "value": "Realtime WebGL/WebGPU engine",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Threlte",
+      "url": "https://github.com/threlte/threlte",
+      "track": "3d",
+      "value": "Svelte-powered declarative 3D",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "TresJS",
+      "url": "https://github.com/Tresjs/tres",
+      "track": "3d",
+      "value": "Vue 3D renderer",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "React Native Paper",
+      "url": "https://github.com/callstack/react-native-paper",
+      "track": "app",
+      "value": "Material UI component design for RN",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "React Native Reanimated",
+      "url": "https://github.com/software-mansion/react-native-reanimated",
+      "track": "motion",
+      "value": "Native-thread animated interactions",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "React Native Gesture Handler",
+      "url": "https://github.com/software-mansion/react-native-gesture-handler",
+      "track": "app",
+      "value": "Native gesture recognition",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "React Native Skia",
+      "url": "https://github.com/Shopify/react-native-skia",
+      "track": "app",
+      "value": "Custom 2D mobile graphics and effects",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Expo Router",
+      "url": "https://github.com/expo/router",
+      "track": "app",
+      "value": "File-based Expo / React Native navigation (verify maintained path)",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Flutter",
+      "url": "https://github.com/flutter/flutter",
+      "track": "app",
+      "value": "Cross-platform native-rendered UI toolkit",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Flutter Samples",
+      "url": "https://github.com/flutter/samples",
+      "track": "app",
+      "value": "Flutter application UI example code",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "TFLite / MediaPipe",
+      "url": "https://github.com/google-ai-edge/mediapipe",
+      "track": "ai",
+      "value": "On-device camera and audio ML pipelines",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "ONNX Runtime",
+      "url": "https://github.com/microsoft/onnxruntime",
+      "track": "ai",
+      "value": "In-browser and mobile model inference",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "TensorFlow.js",
+      "url": "https://github.com/tensorflow/tfjs",
+      "track": "ai",
+      "value": "Browser-local ML in JavaScript",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "ComfyUI",
+      "url": "https://github.com/comfyanonymous/ComfyUI",
+      "track": "ai",
+      "value": "Visual pipeline examples for generative workflows",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Rive Runtimes",
+      "url": "https://github.com/rive-app/rive-runtime",
+      "track": "motion",
+      "value": "Interactive vector animation runtimes; check runtime licensing",
+      "license": "Verify exact upstream package, assets and commercial terms"
     }
   ],
   "topEarners": [
