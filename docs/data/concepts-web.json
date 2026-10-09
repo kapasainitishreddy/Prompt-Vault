@@ -27,7 +27,8 @@
       "sources": [
         "nng-recognition",
         "sweller-1988",
-        "w3c-clear"
+        "w3c-clear",
+        "hassenzahl-2004"
       ],
       "skills": [
         "typography",
@@ -234,7 +235,8 @@
       "sources": [
         "nng-recognition",
         "sweller-1988",
-        "w3c-clear"
+        "w3c-clear",
+        "hassenzahl-2004"
       ],
       "skills": [
         "typography",
@@ -1706,7 +1708,9 @@
       "sources": [
         "mdn-viewtransitions",
         "w3c-motion",
-        "web-vitals-2026"
+        "web-vitals-2026",
+        "heer-2007",
+        "cleveland-1984"
       ],
       "skills": [
         "animation",
@@ -2005,7 +2009,9 @@
       "sources": [
         "w3c-aria-apg",
         "w3c-target",
-        "w3c-wcag22"
+        "w3c-wcag22",
+        "cleveland-1984",
+        "munzner-2009"
       ],
       "skills": [
         "design tokens",
