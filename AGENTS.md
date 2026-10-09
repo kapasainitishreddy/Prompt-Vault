@@ -88,3 +88,7 @@ Maintain eight distinct original mini-studies and eight original standalone prom
 ## Guided Website + App Academy (40 full blueprints)
 
 Canonical sources: `guides/website/*.md` and `guides/app/*.md`. Mirrored full prompts in `docs/prompts/guided/{website,app}/`. Data catalogs: `catalog/guided-{websites,apps}.json`, `catalog/evidence-atlas.json` and same-origin copies under `docs/data/`. Preview: `docs/guided.{html,css,js}`. Two tracks ONLY. The original Academy, 200-concept Field Guide and other previews remain intact. AI/3D are **optional features** within tracks. Never claim native device testing from HTML examples, or fabricated revenue based on top-grossing app rankings.
+
+## Practice Studio and creator support
+
+Source: `docs/studio.{html,css,mjs}`, `docs/studio-data.mjs`; support: `docs/support.html`, `docs/support.mjs`, `docs/support-core.mjs`, `docs/support-config.json`. **Do not activate** paid sponsor, coffee URL or video until verified real assets/consent are supplied. User learning is always free; no model API required. 100 original lessons include 60 app/40 web, not 100 native apps. Preserve focus, responsive, reduced-motion, provenance and direct navigation. See `docs/LEARNING-STUDIO.md` and `docs/QA-LEARNING-STUDIO.md`.

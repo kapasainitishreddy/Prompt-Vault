@@ -1,5 +1,8 @@
 # Prompt-Vault Atlas website
 
+**Practice Studio (new)**: [100 accessible learning prompts](studio.html) (60 apps/40 websites; demos, research, test scenarios, prompt export), plus a separate [Support & Sponsorship page](support.html) whose coffee, paid sponsors and video remain disabled until verified. See [learning/QA guide](LEARNING-STUDIO.md).
+
+
 **Guided Atlas (new)**: [guided.html](guided.html), 40 full website/app blueprints, original preview renderer with desktop/mobile and iOS/Android modes, per-step source links, research citations, full prompt copy. Catalog: [guided-websites.json](data/guided-websites.json), [guided-apps.json](data/guided-apps.json), [evidence-atlas.json](data/evidence-atlas.json). No paid API or external runtime needed. The examples illustrate UI and state; they are **not** 40 shippable products.
 
 
