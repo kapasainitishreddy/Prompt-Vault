@@ -1,0 +1,689 @@
+{
+  "version": 1,
+  "track": "website",
+  "count": 20,
+  "reviewed": "2026-10-08",
+  "note": "20 scenario-specific guided website blueprints. Sections are ordered hypotheses, not compulsory page modules. AI/3D optional.",
+  "blueprints": [
+    {
+      "id": "engineer-portfolio",
+      "title": "Engineering portfolio",
+      "group": "Portfolio",
+      "audience": "Hiring managers, founders and technical teammates",
+      "goal": "Assess engineering judgment and open a real project",
+      "sections": [
+        "navigation",
+        "hero",
+        "portfolio",
+        "case-study",
+        "documentation",
+        "articles",
+        "contact",
+        "footer"
+      ],
+      "thesis": "A quiet technical field journal: inspectable work before ornamental self-promotion",
+      "ai": "Optional scoped project Q&A after case studies, never as the only navigation",
+      "threeD": "Usually no; only an optional product-specific visualization with image and plain-text fallback",
+      "sourceIds": [
+        "portfolio-guide",
+        "portfolio-case",
+        "core-web-vitals"
+      ],
+      "skills": [
+        "Editorial art direction",
+        " case-study structure",
+        " accessibility",
+        " performance",
+        " GitHub provenance"
+      ],
+      "notes": "No stock headshot needed. Show source, contribution, constraints, honest screenshots, repo/demo links, architecture and measurable results when documented.",
+      "prompt": "./prompts/guided/website/engineer-portfolio.md"
+    },
+    {
+      "id": "designer-portfolio",
+      "title": "Designer / creative portfolio",
+      "group": "Portfolio",
+      "audience": "Creative leads and clients",
+      "goal": "Understand visual craft, process and real delivered work",
+      "sections": [
+        "navigation",
+        "hero",
+        "gallery",
+        "portfolio",
+        "case-study",
+        "benefits-story",
+        "contact",
+        "footer"
+      ],
+      "thesis": "Curated exhibition with project context and process evidence",
+      "ai": "Optional portfolio finder for a large archive, after categories and filters work",
+      "threeD": "Optional interaction study or spatial art stage if it actually demonstrates the designer's capability",
+      "sourceIds": [
+        "portfolio-guide",
+        "portfolio-case",
+        "first-impressions"
+      ],
+      "skills": [
+        "Editorial grid",
+        " images and cropping",
+        " interaction design",
+        " case-study writing"
+      ],
+      "notes": "Show role and collaborators. Keep navigation and case-study text legible. Motion should not hide imagery or client proof.",
+      "prompt": "./prompts/guided/website/designer-portfolio.md"
+    },
+    {
+      "id": "startup-company",
+      "title": "Startup company site",
+      "group": "Company",
+      "audience": "Potential customers, partners and applicants",
+      "goal": "Find out what the company does, why trust it and how to contact",
+      "sections": [
+        "navigation",
+        "hero",
+        "features",
+        "use-cases",
+        "how-it-works",
+        "case-study",
+        "faq",
+        "contact",
+        "footer"
+      ],
+      "thesis": "Credible company story anchored in a concrete customer problem",
+      "ai": "Optional sales/support assistant in help or contact, with truthful limits and human escalation",
+      "threeD": "Avoid unless product hardware or visual interaction requires it",
+      "sourceIds": [
+        "company-about",
+        "heuristics",
+        "ai-bots"
+      ],
+      "skills": [
+        "Brand strategy",
+        " information architecture",
+        " content design",
+        " trust design"
+      ],
+      "notes": "No invented team, funding or clients. Include legal/company identity only when verified; accessible contact path should not depend on chat.",
+      "prompt": "./prompts/guided/website/startup-company.md"
+    },
+    {
+      "id": "enterprise-company",
+      "title": "Enterprise corporate site",
+      "group": "Company",
+      "audience": "Procurement teams, executives, prospective employees",
+      "goal": "Verify services, governance, credibility, support and operations",
+      "sections": [
+        "navigation",
+        "hero",
+        "use-cases",
+        "features",
+        "case-study",
+        "integrations",
+        "documentation",
+        "contact",
+        "footer"
+      ],
+      "thesis": "A documented institution: evidence and pathways beat inflated slogans",
+      "ai": "Scoped documentation retrieval after clear contact and searchable resources",
+      "threeD": "Avoid by default; reduce enterprise bandwidth and cognitive load",
+      "sourceIds": [
+        "company-about",
+        "heuristics",
+        "govuk"
+      ],
+      "skills": [
+        "B2B IA",
+        " procurement",
+        " documentation",
+        " multilingual accessibility"
+      ],
+      "notes": "Provide clear security, compliance and contact details only if real. Distinguish press, careers, investor and product destinations.",
+      "prompt": "./prompts/guided/website/enterprise-company.md"
+    },
+    {
+      "id": "saas-marketing",
+      "title": "SaaS product landing page",
+      "group": "Product",
+      "audience": "Busy evaluators and new signups",
+      "goal": "Understand the product, try a genuine workflow and see terms",
+      "sections": [
+        "navigation",
+        "hero",
+        "interactive-demo",
+        "features",
+        "how-it-works",
+        "integrations",
+        "pricing",
+        "faq",
+        "call-to-action",
+        "footer"
+      ],
+      "thesis": "The software itself is the hero; show one honest workflow",
+      "ai": "Offer AI only as actual product capability, not a floating sales bot by default",
+      "threeD": "Usually no. A real working product demo is stronger than ornamental CGI",
+      "sourceIds": [
+        "first-impressions",
+        "heuristics",
+        "core-web-vitals"
+      ],
+      "skills": [
+        "Product-led storytelling",
+        " demo-state design",
+        " pricing UX",
+        " web performance"
+      ],
+      "notes": "Do not simulate integrations as real. Make onboarding and checkout link functional; optimize first visitor understanding.",
+      "prompt": "./prompts/guided/website/saas-marketing.md"
+    },
+    {
+      "id": "b2b-platform",
+      "title": "B2B platform / integration site",
+      "group": "Product",
+      "audience": "Engineering evaluators and purchasing stakeholders",
+      "goal": "Validate integration, risk, documentation and support",
+      "sections": [
+        "navigation",
+        "hero",
+        "integrations",
+        "documentation",
+        "interactive-demo",
+        "case-study",
+        "comparison",
+        "pricing",
+        "contact",
+        "footer"
+      ],
+      "thesis": "A systems map with real documented capabilities",
+      "ai": "Searchable docs assistant alongside canonical docs links and code examples",
+      "threeD": "Only if an interactive topology is clearer than an accessible 2D diagram",
+      "sourceIds": [
+        "heuristics",
+        "company-about",
+        "core-web-vitals"
+      ],
+      "skills": [
+        "Technical docs",
+        " architecture explanation",
+        " accessibility",
+        " API validation"
+      ],
+      "notes": "Separate SDK docs from marketing promises. Include runnable snippets, auth scopes and real supported providers.",
+      "prompt": "./prompts/guided/website/b2b-platform.md"
+    },
+    {
+      "id": "consumer-product",
+      "title": "Consumer digital product site",
+      "group": "Product",
+      "audience": "Individuals comparing everyday apps",
+      "goal": "Experience the product benefit and understand pricing/privacy",
+      "sections": [
+        "navigation",
+        "hero",
+        "product-showcase",
+        "benefits-story",
+        "how-it-works",
+        "pricing",
+        "faq",
+        "call-to-action",
+        "footer"
+      ],
+      "thesis": "A humane product story, demonstrated by real moments",
+      "ai": "Only if the consumer product genuinely requires AI to accomplish a task",
+      "threeD": "Optional brand illustration; must not obscure CTA or readability",
+      "sourceIds": [
+        "first-impressions",
+        "prototypicality",
+        "heuristics"
+      ],
+      "skills": [
+        "User-language copy",
+        " motion restraint",
+        " mobile conversion",
+        " ethical billing"
+      ],
+      "notes": "Real app screenshots, permissions, terms and store destinations; no fake ratings or feature claims.",
+      "prompt": "./prompts/guided/website/consumer-product.md"
+    },
+    {
+      "id": "ecommerce-pdp",
+      "title": "Ecommerce product detail",
+      "group": "Commerce",
+      "audience": "Shoppers evaluating one purchasable item",
+      "goal": "Judge fit, variant, total cost, delivery and return conditions",
+      "sections": [
+        "navigation",
+        "search",
+        "product-detail",
+        "gallery",
+        "features",
+        "comparison",
+        "faq",
+        "checkout",
+        "footer"
+      ],
+      "thesis": "A product decision sheet with truthful visual evidence",
+      "ai": "Optional sizing/spec finder after direct filters and customer support work",
+      "threeD": "Useful for physical shape/fit with user-controlled rotation and photo/spec fallback",
+      "sourceIds": [
+        "product-page",
+        "checkout",
+        "model-viewer",
+        "core-web-vitals"
+      ],
+      "skills": [
+        "Product photography UX",
+        " AR fallback",
+        " inventory accuracy",
+        " pricing transparency"
+      ],
+      "notes": "Visible stock, shipping, dimensions, returns and exact chosen variant; keyboard gallery and mobile action.",
+      "prompt": "./prompts/guided/website/ecommerce-pdp.md"
+    },
+    {
+      "id": "ecommerce-catalog",
+      "title": "Marketplace / store catalog",
+      "group": "Commerce",
+      "audience": "Shoppers filtering large inventories",
+      "goal": "Search, narrow, compare and navigate back without losing filters",
+      "sections": [
+        "navigation",
+        "search",
+        "storefront",
+        "features",
+        "product-detail",
+        "faq",
+        "checkout",
+        "footer"
+      ],
+      "thesis": "An efficient discovery index with useful distinctions",
+      "ai": "Optional semantic search only if ordinary facets fail and results stay explainable",
+      "threeD": "Keep listings fast; restrict 3D to a detail page as optional progressive enhancement",
+      "sourceIds": [
+        "catalog-ux",
+        "product-page",
+        "checkout"
+      ],
+      "skills": [
+        "Filter architecture",
+        " inclusive comparison",
+        " persistent navigation",
+        " cart state"
+      ],
+      "notes": "Search state should persist between catalog and detail. Transparent out-of-stock, pricing and sorting.",
+      "prompt": "./prompts/guided/website/ecommerce-catalog.md"
+    },
+    {
+      "id": "creative-agency",
+      "title": "Creative / development agency",
+      "group": "Company",
+      "audience": "Prospective clients and collaborators",
+      "goal": "See expertise, specific outcomes, process and contact",
+      "sections": [
+        "navigation",
+        "hero",
+        "portfolio",
+        "case-study",
+        "how-it-works",
+        "features",
+        "testimonials",
+        "contact",
+        "footer"
+      ],
+      "thesis": "Case-file portfolio with authorship and clear working method",
+      "ai": "Optional project estimator with assumptions disclosed, not a bogus fixed quote",
+      "threeD": "Suitable only as a restrained original craft showcase with skip and static view",
+      "sourceIds": [
+        "portfolio-case",
+        "company-about",
+        "heuristics"
+      ],
+      "skills": [
+        "Editorial project narrative",
+        " ethical testimonials",
+        " motion director"
+      ],
+      "notes": "Name team role and real engagement types. If no testimonials, use transparent process and public work instead.",
+      "prompt": "./prompts/guided/website/creative-agency.md"
+    },
+    {
+      "id": "editorial-publishing",
+      "title": "Publication / book editorial",
+      "group": "Editorial",
+      "audience": "Readers discovering stories and authors",
+      "goal": "Find a work, read a real excerpt and subscribe or purchase",
+      "sections": [
+        "navigation",
+        "hero",
+        "articles",
+        "gallery",
+        "portfolio",
+        "newsletter",
+        "call-to-action",
+        "footer"
+      ],
+      "thesis": "The typography and the words are the artwork",
+      "ai": "Optional topic/library recommender after browse and conventional search",
+      "threeD": "Physical book reveal optional, but never interfere with readable excerpts or page navigation",
+      "sourceIds": [
+        "first-impressions",
+        "heuristics",
+        "core-web-vitals"
+      ],
+      "skills": [
+        "Long-form typography",
+        " metadata",
+        " reading progress",
+        " accessible search"
+      ],
+      "notes": "Support sample chapters, genres, series, author context, publication status and regional availability truthfully.",
+      "prompt": "./prompts/guided/website/editorial-publishing.md"
+    },
+    {
+      "id": "education-course",
+      "title": "Learning / course website",
+      "group": "Education",
+      "audience": "Prospective learners and educators",
+      "goal": "Judge outcomes, curriculum level, format and purchase/registration",
+      "sections": [
+        "navigation",
+        "hero",
+        "use-cases",
+        "how-it-works",
+        "features",
+        "articles",
+        "pricing",
+        "faq",
+        "call-to-action",
+        "footer"
+      ],
+      "thesis": "Curriculum map before glossy certificate marketing",
+      "ai": "Optional study-plan guide if it knows the real syllabus and cites lesson sources",
+      "threeD": "Only for teachable manipulable spatial subjects (anatomy, geometry), not a default LMS hero",
+      "sourceIds": [
+        "heuristics",
+        "govuk",
+        "core-web-vitals"
+      ],
+      "skills": [
+        "Instructional design",
+        " wayfinding",
+        " inclusive content and assessment UX"
+      ],
+      "notes": "Show prerequisites, lessons, total commitment, instructor credibility, access, refunds and completion criteria.",
+      "prompt": "./prompts/guided/website/education-course.md"
+    },
+    {
+      "id": "nonprofit-cause",
+      "title": "Nonprofit / mission site",
+      "group": "Company",
+      "audience": "Donors, beneficiaries and volunteers",
+      "goal": "Understand mission, impact evidence, donation and participation",
+      "sections": [
+        "navigation",
+        "hero",
+        "benefits-story",
+        "case-study",
+        "metrics",
+        "use-cases",
+        "events",
+        "contact",
+        "footer"
+      ],
+      "thesis": "Human testimony and audited evidence before dramatic effects",
+      "ai": "Usually skip. Direct service eligibility and safety contacts matter more",
+      "threeD": "Avoid heavy visuals; prioritize low bandwidth, inclusive access and credible impact charts",
+      "sourceIds": [
+        "company-about",
+        "govuk",
+        "wcag"
+      ],
+      "skills": [
+        "Plain language",
+        " accessibility",
+        " ethical photography",
+        " evidence traceability"
+      ],
+      "notes": "Do not invent beneficiary stories or impact stats. Publish privacy/consent and donation fee terms.",
+      "prompt": "./prompts/guided/website/nonprofit-cause.md"
+    },
+    {
+      "id": "local-business",
+      "title": "Local service business",
+      "group": "Company",
+      "audience": "Nearby customers needing an appointment or location",
+      "goal": "Find service area, availability, trust signals and booking",
+      "sections": [
+        "navigation",
+        "hero",
+        "use-cases",
+        "features",
+        "faq",
+        "contact",
+        "call-to-action",
+        "footer"
+      ],
+      "thesis": "Practical location-and-service guide with immediate next step",
+      "ai": "Skip unless appointment questions truly exceed FAQ and phone access",
+      "threeD": "No, unless physical property walkthrough is genuinely useful",
+      "sourceIds": [
+        "heuristics",
+        "company-about",
+        "core-web-vitals"
+      ],
+      "skills": [
+        "Local SEO",
+        " accessible form",
+        " maps alternative",
+        " real availability"
+      ],
+      "notes": "Use verified address, hours, phone, accessibility, service boundaries; no fictional reviews or availability.",
+      "prompt": "./prompts/guided/website/local-business.md"
+    },
+    {
+      "id": "conference-event",
+      "title": "Conference / event registration",
+      "group": "Event",
+      "audience": "Attendees and speakers planning a visit",
+      "goal": "Read accurate schedule, place, speakers and register",
+      "sections": [
+        "navigation",
+        "hero",
+        "events",
+        "timeline",
+        "use-cases",
+        "faq",
+        "contact",
+        "call-to-action",
+        "footer"
+      ],
+      "thesis": "A readable program that behaves like a ticket and timetable",
+      "ai": "Optional schedule assistant grounded in actual program and changes",
+      "threeD": "Venue walkthrough only if navigation requires it; show 2D map and address fallback",
+      "sourceIds": [
+        "heuristics",
+        "wcag",
+        "core-web-vitals"
+      ],
+      "skills": [
+        "Timezone handling",
+        " events schema",
+        " ticket UX",
+        " responsive agenda"
+      ],
+      "notes": "Display timezone for every session and cancellation/change policy, don't invent speakers or countdowns.",
+      "prompt": "./prompts/guided/website/conference-event.md"
+    },
+    {
+      "id": "developer-docs",
+      "title": "Developer documentation / API portal",
+      "group": "Documentation",
+      "audience": "Engineers integrating a real API",
+      "goal": "Find correct version, authentication, code example and troubleshoot",
+      "sections": [
+        "navigation",
+        "hero",
+        "search",
+        "documentation",
+        "interactive-demo",
+        "integrations",
+        "faq",
+        "contact",
+        "footer"
+      ],
+      "thesis": "An indexed lab notebook with executable examples",
+      "ai": "Contextual retrieval tied to docs versions with links and 'I don't know' fallback",
+      "threeD": "Only for actual spatial/systems explanation, never as a docs navigation replacement",
+      "sourceIds": [
+        "heuristics",
+        "govuk",
+        "core-web-vitals",
+        "ai-bots"
+      ],
+      "skills": [
+        "API docs",
+        " information retrieval",
+        " developer ergonomics",
+        " code-copy QA"
+      ],
+      "notes": "Version tags, SDK languages, API limits, error codes, request scope and real results. No fake 'live terminal'.",
+      "prompt": "./prompts/guided/website/developer-docs.md"
+    },
+    {
+      "id": "brand-subdomains",
+      "title": "Multi-product company and subdomain hub",
+      "group": "Architecture",
+      "audience": "Users moving between a parent brand and distinct products",
+      "goal": "Recognize destinations, ownership, account boundaries and return routes",
+      "sections": [
+        "navigation",
+        "hero",
+        "storefront",
+        "use-cases",
+        "product-showcase",
+        "integrations",
+        "faq",
+        "contact",
+        "footer"
+      ],
+      "thesis": "A consistent family of independent product identities",
+      "ai": "Per-product scoped assistant with explicit domain/context handoff, never ambient cross-property spying",
+      "threeD": "Prefer consistent brand system, not 3D transition between domains",
+      "sourceIds": [
+        "company-about",
+        "heuristics",
+        "core-web-vitals"
+      ],
+      "skills": [
+        "DNS/subdomain IA",
+        " identity handoff",
+        " cross-origin auth",
+        " security",
+        " canonical SEO"
+      ],
+      "notes": "e.g. brand.example / app.brand.example / docs.brand.example / help.brand.example. Choose subdomain for independently deployed application or permission boundary; path for closely related content if simpler. Explicit cookie scope, CORS, CSP, session and privacy rules. Do not assume Google treats both as identical for SEO.",
+      "prompt": "./prompts/guided/website/brand-subdomains.md"
+    },
+    {
+      "id": "ai-native-marketing",
+      "title": "AI-first product website",
+      "group": "Product",
+      "audience": "People evaluating an assistant, creator or AI workflow",
+      "goal": "Understand data use, what AI can do, reliability and pricing",
+      "sections": [
+        "navigation",
+        "hero",
+        "interactive-demo",
+        "how-it-works",
+        "features",
+        "pricing",
+        "faq",
+        "contact",
+        "footer"
+      ],
+      "thesis": "A transparent capability demonstrator, not magic chat bubbles",
+      "ai": "Core feature only when validated; model limitations, sources, permissions and user approval visible",
+      "threeD": "No unless AI product creates/manipulates real spatial assets",
+      "sourceIds": [
+        "ai-bots",
+        "ai-not-always",
+        "puter",
+        "webllm"
+      ],
+      "skills": [
+        "AI UX",
+        " prompt UX",
+        " consent",
+        " source-backed output",
+        " evaluation"
+      ],
+      "notes": "Show honest local/cloud route, trial/account requirements, model uncertainty, failure recovery and safety boundaries.",
+      "prompt": "./prompts/guided/website/ai-native-marketing.md"
+    },
+    {
+      "id": "travel-hospitality",
+      "title": "Travel / hotel booking",
+      "group": "Commerce",
+      "audience": "Travelers weighing destinations, rooms and dates",
+      "goal": "Understand rooms, total cost, location and change policy",
+      "sections": [
+        "navigation",
+        "hero",
+        "gallery",
+        "product-detail",
+        "comparison",
+        "faq",
+        "checkout",
+        "footer"
+      ],
+      "thesis": "A calm travel decision board with honest date and cost context",
+      "ai": "Optional itinerary helper only when it uses verified opening times and can cite details",
+      "threeD": "Optional 360 room tour with photo/list accessibility fallback",
+      "sourceIds": [
+        "checkout",
+        "product-page",
+        "wcag"
+      ],
+      "skills": [
+        "Booking UX",
+        " dates/time zones",
+        " media licensing",
+        " pricing transparency"
+      ],
+      "notes": "Live inventory only when backend confirms it. Mark sample results; disclose taxes, deposit, cancellation, accessibility.",
+      "prompt": "./prompts/guided/website/travel-hospitality.md"
+    },
+    {
+      "id": "media-creator",
+      "title": "Creator / entertainment channel",
+      "group": "Editorial",
+      "audience": "Fans and visitors discovering work",
+      "goal": "Watch or read a real sample and find the next release",
+      "sections": [
+        "navigation",
+        "hero",
+        "gallery",
+        "articles",
+        "events",
+        "newsletter",
+        "call-to-action",
+        "footer"
+      ],
+      "thesis": "A cinematic library that prioritizes the creator's work",
+      "ai": "Optional archive finder; no synthetic fan comments",
+      "threeD": "Cinematic title graphics optional, with motion/pause controls and no autoplay audio",
+      "sourceIds": [
+        "first-impressions",
+        "wcag",
+        "motion-pause"
+      ],
+      "skills": [
+        "Media curation",
+        " captioning",
+        " focus",
+        " CMS and reusable content"
+      ],
+      "notes": "Respect audio consent, captions, performance budget and real release dates.",
+      "prompt": "./prompts/guided/website/media-creator.md"
+    }
+  ]
+}

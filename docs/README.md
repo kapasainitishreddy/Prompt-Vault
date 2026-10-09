@@ -1,5 +1,8 @@
 # Prompt-Vault Atlas website
 
+**Guided Atlas (new)**: [guided.html](guided.html), 40 full website/app blueprints, original preview renderer with desktop/mobile and iOS/Android modes, per-step source links, research citations, full prompt copy. Catalog: [guided-websites.json](data/guided-websites.json), [guided-apps.json](data/guided-apps.json), [evidence-atlas.json](data/evidence-atlas.json). No paid API or external runtime needed. The examples illustrate UI and state; they are **not** 40 shippable products.
+
+
 A static, dependency-free visual gallery of the original **32 website section**, **32 app UI/UX flow**, and **23 motion recipe** prompts.
 
 ## Deep Concept Field Guide (October 2026)

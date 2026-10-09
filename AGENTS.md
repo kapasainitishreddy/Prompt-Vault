@@ -84,3 +84,7 @@ Maintain eight distinct original mini-studies and eight original standalone prom
   source link integrity, responsive/keyboard interactions and
   reductions in motion. Never claim physical device or browser
   testing without execution evidence.
+
+## Guided Website + App Academy (40 full blueprints)
+
+Canonical sources: `guides/website/*.md` and `guides/app/*.md`. Mirrored full prompts in `docs/prompts/guided/{website,app}/`. Data catalogs: `catalog/guided-{websites,apps}.json`, `catalog/evidence-atlas.json` and same-origin copies under `docs/data/`. Preview: `docs/guided.{html,css,js}`. Two tracks ONLY. The original Academy, 200-concept Field Guide and other previews remain intact. AI/3D are **optional features** within tracks. Never claim native device testing from HTML examples, or fabricated revenue based on top-grossing app rankings.

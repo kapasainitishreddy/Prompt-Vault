@@ -1,0 +1,656 @@
+{
+  "version": 1,
+  "count": 20,
+  "track": "app",
+  "platforms": [
+    "Apple App Store/iOS",
+    "Google Play/Android"
+  ],
+  "reviewed": "2026-10-08",
+  "blueprints": [
+    {
+      "id": "tasks",
+      "title": "Task and to-do app",
+      "category": "Productivity",
+      "job": "Capture, prioritize, finish and undo actions without losing work",
+      "flows": [
+        "onboarding",
+        "home",
+        "navigation",
+        "task-management",
+        "create-edit",
+        "notifications",
+        "offline-sync",
+        "settings-privacy",
+        "errors-recovery"
+      ],
+      "thesis": "A daily workbench built around the next meaningful action",
+      "ai": "Optional intent-to-task extraction on request; manual creation always remains",
+      "threeD": "No 3D; state-driven completion or reorder transitions",
+      "sourceIds": [
+        "apple-tabs",
+        "android-nav",
+        "revenuecat"
+      ],
+      "skills": [
+        "Task state",
+        " offline conflict",
+        " accessible input",
+        " reminders"
+      ],
+      "prompt": "./prompts/guided/app/tasks.md"
+    },
+    {
+      "id": "calendar",
+      "title": "Calendar and scheduling",
+      "category": "Productivity",
+      "job": "See commitments, resolve conflicts and reschedule across time zones",
+      "flows": [
+        "onboarding",
+        "calendar",
+        "navigation",
+        "create-edit",
+        "notifications",
+        "search",
+        "offline-sync",
+        "settings-privacy",
+        "errors-recovery"
+      ],
+      "thesis": "An adaptive time canvas with visible local time and conflict",
+      "ai": "Optional scheduling suggestions with explicit write approval",
+      "threeD": "No 3D; directional transitions for changing real dates",
+      "sourceIds": [
+        "apple-tabs",
+        "android-nav",
+        "android-adaptive"
+      ],
+      "skills": [
+        "DST/time-zone validation",
+        " accessibility list alternative",
+        " drag",
+        " deep links"
+      ],
+      "prompt": "./prompts/guided/app/calendar.md"
+    },
+    {
+      "id": "journal",
+      "title": "Privacy-first journal",
+      "category": "Wellness",
+      "job": "Write without setup, save privately, search and export entries",
+      "flows": [
+        "onboarding",
+        "home",
+        "create-edit",
+        "list-feed",
+        "search",
+        "offline-sync",
+        "settings-privacy",
+        "account-deletion"
+      ],
+      "thesis": "A readable writing space, not a gamified mental-health dashboard",
+      "ai": "Optional local categorization only after opt-in; no medical claims",
+      "threeD": "No 3D; protect reading, type resizing and focus",
+      "sourceIds": [
+        "wcag",
+        "heuristics",
+        "apple-onboarding"
+      ],
+      "skills": [
+        "Autosave",
+        " encryption disclosure",
+        " export",
+        " deletion and recovery"
+      ],
+      "prompt": "./prompts/guided/app/journal.md"
+    },
+    {
+      "id": "habits",
+      "title": "Habits and routines",
+      "category": "Wellness",
+      "job": "Plan realistic routines and recover after missing sessions",
+      "flows": [
+        "onboarding",
+        "home",
+        "navigation",
+        "task-management",
+        "dashboard-data",
+        "notifications",
+        "settings-privacy",
+        "errors-recovery"
+      ],
+      "thesis": "Supportive progress visualization without punitive streaks",
+      "ai": "Optional reflection prompts, no diagnosis or manipulative nudges",
+      "threeD": "No 3D; meaningful small completion feedback",
+      "sourceIds": [
+        "revenuecat",
+        "heuristics",
+        "apple-onboarding"
+      ],
+      "skills": [
+        "Reminder rights",
+        " day changes",
+        " accessible progress and no-shame language"
+      ],
+      "prompt": "./prompts/guided/app/habits.md"
+    },
+    {
+      "id": "fitness",
+      "title": "Workout tracker",
+      "category": "Wellness",
+      "job": "Find exercises, log a session, resume interrupted tracking",
+      "flows": [
+        "onboarding",
+        "home",
+        "navigation",
+        "task-management",
+        "detail",
+        "media-library",
+        "dashboard-data",
+        "notifications",
+        "settings-privacy"
+      ],
+      "thesis": "Session-first hierarchy with large readable controls",
+      "ai": "Optional exercise search grounded in licensed instructions",
+      "threeD": "3D only when validated exercise geometry materially helps",
+      "sourceIds": [
+        "revenuecat",
+        "android-adaptive",
+        "wcag"
+      ],
+      "skills": [
+        "Session persistence",
+        " safe health language",
+        " offline logs and screen readers"
+      ],
+      "prompt": "./prompts/guided/app/fitness.md"
+    },
+    {
+      "id": "learning",
+      "title": "Education and language learning",
+      "category": "Learning",
+      "job": "Find level, practice, get accurate feedback and revisit a lesson",
+      "flows": [
+        "onboarding",
+        "home",
+        "navigation",
+        "detail",
+        "media-library",
+        "task-management",
+        "dashboard-data",
+        "offline-sync",
+        "settings-privacy"
+      ],
+      "thesis": "A learning path revealing actual capability rather than points theatre",
+      "ai": "Optional cited lesson Q&A, with a separate validated grading policy",
+      "threeD": "3D only for spatial learning, and always with a 2D equivalent",
+      "sourceIds": [
+        "revenuecat",
+        "apple-onboarding",
+        "material"
+      ],
+      "skills": [
+        "Authentic assessments",
+        " multilingual/RTL",
+        " native audio",
+        " lesson state"
+      ],
+      "prompt": "./prompts/guided/app/learning.md"
+    },
+    {
+      "id": "reader",
+      "title": "Ebook and reading library",
+      "category": "Media",
+      "job": "Find a title, read, bookmark and resume offline",
+      "flows": [
+        "onboarding",
+        "home",
+        "navigation",
+        "media-library",
+        "detail",
+        "search",
+        "offline-sync",
+        "settings-privacy",
+        "account-deletion"
+      ],
+      "thesis": "A book-first interface with typography above chrome",
+      "ai": "Optional source-cited chapter Q&A only with rights and spoiler control",
+      "threeD": "3D bookshelf/page turn is optional, never required for reading",
+      "sourceIds": [
+        "wcag",
+        "apple-tabs",
+        "heuristics"
+      ],
+      "skills": [
+        "Accessible typography",
+        " reader progress",
+        " book rights",
+        " offline"
+      ],
+      "prompt": "./prompts/guided/app/reader.md"
+    },
+    {
+      "id": "creator",
+      "title": "Creative editor and design canvas",
+      "category": "Creation",
+      "job": "Import, edit, preview, export and recover failed work",
+      "flows": [
+        "onboarding",
+        "home",
+        "navigation",
+        "upload-capture",
+        "media-library",
+        "create-edit",
+        "undo-confirmation",
+        "offline-sync",
+        "settings-privacy"
+      ],
+      "thesis": "Canvas-centered creation with tool panels only when needed",
+      "ai": "Optional requested generation with visible provenance and consent",
+      "threeD": "Spatial editing only if actual 3D creation is the main task",
+      "sourceIds": [
+        "heuristics",
+        "android-adaptive",
+        "wcag"
+      ],
+      "skills": [
+        "Undo history",
+        " permissions",
+        " source licensing",
+        " export failures"
+      ],
+      "prompt": "./prompts/guided/app/creator.md"
+    },
+    {
+      "id": "camera",
+      "title": "Camera and photo editor",
+      "category": "Creation",
+      "job": "Capture, review, edit and export with controlled permissions",
+      "flows": [
+        "onboarding",
+        "permissions",
+        "home",
+        "upload-capture",
+        "media-library",
+        "detail",
+        "create-edit",
+        "settings-privacy",
+        "errors-recovery"
+      ],
+      "thesis": "Make the camera itself the primary task, not an onboarding slide",
+      "ai": "On-device enhancement optional with latency and model footprint disclosed",
+      "threeD": "AR preview only on capable hardware with 2D fallback",
+      "sourceIds": [
+        "android-quality",
+        "apple-onboarding",
+        "android-adaptive"
+      ],
+      "skills": [
+        "Camera permission",
+        " orientation",
+        " memory",
+        " privacy",
+        " battery"
+      ],
+      "prompt": "./prompts/guided/app/camera.md"
+    },
+    {
+      "id": "streaming",
+      "title": "Music and video streaming",
+      "category": "Media",
+      "job": "Discover media, play and resume, handle downloads/expiry",
+      "flows": [
+        "onboarding",
+        "home",
+        "navigation",
+        "search",
+        "list-feed",
+        "detail",
+        "media-library",
+        "offline-sync",
+        "notifications",
+        "settings-privacy"
+      ],
+      "thesis": "Content and playback continuity, with clear offline rights",
+      "ai": "Optional recommendation explanations based on licensed catalog",
+      "threeD": "No 3D shell; immersive visual only if media warrants it",
+      "sourceIds": [
+        "apple-tabs",
+        "android-nav",
+        "heuristics"
+      ],
+      "skills": [
+        "Captions",
+        " audio controls",
+        " downloads and licensed media"
+      ],
+      "prompt": "./prompts/guided/app/streaming.md"
+    },
+    {
+      "id": "community",
+      "title": "Social/community network",
+      "category": "Social",
+      "job": "Find relevant communities, post, manage privacy and harm reporting",
+      "flows": [
+        "onboarding",
+        "authentication",
+        "home",
+        "navigation",
+        "list-feed",
+        "search",
+        "detail",
+        "create-edit",
+        "notifications",
+        "profile",
+        "settings-privacy"
+      ],
+      "thesis": "Community context and informed control before engagement counters",
+      "ai": "Optional review assistance with human escalation and appeal",
+      "threeD": "No 3D; motion supports relationship and reply context",
+      "sourceIds": [
+        "heuristics",
+        "android-quality",
+        "wcag"
+      ],
+      "skills": [
+        "Moderation",
+        " abuse reporting",
+        " blocked states and privacy"
+      ],
+      "prompt": "./prompts/guided/app/community.md"
+    },
+    {
+      "id": "messaging",
+      "title": "Messaging and collaboration",
+      "category": "Social",
+      "job": "Find a thread, communicate, see delivery state and retry failures",
+      "flows": [
+        "authentication",
+        "home",
+        "navigation",
+        "chat",
+        "search",
+        "notifications",
+        "upload-capture",
+        "offline-sync",
+        "settings-privacy",
+        "errors-recovery"
+      ],
+      "thesis": "Conversation-first, resilient drafts and transparent delivery",
+      "ai": "Optional compose help that cannot send without user approval",
+      "threeD": "No 3D; message transitions only when state changes",
+      "sourceIds": [
+        "heuristics",
+        "apple-tabs",
+        "android-quality"
+      ],
+      "skills": [
+        "Back",
+        " drafts",
+        " delivery receipts",
+        " privacy and recovery"
+      ],
+      "prompt": "./prompts/guided/app/messaging.md"
+    },
+    {
+      "id": "shopping",
+      "title": "Shopping and marketplace",
+      "category": "Commerce",
+      "job": "Search inventory, compare, buy accurately and inspect order",
+      "flows": [
+        "onboarding",
+        "home",
+        "navigation",
+        "search",
+        "filters",
+        "list-feed",
+        "detail",
+        "checkout",
+        "notifications",
+        "settings-privacy"
+      ],
+      "thesis": "A decision-first mobile shop, not a wall of promotions",
+      "ai": "Optional verified size/spec finder with real catalog data",
+      "threeD": "Product-specific viewer optional with static spec/photo fallback",
+      "sourceIds": [
+        "product-page",
+        "checkout",
+        "android-nav"
+      ],
+      "skills": [
+        "Prices",
+        " inventory",
+        " filters",
+        " checkout idempotency and shipping"
+      ],
+      "prompt": "./prompts/guided/app/shopping.md"
+    },
+    {
+      "id": "travel",
+      "title": "Travel and booking",
+      "category": "Commerce",
+      "job": "Choose dates/inventory, see total cost, book, then amend",
+      "flows": [
+        "onboarding",
+        "home",
+        "navigation",
+        "search",
+        "filters",
+        "detail",
+        "multi-step-form",
+        "checkout",
+        "notifications",
+        "settings-privacy"
+      ],
+      "thesis": "An accurate itinerary ledger with recoverable choices",
+      "ai": "Optional grounded itinerary drafting; no invented availability",
+      "threeD": "3D property tour only if useful and skippable",
+      "sourceIds": [
+        "apple-tabs",
+        "checkout",
+        "android-adaptive"
+      ],
+      "skills": [
+        "Timezone",
+        " fees",
+        " policy",
+        " reservations",
+        " payment recovery"
+      ],
+      "prompt": "./prompts/guided/app/travel.md"
+    },
+    {
+      "id": "finance",
+      "title": "Personal finance viewer",
+      "category": "Utility",
+      "job": "See balances, provenance, pending activity and data controls",
+      "flows": [
+        "authentication",
+        "home",
+        "navigation",
+        "dashboard-data",
+        "table-data",
+        "search",
+        "notifications",
+        "settings-privacy",
+        "errors-recovery",
+        "account-deletion"
+      ],
+      "thesis": "A real evidence-led ledger with no decorative fake gains",
+      "ai": "Optional scoped explanatory assistant; read-only by default",
+      "threeD": "No 3D; accessible actual-data graphs and tables",
+      "sourceIds": [
+        "heuristics",
+        "wcag",
+        "android-quality"
+      ],
+      "skills": [
+        "Freshness",
+        " sensitive permissions",
+        " exact totals and consent"
+      ],
+      "prompt": "./prompts/guided/app/finance.md"
+    },
+    {
+      "id": "wellness",
+      "title": "Meditation and calm practice",
+      "category": "Wellness",
+      "job": "Find a fitting session, complete it, optionally reflect",
+      "flows": [
+        "onboarding",
+        "home",
+        "navigation",
+        "media-library",
+        "detail",
+        "notifications",
+        "settings-privacy",
+        "offline-sync",
+        "accessibility"
+      ],
+      "thesis": "A calm player that never punishes users for time away",
+      "ai": "Optional guided discovery without clinical diagnosis",
+      "threeD": "Avoid ambient auto-playing 3D; provide a motion-off option",
+      "sourceIds": [
+        "apple-onboarding",
+        "wcag",
+        "motion-pause"
+      ],
+      "skills": [
+        "Audio control",
+        " sleep behavior",
+        " captions and privacy"
+      ],
+      "prompt": "./prompts/guided/app/wellness.md"
+    },
+    {
+      "id": "ai-copilot",
+      "title": "AI work assistant",
+      "category": "AI",
+      "job": "Give a task, review cited evidence, approve actions and recover failure",
+      "flows": [
+        "onboarding",
+        "authentication",
+        "home",
+        "navigation",
+        "ai-assistant",
+        "chat",
+        "search",
+        "errors-recovery",
+        "settings-privacy",
+        "account-deletion"
+      ],
+      "thesis": "A transparent workbench keeping the human in control",
+      "ai": "AI core: model availability, sources, permissions, sandbox and review",
+      "threeD": "3D only for domain spatial tasks, never obligatory floating AI orb",
+      "sourceIds": [
+        "ai-bots",
+        "ai-not-always",
+        "webllm",
+        "puter"
+      ],
+      "skills": [
+        "Model eval",
+        " hallucination",
+        " privacy",
+        " tool authorization and audit"
+      ],
+      "prompt": "./prompts/guided/app/ai-copilot.md"
+    },
+    {
+      "id": "offline-notes",
+      "title": "Offline knowledge base",
+      "category": "Productivity",
+      "job": "Capture without network, merge and search safely",
+      "flows": [
+        "onboarding",
+        "home",
+        "navigation",
+        "create-edit",
+        "search",
+        "filters",
+        "offline-sync",
+        "undo-confirmation",
+        "settings-privacy"
+      ],
+      "thesis": "Reliable instant capture with honest synchronization status",
+      "ai": "Optional local semantic search with model license/size checked",
+      "threeD": "No 3D, small sync-status transitions",
+      "sourceIds": [
+        "heuristics",
+        "android-adaptive",
+        "wcag"
+      ],
+      "skills": [
+        "Durability",
+        " merge conflict",
+        " export",
+        " encryption"
+      ],
+      "prompt": "./prompts/guided/app/offline-notes.md"
+    },
+    {
+      "id": "b2b-dashboard",
+      "title": "Business operations dashboard",
+      "category": "Enterprise",
+      "job": "Detect anomaly, verify source, act, audit result",
+      "flows": [
+        "authentication",
+        "home",
+        "navigation",
+        "dashboard-data",
+        "table-data",
+        "filters",
+        "detail",
+        "notifications",
+        "settings-privacy",
+        "errors-recovery"
+      ],
+      "thesis": "Dense but legible evidence-first operational UI",
+      "ai": "Optional explanation grounded in actual metrics, no invented causality",
+      "threeD": "No 3D unless underlying spatial system really benefits",
+      "sourceIds": [
+        "heuristics",
+        "android-adaptive",
+        "govuk"
+      ],
+      "skills": [
+        "Metric provenance",
+        " permissions",
+        " wide-screen adaptation",
+        " log"
+      ],
+      "prompt": "./prompts/guided/app/b2b-dashboard.md"
+    },
+    {
+      "id": "game-companion",
+      "title": "Game companion and collectibles",
+      "category": "Entertainment",
+      "job": "Manage current game state, coordinate tasks and preserve progress",
+      "flows": [
+        "onboarding",
+        "home",
+        "navigation",
+        "media-library",
+        "task-management",
+        "chat",
+        "notifications",
+        "offline-sync",
+        "settings-privacy"
+      ],
+      "thesis": "Playful art direction nested in familiar and accessible controls",
+      "ai": "Optional licensed lore Q&A, no private chat ingestion",
+      "threeD": "3D model viewer with licensed original assets only, fallback needed",
+      "sourceIds": [
+        "android-adaptive",
+        "material",
+        "wcag"
+      ],
+      "skills": [
+        "Device GPU",
+        " age rating",
+        " entitlements",
+        " offline and battery"
+      ],
+      "prompt": "./prompts/guided/app/game-companion.md"
+    }
+  ]
+}
