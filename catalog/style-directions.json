@@ -1,0 +1,1164 @@
+{
+  "version": 1,
+  "created": "2026-10-08",
+  "count": 48,
+  "targetCounts": {
+    "website": 24,
+    "app": 24
+  },
+  "type": "original-mit-direction-prompts",
+  "styles": [
+    {
+      "id": "editorial-atlas",
+      "title": "Editorial Atlas",
+      "target": "website",
+      "family": "Editorial",
+      "visual": "magazine",
+      "layout": "columns",
+      "palette": {
+        "paper": "#F1EDE1",
+        "ink": "#17251E",
+        "accent": "#AE4830",
+        "secondary": "#CFD2C2"
+      },
+      "typography": "serif display / restrained sans",
+      "density": "airy",
+      "purpose": "Editorial studio and essays with a documented provenance trail",
+      "motion": "Short chapter crossfades after direct navigation",
+      "avoid": "Same-height feature card carpet; unreadable microcopy",
+      "variants": [
+        "A · columns original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "swiss-signal",
+      "title": "Swiss Signal",
+      "target": "website",
+      "family": "Precision",
+      "visual": "grid",
+      "layout": "grid",
+      "palette": {
+        "paper": "#F6F4EE",
+        "ink": "#11171D",
+        "accent": "#D9372A",
+        "secondary": "#C7D6DD"
+      },
+      "typography": "grotesk / mono labels",
+      "density": "compact",
+      "purpose": "Research organization where hierarchy has to be absolutely crisp",
+      "motion": "Active navigation underline on a real route change",
+      "avoid": "Confusing experimental nav; gratuitous geometric decoration",
+      "variants": [
+        "A · grid original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "investigative-paper",
+      "title": "Investigative Paper",
+      "target": "website",
+      "family": "Editorial",
+      "visual": "newspaper",
+      "layout": "newspaper",
+      "palette": {
+        "paper": "#EFE8D5",
+        "ink": "#25231E",
+        "accent": "#B0442B",
+        "secondary": "#D1C2A4"
+      },
+      "typography": "news serif / utility grotesk",
+      "density": "balanced",
+      "purpose": "Long investigative articles and annotated evidence",
+      "motion": "Reveal linked citations only when requested",
+      "avoid": "Fabricated headlines or sensational alerts",
+      "variants": [
+        "A · newspaper original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "brutalist-gallery",
+      "title": "Brutalist Gallery",
+      "target": "website",
+      "family": "Expressive",
+      "visual": "brutalist",
+      "layout": "split",
+      "palette": {
+        "paper": "#F3EDDF",
+        "ink": "#191919",
+        "accent": "#E23D2C",
+        "secondary": "#CAC1B5"
+      },
+      "typography": "oversized sans / condensed labels",
+      "density": "dense",
+      "purpose": "Experimental designer portfolio with still-accessible navigation",
+      "motion": "Strong but optional project switch transition",
+      "avoid": "Inaccessible contrast or randomized placement",
+      "variants": [
+        "A · split original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "museum-index",
+      "title": "Museum Index",
+      "target": "website",
+      "family": "Editorial",
+      "visual": "archive",
+      "layout": "index",
+      "palette": {
+        "paper": "#F7F4EA",
+        "ink": "#24281F",
+        "accent": "#917451",
+        "secondary": "#DBD6C7"
+      },
+      "typography": "elegant serif / catalog mono",
+      "density": "airy",
+      "purpose": "Collection of artifacts with material and period metadata",
+      "motion": "Caption appears on activated artifact focus",
+      "avoid": "Unlicensed exhibition photos or imitation museum seals",
+      "variants": [
+        "A · index original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "botanical-atelier",
+      "title": "Botanical Atelier",
+      "target": "website",
+      "family": "Organic",
+      "visual": "botanical",
+      "layout": "organic",
+      "palette": {
+        "paper": "#EFF2E7",
+        "ink": "#2D4734",
+        "accent": "#A26845",
+        "secondary": "#B6CCA6"
+      },
+      "typography": "gentle book serif / humanist sans",
+      "density": "airy",
+      "purpose": "Natural skincare or plant education with sourced information",
+      "motion": "Fine SVG line-draw of documented plant structures",
+      "avoid": "Fake organic certification and decorative leaves everywhere",
+      "variants": [
+        "A · organic original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "motion-type-studio",
+      "title": "Motion Type Studio",
+      "target": "website",
+      "family": "Expressive",
+      "visual": "kinetic",
+      "layout": "typography",
+      "palette": {
+        "paper": "#F5F2EE",
+        "ink": "#171C27",
+        "accent": "#C82B42",
+        "secondary": "#C0B9D4"
+      },
+      "typography": "variable grotesk / mono",
+      "density": "balanced",
+      "purpose": "Creative typography studio showcasing client-approved work",
+      "motion": "One controllable typographic transition per project",
+      "avoid": "Autoplay flashing text over every paragraph",
+      "variants": [
+        "A · typography original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "risograph-press",
+      "title": "Risograph Press",
+      "target": "website",
+      "family": "Artisanal",
+      "visual": "risograph",
+      "layout": "collage",
+      "palette": {
+        "paper": "#F8EBD8",
+        "ink": "#232B39",
+        "accent": "#F45C3B",
+        "secondary": "#7BB8B1"
+      },
+      "typography": "ink-heavy serif / imperfect labels",
+      "density": "balanced",
+      "purpose": "Independent printmaking shop selling verified editions",
+      "motion": "Paper stack shift on selected print only",
+      "avoid": "Textures hiding body type; fake edition scarcity",
+      "variants": [
+        "A · collage original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "cinema-festival",
+      "title": "Cinema Festival",
+      "target": "website",
+      "family": "Cinematic",
+      "visual": "cinematic",
+      "layout": "poster",
+      "palette": {
+        "paper": "#11181C",
+        "ink": "#F3EEE2",
+        "accent": "#FFAD60",
+        "secondary": "#687987"
+      },
+      "typography": "cinema condensed / quiet sans",
+      "density": "airy",
+      "purpose": "Film festival with real screenings and local-time schedule",
+      "motion": "Optional chapter-style film transition with pause",
+      "avoid": "Autoplay video or sound; movie stills without rights",
+      "variants": [
+        "A · poster original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "technical-blueprint",
+      "title": "Technical Blueprint",
+      "target": "website",
+      "family": "Precision",
+      "visual": "blueprint",
+      "layout": "schematic",
+      "palette": {
+        "paper": "#112A36",
+        "ink": "#D9F1EA",
+        "accent": "#E5AF76",
+        "secondary": "#4A7383"
+      },
+      "typography": "technical sans / engineering mono",
+      "density": "compact",
+      "purpose": "Engineering company with a real interactive systems diagram",
+      "motion": "Actual connection path highlighted on selection",
+      "avoid": "False-looking equations; fake technical data",
+      "variants": [
+        "A · schematic original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "orbital-observatory",
+      "title": "Orbital Observatory",
+      "target": "website",
+      "family": "Spatial",
+      "visual": "orbital",
+      "layout": "orbital",
+      "palette": {
+        "paper": "#0F172B",
+        "ink": "#F2F1E9",
+        "accent": "#9FC0E3",
+        "secondary": "#5D6984"
+      },
+      "typography": "precise display sans / data mono",
+      "density": "airy",
+      "purpose": "Science outreach explaining verified observations",
+      "motion": "Orbital motion only after Play is selected",
+      "avoid": "Constant parallax and particle noise covering facts",
+      "variants": [
+        "A · orbital original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "minimal-japanese",
+      "title": "Quiet Ma",
+      "target": "website",
+      "family": "Minimal",
+      "visual": "zen",
+      "layout": "minimal",
+      "palette": {
+        "paper": "#F7F5F0",
+        "ink": "#282F29",
+        "accent": "#94745C",
+        "secondary": "#D8D5CA"
+      },
+      "typography": "high-contrast serif / multilingual sans",
+      "density": "airy",
+      "purpose": "Tea or craft studio where product stillness is central",
+      "motion": "Small material detail fade on intent, otherwise none",
+      "avoid": "Exoticized cultural clichés; unreadable tiny Japanese type",
+      "variants": [
+        "A · minimal original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "neo-bauhaus",
+      "title": "Functional Color",
+      "target": "website",
+      "family": "Expressive",
+      "visual": "bauhaus",
+      "layout": "geometry",
+      "palette": {
+        "paper": "#F1F0E8",
+        "ink": "#141414",
+        "accent": "#E54431",
+        "secondary": "#F3C74D"
+      },
+      "typography": "bold geometric sans / readable body",
+      "density": "balanced",
+      "purpose": "Design festival with clear program and registration",
+      "motion": "Purposeful geometric tab change tied to real program",
+      "avoid": "Pretending basic shapes establish product identity",
+      "variants": [
+        "A · geometry original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "luxury-atelier",
+      "title": "Atelier Ledger",
+      "target": "website",
+      "family": "Artisanal",
+      "visual": "luxury",
+      "layout": "poster",
+      "palette": {
+        "paper": "#F0EBE1",
+        "ink": "#27261F",
+        "accent": "#7F6C4B",
+        "secondary": "#C8BBA7"
+      },
+      "typography": "display serif / uncluttered sans",
+      "density": "airy",
+      "purpose": "Luxury craft studio with documented provenance",
+      "motion": "Slow nonessential image crossfade after selection",
+      "avoid": "Gold gradients; fake client pedigree; mystery interactions",
+      "variants": [
+        "A · poster original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "independent-bookshop",
+      "title": "Independent Bookshop",
+      "target": "website",
+      "family": "Editorial",
+      "visual": "books",
+      "layout": "index",
+      "palette": {
+        "paper": "#F7ECDC",
+        "ink": "#33311F",
+        "accent": "#B43D2C",
+        "secondary": "#B7AD8B"
+      },
+      "typography": "book serif / utilitarian sans",
+      "density": "balanced",
+      "purpose": "Independent bookseller with real catalog and inventory",
+      "motion": "Card opens into detail with reduced motion fallback",
+      "avoid": "Invented reviews; fake bestsellers; illegible book covers",
+      "variants": [
+        "A · index original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "ecommerce-editorial",
+      "title": "Product Field Notes",
+      "target": "website",
+      "family": "Commerce",
+      "visual": "commerce",
+      "layout": "product",
+      "palette": {
+        "paper": "#F2ECDD",
+        "ink": "#202822",
+        "accent": "#C66B35",
+        "secondary": "#D0D9CB"
+      },
+      "typography": "commerce sans / product data mono",
+      "density": "balanced",
+      "purpose": "Small-batch functional goods with transparent specifications",
+      "motion": "Variant selection updates price and photo only after data",
+      "avoid": "Infinite hover spins and false buy urgency",
+      "variants": [
+        "A · product original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "open-source-terminal",
+      "title": "Open Source Terminal",
+      "target": "website",
+      "family": "Technical",
+      "visual": "terminal",
+      "layout": "terminal",
+      "palette": {
+        "paper": "#17211E",
+        "ink": "#D3E8CC",
+        "accent": "#A7DA6F",
+        "secondary": "#51705D"
+      },
+      "typography": "mono / utilitarian sans",
+      "density": "compact",
+      "purpose": "Developer CLI with copyable verified commands",
+      "motion": "Sample command output appears only after real mock invocation",
+      "avoid": "Fake command success and simulated active service",
+      "variants": [
+        "A · terminal original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "civic-public",
+      "title": "Public Service Standard",
+      "target": "website",
+      "family": "Utility",
+      "visual": "civic",
+      "layout": "columns",
+      "palette": {
+        "paper": "#F8F7F1",
+        "ink": "#16304B",
+        "accent": "#B83A2C",
+        "secondary": "#B6C8D5"
+      },
+      "typography": "high legibility sans / clear headings",
+      "density": "compact",
+      "purpose": "Municipal information with forms and public-service constraints",
+      "motion": "Only progress feedback on genuine submitted action",
+      "avoid": "Decorative motion obscuring emergency instructions",
+      "variants": [
+        "A · columns original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "travel-journal",
+      "title": "Journey Fieldbook",
+      "target": "website",
+      "family": "Editorial",
+      "visual": "travel",
+      "layout": "collage",
+      "palette": {
+        "paper": "#F5EBDA",
+        "ink": "#273B32",
+        "accent": "#C57A4A",
+        "secondary": "#ADC5BC"
+      },
+      "typography": "narrative serif / mapping mono",
+      "density": "balanced",
+      "purpose": "Travel publication with real locations and attribution",
+      "motion": "Annotated route drawing controlled by user",
+      "avoid": "Fabricated geographic distances or unlicensed destination photos",
+      "variants": [
+        "A · collage original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "architecture-lines",
+      "title": "Architecture Lines",
+      "target": "website",
+      "family": "Spatial",
+      "visual": "architecture",
+      "layout": "schematic",
+      "palette": {
+        "paper": "#E8E7E0",
+        "ink": "#20252A",
+        "accent": "#AA5B42",
+        "secondary": "#9EABB2"
+      },
+      "typography": "architectural sans / detail mono",
+      "density": "airy",
+      "purpose": "Built-environment portfolio highlighting floorplans and decisions",
+      "motion": "Reveal measured callouts after interaction",
+      "avoid": "Fake architectural drawings or inaccessible tiny plans",
+      "variants": [
+        "A · schematic original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "education-workshop",
+      "title": "Learning Workshop",
+      "target": "website",
+      "family": "Illustrated",
+      "visual": "workshop",
+      "layout": "collage",
+      "palette": {
+        "paper": "#F5EDD8",
+        "ink": "#243747",
+        "accent": "#D26441",
+        "secondary": "#90B2A6"
+      },
+      "typography": "rounded humanist / note labels",
+      "density": "balanced",
+      "purpose": "Hands-on educational course with transparent outcomes",
+      "motion": "Annotated lesson steps appear on user selection",
+      "avoid": "Childlike illustration used to hide vague outcomes",
+      "variants": [
+        "A · collage original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "maker-workbench",
+      "title": "Maker Workbench",
+      "target": "website",
+      "family": "Technical",
+      "visual": "workbench",
+      "layout": "product",
+      "palette": {
+        "paper": "#E8EBE4",
+        "ink": "#1B302C",
+        "accent": "#E17C4B",
+        "secondary": "#A6BCB1"
+      },
+      "typography": "functional sans / code mono",
+      "density": "compact",
+      "purpose": "Maker product with interactive live demo and source links",
+      "motion": "Tiny system-state transitions after honest demo response",
+      "avoid": "Synthetic terminal playback posing as production logs",
+      "variants": [
+        "A · product original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "nonprofit-documentary",
+      "title": "Human Documentary",
+      "target": "website",
+      "family": "Editorial",
+      "visual": "documentary",
+      "layout": "newspaper",
+      "palette": {
+        "paper": "#F4EEE5",
+        "ink": "#272D27",
+        "accent": "#BE643C",
+        "secondary": "#B5B6A7"
+      },
+      "typography": "humanist serif / inclusive sans",
+      "density": "airy",
+      "purpose": "Nonprofit documenting real outcomes with consented imagery",
+      "motion": "Details disclosure rather than dramatic scrolljacking",
+      "avoid": "Invented beneficiaries and misleading impact numbers",
+      "variants": [
+        "A · newspaper original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "tactile-paper",
+      "title": "Tactile Paper",
+      "target": "website",
+      "family": "Illustrated",
+      "visual": "paper",
+      "layout": "scrapbook",
+      "palette": {
+        "paper": "#F6F0DE",
+        "ink": "#342C28",
+        "accent": "#C16E4D",
+        "secondary": "#9DB9B2"
+      },
+      "typography": "warm book serif / clear UI sans",
+      "density": "balanced",
+      "purpose": "Small creator portfolio mixing sketches and journal notes",
+      "motion": "Original paper tab responds to tap; no mandatory page flip",
+      "avoid": "Pirated notebook assets and animation that traps scrolling",
+      "variants": [
+        "A · scrapbook original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "task-ink",
+      "title": "Ink Taskbook",
+      "target": "app",
+      "family": "Productivity",
+      "visual": "notebook",
+      "layout": "tasks",
+      "palette": {
+        "paper": "#F4EAD8",
+        "ink": "#292921",
+        "accent": "#BB5338",
+        "secondary": "#C9BFA9"
+      },
+      "typography": "clear humanist / compact mono",
+      "density": "balanced",
+      "purpose": "Personal planning with durable drafts and useful completion undo",
+      "motion": "Pencil underline triggered by actual task completion",
+      "avoid": "Notebook skeuomorphism hiding controls",
+      "variants": [
+        "A · tasks original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "command-console",
+      "title": "Command Console",
+      "target": "app",
+      "family": "Technical",
+      "visual": "terminal",
+      "layout": "console",
+      "palette": {
+        "paper": "#17221F",
+        "ink": "#D3E7D7",
+        "accent": "#A2E57A",
+        "secondary": "#4B6557"
+      },
+      "typography": "legible mono / system sans",
+      "density": "dense",
+      "purpose": "Developer operations with explicit command permissions and audit log",
+      "motion": "Status chip updates only on actual command completion",
+      "avoid": "Fake console data, danger actions without confirmation",
+      "variants": [
+        "A · console original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "field-operations",
+      "title": "Field Ops",
+      "target": "app",
+      "family": "Operations",
+      "visual": "utility",
+      "layout": "list",
+      "palette": {
+        "paper": "#F0F1EB",
+        "ink": "#1B303C",
+        "accent": "#E07B45",
+        "secondary": "#B9C9CA"
+      },
+      "typography": "robust sans / small data mono",
+      "density": "dense",
+      "purpose": "On-site inspection used with gloves and poor connectivity",
+      "motion": "Inline save status and queued-sync indicator",
+      "avoid": "Tiny taps; network required for every interaction",
+      "variants": [
+        "A · list original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "wellness-horizon",
+      "title": "Quiet Horizon",
+      "target": "app",
+      "family": "Wellness",
+      "visual": "calm",
+      "layout": "progress",
+      "palette": {
+        "paper": "#F1F4EB",
+        "ink": "#31534C",
+        "accent": "#B67962",
+        "secondary": "#BCD4C8"
+      },
+      "typography": "friendly humanist / readable sans",
+      "density": "airy",
+      "purpose": "Breathing and reflection with no false medical outcomes",
+      "motion": "User-started guided breathing with pause and reduced mode",
+      "avoid": "Auto breath forcing; fabricated neuroscience promises",
+      "variants": [
+        "A · progress original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "money-ledger",
+      "title": "Money Ledger",
+      "target": "app",
+      "family": "Data",
+      "visual": "ledger",
+      "layout": "ledger",
+      "palette": {
+        "paper": "#F4F5EF",
+        "ink": "#1C2F30",
+        "accent": "#196D53",
+        "secondary": "#C6D7D0"
+      },
+      "typography": "numbers tabular / simple sans",
+      "density": "compact",
+      "purpose": "Personal finance categorization with explicit data freshness",
+      "motion": "Category change updates amount without count-up theatrics",
+      "avoid": "Green for debt; fake transaction metrics",
+      "variants": [
+        "A · ledger original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "airport-planner",
+      "title": "Gate Board",
+      "target": "app",
+      "family": "Productivity",
+      "visual": "flight",
+      "layout": "board",
+      "palette": {
+        "paper": "#1B2834",
+        "ink": "#F4F6F2",
+        "accent": "#F0B85D",
+        "secondary": "#516471"
+      },
+      "typography": "airport display sans / tabular mono",
+      "density": "dense",
+      "purpose": "Departure-style personal scheduling with truthfully labeled tasks",
+      "motion": "Gate assignment slot shifts when the user reschedules",
+      "avoid": "Fake flight delay data; mandatory noisy announcements",
+      "variants": [
+        "A · board original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "atlas-maps",
+      "title": "Wayfinding Atlas",
+      "target": "app",
+      "family": "Spatial",
+      "visual": "map",
+      "layout": "map",
+      "palette": {
+        "paper": "#E8EEDC",
+        "ink": "#214338",
+        "accent": "#E17F46",
+        "secondary": "#A4BAA8"
+      },
+      "typography": "clear navigational sans / mono coordinates",
+      "density": "balanced",
+      "purpose": "Outdoor route planner with map and usable text alternative",
+      "motion": "Route highlight on user-selected path, never invented ETAs",
+      "avoid": "Decorative maps with inaccessible instructions",
+      "variants": [
+        "A · map original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "accessible-focus",
+      "title": "Accessible Focus",
+      "target": "app",
+      "family": "Accessibility",
+      "visual": "contrast",
+      "layout": "focus",
+      "palette": {
+        "paper": "#FAFAF5",
+        "ink": "#151515",
+        "accent": "#0A60A6",
+        "secondary": "#DFEAF5"
+      },
+      "typography": "system sans / accessible weights",
+      "density": "airy",
+      "purpose": "Assistive-friendly app emphasizing keyboard and screen-reader tasks",
+      "motion": "None unless state feedback has a semantic text equivalent",
+      "avoid": "Tiny icons and screen reader-hidden required actions",
+      "variants": [
+        "A · focus original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "chat-canvas",
+      "title": "Conversation Canvas",
+      "target": "app",
+      "family": "Communication",
+      "visual": "chat",
+      "layout": "chat",
+      "palette": {
+        "paper": "#F1F1EB",
+        "ink": "#1B3833",
+        "accent": "#B85D45",
+        "secondary": "#D3E1D6"
+      },
+      "typography": "comfortable sans / compact time labels",
+      "density": "balanced",
+      "purpose": "Private messaging with delivery receipts and recoverable drafts",
+      "motion": "Message animates only after confirmed local/remote insert",
+      "avoid": "Fake AI typing or messages from fictional users",
+      "variants": [
+        "A · chat original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "media-library",
+      "title": "Media Archive",
+      "target": "app",
+      "family": "Content",
+      "visual": "archive",
+      "layout": "media",
+      "palette": {
+        "paper": "#202323",
+        "ink": "#E9E8E2",
+        "accent": "#D3A876",
+        "secondary": "#66706C"
+      },
+      "typography": "museum sans / caption mono",
+      "density": "balanced",
+      "purpose": "Personal media collection with explicit permissions and indexing",
+      "motion": "Thumbnail opens to related full media with original focus restored",
+      "avoid": "Autoplay slideshow and inaccessible gallery",
+      "variants": [
+        "A · media original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "creative-canvas",
+      "title": "Creator Canvas",
+      "target": "app",
+      "family": "Creative",
+      "visual": "canvas",
+      "layout": "canvas",
+      "palette": {
+        "paper": "#E9E6DD",
+        "ink": "#233142",
+        "accent": "#E06A3D",
+        "secondary": "#BEC7D2"
+      },
+      "typography": "tool sans / panel mono",
+      "density": "dense",
+      "purpose": "Vector illustration tool with undo and autosave credibility",
+      "motion": "Handle and layer motion follows actual pointer/keyboard input",
+      "avoid": "Canvas-only interface with no accessible action equivalents",
+      "variants": [
+        "A · canvas original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "study-cards",
+      "title": "Learning Cards",
+      "target": "app",
+      "family": "Learning",
+      "visual": "cards",
+      "layout": "cards",
+      "palette": {
+        "paper": "#F4F1E5",
+        "ink": "#263344",
+        "accent": "#C7774A",
+        "secondary": "#C4D3D0"
+      },
+      "typography": "highly readable sans / fact mono",
+      "density": "balanced",
+      "purpose": "Flashcards with spaced repetition and accurate review states",
+      "motion": "Answer card flips only on activated reveal, with static alternative",
+      "avoid": "Complex spin that hides text, fabricated mastery scores",
+      "variants": [
+        "A · cards original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "library-reader",
+      "title": "Quiet Reader",
+      "target": "app",
+      "family": "Content",
+      "visual": "reader",
+      "layout": "reader",
+      "palette": {
+        "paper": "#F8F3E8",
+        "ink": "#332A25",
+        "accent": "#B36745",
+        "secondary": "#D3C6B6"
+      },
+      "typography": "book serif / functional UI sans",
+      "density": "airy",
+      "purpose": "Long-form reading with bookmarks and accessibility controls",
+      "motion": "Page indicator transitions on actual chapter change",
+      "avoid": "Forced page curl, inaccessible line height or dynamic text",
+      "variants": [
+        "A · reader original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "dark-data-lab",
+      "title": "Dark Data Lab",
+      "target": "app",
+      "family": "Data",
+      "visual": "dashboard",
+      "layout": "chart",
+      "palette": {
+        "paper": "#0F1C24",
+        "ink": "#ECF0F2",
+        "accent": "#52C7B3",
+        "secondary": "#344B58"
+      },
+      "typography": "data sans / tabular numbers",
+      "density": "dense",
+      "purpose": "Technical metrics dashboard with real units and refresh state",
+      "motion": "Series highlight only after filter selection",
+      "avoid": "Neon glows obscuring gridlines or fake performance charts",
+      "variants": [
+        "A · chart original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "habit-practice",
+      "title": "Habit Practice",
+      "target": "app",
+      "family": "Productivity",
+      "visual": "habit",
+      "layout": "grid",
+      "palette": {
+        "paper": "#EDF0E6",
+        "ink": "#243D30",
+        "accent": "#B66A50",
+        "secondary": "#C6D6BD"
+      },
+      "typography": "gentle geometric / legible body",
+      "density": "balanced",
+      "purpose": "A low-pressure daily practice with editable goals",
+      "motion": "One checkmark appears on acknowledged completion",
+      "avoid": "Manipulative streak guilt; invented improvement claims",
+      "variants": [
+        "A · grid original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "service-desk",
+      "title": "Service Desk",
+      "target": "app",
+      "family": "Operations",
+      "visual": "service",
+      "layout": "list",
+      "palette": {
+        "paper": "#ECEEF1",
+        "ink": "#19304B",
+        "accent": "#C77344",
+        "secondary": "#BCCAD8"
+      },
+      "typography": "work-ready sans / time mono",
+      "density": "dense",
+      "purpose": "Customer support triage with clear status and escalation",
+      "motion": "Ticket moves category after authoritative status change",
+      "avoid": "Unreal unread counts; destructive bulk action without undo",
+      "variants": [
+        "A · list original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "inventory-warehouse",
+      "title": "Warehouse Ledger",
+      "target": "app",
+      "family": "Operations",
+      "visual": "inventory",
+      "layout": "table",
+      "palette": {
+        "paper": "#F4F1E7",
+        "ink": "#253429",
+        "accent": "#D88734",
+        "secondary": "#C9D2C4"
+      },
+      "typography": "industrial sans / scannable mono",
+      "density": "dense",
+      "purpose": "Stock control with barcode status and reconciliation",
+      "motion": "Row confirmation on persisted quantity, not optimistic false save",
+      "avoid": "Missing units; too-small tap targets",
+      "variants": [
+        "A · table original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "diary-pages",
+      "title": "Private Diary",
+      "target": "app",
+      "family": "Content",
+      "visual": "diary",
+      "layout": "notebook",
+      "palette": {
+        "paper": "#F4ECDC",
+        "ink": "#403027",
+        "accent": "#A66B58",
+        "secondary": "#D6C1B4"
+      },
+      "typography": "warm serif / crisp UI sans",
+      "density": "airy",
+      "purpose": "Private encrypted journal with honest privacy claims",
+      "motion": "Gentle entry-open reveal without losing keyboard focus",
+      "avoid": "Fake E2EE promises or splash-only padlock",
+      "variants": [
+        "A · notebook original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "local-first-files",
+      "title": "Local First Workspace",
+      "target": "app",
+      "family": "Technical",
+      "visual": "offline",
+      "layout": "files",
+      "palette": {
+        "paper": "#E8EFEA",
+        "ink": "#263A37",
+        "accent": "#2B806D",
+        "secondary": "#B2C8BF"
+      },
+      "typography": "neutral sans / file mono",
+      "density": "compact",
+      "purpose": "Offline document organizer with conflict resolution and recovery",
+      "motion": "Queued-to-synced status changes only after server confirmation",
+      "avoid": "Unsaved drafts hidden behind an always-spinning indicator",
+      "variants": [
+        "A · files original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "rtl-workspace",
+      "title": "RTL Workspace",
+      "target": "app",
+      "family": "Accessibility",
+      "visual": "rtl",
+      "layout": "list",
+      "palette": {
+        "paper": "#F2F3ED",
+        "ink": "#263B35",
+        "accent": "#935A8F",
+        "secondary": "#C8D9CF"
+      },
+      "typography": "script-safe system / bilingual labels",
+      "density": "balanced",
+      "purpose": "Bilingual Arabic-English work dashboard with directional support",
+      "motion": "Direction-aware panel slide or none if confusing",
+      "avoid": "Translated words with permanently LTR layout",
+      "variants": [
+        "A · list original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "nutrition-planner",
+      "title": "Food Notebook",
+      "target": "app",
+      "family": "Wellness",
+      "visual": "nutrition",
+      "layout": "ledger",
+      "palette": {
+        "paper": "#F4F1E4",
+        "ink": "#2C4436",
+        "accent": "#D27A4A",
+        "secondary": "#C9D5C2"
+      },
+      "typography": "clear humanist / unit mono",
+      "density": "balanced",
+      "purpose": "Personal food planning with ingredients and explicit uncertainty",
+      "motion": "Selection highlight after actual meal log",
+      "avoid": "Clinical claims and hidden allergens",
+      "variants": [
+        "A · ledger original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "music-studio",
+      "title": "Track Studio",
+      "target": "app",
+      "family": "Creative",
+      "visual": "music",
+      "layout": "waveform",
+      "palette": {
+        "paper": "#181D27",
+        "ink": "#F2F1EF",
+        "accent": "#B6C3FF",
+        "secondary": "#4B5371"
+      },
+      "typography": "artist sans / time mono",
+      "density": "dense",
+      "purpose": "Music creation with accurate tempo and audio transport feedback",
+      "motion": "Playhead moves only while user playback actually runs",
+      "avoid": "Autoplay music; fake waveform implying real audio",
+      "variants": [
+        "A · waveform original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "minimalist-calendar",
+      "title": "Focused Time",
+      "target": "app",
+      "family": "Productivity",
+      "visual": "minimal",
+      "layout": "calendar",
+      "palette": {
+        "paper": "#F6F5ED",
+        "ink": "#25393A",
+        "accent": "#B65C42",
+        "secondary": "#D3DDD7"
+      },
+      "typography": "uncluttered sans / time tabular",
+      "density": "airy",
+      "purpose": "Calendar app with timezone-safe recurring events",
+      "motion": "Event shift after drag commit, accessible keyboard alternative",
+      "avoid": "Ambiguous times and animated fake reminders",
+      "variants": [
+        "A · calendar original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    },
+    {
+      "id": "incident-response",
+      "title": "Incident Room",
+      "target": "app",
+      "family": "Operations",
+      "visual": "incident",
+      "layout": "console",
+      "palette": {
+        "paper": "#121F2A",
+        "ink": "#F4F3E7",
+        "accent": "#E8A456",
+        "secondary": "#455F6D"
+      },
+      "typography": "crisp sans / metrics mono",
+      "density": "dense",
+      "purpose": "Incident triage with audit trail and unambiguous severity",
+      "motion": "Status transitions tied to real incident acknowledgement",
+      "avoid": "Severity communicated by color alone or cinematic flashing",
+      "variants": [
+        "A · console original composition centered on the actual user job and strong typographic hierarchy",
+        "B · demonstrate the product with real sample data, honest states, deliberate pacing and a different focal structure",
+        "C · information-led index or process narrative with more compact controls and accessible navigation"
+      ]
+    }
+  ]
+}

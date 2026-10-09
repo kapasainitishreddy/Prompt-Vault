@@ -2,7 +2,7 @@
 
 ## Interactive Atlas website
 
-**New:** browse every pattern through an original [five-page visual gallery](docs/index.html). It includes [32 website section previews](docs/websites.html), [32 separate app UI/UX flow previews](docs/apps.html), [23 motion experiments](docs/motion.html), plus [principles/research](docs/principles.html). Each specimen opens a detailed preview with **three design directions**, explanatory interaction notes and its complete copyable Markdown prompt from the repo. Search, category filters, saved ideas, keyboard-friendly dialog and motion-reduction support are built in.
+**New:** browse every pattern through an original [seven-page interactive design atlas](docs/index.html). It includes [32 website section previews](docs/websites.html), [32 separate app UI/UX flow previews](docs/apps.html), [23 motion experiments](docs/motion.html), plus [principles/research](docs/principles.html). Each specimen opens a detailed preview with **three design directions**, explanatory interaction notes and its complete copyable Markdown prompt from the repo. Search, category filters, saved ideas, keyboard-friendly dialog and motion-reduction support are built in.
 
 **Run it:** `python3 -m http.server 8000` from the repository root, then visit `http://localhost:8000/docs/index.html`. To host on GitHub Pages, choose branch `main` and folder `/docs` in Settings → Pages (no Actions workflow or paid extras required). [Deployment notes](docs/README.md).
 
@@ -115,3 +115,9 @@ An agent must not invent client logos, quotes, performance figures, reviews, leg
 Original Prompt-Vault source, examples, and prompt text are [MIT licensed](LICENSE). Research papers, screenshots, referenced repos, fonts, and external assets retain **their own** licenses. Our MIT license does not relicense somebody else's work. See [the license table](research/open-source-stack.md) before borrowing component code.
 
 Contributions: [CONTRIBUTING.md](CONTRIBUTING.md). Please share before/after evidence and avoid generic prompt spam.
+
+## Four open research sources and 64 new original workflows
+
+Use the [Style Laboratory](docs/styles.html) to explore **24 website-specific** plus **24 app-specific** original visual languages, with A/B/C compositions, editable product names and complete copyable prompts. The [Skills Workbench](docs/skills.html) provides **16** additional original agent craft prompts and a three-workflow composer. There are now **151 original prompt recipes** across the repo and **135 visual studies** (87 existing + 48 new styles), not 151 complete production templates.
+
+The four sources are [Emil Kowalski](https://github.com/emilkowalski/skills), [UI Prompt Explorer](https://github.com/zhangchenchen/UIPromptExplorer), [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill), and [Claude Design Skillstack](https://github.com/freshtechbro/claudedesignskills). See [license and research notes](research/agent-skill-resources.md). UI Prompt Explorer's repository LICENSE says Apache-2.0 although its README says MIT. Source components and assets are not copied into this MIT catalog.

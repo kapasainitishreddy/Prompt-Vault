@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "count": 16,
+  "sourceRepositories": [
+    {
+      "name": "Emil Kowalski",
+      "url": "https://github.com/emilkowalski/skills"
+    },
+    {
+      "name": "UI Prompt Explorer",
+      "url": "https://github.com/zhangchenchen/UIPromptExplorer"
+    },
+    {
+      "name": "UI UX Pro Max",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
+    },
+    {
+      "name": "Claude Design Skillstack",
+      "url": "https://github.com/freshtechbro/claudedesignskills"
+    }
+  ],
+  "skills": [
+    {
+      "id": "motion-judgment",
+      "title": "Motion Judgment Review",
+      "family": "Interaction",
+      "source": "Emil Kowalski",
+      "job": "Decide which interface movements improve orientation, what to delete, and how to tune curves",
+      "checks": "Map trigger -> before/after -> cancellation -> reduced mode -> observed task cost"
+    },
+    {
+      "id": "expo-motion",
+      "title": "Native Gesture and Motion",
+      "family": "Native app",
+      "source": "Emil Kowalski",
+      "job": "Make Expo/React Native motion respond to gesture and navigation without blocking JS",
+      "checks": "Audit Reanimated/UI-thread work, Gesture Handler cancellations, safe areas, haptics and reduced motion"
+    },
+    {
+      "id": "variant-studio",
+      "title": "Three-Direction Prototype",
+      "family": "Exploration",
+      "source": "Emil Kowalski",
+      "job": "Produce three visually and structurally different live candidates rather than three recolors",
+      "checks": "Compare information architecture, hierarchy, content, tasks and originality side by side"
+    },
+    {
+      "id": "stress-test-interface",
+      "title": "Worst-Case Interface Breaker",
+      "family": "QA",
+      "source": "Emil Kowalski",
+      "job": "Stress real UI with pathological content and accessibility constraints",
+      "checks": "Try long strings, CJK/RTL, huge values, nulls, 200% zoom, offline, keyboard and screen reader"
+    },
+    {
+      "id": "component-choice",
+      "title": "Dependency and Primitive Selector",
+      "family": "Engineering",
+      "source": "Emil Kowalski",
+      "job": "Choose the smallest mature accessible UI primitive instead of duplicating fragile behavior",
+      "checks": "Check maintenance, bundle cost, semantics, rights and existing dependency overlap"
+    },
+    {
+      "id": "sketch-language",
+      "title": "Illustrated Interaction System",
+      "family": "Art direction",
+      "source": "UI Prompt Explorer",
+      "job": "Create an original expressive sketch-like system with real task clarity",
+      "checks": "Differentiate illustration layers from text, preserve targets, label demos and avoid copying source themes"
+    },
+    {
+      "id": "style-remix",
+      "title": "Visual Theme Remix Study",
+      "family": "Exploration",
+      "source": "UI Prompt Explorer",
+      "job": "Apply multiple distinct art-direction systems to the same real product content",
+      "checks": "Test across web and app separately, compare identity and operational clarity"
+    },
+    {
+      "id": "skeuomorphism-purpose",
+      "title": "Tactile Metaphor Audit",
+      "family": "Art direction",
+      "source": "UI Prompt Explorer",
+      "job": "Use physical material metaphors only where they help users predict actions",
+      "checks": "Check metaphor accuracy, mobile performance, readable type and keyboard equivalence"
+    },
+    {
+      "id": "industry-fit",
+      "title": "Industry and Audience Fit",
+      "family": "Strategy",
+      "source": "UI UX Pro Max",
+      "job": "Select layout grammar, content and trust evidence for a real product category",
+      "checks": "Name audience, sector, proof, task, visual anti-patterns and legal/locale constraints"
+    },
+    {
+      "id": "tokens-and-type",
+      "title": "Design Tokens and Typography",
+      "family": "Design system",
+      "source": "UI UX Pro Max",
+      "job": "Derive color roles and type pairings from brand meaning and real data density",
+      "checks": "Verify contrast, glyph coverage, license, fallback and semantic states"
+    },
+    {
+      "id": "ux-pattern-match",
+      "title": "UX Pattern Reasoning",
+      "family": "Strategy",
+      "source": "UI UX Pro Max",
+      "job": "Choose proven interaction patterns based on user task rather than fashion",
+      "checks": "Compare 3 patterns, error prevention, recovery and platform conventions"
+    },
+    {
+      "id": "design-system-review",
+      "title": "Visual System Regression Review",
+      "family": "QA",
+      "source": "UI UX Pro Max",
+      "job": "Audit a complete UI for token drift, missing states, broken responsive hierarchy",
+      "checks": "Verify typography roles, color semantics, section pacing, real page capture and tests"
+    },
+    {
+      "id": "webgl-budget",
+      "title": "3D and WebGL Viability",
+      "family": "Advanced visuals",
+      "source": "Claude Design Skillstack",
+      "job": "Decide if a 3D scene materially explains a product before adding a heavy renderer",
+      "checks": "Measure initial load, GPU memory budget, fallback, focus and battery cost"
+    },
+    {
+      "id": "scroll-story",
+      "title": "Scroll Narrative With Restraint",
+      "family": "Advanced visuals",
+      "source": "Claude Design Skillstack",
+      "job": "Use GSAP/Motion scroll storytelling without scroll hijack or trapping content",
+      "checks": "Accessible static sequence, reduced motion, keyboard and touch, scroll restoration"
+    },
+    {
+      "id": "shader-performance",
+      "title": "Shader and Postprocessing Safety",
+      "family": "Advanced visuals",
+      "source": "Claude Design Skillstack",
+      "job": "Use GPU effects only when a specific visual job survives slow devices",
+      "checks": "Cap DPR and resources, pause offscreen, set fallback, avoid unlicensed assets"
+    },
+    {
+      "id": "animated-illustrations",
+      "title": "2D and Animated Illustration",
+      "family": "Advanced visuals",
+      "source": "Claude Design Skillstack",
+      "job": "Create expressive but accessible 2D illustrative cues driven by real interactions",
+      "checks": "SVG/Canvas performance, asset attribution, motion alternatives, no decorative noise"
+    }
+  ]
+}
