@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f4f0e7">
+<meta name="description" content="Explore 200 research-linked design concepts for websites and apps, with original interactive previews, evidence limits, copyable build prompts and open-source tool guidance.">
+<title>The Concept Field Guide | Prompt-Vault</title>
+<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./concepts.css">
+<script src="./concepts.js" type="module"></script>
+</head>
+<body class="concept-page">
+<a class="skip-link" href="#main">Skip to the concept field guide</a>
+<header class="masthead shell">
+<a class="brand" href="./index.html" aria-label="Prompt-Vault home"><span class="brand-seal" aria-hidden="true">P<span>•</span>V</span><span class="brand-name">PROMPT<br>VAULT</span></a>
+<nav class="main-nav" aria-label="Main navigation">
+<a href="./academy.html">Design academy</a>
+<a href="./websites.html">Website atlas</a>
+<a href="./apps.html">App atlas</a>
+<a href="./concepts.html" aria-current="page">Concept field guide</a>
+<a href="./resources.html">Open-source</a>
+</nav>
+<a class="nav-github" href="https://github.com/kapasainitishreddy/Prompt-Vault" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+<button class="mobile-menu" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-navigation">MENU</button>
+</header>
+<nav id="mobile-navigation" class="mobile-navigation shell" aria-label="Mobile navigation" hidden>
+<a href="./index.html">Home</a>
+<a href="./academy.html">Design academy</a>
+<a href="./websites.html">Website design</a>
+<a href="./apps.html">App design</a>
+<a href="./concepts.html" aria-current="page">Concept field guide</a>
+<a href="./resources.html">Open-source resources</a>
+</nav>
+<main id="main">
+<section class="cf-intro shell" aria-labelledby="intro-title">
+<div class="cf-intro-content">
+<h1 id="intro-title">The anatomy<br>of <em>useful</em><br>interfaces.</h1>
+<p>Beyond moodboards. A field guide for choosing a pattern, understanding the reason behind it, recognizing its failure modes, and implementing it with evidence. Two tracks: websites and applications. No automatic template stacks.</p>
+<div class="cf-hero-actions"><a href="#explore" class="cf-button cf-dark">Explore concepts <span aria-hidden="true">↗</span></a><a href="#research" class="cf-link">Inspect the research</a></div>
+</div>
+<div class="cf-intro-index" aria-label="Catalog overview"><div class="cf-index-heading"><span>THE OPEN FIELD GUIDE</span><span>OCTOBER 2026</span></div>
+<div class="cf-index-entry"><strong id="concept-total">200</strong><span>Individually explained design concepts</span></div>
+<div class="cf-index-entry"><strong>20</strong><span>Focused concept families</span></div>
+<div class="cf-index-entry"><strong id="research-total">50</strong><span>Scoped research references and papers</span></div>
+<p>Original previews and copyable design/build/audit prompts. Patterns guide decisions; they do not predict conversion, store acceptance, or scientific validity.</p>
+</div></section>
+<section class="cf-workbench" id="explore" aria-labelledby="workbench-heading">
+<div class="shell">
+<div class="cf-heading-line"><h2 id="workbench-heading">Find the <em>right pattern.</em></h2><p>Start with a user problem. Keep the familiar behavior, but give the expression a point of view.</p></div>
+<div class="cf-tracks" role="group" aria-label="Choose design track">
+<button type="button" data-track="website" aria-pressed="true"><span>WEBSITE DESIGN</span><strong>Information, persuasion, exploration</strong></button>
+<button type="button" data-track="app" aria-pressed="false"><span>APP DESIGN</span><strong>Tasks, native flows, resilient states</strong></button>
+</div>
+<div class="cf-workspace">
+<aside class="cf-browser" aria-label="Browse design concepts">
+<label for="concept-search">SEARCH BY JOB, PATTERN OR FAILURE</label>
+<input id="concept-search" type="search" placeholder="e.g. offline, charts, onboarding" autocomplete="off" spellcheck="false">
+<label for="concept-family">CONCEPT FAMILY</label>
+<select id="concept-family"><option value="all">All families</option></select>
+<label class="cf-save-filter"><input type="checkbox" id="concept-saved-only"> Only my saved concepts</label>
+<div class="cf-countline"><span id="result-count" role="status">Loading research-linked concepts…</span><button id="reset-concept-filters" type="button">Reset filters</button></div>
+<div id="concept-list" class="cf-concept-list" role="navigation" aria-label="Concept results"></div>
+</aside>
+<article class="cf-field-note" aria-labelledby="current-title">
+<div class="cf-meta-row"><span id="current-family">FIELD NOTE</span><span id="current-index">SELECT A CONCEPT</span></div>
+<h3 id="current-title">Loading concepts…</h3>
+<p id="current-purpose" class="cf-purpose"></p>
+<div class="cf-plain-actions"><button id="save-concept" type="button" aria-pressed="false">Save concept</button><button id="copy-link" type="button">Copy link</button></div>
+<div class="cf-guidance">
+<div><h4>Best applied when</h4><p id="current-when"></p></div>
+<div><h4>Avoid it when</h4><p id="current-avoid"></p></div>
+</div>
+<h4 class="cf-subheading">What to design and verify</h4>
+<div class="cf-contract"><div><span>SKILLS</span><p id="current-skills"></p></div><div><span>SUCCESS TEST</span><p id="current-success"></p></div><div><span>INCLUSION</span><p id="current-access"></p></div><div><span>RECOVERY</span><p id="current-recovery"></p></div></div>
+<h4 class="cf-subheading">Why this advice exists</h4>
+<p class="cf-source-disclosure">Sources below support a principle or implementation concern, not the commercial success of this exact concept. Each source has an explicit applicability limit.</p>
+<div id="current-sources" class="cf-sources"></div>
+<div class="cf-prompt-builder" id="make-prompt">
+<h4 class="cf-subheading">Take the reasoning into your project</h4>
+<label for="project-brief">YOUR PRODUCT CONTEXT <span>(optional)</span></label>
+<textarea id="project-brief" rows="3" placeholder="What you're building, who uses it, your actual stack, and the one task this pattern should improve. Nothing sensitive."></textarea>
+<div class="cf-prompt-switch" role="group" aria-label="Prompt type">
+<button data-prompt="design" aria-pressed="true" type="button">Design</button>
+<button data-prompt="build" aria-pressed="false" type="button">Implement</button>
+<button data-prompt="audit" aria-pressed="false" type="button">Audit</button>
+</div>
+<div class="cf-prompt-head"><span>COPY-READY GUIDANCE</span><button type="button" id="copy-concept-prompt">Copy full prompt</button></div>
+<pre id="concept-prompt" tabindex="0"></pre>
+<p class="cf-fineprint">This is an authored prompt generated locally from the concept. No model or paid API runs on this page.</p>
+</div></article>
+<aside class="cf-preview" id="preview" aria-label="Interactive concept specimen">
+<div class="cf-preview-intro"><strong>Interface specimen</strong><span>ORIGINAL CODE / ILLUSTRATIVE</span></div>
+<div class="cf-preview-controls" role="group" aria-label="Preview viewport"><button type="button" data-device="desktop" aria-pressed="true">Desktop</button><button type="button" data-device="tablet" aria-pressed="false">Tablet</button><button type="button" data-device="mobile" aria-pressed="false">Phone</button></div>
+<div class="cf-preview-controls cf-direction-controls" role="group" aria-label="Composition"><button type="button" data-direction="focus" aria-pressed="true">Focused</button><button type="button" data-direction="editorial" aria-pressed="false">Editorial</button><button type="button" data-direction="dense" aria-pressed="false">Dense</button></div>
+<div id="specimen-stage" class="cf-specimen-stage" data-device="desktop" data-direction="focus">
+<div id="specimen" class="cf-specimen" aria-live="polite"><p>Preparing original specimen…</p></div>
+</div>
+<div class="cf-preview-controls cf-state-controls" role="group" aria-label="Preview scenario"><button type="button" data-scenario="normal" aria-pressed="true">Normal</button><button type="button" data-scenario="success" aria-pressed="false">Success</button><button type="button" data-scenario="error" aria-pressed="false">Error</button></div>
+<p class="cf-preview-note">Concept-specific text in reusable, interactive HTML/CSS studies. No real checkout, AI inference, store integrations, 3D models or production backend. Native behavior requires device testing.</p>
+</aside>
+</div></div>
+</section>
+<section class="cf-research shell" id="research" aria-labelledby="research-title">
+<div class="cf-section-top"><div><h2 id="research-title">Show the <em>evidence.</em></h2><p>A linked research reading room, including journal papers, cognitive design, accessibility standards, platform guidance and field studies. Read the boundary before borrowing the finding.</p></div><div class="cf-counter" id="paper-count">50 source records</div></div>
+<div class="cf-research-filter"><label for="research-search">SEARCH RESEARCH</label><input id="research-search" type="search" placeholder="AI, cognition, accessible forms…" autocomplete="off"><label for="research-type">TYPE</label><select id="research-type"><option value="all">All research types</option></select><span id="research-count" role="status"></span></div>
+<div id="research-list" class="cf-evidence-list"></div>
+<button id="research-more" type="button" class="cf-more">Show more research</button>
+</section>
+<section class="cf-library" id="library" aria-labelledby="library-title"><div class="shell">
+<div class="cf-section-top"><div><h2 id="library-title">Borrow the <em>method,</em><br>not the code.</h2><p>Open-source and source-visible libraries across components, native apps, generative UI, charts, editors, animation, maps and QA. The 63 existing references and newly researched candidates are searchable together.</p></div><div class="cf-counter" id="library-count">Source catalog</div></div>
+<div class="cf-research-filter"><label for="resource-search">FIND TOOL</label><input type="search" id="resource-search" placeholder="e.g. CopilotKit, chart, Android…" autocomplete="off"><label for="resource-kind">CATEGORY</label><select id="resource-kind"><option value="all">All categories</option></select><span id="resource-count" role="status"></span></div>
+<div id="resource-list" class="cf-resource-list"></div>
+<button type="button" id="resource-more" class="cf-more">Show more references</button>
+<p class="cf-license-warning"><strong>Rights, not vibes:</strong> React Bits is MIT with Commons Clause restrictions, and tldraw SDK production use requires an appropriate license. Unknown license means reference-only until checked. Prompt-Vault does not copy external components or media assets into its own MIT source.</p>
+</div></section>
+<section class="cf-method shell" aria-labelledby="method-title"><div><h2 id="method-title">A map can grow.<br><em>It cannot be finished.</em></h2></div><div><p>There is no complete finite inventory of every UI concept. Patterns evolve as devices, cultures, research and products change. This catalog is extensible: each new entry requires a distinct job, a decision boundary, a failure case, linked source limitations, a prompt contract and an honest preview family.</p><a href="https://github.com/kapasainitishreddy/Prompt-Vault/blob/main/research/concept-field-guide.md" class="cf-link" target="_blank" rel="noopener noreferrer">Read the evidence and contribution method ↗</a><a href="./academy.html" class="cf-link">Use full-page and native app blueprints ↗</a></div></section>
+</main>
+<footer class="cf-footer"><div class="shell"><strong>PROMPT VAULT / THE CONCEPT FIELD GUIDE</strong><span>Original studies. Linked research. No manufactured proof.</span><a href="./index.html">Back to home ↑</a></div></footer>
+<div id="concept-toast" class="cf-toast" hidden role="status" aria-live="polite"></div>
+<noscript><p class="shell">Enable JavaScript to explore interactive concepts; static <a href="./academy.html">blueprints</a> and <a href="./resources.html">open-source references</a> remain available.</p></noscript>
+</body>
+</html>
