@@ -102,8 +102,31 @@
     <div id="ms-pattern-grid" class="ms-pattern-grid"><a href="./apps.html">Browse the original app atlas while the catalog loads →</a></div>
     <div class="ms-pattern-bottom"><span id="ms-pattern-total">32 supported patterns</span><a href="./concepts.html#previews">Explore 100 more mobile concepts ↗</a></div>
   </section>
+  <section class="ms-generator" id="build-plan" aria-labelledby="ms-composer-title">
+    <div class="ms-section-heading"><div><p class="ms-label">03 / YOUR PROJECT, YOUR PLAN</p><h2 id="ms-composer-title">From an idea<br>to a real brief.</h2></div><p>No API key or account. This structured prompt generator runs in your browser and can be pasted into your preferred coding assistant.</p></div>
+    <div class="ms-compose-layout">
+      <div class="ms-compose-inputs">
+        <label class="ms-field-label" for="ms-compose-idea">Describe the app you want to make</label>
+        <textarea id="ms-compose-idea" rows="4" maxlength="600" placeholder="For example: A calm reading app that remembers where I stopped and works offline.">A distraction-free mobile app for planning meaningful daily work.</textarea>
+        <label class="ms-field-label" for="ms-compose-journey">App category</label>
+        <select class="ms-search" id="ms-compose-journey"><option value="tasks">Task and to-do app</option></select>
+        <label class="ms-field-label" for="ms-compose-platform">Target platform</label>
+        <select class="ms-search" id="ms-compose-platform"><option value="both">Android and iOS</option><option value="android">Android first</option><option value="ios">iOS first</option></select>
+        <label class="ms-field-label" for="ms-compose-style">Visual direction</label>
+        <select class="ms-search" id="ms-compose-style"><option value="editorial">Warm editorial minimalism</option><option value="native">Native platform clarity</option><option value="technical">Technical and precise</option><option value="playful">Playful and tactile</option><option value="calm">Calm and private</option></select>
+        <button type="button" id="ms-compose-generate" class="ms-primary">Create complete build brief ↗</button>
+        <p class="ms-small">No AI is running inside this tool. It generates an editable prompt from researched flow definitions, not a working application or validated research result.</p>
+      </div>
+      <div class="ms-compose-output">
+        <div class="ms-compose-output-head"><span class="ms-label">COPY-READY / BUILD PLAN</span><button id="ms-compose-copy" type="button" class="ms-secondary">Copy text</button></div>
+        <label for="ms-compose-result" class="ms-field-label">Full editable instruction for your coding agent</label>
+        <textarea id="ms-compose-result" rows="18" spellcheck="false" aria-label="Editable generated build plan">Choose a category and click Create complete build brief. Your plan will appear here.</textarea>
+        <div class="ms-compose-output-footer"><span>Design → Implement → Test → Review → Release</span><a href="https://github.com/kapasainitishreddy/Prompt-Vault/tree/main/native-kit" target="_blank" rel="noopener noreferrer">Open native source ↗</a></div>
+      </div>
+    </div>
+  </section>
   <section class="ms-learning" aria-labelledby="ms-learning-title">
-    <p class="ms-label">03 / FROM IDEA TO RELEASE</p><h2 id="ms-learning-title">One continuous workflow.</h2>
+    <p class="ms-label">04 / FROM IDEA TO RELEASE</p><h2 id="ms-learning-title">One continuous workflow.</h2>
     <div class="ms-learning-grid">
       <article><span>01 / DISCOVER</span><h3>Choose the problem</h3><p>Find the right app journey, goals, user permissions and real required states.</p><a href="./guided.html">Browse journeys ↗</a></article>
       <article><span>02 / EXPERIENCE</span><h3>Test the screens</h3><p>Switch platforms, compare states, complete actions and study why they work.</p><a href="#workbench">Open preview ↗</a></article>

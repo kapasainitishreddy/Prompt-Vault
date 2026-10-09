@@ -366,7 +366,7 @@ async function init(){
   if(!a.ok||!b.ok)throw Error("Catalog files not available. Check static hosting paths.");
   const flows=await a.json(),journeys=await b.json();
   if(!Array.isArray(flows.flows)||flows.flows.length!==32||!Array.isArray(journeys.blueprints)||journeys.blueprints.length!==20)throw Error("Catalog count mismatch.");
-  state.flows=flows.flows;state.journeys=journeys.blueprints;state.ready=true;renderAll();
+  state.flows=flows.flows;state.journeys=journeys.blueprints;state.ready=true;renderAll();populateComposer();
   $("ms-load-status").textContent="Loaded 32 documented patterns and 20 guided journeys. Simulations are local; native source is separate.";
  }catch(err){
   $("ms-load-status").textContent="Catalog unavailable: "+String(err.message)+". The visible fallback remains. Open the original App Atlas or GitHub source.";
@@ -374,3 +374,63 @@ async function init(){
  }
 }
 init();
+
+/* Offline, user-editable agent brief. Not AI inference and never transmits user input. */
+function populateComposer(){
+ const target=$("ms-compose-journey"),selected=target.value;
+ target.innerHTML=state.journeys.map(j=>'<option value="'+esc(j.id)+'">'+esc(j.title)+'</option>').join("");
+ target.value=state.journeys.some(j=>j.id===selected)?selected:state.journey;
+}
+function composePlan(){
+ const idea=$("ms-compose-idea").value.trim(),id=$("ms-compose-journey").value;
+ const guide=state.journeys.find(j=>j.id===id);
+ if(!guide){toast("Please select an app category.");return;}
+ if(idea.length<10){toast("Describe your app in at least ten characters.");return;}
+ const platform=$("ms-compose-platform").value;
+ const direction=$("ms-compose-style").selectedOptions[0]?.textContent||"Editorial minimalism";
+ const list=guide.flows.map((id,i)=>{
+  const f=findFlow(id);return String(i+1)+". "+f.title+" ["+id+"] — "+f.job;
+ });
+ const result=[
+ "# Mobile application build brief",
+ "Product intent: "+idea,
+ "Target: "+({"both":"Android and iOS","android":"Android first","ios":"iOS first"}[platform]||"Android and iOS"),
+ "Category: "+guide.title+" / "+guide.category,
+ "Visual direction: "+direction,
+ "Core user job: "+guide.job,
+ "",
+ "## User journey, ordered and connected",
+ ...list,
+ "",
+ "## Design contract",
+ "Create three substantially different visual directions and choose the strongest for this audience. Show wireframes for the entire connected journey, not disconnected hero cards. Build reusable design tokens (type, spacing, color, radius, elevation) and consistent light/dark themes. Explain native Android/iOS differences rather than pretending CSS phone screenshots are native.",
+ "Each screen must support relevant empty, loading, error, success, offline, permission-denied and interrupted states, with recovery and undo where appropriate. Design tap targets, dynamic text, screen reader labels, keyboard behavior, locale/RTL and reduced motion.",
+ "",
+ "## Implementation contract",
+ "Use React Native/Expo with TypeScript and compatible packages. Start from the MIT Prompt-Vault native-kit primitives. Copy selectively, not wholesale. Map the screen identifiers above to navigable routes, coherent reusable components and typed state. Implement honest real data storage, validation, authentication and authorization only if required. Never claim simulated payments, AI, uploads, permissions or deletion are connected.",
+ "For any service integration, expose environment variables and server-side secrets, explicit opt-in, meaningful errors, logging without sensitive data and deterministic retry semantics.",
+ "",
+ "## Verification and deliverables",
+ "Build, render and inspect each screen on Android and iOS; run TypeScript lint/build checks and interaction tests. Capture screenshots at phone and tablet widths, keyboard, TalkBack and VoiceOver where available. Test dark mode, text scaling, RTL, offline, recovery, deletion and payment paths if implemented. Cite observed evidence; list every untested state as unverified.",
+ "Deliver: source files, installation instructions, route map, design tokens, before/after screenshots, feature/state matrix, test results and release blockers. Do not call the product production-ready without evidence.",
+ "",
+ "Reference architecture: https://github.com/kapasainitishreddy/Prompt-Vault/tree/main/native-kit",
+ "Source flow research: https://github.com/kapasainitishreddy/Prompt-Vault/tree/main/guides/app"
+ ].join("\n");
+ $("ms-compose-result").value=result;
+ toast("Editable project plan generated locally. Review it before using with an AI builder.");
+}
+async function copyPlan(){
+ const value=$("ms-compose-result").value;
+ if(!value||value.startsWith("Choose a category")){toast("Generate a brief first.");return;}
+ try{
+  if(navigator.clipboard?.writeText)await navigator.clipboard.writeText(value);
+  else{const el=$("ms-compose-result");el.focus();el.select();if(!document.execCommand("copy"))throw Error("Clipboard unavailable");}
+  toast("Copied the full mobile build plan.");
+ }catch(e){toast("Clipboard unavailable. Select and copy the text manually.");}
+}
+function initComposer(){
+ $("ms-compose-generate").addEventListener("click",composePlan);
+ $("ms-compose-copy").addEventListener("click",copyPlan);
+}
+initComposer();

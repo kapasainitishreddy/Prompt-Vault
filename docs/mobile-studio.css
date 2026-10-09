@@ -46,3 +46,18 @@ button,input{font:inherit}button{cursor:pointer}a{color:inherit}button:focus-vis
 @media(max-width:750px){.ms-site-header{flex-wrap:wrap}.ms-site-header nav{order:3;width:100%;justify-content:space-between;margin:0}.ms-hero-body{grid-template-columns:1fr;padding:25px 0 28px}.ms-hero h1{font-size:clamp(3.7rem,15vw,7rem)}.ms-section-heading{display:block}.ms-section-heading>p{margin-top:18px}.ms-layout{display:block}.ms-sidebar{border-right:0;border-bottom:1px solid var(--ink)}.ms-journeys{max-height:210px}.ms-live-header{flex-direction:column}.ms-inspector{border-top:1px solid var(--ink)}.ms-pattern-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ms-workbench,.ms-patterns,.ms-learning{padding-top:48px;padding-bottom:55px}}
 @media(max-width:500px){.ms-header-code{margin-left:auto}.ms-site-header nav a{font-size:10px}.ms-hero-note{align-items:flex-start;flex-direction:column}.ms-stage{padding:28px 10px 42px}.ms-phone{width:min(318px,90vw)}.ms-preview-bar{gap:6px;padding:10px}.ms-toggle-set button{padding:8px;font-size:9px}.ms-flow-controls{padding:14px 10px}.ms-pattern-grid{grid-template-columns:1fr}.ms-learning-grid{grid-template-columns:1fr}.ms-hero-numbers strong{font-size:32px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:0s!important;animation-duration:0s!important}}
+
+/* Full app brief composer: same editorial system, distinct warm-workbench surface. */
+.ms-generator{padding:78px 4.2% 90px;background:#dce8ce;border-bottom:1px solid var(--ink)}
+.ms-generator .ms-section-heading>.ms-label,.ms-generator .ms-section-heading .ms-label{color:#9b3d2a}
+.ms-compose-layout{display:grid;grid-template-columns:minmax(260px,.83fr) minmax(360px,1.17fr);border:1px solid var(--ink);background:#fffefa}
+.ms-compose-inputs,.ms-compose-output{display:flex;flex-direction:column;gap:12px;padding:25px 27px}
+.ms-compose-inputs{border-right:1px solid var(--ink)}
+.ms-compose-inputs textarea,.ms-compose-output textarea{width:100%;min-height:116px;resize:vertical;padding:14px;background:#fffefa;color:var(--ink);border:1px solid var(--line);font:13px/1.6 var(--sans)}
+.ms-compose-output textarea{min-height:410px;background:#f6f5ed;font:12px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace}
+.ms-compose-inputs .ms-field-label{margin-top:7px}
+.ms-compose-output-head,.ms-compose-output-footer{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.ms-compose-output-footer{font-size:11px;color:var(--muted);font-weight:700;flex-wrap:wrap}
+.ms-compose-output-footer a{color:var(--ink)}
+@media(max-width:750px){.ms-generator{padding:48px 4.2% 55px}.ms-compose-layout{grid-template-columns:1fr}.ms-compose-inputs{border-right:0;border-bottom:1px solid var(--ink)}}
+@media(max-width:500px){.ms-compose-inputs,.ms-compose-output{padding:18px}.ms-compose-output textarea{min-height:320px}}
