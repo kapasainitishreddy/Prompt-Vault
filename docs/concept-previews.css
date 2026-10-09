@@ -1,7 +1,7 @@
 /* Visual-first concept browser. Each thumbnail is independently authored HTML/CSS, not an image search or copied gallery asset. */
-.pv-gallery{padding-top:64px;padding-bottom:76px;border-top:1px solid #b0bba9;border-bottom:1px solid #b0bba9;background:#f6f4ec}
+.pv-gallery{padding-top:38px;padding-bottom:66px;border-top:1px solid #b0bba9;border-bottom:1px solid #b0bba9;background:#f6f4ec}
 .pv-gallery .pv-gallery-heading{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:end;margin:0 0 28px}
-.pv-gallery-heading h2{font:normal clamp(2.7rem,4.9vw,5.6rem)/1.02 Georgia,serif;letter-spacing:-.034em;margin:0;color:#213328}
+ .pv-gallery-heading h2{font:normal clamp(2.7rem,4.9vw,5.6rem)/1.02 Georgia,serif;letter-spacing:-.034em;margin:0;color:#213328}
 .pv-gallery-heading h2 em{font-style:italic;font-weight:400;color:#b34f3b}
 .pv-gallery-heading p{font-size:1rem;line-height:1.6;color:#48604e;max-width:460px;margin:0 0 5px}
 .pv-gallery-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid #7d9580;border-bottom:1px solid #7d9580;padding:13px 0 17px;margin-bottom:24px}
