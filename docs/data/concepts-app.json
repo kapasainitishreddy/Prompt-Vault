@@ -1,0 +1,2319 @@
+{
+  "version": "2026-10-08",
+  "track": "app",
+  "scope": "Original task and state design guidance for both Play Store and App Store; no native release, billing, AI service or accessibility certification is simulated by browser previews.",
+  "families": [
+    "Activation & onboarding",
+    "Native navigation & adaptive layouts",
+    "Creation, input & editing",
+    "Search, data & decisions",
+    "Community & collaboration",
+    "Reliability, recovery & privacy",
+    "AI, assistants & agentic UX",
+    "Payments, subscriptions & entitlements",
+    "Media, motion & spatial interfaces",
+    "Learning, wellbeing & global inclusion"
+  ],
+  "concepts": [
+    {
+      "id": "app-value-before-signup",
+      "track": "app",
+      "family": "Activation & onboarding",
+      "title": "Value-before-signup",
+      "purpose": "Offer a safe first useful action before demanding an account.",
+      "useWhen": "Apps with non-sensitive trial functionality.",
+      "avoidWhen": "Data must be persisted under an authenticated identity.",
+      "preview": "onboarding",
+      "sources": [
+        "apple-onboarding-2026",
+        "sweller-1988",
+        "nng-heuristics2"
+      ],
+      "skills": [
+        "first-session UX",
+        "progressive disclosure",
+        "task analysis"
+      ],
+      "successSignal": "Can a new user achieve one genuine outcome with unnecessary setup removed?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-contextual-onboarding-tip",
+      "track": "app",
+      "family": "Activation & onboarding",
+      "title": "Contextual onboarding tip",
+      "purpose": "Teach a gesture or feature just before it becomes relevant.",
+      "useWhen": "Apps with a genuinely unfamiliar workflow.",
+      "avoidWhen": "Persistent coaching overlays obscure the job.",
+      "preview": "onboarding",
+      "sources": [
+        "apple-onboarding-2026",
+        "sweller-1988",
+        "nng-heuristics2"
+      ],
+      "skills": [
+        "first-session UX",
+        "progressive disclosure",
+        "task analysis"
+      ],
+      "successSignal": "Can a new user achieve one genuine outcome with unnecessary setup removed?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-goal-based-path-selection",
+      "track": "app",
+      "family": "Activation & onboarding",
+      "title": "Goal-based path selection",
+      "purpose": "Let people explicitly choose a learning or work goal and revise it.",
+      "useWhen": "Education or coaching with different starting needs.",
+      "avoidWhen": "Demographic guesses are used as hidden defaults.",
+      "preview": "form",
+      "sources": [
+        "apple-onboarding-2026",
+        "sweller-1988",
+        "nng-heuristics2"
+      ],
+      "skills": [
+        "first-session UX",
+        "progressive disclosure",
+        "task analysis"
+      ],
+      "successSignal": "Can a new user achieve one genuine outcome with unnecessary setup removed?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-import-first-activation",
+      "track": "app",
+      "family": "Activation & onboarding",
+      "title": "Import-first activation",
+      "purpose": "Let returning users bring existing content before building empty structure.",
+      "useWhen": "Notes, bookmarks and habit migration tools.",
+      "avoidWhen": "Import permissions and format limits are hidden.",
+      "preview": "onboarding",
+      "sources": [
+        "apple-onboarding-2026",
+        "sweller-1988",
+        "nng-heuristics2"
+      ],
+      "skills": [
+        "first-session UX",
+        "progressive disclosure",
+        "task analysis"
+      ],
+      "successSignal": "Can a new user achieve one genuine outcome with unnecessary setup removed?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-progressive-permission-request",
+      "track": "app",
+      "family": "Activation & onboarding",
+      "title": "Progressive permission request",
+      "purpose": "Explain the immediate value before asking for notifications or media access.",
+      "useWhen": "Native features needing optional OS permission.",
+      "avoidWhen": "Denied permission blocks unrelated features.",
+      "preview": "form",
+      "sources": [
+        "apple-onboarding-2026",
+        "sweller-1988",
+        "nng-heuristics2"
+      ],
+      "skills": [
+        "first-session UX",
+        "progressive disclosure",
+        "task analysis"
+      ],
+      "successSignal": "Can a new user achieve one genuine outcome with unnecessary setup removed?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-first-task-in-one-screen",
+      "track": "app",
+      "family": "Activation & onboarding",
+      "title": "First task in one screen",
+      "purpose": "Compress the primary job into the shortest reliable first step.",
+      "useWhen": "Simple task, reading or note apps.",
+      "avoidWhen": "Important setup or safety requirements are silently skipped.",
+      "preview": "workflow",
+      "sources": [
+        "apple-onboarding-2026",
+        "sweller-1988",
+        "nng-heuristics2"
+      ],
+      "skills": [
+        "first-session UX",
+        "progressive disclosure",
+        "task analysis"
+      ],
+      "successSignal": "Can a new user achieve one genuine outcome with unnecessary setup removed?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-guided-safe-experiment",
+      "track": "app",
+      "family": "Activation & onboarding",
+      "title": "Guided safe experiment",
+      "purpose": "Allow an action to be tried with reversible sample content.",
+      "useWhen": "Creative tools and AI systems with uncertain behavior.",
+      "avoidWhen": "The sample appears to be the person's real data.",
+      "preview": "onboarding",
+      "sources": [
+        "apple-onboarding-2026",
+        "sweller-1988",
+        "nng-heuristics2"
+      ],
+      "skills": [
+        "first-session UX",
+        "progressive disclosure",
+        "task analysis"
+      ],
+      "successSignal": "Can a new user achieve one genuine outcome with unnecessary setup removed?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-guest-session-with-later-account",
+      "track": "app",
+      "family": "Activation & onboarding",
+      "title": "Guest session with later account",
+      "purpose": "Preserve meaningful progress without forced registration.",
+      "useWhen": "Tools where login is mainly for sync.",
+      "avoidWhen": "Unlinked guest data disappears during conversion.",
+      "preview": "workflow",
+      "sources": [
+        "apple-onboarding-2026",
+        "sweller-1988",
+        "nng-heuristics2"
+      ],
+      "skills": [
+        "first-session UX",
+        "progressive disclosure",
+        "task analysis"
+      ],
+      "successSignal": "Can a new user achieve one genuine outcome with unnecessary setup removed?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-progressive-feature-discovery",
+      "track": "app",
+      "family": "Activation & onboarding",
+      "title": "Progressive feature discovery",
+      "purpose": "Surface advanced controls after baseline competence is reached.",
+      "useWhen": "Powerful tools with novice and expert audiences.",
+      "avoidWhen": "Features are hidden forever without findability.",
+      "preview": "navigation",
+      "sources": [
+        "apple-onboarding-2026",
+        "sweller-1988",
+        "nng-heuristics2"
+      ],
+      "skills": [
+        "first-session UX",
+        "progressive disclosure",
+        "task analysis"
+      ],
+      "successSignal": "Can a new user achieve one genuine outcome with unnecessary setup removed?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-empty-home-with-next-action",
+      "track": "app",
+      "family": "Activation & onboarding",
+      "title": "Empty home with next action",
+      "purpose": "Use a clear example and one obvious first action.",
+      "useWhen": "Apps lacking initial user content.",
+      "avoidWhen": "Fabricated activity makes the app look already populated.",
+      "preview": "onboarding",
+      "sources": [
+        "apple-onboarding-2026",
+        "sweller-1988",
+        "nng-heuristics2"
+      ],
+      "skills": [
+        "first-session UX",
+        "progressive disclosure",
+        "task analysis"
+      ],
+      "successSignal": "Can a new user achieve one genuine outcome with unnecessary setup removed?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-persistent-tab-destinations",
+      "track": "app",
+      "family": "Native navigation & adaptive layouts",
+      "title": "Persistent tab destinations",
+      "purpose": "Use tabs to switch between stable top-level places.",
+      "useWhen": "Mobile apps with a few peer destinations.",
+      "avoidWhen": "Primary actions masquerade as tabs.",
+      "preview": "navigation",
+      "sources": [
+        "apple-tab-2026",
+        "android-adaptive-2026",
+        "android-core-2026"
+      ],
+      "skills": [
+        "native navigation",
+        "window classes",
+        "back-stack QA"
+      ],
+      "successSignal": "Can users move among destinations and return with expected platform semantics?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-navigation-rail-on-large-screens",
+      "track": "app",
+      "family": "Native navigation & adaptive layouts",
+      "title": "Navigation rail on large screens",
+      "purpose": "Move top-level destinations into a rail on larger window widths.",
+      "useWhen": "Phone/tablet apps with adaptable side navigation.",
+      "avoidWhen": "Rail stays cramped in compact windows.",
+      "preview": "navigation",
+      "sources": [
+        "apple-tab-2026",
+        "android-adaptive-2026",
+        "android-core-2026"
+      ],
+      "skills": [
+        "native navigation",
+        "window classes",
+        "back-stack QA"
+      ],
+      "successSignal": "Can users move among destinations and return with expected platform semantics?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-list-detail-adaptive-split",
+      "track": "app",
+      "family": "Native navigation & adaptive layouts",
+      "title": "List-detail adaptive split",
+      "purpose": "Keep selection and details visible together when room allows.",
+      "useWhen": "Mail, files, knowledge and admin apps.",
+      "avoidWhen": "Two panes remain forced into narrow portrait mode.",
+      "preview": "dashboard",
+      "sources": [
+        "apple-tab-2026",
+        "android-adaptive-2026",
+        "android-core-2026"
+      ],
+      "skills": [
+        "native navigation",
+        "window classes",
+        "back-stack QA"
+      ],
+      "successSignal": "Can users move among destinations and return with expected platform semantics?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-native-system-back-semantics",
+      "track": "app",
+      "family": "Native navigation & adaptive layouts",
+      "title": "Native system back semantics",
+      "purpose": "Return to the logical previous place while protecting unsaved changes.",
+      "useWhen": "Any app with nested flows or sheets.",
+      "avoidWhen": "Back unpredictably exits or discards input.",
+      "preview": "navigation",
+      "sources": [
+        "apple-tab-2026",
+        "android-adaptive-2026",
+        "android-core-2026"
+      ],
+      "skills": [
+        "native navigation",
+        "window classes",
+        "back-stack QA"
+      ],
+      "successSignal": "Can users move among destinations and return with expected platform semantics?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-contextual-sheet-for-editing",
+      "track": "app",
+      "family": "Native navigation & adaptive layouts",
+      "title": "Contextual sheet for editing",
+      "purpose": "Use a scoped sheet without losing the underlying task.",
+      "useWhen": "Quick edit, attach and supplementary choices.",
+      "avoidWhen": "Long-term navigation is crammed into a modal.",
+      "preview": "form",
+      "sources": [
+        "apple-tab-2026",
+        "android-adaptive-2026",
+        "android-core-2026"
+      ],
+      "skills": [
+        "native navigation",
+        "window classes",
+        "back-stack QA"
+      ],
+      "successSignal": "Can users move among destinations and return with expected platform semantics?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-search-as-a-destination",
+      "track": "app",
+      "family": "Native navigation & adaptive layouts",
+      "title": "Search as a destination",
+      "purpose": "Expose full-query search with history and results where essential.",
+      "useWhen": "Libraries, commerce and large content apps.",
+      "avoidWhen": "Search is buried in unrelated settings.",
+      "preview": "search",
+      "sources": [
+        "apple-tab-2026",
+        "android-adaptive-2026",
+        "android-core-2026"
+      ],
+      "skills": [
+        "native navigation",
+        "window classes",
+        "back-stack QA"
+      ],
+      "successSignal": "Can users move among destinations and return with expected platform semantics?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-adaptive-landscape-controls",
+      "track": "app",
+      "family": "Native navigation & adaptive layouts",
+      "title": "Adaptive landscape controls",
+      "purpose": "Reflow task controls into meaningful panes on rotation.",
+      "useWhen": "Media, maps, dashboards and tablet-first apps.",
+      "avoidWhen": "Landscape simply scales up a phone screenshot.",
+      "preview": "dashboard",
+      "sources": [
+        "apple-tab-2026",
+        "android-adaptive-2026",
+        "android-core-2026"
+      ],
+      "skills": [
+        "native navigation",
+        "window classes",
+        "back-stack QA"
+      ],
+      "successSignal": "Can users move among destinations and return with expected platform semantics?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-foldable-posture-aware-flow",
+      "track": "app",
+      "family": "Native navigation & adaptive layouts",
+      "title": "Foldable posture-aware flow",
+      "purpose": "Rearrange focus, touch regions and panes by usable geometry.",
+      "useWhen": "Apps explicitly supporting foldable devices.",
+      "avoidWhen": "Hinge or cutout obscures key content.",
+      "preview": "dashboard",
+      "sources": [
+        "apple-tab-2026",
+        "android-adaptive-2026",
+        "android-core-2026"
+      ],
+      "skills": [
+        "native navigation",
+        "window classes",
+        "back-stack QA"
+      ],
+      "successSignal": "Can users move among destinations and return with expected platform semantics?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-deep-link-restoration",
+      "track": "app",
+      "family": "Native navigation & adaptive layouts",
+      "title": "Deep-link restoration",
+      "purpose": "Open the intended destination after sign-in or app restart.",
+      "useWhen": "Notifications, shared content and invitation links.",
+      "avoidWhen": "The system loses context after auth.",
+      "preview": "workflow",
+      "sources": [
+        "apple-tab-2026",
+        "android-adaptive-2026",
+        "android-core-2026"
+      ],
+      "skills": [
+        "native navigation",
+        "window classes",
+        "back-stack QA"
+      ],
+      "successSignal": "Can users move among destinations and return with expected platform semantics?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-keyboard-and-pointer-parity",
+      "track": "app",
+      "family": "Native navigation & adaptive layouts",
+      "title": "Keyboard and pointer parity",
+      "purpose": "Support focus, shortcuts and context menus on desktop/tablet.",
+      "useWhen": "Adaptive productivity and creative applications.",
+      "avoidWhen": "Gesture-only affordances leave pointer users stranded.",
+      "preview": "navigation",
+      "sources": [
+        "apple-tab-2026",
+        "android-adaptive-2026",
+        "android-core-2026"
+      ],
+      "skills": [
+        "native navigation",
+        "window classes",
+        "back-stack QA"
+      ],
+      "successSignal": "Can users move among destinations and return with expected platform semantics?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-instant-note-capture",
+      "track": "app",
+      "family": "Creation, input & editing",
+      "title": "Instant note capture",
+      "purpose": "Provide a fast accessible entry point to record a thought.",
+      "useWhen": "Notes, journals, field research and drafts.",
+      "avoidWhen": "Saving relies on an invisible background promise.",
+      "preview": "editor",
+      "sources": [
+        "gov-errors",
+        "w3c-forms",
+        "nng-recognition"
+      ],
+      "skills": [
+        "form semantics",
+        "editing UX",
+        "undo history"
+      ],
+      "successSignal": "Can a user create, change, validate and recover content without accidental loss?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-autosave-with-visible-status",
+      "track": "app",
+      "family": "Creation, input & editing",
+      "title": "Autosave with visible status",
+      "purpose": "Show saved, syncing, offline or failed state accurately.",
+      "useWhen": "Editors with asynchronous persistence.",
+      "avoidWhen": "A success indicator appears before write confirmation.",
+      "preview": "status",
+      "sources": [
+        "gov-errors",
+        "w3c-forms",
+        "nng-recognition"
+      ],
+      "skills": [
+        "form semantics",
+        "editing UX",
+        "undo history"
+      ],
+      "successSignal": "Can a user create, change, validate and recover content without accidental loss?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-structured-document-blocks",
+      "track": "app",
+      "family": "Creation, input & editing",
+      "title": "Structured document blocks",
+      "purpose": "Support reusable content types without burying the writing task.",
+      "useWhen": "Advanced documents, proposals and research notes.",
+      "avoidWhen": "Every paragraph requires choosing a block.",
+      "preview": "editor",
+      "sources": [
+        "gov-errors",
+        "w3c-forms",
+        "nng-recognition"
+      ],
+      "skills": [
+        "form semantics",
+        "editing UX",
+        "undo history"
+      ],
+      "successSignal": "Can a user create, change, validate and recover content without accidental loss?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-undo-and-redo-history",
+      "track": "app",
+      "family": "Creation, input & editing",
+      "title": "Undo and redo history",
+      "purpose": "Keep reversible local actions with usable labels and shortcuts.",
+      "useWhen": "Editing, drawing, scheduling and batch changes.",
+      "avoidWhen": "Undo silently modifies unrelated remote state.",
+      "preview": "editor",
+      "sources": [
+        "gov-errors",
+        "w3c-forms",
+        "nng-recognition"
+      ],
+      "skills": [
+        "form semantics",
+        "editing UX",
+        "undo history"
+      ],
+      "successSignal": "Can a user create, change, validate and recover content without accidental loss?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-multi-step-native-form",
+      "track": "app",
+      "family": "Creation, input & editing",
+      "title": "Multi-step native form",
+      "purpose": "Split large input tasks while preserving drafts and progress.",
+      "useWhen": "Applications with dozens of fields.",
+      "avoidWhen": "Short forms require repetitive Next tapping.",
+      "preview": "form",
+      "sources": [
+        "gov-errors",
+        "w3c-forms",
+        "nng-recognition"
+      ],
+      "skills": [
+        "form semantics",
+        "editing UX",
+        "undo history"
+      ],
+      "successSignal": "Can a user create, change, validate and recover content without accidental loss?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-contextual-picker-choices",
+      "track": "app",
+      "family": "Creation, input & editing",
+      "title": "Contextual picker choices",
+      "purpose": "Use camera/files/photos or item selection when user requests it.",
+      "useWhen": "Media workflows and content imports.",
+      "avoidWhen": "Permissions appear without context.",
+      "preview": "form",
+      "sources": [
+        "gov-errors",
+        "w3c-forms",
+        "nng-recognition"
+      ],
+      "skills": [
+        "form semantics",
+        "editing UX",
+        "undo history"
+      ],
+      "successSignal": "Can a user create, change, validate and recover content without accidental loss?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-rich-text-with-plain-text-fallback",
+      "track": "app",
+      "family": "Creation, input & editing",
+      "title": "Rich text with plain-text fallback",
+      "purpose": "Support formatting without trapping accessible content in canvas only.",
+      "useWhen": "Writing products and knowledge tools.",
+      "avoidWhen": "Screen-reader access and clipboard behavior break.",
+      "preview": "editor",
+      "sources": [
+        "gov-errors",
+        "w3c-forms",
+        "nng-recognition"
+      ],
+      "skills": [
+        "form semantics",
+        "editing UX",
+        "undo history"
+      ],
+      "successSignal": "Can a user create, change, validate and recover content without accidental loss?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-bulk-selection-and-review",
+      "track": "app",
+      "family": "Creation, input & editing",
+      "title": "Bulk selection and review",
+      "purpose": "Make selections and destructive scope unmistakable.",
+      "useWhen": "File, task and message management.",
+      "avoidWhen": "Delete-all appears adjacent to harmless actions.",
+      "preview": "dashboard",
+      "sources": [
+        "gov-errors",
+        "w3c-forms",
+        "nng-recognition"
+      ],
+      "skills": [
+        "form semantics",
+        "editing UX",
+        "undo history"
+      ],
+      "successSignal": "Can a user create, change, validate and recover content without accidental loss?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-conflict-safe-collaborative-editing",
+      "track": "app",
+      "family": "Creation, input & editing",
+      "title": "Conflict-safe collaborative editing",
+      "purpose": "Surface revisions and choices when concurrent edits diverge.",
+      "useWhen": "Shared documents and team tools.",
+      "avoidWhen": "One person's work is silently overwritten.",
+      "preview": "editor",
+      "sources": [
+        "gov-errors",
+        "w3c-forms",
+        "nng-recognition"
+      ],
+      "skills": [
+        "form semantics",
+        "editing UX",
+        "undo history"
+      ],
+      "successSignal": "Can a user create, change, validate and recover content without accidental loss?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-input-error-recovery",
+      "track": "app",
+      "family": "Creation, input & editing",
+      "title": "Input error recovery",
+      "purpose": "Keep entered values, focus the correction and explain why.",
+      "useWhen": "Long editing forms with server validation.",
+      "avoidWhen": "The app clears the entire draft after a network error.",
+      "preview": "form",
+      "sources": [
+        "gov-errors",
+        "w3c-forms",
+        "nng-recognition"
+      ],
+      "skills": [
+        "form semantics",
+        "editing UX",
+        "undo history"
+      ],
+      "successSignal": "Can a user create, change, validate and recover content without accidental loss?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-search-with-remembered-query",
+      "track": "app",
+      "family": "Search, data & decisions",
+      "title": "Search with remembered query",
+      "purpose": "Keep recent query context and editable search scopes.",
+      "useWhen": "Large personal or enterprise datasets.",
+      "avoidWhen": "Search silently expands into private data.",
+      "preview": "search",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "uswds-principles"
+      ],
+      "skills": [
+        "information architecture",
+        "data grids",
+        "accessible data visualization"
+      ],
+      "successSignal": "Can users find the record or decision-driving fact and understand its provenance?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-filter-chips-with-reset",
+      "track": "app",
+      "family": "Search, data & decisions",
+      "title": "Filter chips with reset",
+      "purpose": "Show active filters, result counts and one-click clearing.",
+      "useWhen": "Large result sets with meaningful metadata.",
+      "avoidWhen": "Filter chips cannot be activated using keyboard.",
+      "preview": "search",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "uswds-principles"
+      ],
+      "skills": [
+        "information architecture",
+        "data grids",
+        "accessible data visualization"
+      ],
+      "successSignal": "Can users find the record or decision-driving fact and understand its provenance?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-sortable-accessible-table",
+      "track": "app",
+      "family": "Search, data & decisions",
+      "title": "Sortable accessible table",
+      "purpose": "Present comparable values with labeled headers and direction.",
+      "useWhen": "Business operations and finance ledgers.",
+      "avoidWhen": "A graphic-only grid cannot be read or navigated.",
+      "preview": "dashboard",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "uswds-principles"
+      ],
+      "skills": [
+        "information architecture",
+        "data grids",
+        "accessible data visualization"
+      ],
+      "successSignal": "Can users find the record or decision-driving fact and understand its provenance?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-summary-plus-drill-down",
+      "track": "app",
+      "family": "Search, data & decisions",
+      "title": "Summary plus drill-down",
+      "purpose": "Let people inspect definitions and source records behind a metric.",
+      "useWhen": "Finance, monitoring and analytics apps.",
+      "avoidWhen": "Numbers are presented without units or timestamps.",
+      "preview": "dashboard",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "uswds-principles"
+      ],
+      "skills": [
+        "information architecture",
+        "data grids",
+        "accessible data visualization"
+      ],
+      "successSignal": "Can users find the record or decision-driving fact and understand its provenance?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-saved-views-without-lock-in",
+      "track": "app",
+      "family": "Search, data & decisions",
+      "title": "Saved views without lock-in",
+      "purpose": "Allow named repeatable filters and clear modification.",
+      "useWhen": "Professional tools with recurring information needs.",
+      "avoidWhen": "Hidden filter state produces unexpected decisions.",
+      "preview": "dashboard",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "uswds-principles"
+      ],
+      "skills": [
+        "information architecture",
+        "data grids",
+        "accessible data visualization"
+      ],
+      "successSignal": "Can users find the record or decision-driving fact and understand its provenance?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-contextual-empty-state-suggestions",
+      "track": "app",
+      "family": "Search, data & decisions",
+      "title": "Contextual empty-state suggestions",
+      "purpose": "Explain no results and offer safe recovery.",
+      "useWhen": "Search, calendar, feed and data filters.",
+      "avoidWhen": "Unrelated recommendations pretend matches exist.",
+      "preview": "status",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "uswds-principles"
+      ],
+      "skills": [
+        "information architecture",
+        "data grids",
+        "accessible data visualization"
+      ],
+      "successSignal": "Can users find the record or decision-driving fact and understand its provenance?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-accessible-comparison-workspace",
+      "track": "app",
+      "family": "Search, data & decisions",
+      "title": "Accessible comparison workspace",
+      "purpose": "Align attributes across objects and show missing values explicitly.",
+      "useWhen": "Product selection, pricing and analytics.",
+      "avoidWhen": "Missing values are treated as zeros.",
+      "preview": "dashboard",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "uswds-principles"
+      ],
+      "skills": [
+        "information architecture",
+        "data grids",
+        "accessible data visualization"
+      ],
+      "successSignal": "Can users find the record or decision-driving fact and understand its provenance?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-chart-with-source-table",
+      "track": "app",
+      "family": "Search, data & decisions",
+      "title": "Chart with source table",
+      "purpose": "Pair a readable data summary with optional visualization.",
+      "useWhen": "Performance, finance and scientific tracking.",
+      "avoidWhen": "Color alone communicates differences.",
+      "preview": "chart",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "uswds-principles"
+      ],
+      "skills": [
+        "information architecture",
+        "data grids",
+        "accessible data visualization"
+      ],
+      "successSignal": "Can users find the record or decision-driving fact and understand its provenance?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-explainable-sort-and-ranking",
+      "track": "app",
+      "family": "Search, data & decisions",
+      "title": "Explainable sort and ranking",
+      "purpose": "Disclose ordering logic and sponsorship when relevant.",
+      "useWhen": "Job feeds, marketplaces, recommendations.",
+      "avoidWhen": "Paid placement is invisible.",
+      "preview": "dashboard",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "uswds-principles"
+      ],
+      "skills": [
+        "information architecture",
+        "data grids",
+        "accessible data visualization"
+      ],
+      "successSignal": "Can users find the record or decision-driving fact and understand its provenance?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-recent-and-pinned-items",
+      "track": "app",
+      "family": "Search, data & decisions",
+      "title": "Recent and pinned items",
+      "purpose": "Support quick return to frequent work without altering source content.",
+      "useWhen": "Heavy productivity and knowledge apps.",
+      "avoidWhen": "Pinning breaks privacy or sync without warning.",
+      "preview": "dashboard",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "uswds-principles"
+      ],
+      "skills": [
+        "information architecture",
+        "data grids",
+        "accessible data visualization"
+      ],
+      "successSignal": "Can users find the record or decision-driving fact and understand its provenance?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-threaded-conversation",
+      "track": "app",
+      "family": "Community & collaboration",
+      "title": "Threaded conversation",
+      "purpose": "Keep parent context visible and reply destinations clear.",
+      "useWhen": "Forums, comments and work discussions.",
+      "avoidWhen": "Threads become impossible to navigate with a screen reader.",
+      "preview": "social",
+      "sources": [
+        "amershi-2019",
+        "nng-heuristics2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "social trust UX",
+        "collaboration states",
+        "notifications"
+      ],
+      "successSignal": "Can members participate, understand audience and control unwanted interaction?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-audience-visibility-control",
+      "track": "app",
+      "family": "Community & collaboration",
+      "title": "Audience visibility control",
+      "purpose": "Show exactly who can see each post or shared item.",
+      "useWhen": "Community and sharing products.",
+      "avoidWhen": "Default sharing is more public than the user expects.",
+      "preview": "trust",
+      "sources": [
+        "amershi-2019",
+        "nng-heuristics2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "social trust UX",
+        "collaboration states",
+        "notifications"
+      ],
+      "successSignal": "Can members participate, understand audience and control unwanted interaction?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-invitation-with-permissions",
+      "track": "app",
+      "family": "Community & collaboration",
+      "title": "Invitation with permissions",
+      "purpose": "Explain invitation access level and expiry before sending.",
+      "useWhen": "Collaborative documents and workspaces.",
+      "avoidWhen": "A guest gains editing access accidentally.",
+      "preview": "form",
+      "sources": [
+        "amershi-2019",
+        "nng-heuristics2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "social trust UX",
+        "collaboration states",
+        "notifications"
+      ],
+      "successSignal": "Can members participate, understand audience and control unwanted interaction?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-collaborative-presence",
+      "track": "app",
+      "family": "Community & collaboration",
+      "title": "Collaborative presence",
+      "purpose": "Indicate presence and active editing without overclaiming availability.",
+      "useWhen": "Multi-user editing with shared real-time state.",
+      "avoidWhen": "Animated avatars imply real live users in demos.",
+      "preview": "social",
+      "sources": [
+        "amershi-2019",
+        "nng-heuristics2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "social trust UX",
+        "collaboration states",
+        "notifications"
+      ],
+      "successSignal": "Can members participate, understand audience and control unwanted interaction?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-moderation-and-report-path",
+      "track": "app",
+      "family": "Community & collaboration",
+      "title": "Moderation and report path",
+      "purpose": "Make report, block and mute discoverable, with confirmation.",
+      "useWhen": "Social or community features with user-generated content.",
+      "avoidWhen": "Safety controls are buried beneath menus.",
+      "preview": "social",
+      "sources": [
+        "amershi-2019",
+        "nng-heuristics2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "social trust UX",
+        "collaboration states",
+        "notifications"
+      ],
+      "successSignal": "Can members participate, understand audience and control unwanted interaction?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-notification-priority-center",
+      "track": "app",
+      "family": "Community & collaboration",
+      "title": "Notification priority center",
+      "purpose": "Group actionable events and prevent attention overload.",
+      "useWhen": "Shared projects and busy communities.",
+      "avoidWhen": "Every change becomes a high-priority push.",
+      "preview": "social",
+      "sources": [
+        "amershi-2019",
+        "nng-heuristics2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "social trust UX",
+        "collaboration states",
+        "notifications"
+      ],
+      "successSignal": "Can members participate, understand audience and control unwanted interaction?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-shared-decision-approval",
+      "track": "app",
+      "family": "Community & collaboration",
+      "title": "Shared decision approval",
+      "purpose": "Expose who proposed, reviewed and approved a consequential change.",
+      "useWhen": "Team administration and regulated workflows.",
+      "avoidWhen": "Approvals can be impersonated via unchecked UI.",
+      "preview": "workflow",
+      "sources": [
+        "amershi-2019",
+        "nng-heuristics2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "social trust UX",
+        "collaboration states",
+        "notifications"
+      ],
+      "successSignal": "Can members participate, understand audience and control unwanted interaction?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-conflict-resolution-conversation",
+      "track": "app",
+      "family": "Community & collaboration",
+      "title": "Conflict-resolution conversation",
+      "purpose": "Show disagreement and options alongside the affected artifact.",
+      "useWhen": "Co-editing and review processes.",
+      "avoidWhen": "Comments disconnect from current versions.",
+      "preview": "editor",
+      "sources": [
+        "amershi-2019",
+        "nng-heuristics2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "social trust UX",
+        "collaboration states",
+        "notifications"
+      ],
+      "successSignal": "Can members participate, understand audience and control unwanted interaction?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-realistic-activity-feed",
+      "track": "app",
+      "family": "Community & collaboration",
+      "title": "Realistic activity feed",
+      "purpose": "Display sourced actions with timestamps, roles and privacy.",
+      "useWhen": "Authenticated business and social activity.",
+      "avoidWhen": "Synthetic sample activity is presented as real people.",
+      "preview": "social",
+      "sources": [
+        "amershi-2019",
+        "nng-heuristics2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "social trust UX",
+        "collaboration states",
+        "notifications"
+      ],
+      "successSignal": "Can members participate, understand audience and control unwanted interaction?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-accessible-reactions-and-mentions",
+      "track": "app",
+      "family": "Community & collaboration",
+      "title": "Accessible reactions and mentions",
+      "purpose": "Support explicit labels, moderation and keyboard activation.",
+      "useWhen": "Collaborative discussions with lightweight feedback.",
+      "avoidWhen": "Emoji-only reactions hide their meaning.",
+      "preview": "social",
+      "sources": [
+        "amershi-2019",
+        "nng-heuristics2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "social trust UX",
+        "collaboration states",
+        "notifications"
+      ],
+      "successSignal": "Can members participate, understand audience and control unwanted interaction?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-offline-first-draft-queue",
+      "track": "app",
+      "family": "Reliability, recovery & privacy",
+      "title": "Offline-first draft queue",
+      "purpose": "Write locally and show what is waiting to sync.",
+      "useWhen": "Notes, tasks and field capture under poor connectivity.",
+      "avoidWhen": "Unsent work appears uploaded.",
+      "preview": "status",
+      "sources": [
+        "android-core-2026",
+        "w3c-coga",
+        "uswds-form"
+      ],
+      "skills": [
+        "state machines",
+        "privacy engineering",
+        "resilience testing"
+      ],
+      "successSignal": "Can work continue or recover across errors, denial, offline and resumed sessions?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-retry-with-idempotent-action",
+      "track": "app",
+      "family": "Reliability, recovery & privacy",
+      "title": "Retry with idempotent action",
+      "purpose": "Prevent duplicate requests and explain whether an attempt succeeded.",
+      "useWhen": "Purchases, transfers and form submissions.",
+      "avoidWhen": "Repeated taps create multiple charges or records.",
+      "preview": "status",
+      "sources": [
+        "android-core-2026",
+        "w3c-coga",
+        "uswds-form"
+      ],
+      "skills": [
+        "state machines",
+        "privacy engineering",
+        "resilience testing"
+      ],
+      "successSignal": "Can work continue or recover across errors, denial, offline and resumed sessions?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-permission-denied-alternative",
+      "track": "app",
+      "family": "Reliability, recovery & privacy",
+      "title": "Permission-denied alternative",
+      "purpose": "Keep an appropriate manual path when permission is refused.",
+      "useWhen": "Camera, location and notification features.",
+      "avoidWhen": "Access denial blocks unrelated functions.",
+      "preview": "form",
+      "sources": [
+        "android-core-2026",
+        "w3c-coga",
+        "uswds-form"
+      ],
+      "skills": [
+        "state machines",
+        "privacy engineering",
+        "resilience testing"
+      ],
+      "successSignal": "Can work continue or recover across errors, denial, offline and resumed sessions?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-clear-sync-conflict-choice",
+      "track": "app",
+      "family": "Reliability, recovery & privacy",
+      "title": "Clear sync conflict choice",
+      "purpose": "Offer understandable compare/keep/merge paths for collisions.",
+      "useWhen": "Shared or multi-device editors.",
+      "avoidWhen": "The latest timestamp overwrites important work silently.",
+      "preview": "dashboard",
+      "sources": [
+        "android-core-2026",
+        "w3c-coga",
+        "uswds-form"
+      ],
+      "skills": [
+        "state machines",
+        "privacy engineering",
+        "resilience testing"
+      ],
+      "successSignal": "Can work continue or recover across errors, denial, offline and resumed sessions?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-connection-status-and-freshness",
+      "track": "app",
+      "family": "Reliability, recovery & privacy",
+      "title": "Connection status and freshness",
+      "purpose": "Show offline, stale, reconnecting and actual last update.",
+      "useWhen": "Monitoring, finance and account-linked apps.",
+      "avoidWhen": "A green badge implies live data with no check.",
+      "preview": "status",
+      "sources": [
+        "android-core-2026",
+        "w3c-coga",
+        "uswds-form"
+      ],
+      "skills": [
+        "state machines",
+        "privacy engineering",
+        "resilience testing"
+      ],
+      "successSignal": "Can work continue or recover across errors, denial, offline and resumed sessions?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-session-expiry-recovery",
+      "track": "app",
+      "family": "Reliability, recovery & privacy",
+      "title": "Session expiry recovery",
+      "purpose": "Preserve safe edits and guide people through reauthentication.",
+      "useWhen": "Long-lived professional sessions.",
+      "avoidWhen": "Re-login loses the entire task.",
+      "preview": "form",
+      "sources": [
+        "android-core-2026",
+        "w3c-coga",
+        "uswds-form"
+      ],
+      "skills": [
+        "state machines",
+        "privacy engineering",
+        "resilience testing"
+      ],
+      "successSignal": "Can work continue or recover across errors, denial, offline and resumed sessions?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-data-export-and-deletion",
+      "track": "app",
+      "family": "Reliability, recovery & privacy",
+      "title": "Data export and deletion",
+      "purpose": "Provide controls consistent with actual storage and policies.",
+      "useWhen": "Any app holding user-generated sensitive information.",
+      "avoidWhen": "A fake export button or confusing deletion semantics.",
+      "preview": "trust",
+      "sources": [
+        "android-core-2026",
+        "w3c-coga",
+        "uswds-form"
+      ],
+      "skills": [
+        "state machines",
+        "privacy engineering",
+        "resilience testing"
+      ],
+      "successSignal": "Can work continue or recover across errors, denial, offline and resumed sessions?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-sensible-confirmation-thresholds",
+      "track": "app",
+      "family": "Reliability, recovery & privacy",
+      "title": "Sensible confirmation thresholds",
+      "purpose": "Reserve interruptions for irreversible or high-impact actions.",
+      "useWhen": "Account changes and destructive bulk operations.",
+      "avoidWhen": "Every harmless tap generates a modal.",
+      "preview": "status",
+      "sources": [
+        "android-core-2026",
+        "w3c-coga",
+        "uswds-form"
+      ],
+      "skills": [
+        "state machines",
+        "privacy engineering",
+        "resilience testing"
+      ],
+      "successSignal": "Can work continue or recover across errors, denial, offline and resumed sessions?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-loading-without-false-progress",
+      "track": "app",
+      "family": "Reliability, recovery & privacy",
+      "title": "Loading without false progress",
+      "purpose": "Use skeleton or status based on known work and preserve layout.",
+      "useWhen": "Slow fetches and expensive processing.",
+      "avoidWhen": "Progress animation claims percentages the app cannot measure.",
+      "preview": "status",
+      "sources": [
+        "android-core-2026",
+        "w3c-coga",
+        "uswds-form"
+      ],
+      "skills": [
+        "state machines",
+        "privacy engineering",
+        "resilience testing"
+      ],
+      "successSignal": "Can work continue or recover across errors, denial, offline and resumed sessions?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-graceful-low-resource-mode",
+      "track": "app",
+      "family": "Reliability, recovery & privacy",
+      "title": "Graceful low-resource mode",
+      "purpose": "Scale graphics, background tasks and caching on weak devices.",
+      "useWhen": "Media, 3D and AI apps with varied hardware.",
+      "avoidWhen": "Minimum hardware limits are hidden until crash.",
+      "preview": "status",
+      "sources": [
+        "android-core-2026",
+        "w3c-coga",
+        "uswds-form"
+      ],
+      "skills": [
+        "state machines",
+        "privacy engineering",
+        "resilience testing"
+      ],
+      "successSignal": "Can work continue or recover across errors, denial, offline and resumed sessions?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-ai-suitability-decision",
+      "track": "app",
+      "family": "AI, assistants & agentic UX",
+      "title": "AI suitability decision",
+      "purpose": "Check whether rules or ordinary search would solve the task more predictably.",
+      "useWhen": "Any proposed AI feature with uncertain value.",
+      "avoidWhen": "Adding chat because it looks fashionable.",
+      "preview": "ai",
+      "sources": [
+        "amershi-2019",
+        "pair-patterns",
+        "owasp-llm-2025"
+      ],
+      "skills": [
+        "human-AI collaboration",
+        "agent approvals",
+        "prompt injection defenses"
+      ],
+      "successSignal": "Can the user understand AI boundaries, inspect context and stop or reverse consequential changes?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-in-context-drafting-copilot",
+      "track": "app",
+      "family": "AI, assistants & agentic UX",
+      "title": "In-context drafting copilot",
+      "purpose": "Offer a bounded suggestion inside the existing editor task.",
+      "useWhen": "Writing, support and code tools.",
+      "avoidWhen": "A chat bubble blocks or replaces the primary workflow.",
+      "preview": "ai",
+      "sources": [
+        "amershi-2019",
+        "pair-patterns",
+        "owasp-llm-2025"
+      ],
+      "skills": [
+        "human-AI collaboration",
+        "agent approvals",
+        "prompt injection defenses"
+      ],
+      "successSignal": "Can the user understand AI boundaries, inspect context and stop or reverse consequential changes?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-grounded-answers-with-provenance",
+      "track": "app",
+      "family": "AI, assistants & agentic UX",
+      "title": "Grounded answers with provenance",
+      "purpose": "Link actual retrieved excerpts and signal uncertainty.",
+      "useWhen": "Knowledge tools that can retain source traceability.",
+      "avoidWhen": "Generated references are fabricated.",
+      "preview": "ai",
+      "sources": [
+        "amershi-2019",
+        "pair-patterns",
+        "owasp-llm-2025"
+      ],
+      "skills": [
+        "human-AI collaboration",
+        "agent approvals",
+        "prompt injection defenses"
+      ],
+      "successSignal": "Can the user understand AI boundaries, inspect context and stop or reverse consequential changes?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-model-and-privacy-disclosure",
+      "track": "app",
+      "family": "AI, assistants & agentic UX",
+      "title": "Model and privacy disclosure",
+      "purpose": "Identify local versus remote inference and what data is transmitted.",
+      "useWhen": "AI features accessing private text, photos or audio.",
+      "avoidWhen": "Hosted inference is labeled on-device.",
+      "preview": "trust",
+      "sources": [
+        "amershi-2019",
+        "pair-patterns",
+        "owasp-llm-2025"
+      ],
+      "skills": [
+        "human-AI collaboration",
+        "agent approvals",
+        "prompt injection defenses"
+      ],
+      "successSignal": "Can the user understand AI boundaries, inspect context and stop or reverse consequential changes?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-human-approval-before-action",
+      "track": "app",
+      "family": "AI, assistants & agentic UX",
+      "title": "Human approval before action",
+      "purpose": "Preview exact affected objects before sending, editing or buying.",
+      "useWhen": "Agents with external tool actions.",
+      "avoidWhen": "An agent treats a plan as user approval.",
+      "preview": "workflow",
+      "sources": [
+        "amershi-2019",
+        "pair-patterns",
+        "owasp-llm-2025"
+      ],
+      "skills": [
+        "human-AI collaboration",
+        "agent approvals",
+        "prompt injection defenses"
+      ],
+      "successSignal": "Can the user understand AI boundaries, inspect context and stop or reverse consequential changes?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-ai-error-and-recourse",
+      "track": "app",
+      "family": "AI, assistants & agentic UX",
+      "title": "AI error and recourse",
+      "purpose": "Let users correct, reject or retry suggestions without losing original work.",
+      "useWhen": "Assistants making imperfect recommendations.",
+      "avoidWhen": "Confidence percentages imply medical/financial certainty.",
+      "preview": "ai",
+      "sources": [
+        "amershi-2019",
+        "pair-patterns",
+        "owasp-llm-2025"
+      ],
+      "skills": [
+        "human-AI collaboration",
+        "agent approvals",
+        "prompt injection defenses"
+      ],
+      "successSignal": "Can the user understand AI boundaries, inspect context and stop or reverse consequential changes?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-cost-aware-ai-invocation",
+      "track": "app",
+      "family": "AI, assistants & agentic UX",
+      "title": "Cost-aware AI invocation",
+      "purpose": "Show tokens, usage, download requirements or metered costs when relevant.",
+      "useWhen": "Paid hosted models and expensive media generation.",
+      "avoidWhen": "Costs appear after the user commits.",
+      "preview": "ai",
+      "sources": [
+        "amershi-2019",
+        "pair-patterns",
+        "owasp-llm-2025"
+      ],
+      "skills": [
+        "human-AI collaboration",
+        "agent approvals",
+        "prompt injection defenses"
+      ],
+      "successSignal": "Can the user understand AI boundaries, inspect context and stop or reverse consequential changes?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-constrained-generative-ui",
+      "track": "app",
+      "family": "AI, assistants & agentic UX",
+      "title": "Constrained generative UI",
+      "purpose": "Render only approved component schemas for agent-generated interfaces.",
+      "useWhen": "Agent dashboards, explainers and safe visual summaries.",
+      "avoidWhen": "Arbitrary executable HTML is injected unsandboxed.",
+      "preview": "dashboard",
+      "sources": [
+        "amershi-2019",
+        "pair-patterns",
+        "owasp-llm-2025"
+      ],
+      "skills": [
+        "human-AI collaboration",
+        "agent approvals",
+        "prompt injection defenses"
+      ],
+      "successSignal": "Can the user understand AI boundaries, inspect context and stop or reverse consequential changes?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-streaming-with-abort-and-recovery",
+      "track": "app",
+      "family": "AI, assistants & agentic UX",
+      "title": "Streaming with abort and recovery",
+      "purpose": "Provide cancel, status, partial result and retry as generation continues.",
+      "useWhen": "Long output chat or asset generation.",
+      "avoidWhen": "An endless spinner hides a failed call.",
+      "preview": "ai",
+      "sources": [
+        "amershi-2019",
+        "pair-patterns",
+        "owasp-llm-2025"
+      ],
+      "skills": [
+        "human-AI collaboration",
+        "agent approvals",
+        "prompt injection defenses"
+      ],
+      "successSignal": "Can the user understand AI boundaries, inspect context and stop or reverse consequential changes?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-retrieval-permission-boundaries",
+      "track": "app",
+      "family": "AI, assistants & agentic UX",
+      "title": "Retrieval permission boundaries",
+      "purpose": "Enforce document ownership and show which sources the assistant could use.",
+      "useWhen": "Connected workspace AI, RAG and enterprise search.",
+      "avoidWhen": "Model output leaks private documents across accounts.",
+      "preview": "trust",
+      "sources": [
+        "amershi-2019",
+        "pair-patterns",
+        "owasp-llm-2025"
+      ],
+      "skills": [
+        "human-AI collaboration",
+        "agent approvals",
+        "prompt injection defenses"
+      ],
+      "successSignal": "Can the user understand AI boundaries, inspect context and stop or reverse consequential changes?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-value-first-paywall",
+      "track": "app",
+      "family": "Payments, subscriptions & entitlements",
+      "title": "Value-first paywall",
+      "purpose": "Show genuinely paid capabilities and available free value.",
+      "useWhen": "Products with validated recurring premium utility.",
+      "avoidWhen": "The paywall blocks evaluation before any context.",
+      "preview": "billing",
+      "sources": [
+        "mathur-2019",
+        "uswds-principles",
+        "apple-layout-2026"
+      ],
+      "skills": [
+        "store billing UX",
+        "entitlements",
+        "ethical pricing"
+      ],
+      "successSignal": "Can users understand price, recover access and cancel without manipulation?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-trial-disclosure-and-schedule",
+      "track": "app",
+      "family": "Payments, subscriptions & entitlements",
+      "title": "Trial disclosure and schedule",
+      "purpose": "Make start, renewal, cancellation and actual price explicit.",
+      "useWhen": "Subscription trials offered through supported stores.",
+      "avoidWhen": "Trial terms are invisible until checkout.",
+      "preview": "billing",
+      "sources": [
+        "mathur-2019",
+        "uswds-principles",
+        "apple-layout-2026"
+      ],
+      "skills": [
+        "store billing UX",
+        "entitlements",
+        "ethical pricing"
+      ],
+      "successSignal": "Can users understand price, recover access and cancel without manipulation?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-plan-comparison-by-need",
+      "track": "app",
+      "family": "Payments, subscriptions & entitlements",
+      "title": "Plan comparison by need",
+      "purpose": "Compare real limits, features, currencies and renewal terms.",
+      "useWhen": "Subscriptions with tiers for different users.",
+      "avoidWhen": "Artificial tier differences pressure upgrades.",
+      "preview": "comparison",
+      "sources": [
+        "mathur-2019",
+        "uswds-principles",
+        "apple-layout-2026"
+      ],
+      "skills": [
+        "store billing UX",
+        "entitlements",
+        "ethical pricing"
+      ],
+      "successSignal": "Can users understand price, recover access and cancel without manipulation?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-restore-purchased-entitlement",
+      "track": "app",
+      "family": "Payments, subscriptions & entitlements",
+      "title": "Restore purchased entitlement",
+      "purpose": "Give a clear native restore path and accurate error status.",
+      "useWhen": "Users returning on a new device or reinstall.",
+      "avoidWhen": "Restoring creates an unintended new purchase.",
+      "preview": "billing",
+      "sources": [
+        "mathur-2019",
+        "uswds-principles",
+        "apple-layout-2026"
+      ],
+      "skills": [
+        "store billing UX",
+        "entitlements",
+        "ethical pricing"
+      ],
+      "successSignal": "Can users understand price, recover access and cancel without manipulation?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-grace-period-billing-recovery",
+      "track": "app",
+      "family": "Payments, subscriptions & entitlements",
+      "title": "Grace period billing recovery",
+      "purpose": "Explain temporary entitlement states without panic.",
+      "useWhen": "Play Store and App Store subscriptions.",
+      "avoidWhen": "Billing failure immediately implies data loss without reason.",
+      "preview": "status",
+      "sources": [
+        "mathur-2019",
+        "uswds-principles",
+        "apple-layout-2026"
+      ],
+      "skills": [
+        "store billing UX",
+        "entitlements",
+        "ethical pricing"
+      ],
+      "successSignal": "Can users understand price, recover access and cancel without manipulation?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-usage-quota-visibility",
+      "track": "app",
+      "family": "Payments, subscriptions & entitlements",
+      "title": "Usage quota visibility",
+      "purpose": "Show remaining usage and replenishment rules with timestamps.",
+      "useWhen": "Metered AI, storage, credits and services.",
+      "avoidWhen": "Meter resets are made up.",
+      "preview": "dashboard",
+      "sources": [
+        "mathur-2019",
+        "uswds-principles",
+        "apple-layout-2026"
+      ],
+      "skills": [
+        "store billing UX",
+        "entitlements",
+        "ethical pricing"
+      ],
+      "successSignal": "Can users understand price, recover access and cancel without manipulation?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-downgrade-impact-preview",
+      "track": "app",
+      "family": "Payments, subscriptions & entitlements",
+      "title": "Downgrade impact preview",
+      "purpose": "Explain what remains accessible after a plan change.",
+      "useWhen": "Products with different storage or feature caps.",
+      "avoidWhen": "Users lose content without warning.",
+      "preview": "billing",
+      "sources": [
+        "mathur-2019",
+        "uswds-principles",
+        "apple-layout-2026"
+      ],
+      "skills": [
+        "store billing UX",
+        "entitlements",
+        "ethical pricing"
+      ],
+      "successSignal": "Can users understand price, recover access and cancel without manipulation?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-cancellation-without-coercion",
+      "track": "app",
+      "family": "Payments, subscriptions & entitlements",
+      "title": "Cancellation without coercion",
+      "purpose": "Offer simple honest cancellation and clear effective dates.",
+      "useWhen": "Recurring products and purchases.",
+      "avoidWhen": "Confusing confirm shaming or forced support call.",
+      "preview": "billing",
+      "sources": [
+        "mathur-2019",
+        "uswds-principles",
+        "apple-layout-2026"
+      ],
+      "skills": [
+        "store billing UX",
+        "entitlements",
+        "ethical pricing"
+      ],
+      "successSignal": "Can users understand price, recover access and cancel without manipulation?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-price-localization",
+      "track": "app",
+      "family": "Payments, subscriptions & entitlements",
+      "title": "Price localization",
+      "purpose": "Respect currency format, taxes, store territory and purchasing rules.",
+      "useWhen": "Apps operating in multiple billing regions.",
+      "avoidWhen": "Converted prices are implied to be official store prices.",
+      "preview": "billing",
+      "sources": [
+        "mathur-2019",
+        "uswds-principles",
+        "apple-layout-2026"
+      ],
+      "skills": [
+        "store billing UX",
+        "entitlements",
+        "ethical pricing"
+      ],
+      "successSignal": "Can users understand price, recover access and cancel without manipulation?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-entitlement-sync-conflicts",
+      "track": "app",
+      "family": "Payments, subscriptions & entitlements",
+      "title": "Entitlement sync conflicts",
+      "purpose": "Reconcile receipts and server ownership without phantom premium claims.",
+      "useWhen": "Multiple-device subscription accounts.",
+      "avoidWhen": "A stale status grants access or charges twice.",
+      "preview": "status",
+      "sources": [
+        "mathur-2019",
+        "uswds-principles",
+        "apple-layout-2026"
+      ],
+      "skills": [
+        "store billing UX",
+        "entitlements",
+        "ethical pricing"
+      ],
+      "successSignal": "Can users understand price, recover access and cancel without manipulation?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-accessible-media-player",
+      "track": "app",
+      "family": "Media, motion & spatial interfaces",
+      "title": "Accessible media player",
+      "purpose": "Expose seek, captions, tracks and speed as accessible controls.",
+      "useWhen": "Audio, video, learning and entertainment apps.",
+      "avoidWhen": "Playback auto-starts without user intent.",
+      "preview": "media",
+      "sources": [
+        "android-adaptive-2026",
+        "w3c-motion",
+        "mdn-viewtransitions"
+      ],
+      "skills": [
+        "media accessibility",
+        "gesture design",
+        "performance"
+      ],
+      "successSignal": "Can users manipulate media or spatial objects with clear controls and a usable static alternative?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-offline-download-lifecycle",
+      "track": "app",
+      "family": "Media, motion & spatial interfaces",
+      "title": "Offline download lifecycle",
+      "purpose": "Show queued, downloading, ready, expired and failed states.",
+      "useWhen": "Apps offering supported offline media.",
+      "avoidWhen": "An expired asset is shown as available.",
+      "preview": "status",
+      "sources": [
+        "android-adaptive-2026",
+        "w3c-motion",
+        "mdn-viewtransitions"
+      ],
+      "skills": [
+        "media accessibility",
+        "gesture design",
+        "performance"
+      ],
+      "successSignal": "Can users manipulate media or spatial objects with clear controls and a usable static alternative?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-multi-track-creator-timeline",
+      "track": "app",
+      "family": "Media, motion & spatial interfaces",
+      "title": "Multi-track creator timeline",
+      "purpose": "Make layers, clips, selection and undo understandable.",
+      "useWhen": "Creative editors with real timeline needs.",
+      "avoidWhen": "A tiny phone timeline demands pixel-perfect gestures.",
+      "preview": "editor",
+      "sources": [
+        "android-adaptive-2026",
+        "w3c-motion",
+        "mdn-viewtransitions"
+      ],
+      "skills": [
+        "media accessibility",
+        "gesture design",
+        "performance"
+      ],
+      "successSignal": "Can users manipulate media or spatial objects with clear controls and a usable static alternative?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-gesture-based-crop-and-zoom",
+      "track": "app",
+      "family": "Media, motion & spatial interfaces",
+      "title": "Gesture-based crop and zoom",
+      "purpose": "Support direct manipulation plus numeric/keyboard fallbacks.",
+      "useWhen": "Photo editors and document scanners.",
+      "avoidWhen": "The only control requires precise multi-touch.",
+      "preview": "media",
+      "sources": [
+        "android-adaptive-2026",
+        "w3c-motion",
+        "mdn-viewtransitions"
+      ],
+      "skills": [
+        "media accessibility",
+        "gesture design",
+        "performance"
+      ],
+      "successSignal": "Can users manipulate media or spatial objects with clear controls and a usable static alternative?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-3d-model-inspection",
+      "track": "app",
+      "family": "Media, motion & spatial interfaces",
+      "title": "3D model inspection",
+      "purpose": "Offer orbit, reset and a static representation of real objects.",
+      "useWhen": "Architecture, product demos and science visualization.",
+      "avoidWhen": "GPU-heavy content blocks core learning.",
+      "preview": "spatial",
+      "sources": [
+        "android-adaptive-2026",
+        "w3c-motion",
+        "mdn-viewtransitions"
+      ],
+      "skills": [
+        "media accessibility",
+        "gesture design",
+        "performance"
+      ],
+      "successSignal": "Can users manipulate media or spatial objects with clear controls and a usable static alternative?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-ar-preview-with-fallback",
+      "track": "app",
+      "family": "Media, motion & spatial interfaces",
+      "title": "AR preview with fallback",
+      "purpose": "Explain capability, permissions and geometric uncertainty.",
+      "useWhen": "Real spatial preview supported by target devices.",
+      "avoidWhen": "AR overlay is claimed physically accurate without calibration.",
+      "preview": "spatial",
+      "sources": [
+        "android-adaptive-2026",
+        "w3c-motion",
+        "mdn-viewtransitions"
+      ],
+      "skills": [
+        "media accessibility",
+        "gesture design",
+        "performance"
+      ],
+      "successSignal": "Can users manipulate media or spatial objects with clear controls and a usable static alternative?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-motion-adaptive-navigation",
+      "track": "app",
+      "family": "Media, motion & spatial interfaces",
+      "title": "Motion-adaptive navigation",
+      "purpose": "Reduce large transforms or disable them based on preference.",
+      "useWhen": "Animated mobile UI transitions.",
+      "avoidWhen": "Critical navigation is conveyed only through motion.",
+      "preview": "motion",
+      "sources": [
+        "android-adaptive-2026",
+        "w3c-motion",
+        "mdn-viewtransitions"
+      ],
+      "skills": [
+        "media accessibility",
+        "gesture design",
+        "performance"
+      ],
+      "successSignal": "Can users manipulate media or spatial objects with clear controls and a usable static alternative?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-image-generation-review-queue",
+      "track": "app",
+      "family": "Media, motion & spatial interfaces",
+      "title": "Image generation review queue",
+      "purpose": "Show prompt/context, previews, rights and approval before publication.",
+      "useWhen": "Creative AI workflows requiring human selection.",
+      "avoidWhen": "Generated images are silently published as original photographs.",
+      "preview": "media",
+      "sources": [
+        "android-adaptive-2026",
+        "w3c-motion",
+        "mdn-viewtransitions"
+      ],
+      "skills": [
+        "media accessibility",
+        "gesture design",
+        "performance"
+      ],
+      "successSignal": "Can users manipulate media or spatial objects with clear controls and a usable static alternative?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-audio-recording-consent-flow",
+      "track": "app",
+      "family": "Media, motion & spatial interfaces",
+      "title": "Audio recording consent flow",
+      "purpose": "Identify microphone state, recording duration and storage.",
+      "useWhen": "Voice notes, transcription and interviews.",
+      "avoidWhen": "Recording begins invisibly or persists unintentionally.",
+      "preview": "media",
+      "sources": [
+        "android-adaptive-2026",
+        "w3c-motion",
+        "mdn-viewtransitions"
+      ],
+      "skills": [
+        "media accessibility",
+        "gesture design",
+        "performance"
+      ],
+      "successSignal": "Can users manipulate media or spatial objects with clear controls and a usable static alternative?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-battery-aware-canvas-rendering",
+      "track": "app",
+      "family": "Media, motion & spatial interfaces",
+      "title": "Battery-aware canvas rendering",
+      "purpose": "Scale FPS, textures and effects to device capability.",
+      "useWhen": "Games and graphic-intensive workspaces.",
+      "avoidWhen": "Rendering overload causes heat and input lag.",
+      "preview": "spatial",
+      "sources": [
+        "android-adaptive-2026",
+        "w3c-motion",
+        "mdn-viewtransitions"
+      ],
+      "skills": [
+        "media accessibility",
+        "gesture design",
+        "performance"
+      ],
+      "successSignal": "Can users manipulate media or spatial objects with clear controls and a usable static alternative?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-learn-practice-feedback-loop",
+      "track": "app",
+      "family": "Learning, wellbeing & global inclusion",
+      "title": "Learn-practice-feedback loop",
+      "purpose": "Connect a small lesson to retrieval or applied exercise and explanation.",
+      "useWhen": "Structured education with explicit learning outcomes.",
+      "avoidWhen": "A quiz score is described as a clinical assessment.",
+      "preview": "learning",
+      "sources": [
+        "sweller-1988",
+        "w3c-coga",
+        "w3c-rtl"
+      ],
+      "skills": [
+        "instructional design",
+        "accessible localization",
+        "cultural review"
+      ],
+      "successSignal": "Can the learner or participant understand, complete and revisit the core task in their language and ability?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-prerequisite-aware-course-path",
+      "track": "app",
+      "family": "Learning, wellbeing & global inclusion",
+      "title": "Prerequisite-aware course path",
+      "purpose": "Show what must be learned first and let users revisit gaps.",
+      "useWhen": "Complex technical or language curricula.",
+      "avoidWhen": "Prerequisites are inferred from unsupported AI scores.",
+      "preview": "learning",
+      "sources": [
+        "sweller-1988",
+        "w3c-coga",
+        "w3c-rtl"
+      ],
+      "skills": [
+        "instructional design",
+        "accessible localization",
+        "cultural review"
+      ],
+      "successSignal": "Can the learner or participant understand, complete and revisit the core task in their language and ability?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-spaced-review-with-user-control",
+      "track": "app",
+      "family": "Learning, wellbeing & global inclusion",
+      "title": "Spaced review with user control",
+      "purpose": "Recommend useful review moments and let people change the rhythm.",
+      "useWhen": "Vocabulary, coding recall and revision tools.",
+      "avoidWhen": "Streak pressure dominates learning.",
+      "preview": "learning",
+      "sources": [
+        "sweller-1988",
+        "w3c-coga",
+        "w3c-rtl"
+      ],
+      "skills": [
+        "instructional design",
+        "accessible localization",
+        "cultural review"
+      ],
+      "successSignal": "Can the learner or participant understand, complete and revisit the core task in their language and ability?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-progress-as-evidence-not-pressure",
+      "track": "app",
+      "family": "Learning, wellbeing & global inclusion",
+      "title": "Progress as evidence not pressure",
+      "purpose": "Show completed work and next steps without shaming missed days.",
+      "useWhen": "Habit, wellbeing and learning products.",
+      "avoidWhen": "Gamification encourages unsafe compulsion.",
+      "preview": "dashboard",
+      "sources": [
+        "sweller-1988",
+        "w3c-coga",
+        "w3c-rtl"
+      ],
+      "skills": [
+        "instructional design",
+        "accessible localization",
+        "cultural review"
+      ],
+      "successSignal": "Can the learner or participant understand, complete and revisit the core task in their language and ability?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-accessible-multilingual-reader",
+      "track": "app",
+      "family": "Learning, wellbeing & global inclusion",
+      "title": "Accessible multilingual reader",
+      "purpose": "Support language selection, font scaling, speech and stable reading position.",
+      "useWhen": "Books, manuals and course material.",
+      "avoidWhen": "Machine-translated lessons claim full cultural review.",
+      "preview": "media",
+      "sources": [
+        "sweller-1988",
+        "w3c-coga",
+        "w3c-rtl"
+      ],
+      "skills": [
+        "instructional design",
+        "accessible localization",
+        "cultural review"
+      ],
+      "successSignal": "Can the learner or participant understand, complete and revisit the core task in their language and ability?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-rtl-first-navigation-qa",
+      "track": "app",
+      "family": "Learning, wellbeing & global inclusion",
+      "title": "RTL-first navigation QA",
+      "purpose": "Mirror layout where appropriate but preserve numbers, media and text direction.",
+      "useWhen": "Arabic, Hebrew and mixed-script interfaces.",
+      "avoidWhen": "Every icon or chart is reversed blindly.",
+      "preview": "navigation",
+      "sources": [
+        "sweller-1988",
+        "w3c-coga",
+        "w3c-rtl"
+      ],
+      "skills": [
+        "instructional design",
+        "accessible localization",
+        "cultural review"
+      ],
+      "successSignal": "Can the learner or participant understand, complete and revisit the core task in their language and ability?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-culturally-neutral-onboarding",
+      "track": "app",
+      "family": "Learning, wellbeing & global inclusion",
+      "title": "Culturally neutral onboarding",
+      "purpose": "Ask preferences instead of guessing culture from locale or name.",
+      "useWhen": "International products and mixed-background audiences.",
+      "avoidWhen": "App assumes religion, gender or socioeconomic role.",
+      "preview": "onboarding",
+      "sources": [
+        "sweller-1988",
+        "w3c-coga",
+        "w3c-rtl"
+      ],
+      "skills": [
+        "instructional design",
+        "accessible localization",
+        "cultural review"
+      ],
+      "successSignal": "Can the learner or participant understand, complete and revisit the core task in their language and ability?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-sensory-friendly-interface-mode",
+      "track": "app",
+      "family": "Learning, wellbeing & global inclusion",
+      "title": "Sensory-friendly interface mode",
+      "purpose": "Offer reduced motion, sound control, calm density and clear focus.",
+      "useWhen": "Apps serving diverse sensory preferences.",
+      "avoidWhen": "A single accessibility preset replaces individual options.",
+      "preview": "system",
+      "sources": [
+        "sweller-1988",
+        "w3c-coga",
+        "w3c-rtl"
+      ],
+      "skills": [
+        "instructional design",
+        "accessible localization",
+        "cultural review"
+      ],
+      "successSignal": "Can the learner or participant understand, complete and revisit the core task in their language and ability?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-self-assessment-with-validity-labels",
+      "track": "app",
+      "family": "Learning, wellbeing & global inclusion",
+      "title": "Self-assessment with validity labels",
+      "purpose": "Name whether a questionnaire is educational, validated or experimental.",
+      "useWhen": "Learning, coaching and behavior-change programs.",
+      "avoidWhen": "An improvised quiz is marketed as a validated diagnosis.",
+      "preview": "learning",
+      "sources": [
+        "sweller-1988",
+        "w3c-coga",
+        "w3c-rtl"
+      ],
+      "skills": [
+        "instructional design",
+        "accessible localization",
+        "cultural review"
+      ],
+      "successSignal": "Can the learner or participant understand, complete and revisit the core task in their language and ability?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    },
+    {
+      "id": "app-private-reflection-and-export",
+      "track": "app",
+      "family": "Learning, wellbeing & global inclusion",
+      "title": "Private reflection and export",
+      "purpose": "Protect personal journals with clear storage, portability and deletion.",
+      "useWhen": "Mental wellness, diary and reflective learning tools.",
+      "avoidWhen": "Private writing is sent to cloud AI without permission.",
+      "preview": "editor",
+      "sources": [
+        "sweller-1988",
+        "w3c-coga",
+        "w3c-rtl"
+      ],
+      "skills": [
+        "instructional design",
+        "accessible localization",
+        "cultural review"
+      ],
+      "successSignal": "Can the learner or participant understand, complete and revisit the core task in their language and ability?",
+      "accessibility": "Respect native iOS/Android navigation and platform behavior, VoiceOver/TalkBack, focus, text zoom, reduced motion, localization and relevant form factors.",
+      "recovery": "Define loading, empty, permission denied, interrupted, offline, stale, success, conflict and undo states appropriate to the user task."
+    }
+  ]
+}
