@@ -1,3 +1,11 @@
+## Remix Studio: browse → customize → copy (October 9, 2026)
+
+The new [Design Remix Studio](docs/remix.html) makes the original 48 website/mobile art directions directly useful to someone changing an existing project. People can switch between 24 website and 24 app directions, filter/search the visual gallery, select a distinct live HTML/CSS preview, and choose Balanced/Expressive/Structured composition. They can enter a project description, URL (included as text only), audience, stack, changes, parts to preserve, full vs single-screen scope, and an optional ordered product blueprint.
+
+The site builds an editable **redesign/build prompt** with concrete layout, typography, color tokens, app/site requirements, states, constraints and verification expectations. A second tab produces a **polish and QA prompt**; both support clipboard copy and Markdown export. This is deterministic local composition, not an AI inference call or a tool that edits a visitor's project automatically. No login, API key, scraping, paid backend, or account is required.
+
+Every design preview is an **original illustrative CSS study**, not a finished app or an exact screenshot of a real provider's product. The generator instructs coding agents to verify the original implementation, preserve existing functionality and only claim tests they actually ran. User project text is kept out of shareable deep-link query parameters.
+
 ## Signature mobile collection and verified source handoff (October 9, 2026)
 
 - The [Mobile Studio](docs/mobile-studio.html) now includes **16 intentionally distinct original mobile interface compositions**, each connected to a relevant interactive flow in the 32-pattern, 20-journey catalog.

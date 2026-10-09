@@ -1,3 +1,9 @@
+## Remix Studio: design selection and copyable customization
+
+[Open Remix Studio](remix.html). It reads the original 48-style catalog, 32 website sections, 32 mobile flows, and 20 web/20 app guided journeys without external services. The [pure prompt engine](remix-core.mjs) distinguishes existing-project redesigns from new builds and produces a detailed build prompt or post-build audit prompt.
+
+Visit from the Style Laboratory's **Use this style in my project** link to preserve the chosen platform/style in a shareable URL (never any entered personal project details). Site previews are original illustrative CSS compositions, not production templates. Clipboard and Markdown download run entirely in the visitor's browser; no AI inference happens on this site. Always verify actual code, accessibility, integrations and screenshots before making public quality claims.
+
 ## Signature Mobile Studio (October 9, 2026)
 
 The [Mobile Studio](mobile-studio.html) has 16 purpose-built editorial mobile compositions, linked to the existing 32 patterns and 20 journeys. The [Expo Native Kit](../native-kit/README.md) implements corresponding React Native screens, while `code/` holds source-identical copies for visitor-controlled copy actions. The shared source mirror is validated by `tests/test_signature_gallery.py`. An optional local Playwright script checks interactions and responsive screenshots, but it has not been executed in this environment.

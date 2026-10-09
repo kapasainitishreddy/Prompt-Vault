@@ -78,6 +78,7 @@ function openStyle(s,trigger){
  $('style-brand').value='';
  $('style-prompt').textContent='Loading the original Markdown…';
  $('style-source').href='https://github.com/kapasainitishreddy/Prompt-Vault/blob/main/prompts/styles/'+encodeURIComponent(s.id)+'.md';
+ $('style-remix').href='./remix.html?type='+encodeURIComponent(s.target)+'&style='+encodeURIComponent(s.id);
  updateDetail();
  $('style-dialog').showModal();
  $('style-close').focus();
