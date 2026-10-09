@@ -40,3 +40,7 @@ To use a *reference*: (a) inspect its actual design, (b) write a short analysis 
 ### Source verification notes
 
 This inventory does **not** verify every component on every site, every claim in the reels, or every browser/device combination. Canvas UI's own marketing says "100% open source" while its actual license adds Commons Clause; the license controls distribution decisions. User-provided link labels and counts are treated as leads rather than authoritative license statements.
+
+## Additional open-source preview libraries
+
+Eight further supplied repositories and item-level licensing caveats are in [the reference-source audit](open-source-preview-resources.md). Their cards in Prompt-Vault link upstream demos and show original independent mini-studies rather than copies.

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f4f0e7">
+<meta name="description" content="Eight carefully researched open-source UI and design-prompt resources, each with an original interactive Preview Lab, full prompt and source/license notes.">
+<title>Open-source Reference Library | Prompt-Vault Atlas</title>
+<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./resources.css">
+<script src="./atlas.js" type="module"></script>
+<script src="./resources.js" defer></script>
+</head>
+<body data-page="references">
+<a class="skip-link" href="#main">Skip to reference gallery</a>
+<header class="masthead shell"><a class="brand" href="./index.html" aria-label="Prompt Vault Atlas home"><span class="brand-seal" aria-hidden="true">P<span>•</span>V</span><span class="brand-name">PROMPT<br>VAULT</span></a><nav class="main-nav" aria-label="Main navigation"><a href="./websites.html">Websites <span class="nav-counter">32</span></a><a href="./apps.html">Apps <span class="nav-counter">32</span></a><a href="./motion.html">Motion <span class="nav-counter">23</span></a><a href="./styles.html">Styles <span class="nav-counter">48</span></a><a href="./skills.html">Skills</a><a href="./resources.html" aria-current="page">Open-source</a><a href="./principles.html">The method</a></nav><a class="nav-github" href="https://github.com/kapasainitishreddy/Prompt-Vault" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><button class="mobile-menu" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Toggle navigation">MENU <span aria-hidden="true">☰</span></button></header>
+<nav id="mobile-navigation" class="mobile-navigation shell" aria-label="Mobile navigation" hidden><a href="./websites.html">Website atlas</a><a href="./apps.html">App atlas</a><a href="./motion.html">Motion lab</a><a href="./styles.html">Style laboratory</a><a href="./skills.html">Skills workbench</a><a href="./resources.html" aria-current="page">Open-source libraries</a><a href="./principles.html">The method</a><a href="https://github.com/kapasainitishreddy/Prompt-Vault">GitHub ↗</a></nav>
+<main id="main">
+<section class="ref-hero shell" aria-labelledby="ref-title">
+ <div class="ref-topline micro"><span>LIBRARY / 006</span><span>08 VERIFIED PROJECT LINKS · ORIGINAL INTERFACE STUDIES</span></div>
+ <div class="ref-hero-grid">
+  <div>
+   <p class="ref-kicker micro"><span aria-hidden="true">✳</span> CURATED TO BE USED, NOT COPIED BLINDLY</p>
+   <h1 id="ref-title">Borrow principles.<br><em>Keep your voice.</em></h1>
+   <p class="ref-intro">Eight practical resources for better design prompts, lively websites and usable apps. Explore an <strong>original, interactive specimen</strong> for each source, then inspect licensing and copy a self-contained implementation prompt.</p>
+   <div class="ref-hero-actions"><a href="#reference-gallery" class="btn btn-ink">Browse the library <span aria-hidden="true">↗</span></a><a href="./styles.html" class="text-link">Explore visual styles ↗</a></div>
+  </div>
+  <div class="ref-hero-poster" aria-label="Stylized editorial poster about source inspiration">
+    <div class="ref-poster-top micro"><span>DESIGN / FIELDNOTES</span><span>NO. 08</span></div>
+    <div class="ref-poster-symbol" aria-hidden="true">✳</div>
+    <p class="ref-poster-quote">Reference is a <em>starting point.</em><br>Not a visual identity.</p>
+    <div class="ref-poster-rule"><span>WEBSITE</span><span>APPLICATION</span><span>MOTION</span></div>
+  </div>
+ </div>
+ <div class="ref-hero-foot micro"><span>LINKED SOURCE CODE</span><span>LICENSES EXPLAINED</span><span>NOT VENDORED REPRODUCTIONS</span></div>
+</section>
+
+<section class="ref-index-intro shell" aria-labelledby="ref-index-title">
+ <div class="section-label micro"><span>01 / THE FIELD GUIDE</span><span>SEARCH · EXPLORE · COPY · BUILD</span></div>
+ <div class="ref-intro-row"><h2 id="ref-index-title">Find the right<br><em>influence.</em></h2><p>Good components help, but they do not invent your product's identity. Every card below is an independent Prompt-Vault experiment informed by an upstream project. Open the <strong>official demo</strong> to inspect the real library, or use our interactive specimen for a small working idea.</p></div>
+</section>
+<section class="ref-gallery-area" id="reference-gallery" aria-labelledby="reference-gallery-heading">
+ <div class="shell">
+  <div class="ref-filter-top"><h2 id="reference-gallery-heading" class="micro">08 / OPEN DESIGN REFERENCES</h2><span class="ref-legend">Eight upstream projects. Eight <strong>original</strong> local previews.</span></div>
+  <form class="ref-search" id="resource-search-form" role="search">
+    <label for="resource-search">Find a resource</label>
+    <div class="ref-search-field"><span aria-hidden="true">⌕</span><input id="resource-search" type="search" autocomplete="off" placeholder="Try React Native, prompts, animation, forms…" aria-controls="resources-grid"><button id="ref-clear-search" type="button" aria-label="Clear search">Clear</button></div>
+  </form>
+  <div class="ref-filter-tools"><div id="resource-filters" class="ref-filter-chips" role="group" aria-label="Filter resources by category">
+    <button type="button" data-filter="all" aria-pressed="true">All sources</button>
+    <button type="button" data-filter="website" aria-pressed="false">Websites</button>
+    <button type="button" data-filter="app" aria-pressed="false">Apps</button>
+    <button type="button" data-filter="motion" aria-pressed="false">Motion</button>
+    <button type="button" data-filter="prompts" aria-pressed="false">Prompts</button>
+   </div>
+   <label class="ref-sort-label" for="resource-sort">Order <select id="resource-sort"><option value="curated">Curated</option><option value="name">A to Z</option><option value="type">By category</option></select></label>
+  </div>
+  <p class="ref-count" id="resource-count" role="status" aria-live="polite">Loading eight reference studies…</p>
+  <div id="resources-grid" class="ref-grid" aria-label="Curated open-source reference studies"></div>
+  <div id="ref-no-results" class="ref-empty" hidden><h3>No match in this collection.</h3><p>Try a category like motion or an interaction like forms.</p><button type="button" id="ref-reset" class="ref-reset">Show all eight</button></div>
+  <noscript><div class="ref-empty"><h3>Reference library works best with JavaScript.</h3><p>All eight upstream sources remain available: <a href="https://github.com/dotHP-harshu/ui-promptly">UI Promptly</a>, <a href="https://github.com/superdesigndev/superdesign-prompts">Superdesign Prompts</a>, <a href="https://github.com/ibelick/motion-primitives">Motion Primitives</a>, <a href="https://github.com/uiverse-io/galaxy">Uiverse Galaxy</a>, <a href="https://github.com/magicuidesign/magicui">Magic UI</a>, <a href="https://github.com/shadcn/originui">Origin UI</a>, <a href="https://github.com/founded-labs/react-native-reusables">React Native Reusables</a>, and <a href="https://github.com/gluestack/gluestack-ui">gluestack-ui</a>.</p></div></noscript>
+ </div>
+</section>
+
+<section class="ref-rules shell" aria-labelledby="source-rules">
+ <div class="section-label micro"><span>02 / SOURCE RESPONSIBILITY</span><span>BE ORIGINAL AND HONEST</span></div>
+ <h2 id="source-rules">Make reference work.<br><em>Keep it legal.</em></h2>
+ <div class="ref-rule-grid">
+  <div><span class="ref-rule-index">01</span><h3>Visit the original.</h3><p>Source links open the actual project. Our previews use authored HTML/CSS and do not claim to render that project's shipped components.</p></div>
+  <div><span class="ref-rule-index">02</span><h3>Check the license.</h3><p>Permissive repository code does not automatically license screenshots, premium examples, photographs, third-party fonts or trademarks.</p></div>
+  <div><span class="ref-rule-index">03</span><h3>Keep the user in mind.</h3><p>Pick a pattern because it improves a task, communication or feedback. Skip heavy effects if reduced motion or performance constraints demand it.</p></div>
+ </div>
+ <p class="ref-source-note">Licensing research: <a href="https://github.com/kapasainitishreddy/Prompt-Vault/blob/main/research/open-source-preview-resources.md">Source audit and links ↗</a>. Original Prompt-Vault previews and prompts are MIT. Upstream items remain governed by their own rights.</p>
+</section>
+</main>
+<footer class="site-footer"><div class="shell footer-grid"><div><a class="footer-wordmark" href="./index.html">PROMPT<br>VAULT<span>.</span></a><p>Better made than generated.<br>MIT original work, with honest source boundaries.</p></div><div><h2 class="micro">EXPLORE</h2><a href="./websites.html">Website atlas</a><a href="./apps.html">App atlas</a><a href="./motion.html">Motion studies</a><a href="./styles.html">Visual styles</a><a href="./skills.html">Design skills</a><a href="./resources.html">Open-source library</a><a href="./principles.html">Research & method</a></div><div><h2 class="micro">SOURCE</h2><a href="https://github.com/kapasainitishreddy/Prompt-Vault">GitHub repository ↗</a><a href="https://github.com/kapasainitishreddy/Prompt-Vault/blob/main/LICENSE">MIT license ↗</a><a href="https://github.com/kapasainitishreddy/Prompt-Vault/blob/main/research/supplied-resources.md">External library licenses ↗</a><span class="micro">BUILT WITHOUT REQUIRED PAID SERVICES</span></div></div><div class="footer-bottom shell micro"><span>© 2026 PROMPT-VAULT CONTRIBUTORS</span><span>ALWAYS QUESTION THE DEFAULT.</span></div></footer>
+<dialog id="resource-dialog" class="ref-dialog" aria-labelledby="resource-dialog-title">
+ <div class="ref-dialog-head">
+  <div><span class="micro" id="resource-dialog-label">SOURCE / REFERENCE</span><h2 id="resource-dialog-title">Study</h2></div>
+  <button type="button" id="resource-dialog-close" class="ref-dialog-close" aria-label="Close reference study">✕</button>
+ </div>
+ <div class="ref-dialog-tabs" role="tablist" aria-label="Reference study detail">
+   <button type="button" role="tab" id="ref-tab-preview" aria-controls="ref-panel-preview" aria-selected="true" tabindex="0" data-tab="preview">Interactive preview</button>
+   <button type="button" role="tab" id="ref-tab-prompt" aria-controls="ref-panel-prompt" aria-selected="false" tabindex="-1" data-tab="prompt">Full design prompt</button>
+   <button type="button" role="tab" id="ref-tab-license" aria-controls="ref-panel-license" aria-selected="false" tabindex="-1" data-tab="license">License & provenance</button>
+ </div>
+ <section id="ref-panel-preview" role="tabpanel" aria-labelledby="ref-tab-preview" class="ref-dialog-panel">
+  <div class="ref-dialog-description"><p id="ref-detail-summary"></p><p class="ref-preview-warning">Independent Prompt-Vault specimen. Not a component imported from the upstream repository.</p></div>
+  <div id="ref-detail-study" class="ref-detail-study"></div>
+  <p id="ref-detail-focus" class="ref-dialog-focus"></p>
+ </section>
+ <section id="ref-panel-prompt" role="tabpanel" aria-labelledby="ref-tab-prompt" class="ref-dialog-panel" hidden>
+  <p class="ref-dialog-description">Full original implementation prompt. Replace its brief placeholders with real product details before pasting into a coding agent.</p>
+  <div class="ref-prompt-actions"><button type="button" id="ref-copy-prompt" class="ref-action-primary">Copy full prompt ↗</button><a id="ref-source-prompt" href="#" target="_blank" rel="noopener noreferrer">Open Markdown source ↗</a></div>
+  <pre id="ref-prompt-text" tabindex="0" class="ref-prompt-box">Select this tab to load the full prompt.</pre>
+ </section>
+ <section id="ref-panel-license" role="tabpanel" aria-labelledby="ref-tab-license" class="ref-dialog-panel" hidden>
+  <p id="ref-detail-license" class="ref-license-text"></p>
+  <p id="ref-detail-use"></p><p id="ref-detail-avoid"></p>
+  <p class="ref-license-standard">Verify the specific files you copy at the current upstream revision; Prompt-Vault does not sublicense third-party work.</p>
+ </section>
+ <div class="ref-dialog-footer"><a id="ref-official-demo" href="#" target="_blank" rel="noopener noreferrer">Open official demo ↗</a><a id="ref-official-code" href="#" target="_blank" rel="noopener noreferrer">View upstream source ↗</a></div>
+</dialog>
+<div id="resource-toast" class="ref-toast" role="status" aria-live="polite" hidden></div>
+</body></html>
