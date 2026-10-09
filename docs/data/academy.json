@@ -266,6 +266,15 @@
       "kind": "Android design system",
       "finding": "Use system-consistent type, color, component and interaction foundations.",
       "limit": "Implementation must follow the actual Android UI framework."
+    },
+    {
+      "id": "revenuecat2026",
+      "org": "RevenueCat",
+      "title": "State of Subscription Apps 2026",
+      "url": "https://www.revenuecat.com/state-of-subscription-apps",
+      "kind": "Subscription benchmarks",
+      "finding": "Analyzes 2025 subscription performance of over 115,000 apps and more than $16B in revenue. Reports conversion, churn, trial and platform differences.",
+      "limit": "RevenueCat platform cohort only, observational comparisons, varying categories/regions; not proof that a paywall, pricing or AI design causes revenue growth."
     }
   ],
   "website": [
@@ -1464,7 +1473,8 @@
       "sources": [
         "apple-onboarding",
         "android-core",
-        "nng-heuristics"
+        "nng-heuristics",
+        "revenuecat2026"
       ],
       "steps": [
         {
@@ -1612,7 +1622,8 @@
       "sources": [
         "apple-onboarding",
         "nng-heuristics",
-        "wcag22"
+        "wcag22",
+        "revenuecat2026"
       ],
       "steps": [
         {
@@ -1682,7 +1693,8 @@
       "sources": [
         "apple-onboarding",
         "nng-heuristics",
-        "wcag22"
+        "wcag22",
+        "revenuecat2026"
       ],
       "steps": [
         {
@@ -1971,7 +1983,8 @@
         "nng-heuristics",
         "webllm",
         "puter",
-        "apple-review"
+        "apple-review",
+        "revenuecat2026"
       ],
       "steps": [
         {
@@ -2391,7 +2404,8 @@
       "sources": [
         "apple-tabs",
         "android-core",
-        "sensor-2026"
+        "sensor-2026",
+        "revenuecat2026"
       ],
       "steps": [
         {
@@ -2799,6 +2813,72 @@
       "year": 2025,
       "measure": "Global non-game app in-app purchase revenue (Sensor Tower)",
       "pattern": "A task-focused conversational entry and progressively revealed capabilities are observable patterns; ranking cannot prove their impact.",
+      "source": "sensor-2026"
+    }
+  ],
+  "marketSignals": [
+    {
+      "id": "paywall",
+      "figure": "10.7% vs 2.1%",
+      "label": "Day 35 paid conversion in hard-paywall vs freemium groups",
+      "implication": "Explain pricing early, test purchase intent, and choose a paywall model based on product use and growth channels.",
+      "caution": "Observational groups may differ; not a recommendation to always hard-gate onboarding.",
+      "source": "revenuecat2026"
+    },
+    {
+      "id": "first-session",
+      "figure": "55%",
+      "label": "Share of three-day trial cancellations occurring on Day 0",
+      "implication": "Design a useful first session and transparent trial/cancel flow before layering on engagement tricks.",
+      "caution": "This is among cancellations of three-day trials, not 55% of all trials.",
+      "source": "revenuecat2026"
+    },
+    {
+      "id": "ai-retention",
+      "figure": "+41% / +30%",
+      "label": "AI apps' revenue per payer uplift / faster churn",
+      "implication": "Place AI after a measurable use case and audit recurring value, reliability, latency and cost.",
+      "caution": "RevenueCat sample comparison, not proof that AI directly causes either effect.",
+      "source": "revenuecat2026"
+    },
+    {
+      "id": "android-billing",
+      "figure": "31% vs 14%",
+      "label": "Google Play versus App Store cancellations attributed to billing failures",
+      "implication": "Treat grace period, restore, retry and payment-method recovery as first-class Android UX.",
+      "caution": "Exact failure mix varies by app and plan; verify current billing APIs.",
+      "source": "revenuecat2026"
+    },
+    {
+      "id": "trials",
+      "figure": "42.5% vs 25.5%",
+      "label": "Median trial-to-paid conversion for 17–32-day vs <=4-day trials",
+      "implication": "Select trial length from time-to-value, category and actual product experiments, not the shortest possible timer.",
+      "caution": "Observational groups; longer trials can bias cohorts and outcomes.",
+      "source": "revenuecat2026"
+    },
+    {
+      "id": "conversion-split",
+      "figure": "2.6% vs 0.9%",
+      "label": "Global median D35 download-to-paid, iOS versus Android (report segment)",
+      "implication": "Design platform-specific growth and billing recovery flows. Compare cohorts on the same funnel definitions.",
+      "caution": "Report contains multiple denominators/segments; verify filters and definitions before using in decisions.",
+      "source": "revenuecat2026"
+    },
+    {
+      "id": "yearly-retention",
+      "figure": "20–40%",
+      "label": "Reported median year-one retention range for yearly subscription plans",
+      "implication": "Build renewal confidence, ongoing user value and understandable subscription management.",
+      "caution": "Category-dependent; not a promise that yearly plans are always preferable.",
+      "source": "revenuecat2026"
+    },
+    {
+      "id": "revenue",
+      "figure": "$167B",
+      "label": "2025 worldwide total mobile IAP across apps and games",
+      "implication": "Mobile is a large market, but distribution and retention matter much more than copying the UI of a top-grosser.",
+      "caution": "Sensor Tower estimates, global apps and games together; not profit.",
       "source": "sensor-2026"
     }
   ]
