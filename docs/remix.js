@@ -11,6 +11,7 @@ const state={target:"website",styles:[],selected:null,flows:{website:[],app:[]},
 const urlParams=new URLSearchParams(location.search);
 const targetParam=urlParams.get("type");
 const styleParam=urlParams.get("style");
+const sectionParam=urlParams.get("section");
 if(targetParam==="app"||targetParam==="website")state.target=targetParam;
 const routeId=/^[a-z0-9-]+$/;
 const familyWeb={technical:["terminal","schematic","grid","blueprint"],editorial:["columns","newspaper","index","minimal"],art:["poster","product","orbital","geometry","organic"],collage:["scrapbook","collage","travel","risograph"]};
@@ -142,6 +143,8 @@ function chooseStyle(id){
 function updateShareableUrl(){
  // Never put users' private project details into a shareable URL.
  const next=new URL(location.href);next.searchParams.set("type",state.target);next.searchParams.set("style",state.selected?.id||"");
+ const chosen=$("rx-scope").value==="section"?$("rx-focus").value:"";
+ if(chosen)next.searchParams.set("section",chosen);else next.searchParams.delete("section");
  history.replaceState(null,"",next.pathname+next.search+next.hash);
 }
 function projectInputs(){
@@ -208,7 +211,7 @@ function setupEvents(){
  document.querySelectorAll("[data-variant]").forEach(b=>b.addEventListener("click",()=>{state.variant=b.dataset.variant;renderSelected();renderPrompt();}));
  $("rx-form").addEventListener("submit",e=>{e.preventDefault();renderPrompt();$("rx-ready").scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"center"});});
  $("rx-form").addEventListener("input",e=>{if(e.target.id==="rx-name")renderSelected();renderPrompt();});
- $("rx-form").addEventListener("change",e=>{if(e.target.id==="rx-scope")updateFocus();renderPrompt();});
+ $("rx-form").addEventListener("change",e=>{if(e.target.id==="rx-scope")updateFocus();renderPrompt();updateShareableUrl();});
  document.querySelectorAll("[data-output]").forEach(b=>b.addEventListener("click",()=>{
   state.output=b.dataset.output;
   document.querySelectorAll("[data-output]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
@@ -230,7 +233,11 @@ async function init(){
   state.flows.website=web.sections;state.flows.app=app.flows;
   state.blueprints.website=webBlueprints.blueprints;state.blueprints.app=appBlueprints.blueprints;
   state.loaded=true;
+  if(sectionParam&&routeId.test(sectionParam)&&state.flows[state.target].some(x=>x.id===sectionParam))$("rx-scope").value="section";
   setTarget(state.target,styleParam||"");
+  if($("rx-scope").value==="section"&&state.flows[state.target].some(x=>x.id===sectionParam)){
+   $("rx-focus").value=sectionParam;renderPrompt();updateShareableUrl();
+  }
   setAnnouncement("48 original design directions loaded. Select a preview, describe your project, and copy a ready-to-edit prompt.");
  }catch(error){
   $("rx-count").textContent="Design library unavailable";
