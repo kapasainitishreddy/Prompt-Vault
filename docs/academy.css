@@ -145,3 +145,15 @@ html{scroll-behavior:smooth}body.academy-page{margin:0;background:var(--ac-cream
 .pv-ai{background:#dfe2f3}.pv-edit .pv-timeline{display:flex;gap:3px;margin:7px 0}.pv-timeline span{background:#c7b9ad;font-size:.55rem;flex:1;padding:9px 3px;text-align:center}
 .pv-journey{background:#f1e3d0}.pv-reading{background:#f8eed8}.pv-ops{background:#e4e9e3}.pv-media{background:#263c31;color:#fff}.pv-media small{color:#ccd5c2}.pv-media>div{height:49px;background:#415947;text-align:center;padding:9px;font-size:1.5rem}.pv-media strong{color:#e7f3da;font-size:.71rem}
 .ac-inline-copy{border:1px solid #718b6e;background:#d5eba2;padding:7px 10px;font-weight:800;font-size:.7rem;margin-top:8px}
+
+/* Observational subscription benchmarks; always show a study limitation. */
+.ac-market-subhead{font:normal clamp(2rem,3.4vw,3.8rem)/1 var(--ac-display);letter-spacing:-.055em;margin:55px 0 15px}
+.ac-market-intro{max-width:780px;font-size:.88rem;line-height:1.65;color:#47604b;margin:0 0 27px}
+.ac-signal-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin-bottom:27px}
+.ac-signal{background:#f8f8ee;padding:21px;border:1px solid #859c72;display:flex;flex-direction:column;gap:10px}
+.ac-signal-figure{font:normal clamp(1.7rem,2vw,3rem)/1 var(--ac-display);letter-spacing:-.04em;color:#c15d45}
+.ac-signal h4{font-size:.82rem;line-height:1.3;margin:0}
+.ac-signal p{font-size:.74rem;line-height:1.5;color:#455e45;margin:0}
+.ac-signal small{font-size:.62rem;line-height:1.5;color:#806748;border-top:1px solid #c1cfa9;padding-top:10px;margin-top:auto}
+@media(max-width:1100px){.ac-signal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.ac-signal-grid{grid-template-columns:1fr}}
