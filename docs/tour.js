@@ -80,7 +80,6 @@
   let driverLoad = null;
   let activeDriver = null;
   let lastLaunch = null;
-  const button = document.createElement("button");
   const info = document.createElement("details");
   info.className = "pv-help";
   info.setAttribute("aria-label", "Site help and guided tours");
@@ -103,23 +102,28 @@
   function loadDriver() {
     if (typeof window.driver?.js?.driver === "function") return Promise.resolve(window.driver.js.driver);
     if (driverLoad) return driverLoad;
-    driverLoad = new Promise((resolve, reject) => {
-      // The CSS and script are loaded only after an explicit button press.
+    const cssReady = new Promise((resolve, reject) => {
       const stylesheet = document.createElement("link");
       stylesheet.rel = "stylesheet";
       stylesheet.href = ROOT + "driver.css";
-      stylesheet.addEventListener("error", () => { /* The tour remains usable without upstream theme CSS only if JS loads. */ });
+      stylesheet.addEventListener("load", resolve, {once:true});
+      stylesheet.addEventListener("error", () => reject(new Error("Driver.js styles could not load")), {once:true});
       document.head.append(stylesheet);
+    });
+    const scriptReady = new Promise((resolve, reject) => {
       const script = document.createElement("script");
       script.src = ROOT + "driver.js.iife.js";
       script.async = true;
       script.addEventListener("load", () => {
         if (typeof window.driver?.js?.driver === "function") resolve(window.driver.js.driver);
         else reject(new Error("Driver.js global was not found"));
-      });
-      script.addEventListener("error", () => reject(new Error("Unable to load Driver.js")));
+      }, {once:true});
+      script.addEventListener("error", () => reject(new Error("Driver.js script could not load")), {once:true});
       document.head.append(script);
-    }).catch(error => { driverLoad = null; throw error; });
+    });
+    // Show highlighted popovers only after the upstream stylesheet is ready.
+    driverLoad = Promise.all([cssReady, scriptReady]).then(([, createDriver]) => createDriver)
+      .catch(error => { driverLoad = null; throw error; });
     return driverLoad;
   }
   async function beginTour(from) {
