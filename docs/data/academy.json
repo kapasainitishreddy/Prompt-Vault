@@ -644,11 +644,11 @@
         },
         {
           "order": 6,
-          "name": "Cart",
+          "name": "Shopping cart",
           "why": "Allow quantity edits, removal and clear totals.",
           "skill": "state transitions",
           "decision": "Essential",
-          "microPrompt": "Design the Cart section with a clear hierarchy and working interaction. Allow quantity edits, removal and clear totals. Use state transitions. Provide states, accessibility and a smaller-screen variant."
+          "microPrompt": "Design the shopping cart section with a clear hierarchy and working interaction. Allow quantity edits, removal and clear totals. Use state transitions. Provide states, accessibility and a smaller-screen variant."
         },
         {
           "order": 7,
@@ -1446,11 +1446,11 @@
         },
         {
           "order": 6,
-          "name": "FAQ",
+          "name": "Frequently asked questions",
           "why": "Resolve overages, upgrades, refunds and access questions.",
           "skill": "expandable disclosure",
           "decision": "Essential",
-          "microPrompt": "Design the FAQ section with a clear hierarchy and working interaction. Resolve overages, upgrades, refunds and access questions. Use expandable disclosure. Provide states, accessibility and a smaller-screen variant."
+          "microPrompt": "Design the frequently asked questions section with a clear hierarchy and working interaction. Resolve overages, upgrades, refunds and access questions. Use expandable disclosure. Provide states, accessibility and a smaller-screen variant."
         },
         {
           "order": 7,
@@ -1801,11 +1801,11 @@
         },
         {
           "order": 4,
-          "name": "Cart",
+          "name": "Shopping cart",
           "why": "Permit edits and show actual totals.",
           "skill": "transaction state",
           "decision": "Essential",
-          "microPrompt": "Design the Cart screen with a clear hierarchy and working interaction. Permit edits and show actual totals. Use transaction state. Provide states, accessibility and a smaller-screen variant."
+          "microPrompt": "Design the shopping cart screen with a clear hierarchy and working interaction. Permit edits and show actual totals. Use transaction state. Provide states, accessibility and a smaller-screen variant."
         },
         {
           "order": 5,
@@ -2155,7 +2155,7 @@
           "order": 4,
           "name": "Traveler info",
           "why": "Validate accessible forms and saved data consent.",
-          "skill": "forms",
+          "skill": "accessible forms",
           "decision": "Essential",
           "microPrompt": "Design the Traveler info screen with a clear hierarchy and working interaction. Validate accessible forms and saved data consent. Use forms. Provide states, accessibility and a smaller-screen variant."
         },
