@@ -157,6 +157,7 @@ function renderDetail(){
  $('current-index').textContent='CONCEPT '+String(activeData().indexOf(c)+1).padStart(3,'0')+' / '+activeData().length;
  $('current-title').textContent=c.title;
  $('current-purpose').textContent=c.purpose;
+ $('remix-concept-link').href='./remix.html?type='+encodeURIComponent(c.track==='app'?'app':'website')+'&concept='+encodeURIComponent(c.id);
  $('current-when').textContent=c.useWhen;
  $('current-avoid').textContent=c.avoidWhen;
  $('current-skills').textContent=c.skills.join(' · ');
