@@ -84,3 +84,10 @@ body.motion-off *,body.motion-off *::before,body.motion-off *::after{transition:
 .pv-secondary-tracks summary:hover{background:#d4e3ca}
 .pv-secondary-tracks .collection-row{background:#e5e9da}
 @media(max-width:850px){.pv-home-academy{align-items:flex-start;flex-direction:column;padding:23px 22px;gap:15px}.pv-home-academy .micro{max-width:none}.pv-home-academy-arrow{font-size:.65rem}}
+
+/* Deep concept field guide within the existing Website/App track structure. */
+.pv-home-concept{display:flex;align-items:center;justify-content:space-between;gap:23px;text-decoration:none;background:#e2e9d3;border-top:1px solid #a4b3a0;border-bottom:1px solid #a4b3a0;padding:19px 26px;margin-bottom:20px;color:#213a28}
+.pv-home-concept>span{font-size:.65rem;letter-spacing:.07em;font-weight:850;line-height:1.5}
+.pv-home-concept strong{font:normal clamp(1.1rem,1.7vw,1.6rem)/1.25 Georgia,serif;letter-spacing:-.02em;max-width:570px}
+.pv-home-concept:hover{background:#d3e5b4}
+@media(max-width:830px){.pv-home-concept{align-items:flex-start;flex-direction:column;padding:18px 19px;gap:9px}}
