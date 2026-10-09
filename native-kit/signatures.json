@@ -51,7 +51,7 @@
     "id": "social",
     "name": "A Shared Space",
     "category": "COMMUNITY / PEOPLE",
-    "journey": "community",
+    "journey": "messaging",
     "flow": "chat",
     "why": "Create legible participant identity and message context."
   },
@@ -68,7 +68,7 @@
     "name": "Field Notes",
     "category": "TRAVEL / ROUTES",
     "journey": "travel",
-    "flow": "calendar",
+    "flow": "detail",
     "why": "Keep visit order and local times easy to scan."
   },
   {
