@@ -20,6 +20,6 @@ The demo provides native buttons, inputs, toggles, cards, chips, progress, acces
 
 ## Honest boundaries
 
-No real account sign-in, cloud sync, permissions, upload, charges, store purchases, notification scheduling, AI inference or account deletion. Those flows are visibly labeled simulations. State is in memory, not durable or encrypted; no remote user data is collected. Do not market demo screens as complete integrations.
+No authentication provider, real account sign-in, cloud sync, permissions, upload, charges, store purchases, notification scheduling, AI inference or account deletion. Those flows are visibly labeled simulations. State is in memory, not durable or encrypted; no remote user data is collected. Do not market demo screens as complete integrations.
 
 Before publishing: run TypeScript checking, Android/iOS device and TalkBack/VoiceOver QA, persistence/recovery tests, native locale/RTL tests, reduced-motion tests, store compliance audits and real-service end-to-end tests. No GitHub Actions are required.
