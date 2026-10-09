@@ -1,3 +1,12 @@
+## First visit: beginner path (October 9, 2026)
+
+- [Start Here](start-here.html): choose Website, App or Exploration; see original visible example screens; learn three plain-English design terms; produce a local, editable/copyable AI-building prompt; and follow a linked route into the right catalog. All works without accounts or external model calls. The initial website example is rendered in HTML/CSS even without JavaScript.
+- [Motion libraries explained](motion-library.html): five **original** no-dependency interaction previews explaining Motion, GSAP, Locomotive Scroll v5, React Bits and Three.js. The underlying packages are referenced, **not vendored or claimed as running**. Each entry explains good and bad use cases, current license caveats and has a copyable prompt.
+- [Opt-in real Lenis study](lenis-scroll.html): separate page loads Lenis only after the visitor enables enhanced scroll, with an ordinary native-scroll fallback.
+- Homepage preview teasers and the user-facing newcomer call-to-action use real HTML/CSS, not an async gallery that may show indefinite loading.
+
+**QA boundary:** Static source review does not establish that the deployed Cloudflare Pages origin runs JavaScript correctly on real browsers. Verify preview gallery loading, client-side routes, responsive layout, keyboard, copy actions and external CDN availability on a real device before claiming live readiness.
+
 # Prompt-Vault Atlas website
 
 ## Visual-first previews
