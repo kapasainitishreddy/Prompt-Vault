@@ -1,5 +1,18 @@
 # Prompt-Vault
 
+## New: 40 complete guided website and app design blueprints
+
+**[Guided Design Atlas with interactive previews](docs/guided.html)** · [20 website architectures](guides/website/README.md) · [20 iOS/Android app journeys](guides/app/README.md) · [37 annotated research sources and 28 open-source ingredients](research/EVIDENCE-ATLAS.md).
+
+This brings the catalog to **199 standalone Markdown prompts** and **183 original illustrative studies** (excluding 200 extra focused concept specifications). It adds **40 full Markdown design/build prompts**, complete ordered screen/section plans, source-linked justification, skills, three art directions, honest AI/3D choices and bounded implementation/testing instructions. They are original interactive HTML/CSS **illustrations**, not 40 deployed websites or native binaries.
+
+- **Websites**: portfolio, corporate, SaaS, ecommerce, docs, publishing, education, agency, nonprofit, event, travel, subdomains and more. [AI integration](guides/website/AI-INTEGRATION.md), [3D/motion](guides/website/3D-AND-MOTION.md), [domain/subdomain architecture](guides/website/DOMAIN-ARCHITECTURE.md).
+- **Apps**: 20 category journeys, with separate Apple App Store and Google Play logic, state/recovery, privacy and accessibility. [Native AI](guides/app/AI-INTEGRATION.md), [native motion/3D](guides/app/MOTION-AND-3D.md), [store release](guides/app/STORE-RELEASE.md), [retention and revenue research](guides/app/REVENUE-AND-RETENTION.md), [UX flow/state model](guides/app/UX-PATTERNS.md).
+- **AI is not mandatory**. Puter.js is **cloud user-pays** while WebLLM / Transformers.js can run eligible models locally in browser subject to hardware and model licensing. No paid infrastructure added.
+- **3D is opt-in** and must have static poster/accessible equivalent, reduced-motion and measurable performance.
+- RevenueCat/Sensor Tower figures are observational industry context, never a recipe for guaranteed app revenue. No external vendor component assets copied into this MIT repository.
+
+
 ## NEW: Deep Research Concept Field Guide (October 2026)
 
 **[Explore all 200 new concepts and previews](docs/concepts.html)** · [Website + App concept index](catalog/CONCEPT-INDEX.md) · [Research and decision handbook](research/concept-field-guide.md)

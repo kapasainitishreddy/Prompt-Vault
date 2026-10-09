@@ -1,0 +1,794 @@
+{
+  "version": 1,
+  "reviewed": "2026-10-08",
+  "warning": "Curated, not every open-source design project. Code, screenshots, paid examples, model weights and demo assets have separate licenses. Data is observational; do not claim design causality.",
+  "sources": [
+    {
+      "id": "first-impressions",
+      "title": "Attention web designers: You have 50 milliseconds to make a good first impression!",
+      "publisher": "Lindgaard et al.",
+      "type": "paper",
+      "year": 2006,
+      "url": "https://doi.org/10.1080/01449290500330448",
+      "tracks": [
+        "website"
+      ],
+      "summary": "First-glance visual appeal judgments matter; do not confuse them with successful tasks.",
+      "limitation": "Tests involved particular short exposures and stimuli."
+    },
+    {
+      "id": "prototypicality",
+      "title": "The role of visual complexity and prototypicality regarding first impression of websites",
+      "publisher": "Tuch et al.",
+      "type": "paper",
+      "year": 2012,
+      "url": "https://doi.org/10.1016/j.ijhcs.2012.06.003",
+      "tracks": [
+        "website"
+      ],
+      "summary": "Familiar operation and controlled complexity help initial judgments, while brand expression may stay original.",
+      "limitation": "Not a prescription to copy existing layouts."
+    },
+    {
+      "id": "beauty-usable",
+      "title": "What is beautiful is usable",
+      "publisher": "Tractinsky, Katz & Ikar",
+      "type": "paper",
+      "year": 2000,
+      "url": "https://doi.org/10.1016/S0953-5438(00)00031-X",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "summary": "Appearance influences perceived usability; test objective task outcomes separately.",
+      "limitation": "Perception is not task completion."
+    },
+    {
+      "id": "heuristics",
+      "title": "10 Usability Heuristics for User Interface Design",
+      "publisher": "Nielsen Norman Group",
+      "type": "industry-guide",
+      "year": 2024,
+      "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "summary": "Status, recognition, undo, consistency and error recovery are essential design review dimensions.",
+      "limitation": "Expert heuristics cannot replace participant tests."
+    },
+    {
+      "id": "wcag",
+      "title": "Web Content Accessibility Guidelines 2.2",
+      "publisher": "W3C",
+      "type": "standard",
+      "year": 2023,
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "summary": "Contrast, accessible names, keyboard, focus, reflow and input alternatives are baseline QA.",
+      "limitation": "Auditing with only automated scanners is insufficient."
+    },
+    {
+      "id": "motion-pause",
+      "title": "Pause, Stop, Hide",
+      "publisher": "W3C",
+      "type": "standard",
+      "year": 2023,
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "summary": "Give controls for qualifying auto-start moving and auto-updating content.",
+      "limitation": "Specific exceptions apply; not every transition is prohibited."
+    },
+    {
+      "id": "animation-graph",
+      "title": "Animated Transitions in Statistical Data Graphics",
+      "publisher": "Heer and Robertson",
+      "type": "paper",
+      "year": 2007,
+      "url": "https://doi.org/10.1109/TVCG.2007.70539",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "summary": "State-linked transitions can make data changes easier to follow.",
+      "limitation": "Data graphics result does not prove arbitrary animations improve conversion."
+    },
+    {
+      "id": "core-web-vitals",
+      "title": "How the Core Web Vitals metrics thresholds were defined",
+      "publisher": "Google web.dev",
+      "type": "company-guide",
+      "year": 2025,
+      "url": "https://web.dev/articles/defining-core-web-vitals-thresholds",
+      "tracks": [
+        "website"
+      ],
+      "summary": "Good p75 LCP ≤2.5s, INP ≤200ms, CLS ≤0.1 are real-user targets.",
+      "limitation": "A local Lighthouse simulation differs from field data."
+    },
+    {
+      "id": "portfolio-guide",
+      "title": "5 Steps to Creating a UX-Design Portfolio",
+      "publisher": "Nielsen Norman Group",
+      "type": "industry-article",
+      "year": 2019,
+      "url": "https://www.nngroup.com/articles/ux-design-portfolios/",
+      "tracks": [
+        "website"
+      ],
+      "summary": "Show roles, process, constraints and results, not only polished screens.",
+      "limitation": "UX hiring research does not predict every engineering hiring decision."
+    },
+    {
+      "id": "portfolio-case",
+      "title": "Creating a UX Design Portfolio Case Study",
+      "publisher": "Nielsen Norman Group",
+      "type": "industry-video",
+      "year": 2019,
+      "url": "https://www.nngroup.com/videos/ux-design-portfolio-case-study/",
+      "tracks": [
+        "website"
+      ],
+      "summary": "Structure case studies as problem, decisions, contribution, evidence and outcome.",
+      "limitation": "Technical implementation portfolios can adapt this structure."
+    },
+    {
+      "id": "company-about",
+      "title": "About Us Information on Corporate Websites",
+      "publisher": "Nielsen Norman Group",
+      "type": "industry-article",
+      "year": 2019,
+      "url": "https://www.nngroup.com/articles/about-us-information-on-websites/",
+      "tracks": [
+        "website"
+      ],
+      "summary": "Company information should be clear, authentic, transparent and verifiable.",
+      "limitation": "Testing context varied by corporate type."
+    },
+    {
+      "id": "product-page",
+      "title": "Product Details Page UX Research",
+      "publisher": "Baymard Institute",
+      "type": "industry-research",
+      "year": 2026,
+      "url": "https://baymard.com/research/product-page",
+      "tracks": [
+        "website"
+      ],
+      "summary": "Decision-ready imagery, dimensions, variant clarity, shipping, spec and availability.",
+      "limitation": "Much of the full benchmark is a paid resource."
+    },
+    {
+      "id": "checkout",
+      "title": "Checkout UX 2025: 10 Pitfalls and Best Practices",
+      "publisher": "Baymard Institute",
+      "type": "industry-research",
+      "year": 2025,
+      "url": "https://baymard.com/research-articles/current-state-of-checkout-ux",
+      "tracks": [
+        "website"
+      ],
+      "summary": "Guest checkout, adaptive errors, shipping clarity and fewer irrelevant form fields.",
+      "limitation": "Benchmarks do not guarantee conversions for any site."
+    },
+    {
+      "id": "catalog-ux",
+      "title": "Product Listing Page UX Best Practices",
+      "publisher": "Baymard Institute",
+      "type": "industry-article",
+      "year": 2026,
+      "url": "https://baymard.com/blog/product-listing-page-plp-ux",
+      "tracks": [
+        "website"
+      ],
+      "summary": "Filter visibility, comparison, scanning and clear sort improve discovery.",
+      "limitation": "Ecommerce context only."
+    },
+    {
+      "id": "stripe-billing",
+      "title": "Designing a billing page that converts",
+      "publisher": "Stripe",
+      "type": "company-article",
+      "year": 2026,
+      "url": "https://stripe.com/resources/more/designing-a-billing-page-that-converts-tips-for-better-payment-experiences",
+      "tracks": [
+        "website"
+      ],
+      "summary": "Honest totals, currency, errors and clear purchase decisions.",
+      "limitation": "Company recommendations, not causal experimental proof."
+    },
+    {
+      "id": "govuk",
+      "title": "Components and patterns",
+      "publisher": "GOV.UK Design System",
+      "type": "open-design-guide",
+      "year": 2026,
+      "url": "https://design-system.service.gov.uk/components/",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "summary": "Semantic, accessible controls, errors and feedback with tested examples.",
+      "limitation": "Government copy/branding should not be cloned."
+    },
+    {
+      "id": "apple-tabs",
+      "title": "Tab bars",
+      "publisher": "Apple Human Interface Guidelines",
+      "type": "platform-guide",
+      "year": 2026,
+      "url": "https://developer.apple.com/design/human-interface-guidelines/tab-bars",
+      "tracks": [
+        "app"
+      ],
+      "summary": "Tabs are for top-level navigation, not actions; keep nested navigation state.",
+      "limitation": "Don't add a tab for every feature."
+    },
+    {
+      "id": "apple-onboarding",
+      "title": "Onboarding",
+      "publisher": "Apple Human Interface Guidelines",
+      "type": "platform-guide",
+      "year": 2026,
+      "url": "https://developer.apple.com/design/human-interface-guidelines/onboarding",
+      "tracks": [
+        "app"
+      ],
+      "summary": "Start fast, teach by doing, and make onboarding optional when possible.",
+      "limitation": "Account and permission constraints need individual review."
+    },
+    {
+      "id": "android-nav",
+      "title": "Layouts and navigation patterns",
+      "publisher": "Android Developers",
+      "type": "platform-guide",
+      "year": 2026,
+      "url": "https://developer.android.com/design/ui/mobile/guides/layout-and-content/layout-and-nav-patterns",
+      "tracks": [
+        "app"
+      ],
+      "summary": "Use familiar navigation bar/rail/drawer by destination count and screen size.",
+      "limitation": "Android patterns should not be imposed unchanged on iOS."
+    },
+    {
+      "id": "android-adaptive",
+      "title": "Adaptive app quality guidelines",
+      "publisher": "Android Developers",
+      "type": "platform-guide",
+      "year": 2026,
+      "url": "https://developer.android.com/docs/quality-guidelines/adaptive-app-quality",
+      "tracks": [
+        "app"
+      ],
+      "summary": "Support phones, tablets, foldables and resizable windows when in scope.",
+      "limitation": "Quality tiers depend on device support goals."
+    },
+    {
+      "id": "android-quality",
+      "title": "Core app quality guidelines",
+      "publisher": "Android Developers",
+      "type": "platform-guide",
+      "year": 2026,
+      "url": "https://developer.android.com/docs/quality-guidelines/archive/core/core-app-quality-2026-03-20",
+      "tracks": [
+        "app"
+      ],
+      "summary": "Meet stability, expected behavior and honest Play Store listing requirements.",
+      "limitation": "Snapshot from March; check current policy before submission."
+    },
+    {
+      "id": "material",
+      "title": "Expressive Design: Google's UX Research",
+      "publisher": "Google Design",
+      "type": "company-research",
+      "year": 2025,
+      "url": "https://design.google/library/expressive-material-design-google-research",
+      "tracks": [
+        "app"
+      ],
+      "summary": "Balance emotional expression with familiarity and legibility.",
+      "limitation": "Do not force a particular Material style onto every brand."
+    },
+    {
+      "id": "app-store",
+      "title": "Creating Your Product Page",
+      "publisher": "Apple Developer",
+      "type": "platform-guide",
+      "year": 2026,
+      "url": "https://developer.apple.com/app-store/product-page/",
+      "tracks": [
+        "app"
+      ],
+      "summary": "Use real feature screenshots and convincing metadata, with localized assets where available.",
+      "limitation": "Marketing cannot rescue poor retention and app quality."
+    },
+    {
+      "id": "app-store-testing",
+      "title": "Product Page Optimization",
+      "publisher": "Apple Developer",
+      "type": "platform-guide",
+      "year": 2026,
+      "url": "https://developer.apple.com/app-store/product-page-optimization/",
+      "tracks": [
+        "app"
+      ],
+      "summary": "Run controlled asset tests with sufficient samples instead of assumptions.",
+      "limitation": "Results from one cohort might not generalize."
+    },
+    {
+      "id": "play-testing",
+      "title": "Store Listing Experiments",
+      "publisher": "Google Play Console",
+      "type": "platform-guide",
+      "year": 2026,
+      "url": "https://play.google.com/intl/eng_ALL/console/about/store-listing-experiments/",
+      "tracks": [
+        "app"
+      ],
+      "summary": "Test icons, preview visuals and localized copy one hypothesis at a time.",
+      "limitation": "Traffic and store tests determine statistical confidence."
+    },
+    {
+      "id": "revenuecat",
+      "title": "State of Subscription Apps 2026",
+      "publisher": "RevenueCat",
+      "type": "industry-report",
+      "year": 2026,
+      "url": "https://www.revenuecat.com/state-of-subscription-apps",
+      "tracks": [
+        "app"
+      ],
+      "summary": "Early time-to-value, cancellations, retention and store billing recovery deserve study.",
+      "limitation": "Observational data from 115k+ apps; correlation is not causation."
+    },
+    {
+      "id": "sensor",
+      "title": "State of Mobile 2026",
+      "publisher": "Sensor Tower",
+      "type": "industry-report",
+      "year": 2026,
+      "url": "https://sensortower.com/press/press-release-boosted-by-gen-ai-services-consumers-spent-more-money-in-apps-than-games-for-first-time",
+      "tracks": [
+        "app"
+      ],
+      "summary": "Global 2025 IAP estimate of $167bn informs market size, not layouts or individual app income.",
+      "limitation": "Do not invent named app revenue."
+    },
+    {
+      "id": "ai-bots",
+      "title": "10 Guidelines for Designing Your Site's AI Chatbots",
+      "publisher": "Nielsen Norman Group",
+      "type": "industry-research",
+      "year": 2026,
+      "url": "https://www.nngroup.com/articles/ai-chatbots-design-guidelines/",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "summary": "Name bot limitations, context, safe suggestions, task relevance and recoverable errors.",
+      "limitation": "AI can be entirely unnecessary for a simple page."
+    },
+    {
+      "id": "ai-not-always",
+      "title": "AI Chat Is Not (Always) the Answer",
+      "publisher": "Nielsen Norman Group",
+      "type": "industry-article",
+      "year": 2024,
+      "url": "https://www.nngroup.com/articles/ai-chat-not-the-answer/",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "summary": "Test direct search/navigation before adding chat; avoid replacing useful controls.",
+      "limitation": "Narrow domain assistants may still help."
+    },
+    {
+      "id": "puter",
+      "title": "Puter.js Documentation",
+      "publisher": "Puter",
+      "type": "vendor-doc",
+      "year": 2026,
+      "url": "https://docs.puter.com/",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "summary": "Frontend access to cloud-model APIs with user-pays authentication; not on-device local inference.",
+      "limitation": "Requires network, service and user account/allowance."
+    },
+    {
+      "id": "webllm",
+      "title": "WebLLM Getting Started",
+      "publisher": "MLC.ai",
+      "type": "open-source-doc",
+      "year": 2026,
+      "url": "https://webllm.mlc.ai/docs/user/get_started.html",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "summary": "WebGPU local inference needs model downloads, progress, memory safeguards and fallback.",
+      "limitation": "WebGPU and model support differ by browser and device."
+    },
+    {
+      "id": "transformers",
+      "title": "Transformers.js WebGPU Guide",
+      "publisher": "Hugging Face",
+      "type": "open-source-doc",
+      "year": 2026,
+      "url": "https://huggingface.co/docs/transformers.js/guides/webgpu",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "summary": "Embeddings/classification/vision models can run locally with the right browser.",
+      "limitation": "Library and model weight licenses are different."
+    },
+    {
+      "id": "chrome-ai",
+      "title": "Get started with built-in AI",
+      "publisher": "Chrome Developers",
+      "type": "platform-guide",
+      "year": 2026,
+      "url": "https://developer.chrome.com/docs/ai/get-started",
+      "tracks": [
+        "website"
+      ],
+      "summary": "Chrome built-in AI feature/browser/device availability must be queried before use.",
+      "limitation": "Some APIs are desktop-only or in trials."
+    },
+    {
+      "id": "model-viewer",
+      "title": "The model-viewer web component",
+      "publisher": "Google web.dev",
+      "type": "company-guide",
+      "year": 2020,
+      "url": "https://web.dev/articles/model-viewer",
+      "tracks": [
+        "website"
+      ],
+      "summary": "A progressive enhancement path to product 3D/AR viewers.",
+      "limitation": "Models need optimization, licenses and accessible static fallback."
+    },
+    {
+      "id": "3d-fiber",
+      "title": "React Three Fiber",
+      "publisher": "Poimandres",
+      "type": "open-source-doc",
+      "year": 2026,
+      "url": "https://github.com/pmndrs/react-three-fiber",
+      "tracks": [
+        "website"
+      ],
+      "summary": "React renderer for useful interactive 3D experiences.",
+      "limitation": "React-version compatibility, device GPU budget and semantics matter."
+    },
+    {
+      "id": "motion-interactions",
+      "title": "Animation from Interactions",
+      "publisher": "W3C",
+      "type": "standard",
+      "year": 2023,
+      "url": "https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "summary": "Allow disabling nonessential movement triggered by interactions.",
+      "limitation": "This is AAA, not an AA mandate."
+    },
+    {
+      "id": "chat-placement",
+      "title": "10 Guidelines for Designing Your Site's AI Chatbots",
+      "publisher": "Nielsen Norman Group",
+      "type": "industry-research",
+      "year": 2026,
+      "url": "https://www.nngroup.com/articles/ai-chatbots-design-guidelines/",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "summary": "Context-specific prompts and easy discovery can help, but don't obstruct the page.",
+      "limitation": "Finding a bot useful is not proven by installing a bubble."
+    }
+  ],
+  "openSource": [
+    {
+      "name": "three.js",
+      "url": "https://github.com/mrdoob/three.js",
+      "license": "MIT",
+      "tracks": [
+        "website"
+      ],
+      "use": "3D engine; only add to page when the visitor can manipulate or learn something."
+    },
+    {
+      "name": "React Three Fiber",
+      "url": "https://github.com/pmndrs/react-three-fiber",
+      "license": "MIT",
+      "tracks": [
+        "website"
+      ],
+      "use": "Declarative React 3D, check React major version compatibility."
+    },
+    {
+      "name": "Drei",
+      "url": "https://github.com/pmndrs/drei",
+      "license": "MIT",
+      "tracks": [
+        "website"
+      ],
+      "use": "Opt-in helper library for React 3D."
+    },
+    {
+      "name": "model-viewer",
+      "url": "https://github.com/google/model-viewer",
+      "license": "Apache-2.0",
+      "tracks": [
+        "website"
+      ],
+      "use": "3D/AR viewer with poster and accessible text fallback."
+    },
+    {
+      "name": "PlayCanvas Engine",
+      "url": "https://github.com/playcanvas/engine",
+      "license": "MIT",
+      "tracks": [
+        "website"
+      ],
+      "use": "High-interaction product/game 3D engine."
+    },
+    {
+      "name": "Threlte",
+      "url": "https://github.com/threlte/threlte",
+      "license": "MIT",
+      "tracks": [
+        "website"
+      ],
+      "use": "Svelte-focused Three.js alternative."
+    },
+    {
+      "name": "Motion",
+      "url": "https://github.com/motiondivision/motion",
+      "license": "MIT",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "use": "State transitions and animation with reduced-motion alternatives."
+    },
+    {
+      "name": "Motion Primitives",
+      "url": "https://github.com/ibelick/motion-primitives",
+      "license": "MIT",
+      "tracks": [
+        "website"
+      ],
+      "use": "Small understandable React motion recipes."
+    },
+    {
+      "name": "Radix UI",
+      "url": "https://github.com/radix-ui/primitives",
+      "license": "MIT",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "use": "Headless accessible interaction primitives."
+    },
+    {
+      "name": "Base UI",
+      "url": "https://github.com/mui/base-ui",
+      "license": "MIT",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "use": "Accessible unstyled React components."
+    },
+    {
+      "name": "React Aria",
+      "url": "https://github.com/adobe/react-spectrum",
+      "license": "Apache-2.0",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "use": "Accessible interactions, inspect subpackage terms."
+    },
+    {
+      "name": "shadcn/ui",
+      "url": "https://github.com/shadcn-ui/ui",
+      "license": "MIT",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "use": "Components as starting points, not final art direction."
+    },
+    {
+      "name": "Origin UI",
+      "url": "https://github.com/shadcn/originui",
+      "license": "MIT",
+      "tracks": [
+        "app"
+      ],
+      "use": "Complex React web-app controls."
+    },
+    {
+      "name": "Uiverse Galaxy",
+      "url": "https://github.com/uiverse-io/galaxy",
+      "license": "MIT",
+      "tracks": [
+        "website"
+      ],
+      "use": "Community small UI effects; respect contributors."
+    },
+    {
+      "name": "Magic UI",
+      "url": "https://github.com/magicuidesign/magicui",
+      "license": "MIT public code",
+      "tracks": [
+        "website"
+      ],
+      "use": "Marketing animations; commercial templates separate."
+    },
+    {
+      "name": "React Native Reusables",
+      "url": "https://github.com/founded-labs/react-native-reusables",
+      "license": "MIT",
+      "tracks": [
+        "app"
+      ],
+      "use": "Expo/NativeWind component patterns."
+    },
+    {
+      "name": "gluestack-ui",
+      "url": "https://github.com/gluestack/gluestack-ui",
+      "license": "README says MIT; root license unconfirmed",
+      "tracks": [
+        "app"
+      ],
+      "use": "Cross-platform components; verify each package's actual license."
+    },
+    {
+      "name": "React Native Paper",
+      "url": "https://github.com/callstack/react-native-paper",
+      "license": "MIT",
+      "tracks": [
+        "app"
+      ],
+      "use": "Material-inspired React Native widgets."
+    },
+    {
+      "name": "Expo",
+      "url": "https://github.com/expo/expo",
+      "license": "MIT core",
+      "tracks": [
+        "app"
+      ],
+      "use": "React Native app framework; check SDK compatibility and modules."
+    },
+    {
+      "name": "Flutter",
+      "url": "https://github.com/flutter/flutter",
+      "license": "BSD-3-Clause",
+      "tracks": [
+        "app"
+      ],
+      "use": "Cross-platform native UI."
+    },
+    {
+      "name": "WebLLM",
+      "url": "https://github.com/mlc-ai/web-llm",
+      "license": "Apache-2.0",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "use": "WebGPU in-browser LLM; downloads and memory."
+    },
+    {
+      "name": "Transformers.js",
+      "url": "https://github.com/huggingface/transformers.js",
+      "license": "Apache-2.0",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "use": "Local embeddings/vision/text; model license separate."
+    },
+    {
+      "name": "assistant-ui",
+      "url": "https://github.com/assistant-ui/assistant-ui",
+      "license": "MIT",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "use": "Chat UI components; runtime/backend still needed."
+    },
+    {
+      "name": "CopilotKit",
+      "url": "https://github.com/CopilotKit/CopilotKit",
+      "license": "MIT",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "use": "Context-aware agent UI; require action review and consent."
+    },
+    {
+      "name": "Puter server",
+      "url": "https://github.com/HeyPuter/puter",
+      "license": "AGPL-3.0",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "use": "Open self-hosted server; JS cloud API is vendor/user-pays."
+    },
+    {
+      "name": "Playwright",
+      "url": "https://github.com/microsoft/playwright",
+      "license": "Apache-2.0",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "use": "Real browser tasks, screenshots and regressions."
+    },
+    {
+      "name": "axe-core",
+      "url": "https://github.com/dequelabs/axe-core",
+      "license": "MPL-2.0",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "use": "Automated accessibility checks, not full certification."
+    },
+    {
+      "name": "GOV.UK Frontend",
+      "url": "https://github.com/alphagov/govuk-frontend",
+      "license": "MIT",
+      "tracks": [
+        "website",
+        "app"
+      ],
+      "use": "Accessible forms and error patterns, not its branding."
+    }
+  ],
+  "marketFacts": [
+    {
+      "label": "Global 2025 mobile IAP spend",
+      "value": "$167bn",
+      "sourceId": "sensor",
+      "scope": "global consumer aggregate"
+    },
+    {
+      "label": "Subscription report sample",
+      "value": "115,000+ apps",
+      "sourceId": "revenuecat",
+      "scope": "RevenueCat managed subscription sample"
+    },
+    {
+      "label": "3-day trial cancellations on Day 0",
+      "value": "55%",
+      "sourceId": "revenuecat",
+      "scope": "Observational subscription cohort"
+    },
+    {
+      "label": "Good LCP threshold",
+      "value": "2.5 seconds at p75",
+      "sourceId": "core-web-vitals",
+      "scope": "Google web performance guidance"
+    }
+  ]
+}

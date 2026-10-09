@@ -91,3 +91,6 @@ body.motion-off *,body.motion-off *::before,body.motion-off *::after{transition:
 .pv-home-concept strong{font:normal clamp(1.1rem,1.7vw,1.6rem)/1.25 Georgia,serif;letter-spacing:-.02em;max-width:570px}
 .pv-home-concept:hover{background:#d3e5b4}
 @media(max-width:830px){.pv-home-concept{align-items:flex-start;flex-direction:column;padding:18px 19px;gap:9px}}
+
+/* Compact site nav for the expanded public atlas: preserve readable links on tablets. */
+@media(min-width:741px) and (max-width:1300px){.masthead .main-nav{display:none}.masthead .mobile-menu{display:flex;align-items:center;gap:7px;min-height:42px;padding:8px 10px;border:1px solid var(--ink);background:transparent;margin-left:auto;font-size:.72rem;font-weight:800}.mobile-navigation:not([hidden]){display:flex;flex-direction:column;gap:0;padding-top:6px;padding-bottom:12px;background:var(--paper);border-bottom:1px solid var(--ink);position:relative;z-index:8}.mobile-navigation a{padding:9px 3px;font-weight:800;font-size:.9rem;text-decoration:none}}

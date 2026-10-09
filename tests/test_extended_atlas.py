@@ -65,7 +65,7 @@ class StyleSkillTests(unittest.TestCase):
             self.assertIn('./apps.html', content)
             self.assertIn('./styles.html', content)
             self.assertIn('./skills.html', content)
-        self.assertIn('151 ORIGINAL PROMPTS', (DOCS / 'index.html').read_text())
+        self.assertIn('199 ORIGINAL PROMPTS', (DOCS / 'index.html').read_text())
 
     def test_scripts_have_safe_prompts_and_no_external_vendor_runtime(self):
         style = (DOCS / "style-lab.js").read_text(encoding="utf-8")
