@@ -48,3 +48,39 @@ Maintain eight distinct original mini-studies and eight original standalone prom
   JSON schema/content invariants and relative links before shipping.
 - Website browser screenshots and actual iOS/Android device QA must be
   reported as pending unless performed and evidenced.
+
+## Concept Field Guide v2: source and contribution contract (October 2026)
+
+- Keep exactly two primary design tracks: `website` and `app`.
+  Add independent concept content to `docs/data/concepts-web.json` or
+  `docs/data/concepts-app.json`, never an uncontrolled third track.
+- Each concept has a unique ID, title, family, user purpose, explicit
+  `useWhen` and `avoidWhen`, a safe original `preview` variant,
+  cited `sources` by ID, suggested `skills`, `successSignal`,
+  `accessibility`, and `recovery` requirements.
+- Sources live in `docs/data/deep-research.json` and must describe
+  what a finding informs AND what it cannot prove. Do not cite a
+  research paper to justify a made-up conversion or revenue number.
+  Researcher or author credit, DOI, platform rule and experiment
+  applicability must be validated.
+- New upstream references live in `docs/data/deep-resources.json`.
+  Always keep licenseStatus: restricted/verified-permissive/reference/
+  unverified. Unknown/source-visible does not imply MIT, Commons-Clause
+  and tldraw SDK are NOT free to commercialize as a component catalog.
+  Avoid vendoring third-party illustrations, models, screenshots,
+  source files, logos or copyrighted reference text.
+- Update `catalog/CONCEPT-INDEX.md` with descriptions and sources.
+  Preserve the source-linked, reference-only distinction in
+  `research/concept-field-guide.md`. New patterns should add unique
+  insight rather than duplicate existing concepts.
+- The original field-guide UI comprises `docs/concepts.html`,
+  `docs/concepts.css` and `docs/concepts.js`. It must run with a
+  local static HTTP server without paid services. Its HTML/CSS specimen
+  variants are illustrative, not independent full sites/native apps.
+  Their normal/success/error states must never imply real purchases,
+  booked services, AI model inference or saved remote data.
+- On concept changes run `tests/test_concept_field_guide.py`
+  and the existing test suite where possible; check JS syntax,
+  source link integrity, responsive/keyboard interactions and
+  reductions in motion. Never claim physical device or browser
+  testing without execution evidence.
