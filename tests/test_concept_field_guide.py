@@ -224,10 +224,11 @@ class ConceptFieldGuideTests(unittest.TestCase):
     def test_preview_renderer_supports_every_catalog_kind(self):
         for track, dataset in (("webTypes", self.web),
                                ("appTypes", self.app)):
-            pattern = r"const " + track + r" = new Set\\(\\[([^\\]]+)\\]\\)"
-            match = re.search(pattern, self.js)
-            self.assertIsNotNone(match, track)
-            supported = set(re.findall(r"'([^']+)'", match.group(1)))
+            marker = "const " + track + " = new Set(["
+            self.assertIn(marker, self.js)
+            begin = self.js.index(marker) + len(marker)
+            end = self.js.index("])", begin)
+            supported = set(re.findall(r"'([^']+)'", self.js[begin:end]))
             actual = {item["preview"] for item in dataset["concepts"]}
             self.assertTrue(actual.issubset(supported),
                             (track, actual - supported))
