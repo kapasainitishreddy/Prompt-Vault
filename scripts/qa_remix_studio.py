@@ -72,6 +72,7 @@ def main()->int:
      page.locator("#rx-preserve").fill("KEEP USER BOOKMARKS AND PAYMENT FLOWS")
      page.locator("#rx-scope").select_option("section")
      page.locator("#rx-focus").select_option("paywall")
+     page.locator(".rx-advanced summary").click()
      page.locator("#rx-blueprint").select_option("reader")
      page.locator("#rx-concept").select_option("app-value-before-signup")
      page.locator("#rx-generate").click()
