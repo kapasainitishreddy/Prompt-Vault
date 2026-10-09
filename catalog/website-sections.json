@@ -1,0 +1,519 @@
+{
+  "version": "1.0",
+  "track": "website",
+  "count": 32,
+  "sections": [
+    {
+      "id": "announcement-bar",
+      "title": "Announcement bar",
+      "job": "Communicate one time-sensitive update without hijacking the visit",
+      "variants": [
+        "Quiet newspaper ticker",
+        "compact product alert",
+        "status strip with optional countdown only if accurate"
+      ],
+      "behavior": "Dismissal remembered locally where lawful; entire message readable; one real link",
+      "motion": "Single slide-in on initial load or discreet status crossfade",
+      "reject": "Fake scarcity countdown; looping marquee; banner covering nav",
+      "states": "dismissed; expired; multi-line localized text",
+      "verify": "Can keyboard-dismiss; banner does not shift focus or cover CTA",
+      "reference": "Kombai"
+    },
+    {
+      "id": "navigation",
+      "title": "Header and navigation",
+      "job": "Help users reach the right page without guessing",
+      "variants": [
+        "Editorial table-of-contents",
+        "precise utility toolbar",
+        "spatial brand-led navigation"
+      ],
+      "behavior": "Semantic real links; responsive disclosure; Escape returns focus; sticky only where useful",
+      "motion": "Indicator glide between real active links; controlled mobile drawer transition",
+      "reject": "Magnetic links that dodge clicks; hovering-only menus; endless glass overlays",
+      "states": "closed; open; keyboard; nested nav; signed in/out",
+      "verify": "Keyboard and screen reader paths; mobile menu at 360px; Back navigation",
+      "reference": "VengeanceUI"
+    },
+    {
+      "id": "hero",
+      "title": "Hero section",
+      "job": "Say what this product does, for whom, and why this specific product exists",
+      "variants": [
+        "Typography-led asymmetric declaration",
+        "original product demo",
+        "document-inspired cinematic composition"
+      ],
+      "behavior": "Specific headline and honest primary action; real proof; meaningful visual",
+      "motion": "One authored entrance sequence OR user-triggered product reveal",
+      "reject": "Purple blob; generic three-card cloud; endless particles; fake numbers",
+      "states": "mobile wrapping; missing image; slow load; reduced motion",
+      "verify": "First-glance clarity; CTA test; 360/390/1440 captures",
+      "reference": "ObsidianUI"
+    },
+    {
+      "id": "product-showcase",
+      "title": "Product showcase",
+      "job": "Show an actual capability or object in useful context",
+      "variants": [
+        "Clickable annotated screenshot",
+        "product stage with technical callouts",
+        "interface before/after"
+      ],
+      "behavior": "Hotspots keyboard-usable; samples identify mock content; media licensing known",
+      "motion": "Hotspot reveal on activation; small shared-layout tab transition",
+      "reject": "Floating UI screenshots with unreadable 10px text; invented prototype data",
+      "states": "tabs; zoom; failed media; touch; long labels",
+      "verify": "Image fidelity; tab order; small-device detail readability",
+      "reference": "Kombai"
+    },
+    {
+      "id": "features",
+      "title": "Features section",
+      "job": "Explain benefits with concrete capabilities not generic marketing",
+      "variants": [
+        "Editorial numbered index",
+        "process-linked feature narrative",
+        "interactive capability explorer"
+      ],
+      "behavior": "Each feature has what/why/outcome/proof; feature media real",
+      "motion": "Focused reveal of selected feature; gentle drawing of an actual diagram",
+      "reject": "Identical rounded 3 cards; vague 'AI-powered' fluff; icons for decoration",
+      "states": "long copy; missing illustration; keyboard feature switch",
+      "verify": "Benefit understood without motion; interaction works with keyboard",
+      "reference": "Originkit"
+    },
+    {
+      "id": "benefits-story",
+      "title": "Benefit storytelling",
+      "job": "Make user stakes and outcomes emotionally legible",
+      "variants": [
+        "Problem-first story panels",
+        "illustrated journey",
+        "documentary split narrative"
+      ],
+      "behavior": "Before and after must be verifiable or illustrative-label; preserve actual testimonials only",
+      "motion": "Scroll-linked chapter transition with static equivalent",
+      "reject": "Stock handshakes; manipulated before-and-after; full-screen scrolljacking",
+      "states": "reduced motion; narrow viewport; content expanded",
+      "verify": "Reading continuity without animation; no forced scrolling",
+      "reference": "Kombai"
+    },
+    {
+      "id": "how-it-works",
+      "title": "How it works",
+      "job": "Explain sequence in fewer steps with no hidden prerequisites",
+      "variants": [
+        "Process blueprint",
+        "guided vertical annotated steps",
+        "interactive branching walkthrough"
+      ],
+      "behavior": "Steps retain numbering and visible prerequisites; actual paths real",
+      "motion": "SVG path progress on scroll OR step-change only after tap",
+      "reject": "Three steps with meaningless icons; autoplay maze; fabricated setup simplicity",
+      "states": "branching; current step; no JS; touch",
+      "verify": "Can explain in one minute; all steps readable statically",
+      "reference": "VengeanceUI"
+    },
+    {
+      "id": "interactive-demo",
+      "title": "Interactive demo",
+      "job": "Let visitors test real product behavior safely",
+      "variants": [
+        "Sandbox workbench",
+        "interactive terminal simulation labeled demo",
+        "try-it form"
+      ],
+      "behavior": "Sandbox must not hit destructive production endpoints; clear outputs/errors",
+      "motion": "State-driven transition after user action, no animation hiding results",
+      "reject": "Fake input fields; prerecorded 'live' response without label",
+      "states": "loading; success; invalid; failure; reset",
+      "verify": "Network disabled and invalid input path tested",
+      "reference": "Bencho"
+    },
+    {
+      "id": "social-proof",
+      "title": "Logos and trust proof",
+      "job": "Convey credible evidence only where it exists",
+      "variants": [
+        "Verified references with context",
+        "open-source activity proof",
+        "no-logo transparent evidence"
+      ],
+      "behavior": "Permission and provenance for client marks; citations to real results",
+      "motion": "Simple disclosure expansion for evidence detail",
+      "reject": "Imaginary Fortune 500 logos; infinite logo crawl; uncited star counts",
+      "states": "zero testimonials; stale badges; broken logos",
+      "verify": "Trace each displayed claim to source; screen reader labels",
+      "reference": "Kombai"
+    },
+    {
+      "id": "metrics",
+      "title": "Metrics and outcomes",
+      "job": "Explain meaningful quantities with traceability",
+      "variants": [
+        "Number-plus-context ledger",
+        "modest comparison graph",
+        "annotated timeline"
+      ],
+      "behavior": "Label date/source, denominator, units, methodology; no invented values",
+      "motion": "One-time datum highlight after render, never fake count-up",
+      "reject": "Count-up from 0 without reason; meaningless '99.9%'",
+      "states": "no data; incomplete data; stale metrics; error",
+      "verify": "Values match dataset; charts readable without animation",
+      "reference": "Kombai"
+    },
+    {
+      "id": "testimonials",
+      "title": "Testimonials",
+      "job": "Preserve real voice while making it easy to judge relevance",
+      "variants": [
+        "Quotation-led editorial spread",
+        "small authentic case quotes",
+        "verified interview excerpts"
+      ],
+      "behavior": "Name/company only with consent; citation; optional anonymous labeled case",
+      "motion": "Subtle optional carousel on button, no timer",
+      "reject": "Synthetic headshots; generated praises; uncontrollable auto-slider",
+      "states": "none available; long quote; mobile carousel",
+      "verify": "Authenticity checked; content reachable without swipe",
+      "reference": "Kombai"
+    },
+    {
+      "id": "case-study",
+      "title": "Case study",
+      "job": "Prove a meaningful result from problem to change to measured outcome",
+      "variants": [
+        "Research dossier",
+        "narrative before/after",
+        "visual data appendix"
+      ],
+      "behavior": "Problem; intervention; evidence; limitations; action to read full study",
+      "motion": "Chapter index active state; annotated screenshot compare",
+      "reject": "Photoshopped proof; fake growth charts; ornamental graphs",
+      "states": "missing metrics; citation unavailable; narrow content",
+      "verify": "Trace all claims; compare with/without motion",
+      "reference": "Kombai"
+    },
+    {
+      "id": "comparison",
+      "title": "Comparison table",
+      "job": "Help visitor choose fairly between realistic options",
+      "variants": [
+        "Editorial matrix",
+        "dimension-by-dimension explainer",
+        "interactive scenario compare"
+      ],
+      "behavior": "Accurate claims with dates; row/column labels; truthful unknowns",
+      "motion": "Highlight currently focused row/column, not an entire fireworks show",
+      "reject": "Biased fake competitor scores; hidden disqualifiers",
+      "states": "very wide tables; unknown value; updated price",
+      "verify": "Keyboard reading order; responsive scroll cue; truthful alternatives",
+      "reference": "Kombai"
+    },
+    {
+      "id": "pricing",
+      "title": "Pricing section",
+      "job": "Make cost, scope and consequences unmistakable",
+      "variants": [
+        "Clear plan ledger",
+        "progressive feature comparison",
+        "calculator for real pricing"
+      ],
+      "behavior": "Real currency/billing cadence, tax notes, cancel/refund boundaries, live working checkout link",
+      "motion": "User-triggered monthly/yearly numeric transition with semantic announcement",
+      "reject": "Unclear dark-pattern default; animated fake discount; mystery add-ons",
+      "states": "free tier; currencies; unavailable checkout; error",
+      "verify": "Total and cadence correct; keyboard toggle; no hidden cost",
+      "reference": "Originkit"
+    },
+    {
+      "id": "faq",
+      "title": "Frequently asked questions",
+      "job": "Remove concrete friction and objections before signup",
+      "variants": [
+        "Tabbed topic index",
+        "accessible disclosure list",
+        "search-driven answers"
+      ],
+      "behavior": "Native details or accessible disclosure; direct deep links; source-aware answers",
+      "motion": "Quick height/opacity expansion only if non-disorienting; reduced fallback",
+      "reject": "Twenty canned generic questions; auto-opening every item",
+      "states": "nested answer links; no result; very long text",
+      "verify": "Keyboard disclosure and focus; no clipped content",
+      "reference": "Kombai"
+    },
+    {
+      "id": "integrations",
+      "title": "Integrations",
+      "job": "Explain exactly what connects, permissions and capabilities",
+      "variants": [
+        "Connected-system map",
+        "grouped directory",
+        "permission-by-scope explorer"
+      ],
+      "behavior": "Only real supported providers; states and setup requirements accurate",
+      "motion": "Connection line highlights after selection not constant ambient motion",
+      "reject": "Floating random logos; claimed integrations that are mockups",
+      "states": "disconnected; auth failed; revoked; coming soon",
+      "verify": "Real documentation destinations; states accurately named",
+      "reference": "Kombai"
+    },
+    {
+      "id": "use-cases",
+      "title": "Use cases",
+      "job": "Help distinct audiences recognize their jobs",
+      "variants": [
+        "Role-based workflows",
+        "audience narratives",
+        "task-based filterable gallery"
+      ],
+      "behavior": "Each job carries real outcome, constraints and user language",
+      "motion": "Selected persona panel transition activated by click",
+      "reject": "Generic 'teams of all sizes' feature cards; stereotyping roles",
+      "states": "empty category; long localization; touch",
+      "verify": "User identifies entry route and relevant example in <30sec",
+      "reference": "Kombai"
+    },
+    {
+      "id": "gallery",
+      "title": "Visual gallery",
+      "job": "Show authored media without overwhelming browse and download",
+      "variants": [
+        "Curated museum wall",
+        "annotated masonry story",
+        "filterable exhibit index"
+      ],
+      "behavior": "Real licensed assets and captions; focus-safe lightbox; alt text",
+      "motion": "Purposeful crossfade of chosen work or user-controlled carousel",
+      "reject": "Endless autoplay slideshow; 3D spin obscuring media",
+      "states": "failed image; keyboard lightbox; portrait/landscape",
+      "verify": "Source rights; ESC focus restore; bandwidth optimization",
+      "reference": "Kombai"
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfolio project section",
+      "job": "Demonstrate skills with a distinctive story of decisions",
+      "variants": [
+        "Case files",
+        "chronological field notes",
+        "full-bleed selected project"
+      ],
+      "behavior": "Role contribution, real screenshots, constraints, result and source",
+      "motion": "Project panel reveal with motion driven by explicit selection",
+      "reject": "Identical animated 'card hover' grid; fake agency clients",
+      "states": "no public results; long titles; sensitive work",
+      "verify": "Viewer understands creator role; accessible keyboard navigation",
+      "reference": "Oneko"
+    },
+    {
+      "id": "articles",
+      "title": "Editorial blog and feed",
+      "job": "Make long-form knowledge easy to scan and enter",
+      "variants": [
+        "Magazine index",
+        "annotated essays",
+        "chronological research notes"
+      ],
+      "behavior": "Dates/authors/categories meaningful; honest summaries; headings semantic",
+      "motion": "Subtle underline follow or article preview after focus",
+      "reject": "Generic cards with fake reading times; endless scroll no footer",
+      "states": "pagination; empty topic; long title; search",
+      "verify": "Scanability at 360px; article links valid",
+      "reference": "Kombai"
+    },
+    {
+      "id": "storefront",
+      "title": "Storefront catalog",
+      "job": "Enable filtering and comparing real merchandise",
+      "variants": [
+        "Lookbook editorial",
+        "structured catalog",
+        "collection explorer"
+      ],
+      "behavior": "Prices/inventory real; filters reflect availability; fast thumbnail loading",
+      "motion": "Filter reflow with stable layout and focus, no flying tiles",
+      "reject": "Fake sold-out urgency; hover-only add; orphaned inventory",
+      "states": "empty filters; out of stock; price changes",
+      "verify": "Cart state correct; back from product retains filter",
+      "reference": "Kombai"
+    },
+    {
+      "id": "product-detail",
+      "title": "Commerce product detail",
+      "job": "Answer fit, delivery, variants and trust questions",
+      "variants": [
+        "Product editorial spread",
+        "spec-driven split view",
+        "annotated media comparisons"
+      ],
+      "behavior": "Variant pricing/stock/deadlines source-backed; accessible gallery",
+      "motion": "User-triggered variant morph with focus retained",
+      "reject": "Huge video masking buy button; false countdown or reviews",
+      "states": "variant out of stock; missing image; long specs",
+      "verify": "Add to cart exact variant; zoom; returns; touch",
+      "reference": "Kombai"
+    },
+    {
+      "id": "newsletter",
+      "title": "Newsletter capture",
+      "job": "Earn trust and opt-in with clear value and frequency",
+      "variants": [
+        "Single-field editorial letter",
+        "sample issue preview",
+        "topic preference panel"
+      ],
+      "behavior": "Real consent, privacy copy, validation, success and unsubscribe clarity",
+      "motion": "Submit button progress to explicit confirmation",
+      "reject": "Fake 'joined by 100k' metric; email wall for unrelated content",
+      "states": "invalid address; double submit; API failure",
+      "verify": "Test validation and announcements; no fake saved state",
+      "reference": "Bencho"
+    },
+    {
+      "id": "contact",
+      "title": "Contact section",
+      "job": "Provide a real path to reach the right person",
+      "variants": [
+        "Letter-style form",
+        "department routing",
+        "practical availability card"
+      ],
+      "behavior": "Form labels, anti-spam, privacy, successful send only after server confirms",
+      "motion": "Field validation feedback after interaction; success without confetti",
+      "reject": "Generic fake form that never sends; too many required fields",
+      "states": "offline; failed submit; missing consent",
+      "verify": "Keyboard field order; realistic success/error paths",
+      "reference": "Bencho"
+    },
+    {
+      "id": "call-to-action",
+      "title": "Final call to action",
+      "job": "Invite one next step with strong product-specific reasoning",
+      "variants": [
+        "Concise closing manifesto",
+        "proof-linked decision panel",
+        "demo-led action"
+      ],
+      "behavior": "Specific action, real destination, cost/commitment truthful",
+      "motion": "One soft emphasis tied to focus/hover; no pulse loop",
+      "reject": "Generic 'Ready to revolutionize' or another irrelevant gradient card",
+      "states": "disabled action; logged in user; mobile layout",
+      "verify": "Primary link works; zero ambiguous copy",
+      "reference": "VengeanceUI"
+    },
+    {
+      "id": "footer",
+      "title": "Footer and global utility",
+      "job": "Make site closure, policy and secondary navigation reliable",
+      "variants": [
+        "Site colophon",
+        "directory index",
+        "compact utility grid"
+      ],
+      "behavior": "Truthful policy links, year, contact and copyright; accessible sitemap",
+      "motion": "No motion required; optional hover underline only",
+      "reject": "Huge decorative particles; broken policy or phantom socials",
+      "states": "very long links; small touch screens",
+      "verify": "All links verified; contrast at bottom; reading order",
+      "reference": "Kombai"
+    },
+    {
+      "id": "search",
+      "title": "Site search and filtering",
+      "job": "Get users to information quickly without visual clutter",
+      "variants": [
+        "Command-style discovery",
+        "structured results list",
+        "facets with counts"
+      ],
+      "behavior": "Query/relevance, zero state, keyboard shortcuts and loading credible",
+      "motion": "Result appearance only after actual update; no infinite shimmer",
+      "reject": "Fake AI answers; nonfunctional Cmd K; result cards clipping",
+      "states": "zero; typo; slow; offline; no permissions",
+      "verify": "Enter/Escape/Arrow keys; real results, reset controls",
+      "reference": "Bencho"
+    },
+    {
+      "id": "checkout",
+      "title": "Website checkout",
+      "job": "Make the transaction secure, transparent and reversible",
+      "variants": [
+        "Transaction receipt layout",
+        "minimal step tracker",
+        "cost ledger"
+      ],
+      "behavior": "Exact totals, payment confirmation, failure recovery, privacy; no fake lock badges",
+      "motion": "Step changes via small directional transition; totals announced",
+      "reject": "Fake security logos; animations hiding fees; disabled cancel",
+      "states": "decline; expired payment; retry; 3DS; success",
+      "verify": "End-to-end test payment in sandbox only; prevent double pay",
+      "reference": "Kombai"
+    },
+    {
+      "id": "error-404",
+      "title": "404 and empty route",
+      "job": "Help users recover from a bad URL instead of dead-ending",
+      "variants": [
+        "Editorial route map",
+        "useful popular links",
+        "search-first recovery"
+      ],
+      "behavior": "Real navigation links; route-safe redirect; no pretend magic assistant",
+      "motion": "Small original branded illustration reacting to user action",
+      "reject": "Huge 3D monster covering search; taunting copy",
+      "states": "offline; unmatched route; search blank",
+      "verify": "Back/home and search keyboard-tested",
+      "reference": "Oneko"
+    },
+    {
+      "id": "documentation",
+      "title": "Documentation and technical guides",
+      "job": "Get developer to a correct implementation quickly",
+      "variants": [
+        "API reference ledger",
+        "executable example split",
+        "editorial guide index"
+      ],
+      "behavior": "Correct commands; version/versioning, copy; permanent deep links",
+      "motion": "Code tab highlight on selection; not auto-typing terminal",
+      "reject": "Decorative IDE screenshots; fabricated run outputs",
+      "states": "syntax fallback; long code; mobile sticky nav",
+      "verify": "Copy code equality; keyboard tab switching; narrow viewport",
+      "reference": "Kombai"
+    },
+    {
+      "id": "events",
+      "title": "Event and schedule section",
+      "job": "Communicate accurate times, locations and attendance path",
+      "variants": [
+        "Ticket ledger",
+        "agenda timeline",
+        "speaker/story panel"
+      ],
+      "behavior": "Timezone, date, availability and organizer details source-backed",
+      "motion": "Agenda phase highlight on selected day, not running clock",
+      "reject": "Fake countdown; event photos with fabricated speakers",
+      "states": "past event; timezone swap; full event",
+      "verify": "Dates converted correctly and registration link works",
+      "reference": "Kombai"
+    },
+    {
+      "id": "timeline",
+      "title": "Roadmap or history",
+      "job": "Explain milestones without claiming future certainty",
+      "variants": [
+        "Research notebook",
+        "vertical engineering log",
+        "spatial illustrated line"
+      ],
+      "behavior": "Distinguish done/in progress/planned and source of claims",
+      "motion": "Progress line follows focus or scrolling with reduced-motion static list",
+      "reject": "Roadmap presented as guaranteed; long paralax; impossible dates",
+      "states": "empty history; delayed milestone; many records",
+      "verify": "A11y chronological order; unchanged semantics without JavaScript",
+      "reference": "VengeanceUI"
+    }
+  ]
+}

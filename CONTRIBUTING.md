@@ -1,5 +1,7 @@
 # Contributing to Prompt-Vault
 
+**New section or motion recipe:** add a unique entry to the correct `catalog/*.json`, a corresponding fully copyable prompt under `prompts/website/sections`, `prompts/app/flows`, or `prompts/motion`, and update the appropriate index. Cover motion/off, real states, anti-slop, mobile and accessibility; retain four-round bound. Do not vendor Canvas UI, Originkit catalog, Kombai screenshots, unknown Oneko skins or Bencho site art into MIT without explicit separate rights.
+
 Prompt-Vault is a practical, permissively licensed toolbox, not a gallery of untested adjectives.
 
 1. Keep the **website** and **app** tracks separate. Put shared tests and critique rules under prompts/shared.

@@ -1,0 +1,519 @@
+{
+  "version": "1.0",
+  "track": "app",
+  "count": 32,
+  "flows": [
+    {
+      "id": "onboarding",
+      "title": "Onboarding and first run",
+      "job": "Get users to first meaningful value without forcing irrelevant setup",
+      "variants": [
+        "Interactive sample before signup",
+        "progressive task-first setup",
+        "short preference path"
+      ],
+      "behavior": "Permissions just-in-time; skip and resume; never gate basic exploration without a reason",
+      "motion": "One between-step transform that shows progress, plus reduced instant switch",
+      "reject": "Full-screen animated confetti before value; forced carousel; hidden skip",
+      "states": "skip; return; no account; denied permission; interrupted setup",
+      "verify": "Time to first real completed task; all steps keyboard/touch accessible",
+      "reference": "Kombai"
+    },
+    {
+      "id": "authentication",
+      "title": "Sign in and account recovery",
+      "job": "Let users access a real account securely and recover it",
+      "variants": [
+        "One purposeful credential form",
+        "magic-link handoff",
+        "multi-step verification"
+      ],
+      "behavior": "Show accurate errors without revealing user existence; recover session and autofill",
+      "motion": "Short verified success transition, not spinner without timeout",
+      "reject": "Fake SSO logos; password-only login without recovery; insecure custom keyboard",
+      "states": "bad password; lockout; 2FA; resend; offline; expired link",
+      "verify": "Test auth against real test backend, rate limit, focus on errors",
+      "reference": "Bencho"
+    },
+    {
+      "id": "home",
+      "title": "Home and task hub",
+      "job": "Show what matters now, how to act, and current state",
+      "variants": [
+        "Editorial focus board",
+        "compact prioritized list",
+        "spatial workbench"
+      ],
+      "behavior": "Real task status and freshness; next-action visible; personalization opt-in",
+      "motion": "Meaningful list insertion or card expansion after explicit action",
+      "reject": "Dashboard with arbitrary 7 glass widgets; fake graphs; no next action",
+      "states": "first use; empty; stale; overloaded; offline",
+      "verify": "Top task recognizable within 5 seconds; real primary action works",
+      "reference": "Bencho"
+    },
+    {
+      "id": "navigation",
+      "title": "App navigation",
+      "job": "Make moving between important jobs reliable and platform-consistent",
+      "variants": [
+        "Native tab hierarchy",
+        "adaptive side rail on large screens",
+        "search-first command shell"
+      ],
+      "behavior": "Preserve stack/back history; visible current destination and labeled icons",
+      "motion": "Selection indicator transition of 120–220ms",
+      "reject": "Mystery-only icon navigation; hover-only menus; unnecessary page 3D spins",
+      "states": "deep link; keyboard; back; many tabs; landscape",
+      "verify": "Back and focus restore correct on iOS/Android/web targets",
+      "reference": "Kombai"
+    },
+    {
+      "id": "search",
+      "title": "Search and discovery",
+      "job": "Find one item precisely with clear matching and recovery",
+      "variants": [
+        "Immediate-results list",
+        "structured category drilldown",
+        "command palette for power users"
+      ],
+      "behavior": "Debounce expensive queries; query scope and relevance visible",
+      "motion": "Result-list crossfade after response; loading shown accurately",
+      "reject": "Phantom AI answers; animated fake typing; 'smart search' with no results",
+      "states": "typo; zero; partial; unauthorized; slow; offline",
+      "verify": "Search exact item and recover from misspelling",
+      "reference": "Bencho"
+    },
+    {
+      "id": "filters",
+      "title": "Filters and sorting",
+      "job": "Narrow or reorganize results without losing user context",
+      "variants": [
+        "Drawer of active facets",
+        "chip summary",
+        "side-panel facets for wide view"
+      ],
+      "behavior": "Expose applied vs draft choices, counts, clear and reset, Back",
+      "motion": "Chip insertion/removal and list reflow driven by actual filtering",
+      "reject": "Sliding panels with 20 irrelevant toggles; hidden clear-all",
+      "states": "zero results; conflicting filters; long facets; keyboard",
+      "verify": "Results and counts agree; filters persist on detail/back path",
+      "reference": "Kombai"
+    },
+    {
+      "id": "list-feed",
+      "title": "Lists and activity feeds",
+      "job": "Scan, group and act on repeated records efficiently",
+      "variants": [
+        "High-density editorial rows",
+        "media-led feed",
+        "timeline with priority markers"
+      ],
+      "behavior": "Stable item identity, timestamps and pagination; action semantics",
+      "motion": "Stagger only freshly inserted items, not every scroll visit",
+      "reject": "Infinite bouncing cards; unreadable card forests; ghost items",
+      "states": "no items; loading; duplicate; 1000+ records; deleted item",
+      "verify": "Scroll/keyboard preserve place; virtualized lists keep a11y",
+      "reference": "Bencho"
+    },
+    {
+      "id": "detail",
+      "title": "Detail screen",
+      "job": "Help someone interpret one object and make its next decision",
+      "variants": [
+        "Hierarchy-first document",
+        "rich detail with related context",
+        "media and metadata rail"
+      ],
+      "behavior": "Correct relationships and source; contextual edit/delete with confirmation",
+      "motion": "Shared-element-like transition only when supported and not motion-sensitive",
+      "reject": "Gigantic decorative hero on utility detail; important actions hidden",
+      "states": "missing data; no permission; changed record; deep link",
+      "verify": "Critical information and action visible; Back state preserved",
+      "reference": "Kombai"
+    },
+    {
+      "id": "create-edit",
+      "title": "Create and edit",
+      "job": "Let users produce and save valid work without loss",
+      "variants": [
+        "Inline direct manipulation",
+        "clear single-page editor",
+        "structured progressive editor"
+      ],
+      "behavior": "Autosave or explicit save honestly represented; undo; dirty-state protection",
+      "motion": "Focus transition to editable context; save confirmation micro-motion",
+      "reject": "Fake 'saved' toast; decorative templates; auto-save lie",
+      "states": "validation; autosave fail; concurrent edit; discard; resume",
+      "verify": "Kill app mid-edit and verify draft recovery when supported",
+      "reference": "Bencho"
+    },
+    {
+      "id": "multi-step-form",
+      "title": "Multi-step forms",
+      "job": "Collect complex input without overwhelming or losing progress",
+      "variants": [
+        "Sectioned form",
+        "steps with preview",
+        "guided branching checklist"
+      ],
+      "behavior": "Explicit requirements, progress, conditional questions, back editing",
+      "motion": "Directional step transitions tied to actual completed validation",
+      "reject": "Fake progress at 99%; mandatory decorative onboarding steps",
+      "states": "invalid field; back; resumed draft; API error",
+      "verify": "Complete with keyboard and screen reader; no data lost",
+      "reference": "Kombai"
+    },
+    {
+      "id": "task-management",
+      "title": "Tasks and to-dos",
+      "job": "Capture, prioritize, finish and undo without distractions",
+      "variants": [
+        "Tiny task studio",
+        "kanban by actual status",
+        "calendar-connected agenda"
+      ],
+      "behavior": "Meaningful priorities, completion semantics and restore action",
+      "motion": "Bencho-inspired press/stack transition only if touch and keyboard equivalent",
+      "reject": "Overdone Todoist clone; spinning checkboxes; fake points",
+      "states": "no tasks; bulk complete; reorder; due date; sync conflict",
+      "verify": "Complete task, undo, reorder and refresh with correct persistence",
+      "reference": "Bencho"
+    },
+    {
+      "id": "calendar",
+      "title": "Calendar and scheduling",
+      "job": "See time truthfully and resolve collisions",
+      "variants": [
+        "Time-grid with drag",
+        "compact agenda",
+        "week-centered contextual planner"
+      ],
+      "behavior": "Time zones, recurrence, daylight saving, accessibility list alternative",
+      "motion": "Event placement transition on drag commit; reduced instant update",
+      "reject": "Faux flight animations covering time labels; unclear overlap",
+      "states": "DST; timezone switch; no events; drag cancel; conflict",
+      "verify": "Correct date math and keyboard event creation/navigation",
+      "reference": "Kombai"
+    },
+    {
+      "id": "dashboard-data",
+      "title": "Analytics and overview",
+      "job": "Turn up-to-date product data into an informed action",
+      "variants": [
+        "Evidence-first metrics ledger",
+        "small-multiple comparisons",
+        "decision dashboard"
+      ],
+      "behavior": "Units, freshness, missingness, source, drilldowns and actionable context",
+      "motion": "Highlight selected series instead of count-up theater",
+      "reject": "Decorative graphs without labels; fabricated KPI cards; green for all",
+      "states": "delayed data; null; network error; sparse cohorts",
+      "verify": "Compare values to data source and chart table accessible labels",
+      "reference": "Kombai"
+    },
+    {
+      "id": "notifications",
+      "title": "Notifications and inbox",
+      "job": "Prioritize real updates, control interruptions and take action",
+      "variants": [
+        "Triage queue",
+        "grouped alerts",
+        "quiet digest with controls"
+      ],
+      "behavior": "Real unread state, delivery permission, user preferences and deep links",
+      "motion": "New alert enters once; acknowledge with small fade",
+      "reject": "Infinite ringing bell; fake unread badges; urgency for no reason",
+      "states": "permission off; no alerts; stale link; bulk clear",
+      "verify": "Deep link lands correct record and respects dismissed state",
+      "reference": "Bencho"
+    },
+    {
+      "id": "chat",
+      "title": "Messaging and conversation",
+      "job": "Read/write messages without ambiguity or lost text",
+      "variants": [
+        "Conversation-first layout",
+        "contextual thread reply",
+        "multi-pane inbox"
+      ],
+      "behavior": "Delivery/pending/failure, attachments, identity, timestamps, privacy",
+      "motion": "Message placement and typing status only on real events",
+      "reject": "Fake 'AI typing' to entertain; ornamental bubble physics",
+      "states": "unsent; offline; retry; large attachment; blocked user",
+      "verify": "Ordered messages, accessibility announcements and retries",
+      "reference": "Kombai"
+    },
+    {
+      "id": "media-library",
+      "title": "Media collection",
+      "job": "Find, inspect, organize and act on real media",
+      "variants": [
+        "Editorial cover-wall",
+        "timeline media archive",
+        "accessible folder grid"
+      ],
+      "behavior": "Real media aspect ratios, licensing/provenance, selection modes",
+      "motion": "Tap-to-open shared-image transition with accessible static open",
+      "reject": "Auto-rotating 3D photo sphere; network-heavy hover effects",
+      "states": "permission denied; corrupted media; huge library; empty album",
+      "verify": "Quick preview and keyboard/image alt navigation",
+      "reference": "Kombai"
+    },
+    {
+      "id": "upload-capture",
+      "title": "Capture and upload",
+      "job": "Add files or recorded content with clear safety, control and feedback",
+      "variants": [
+        "Annotated dropzone",
+        "camera capture sheet",
+        "queue of upload progress"
+      ],
+      "behavior": "File limits, actual progress, cancel/retry, permission timing",
+      "motion": "Transfer queue progress tied to measured bytes, not a fake bar",
+      "reject": "Simulated 100% then server error; unbounded particle drag zone",
+      "states": "oversize; unsupported; offline; quota; duplicate",
+      "verify": "Resume and retry; assistive labels and drag alternative",
+      "reference": "Bencho"
+    },
+    {
+      "id": "checkout",
+      "title": "In-app purchase or booking checkout",
+      "job": "Commit money with exact price and reliable receipt",
+      "variants": [
+        "Transaction ledger",
+        "transparent steps",
+        "contextual total review"
+      ],
+      "behavior": "Tax, currency, recurring cadence, cancellation, pending state, idempotency",
+      "motion": "Confirm to real receipt transition only after provider success",
+      "reject": "Fake Apple Pay or Google Pay UI; hidden fees; confetti before payment",
+      "states": "declined; 3DS; duplicate click; offline; refund",
+      "verify": "Sandbox payment flow confirms exact totals; no double charge",
+      "reference": "Kombai"
+    },
+    {
+      "id": "paywall",
+      "title": "Premium plan decision",
+      "job": "Help users make informed subscription choice without coercion",
+      "variants": [
+        "Value-led upgrade",
+        "transparent comparison",
+        "preview before purchase"
+      ],
+      "behavior": "Current entitlement, trial, cancellation route and restore purchase",
+      "motion": "Plan selection highlight and verified entitlement transition",
+      "reject": "Dark patterns; 'only 1 seat left' unless real; forced shake",
+      "states": "free; active; restored; cancelled; store unavailable",
+      "verify": "Entitlement updates accurately and restore path works",
+      "reference": "Originkit"
+    },
+    {
+      "id": "profile",
+      "title": "User profile",
+      "job": "Present identity, control and privacy without fantasy data",
+      "variants": [
+        "Compact editable identity",
+        "activity-led profile",
+        "portfolio-style public view"
+      ],
+      "behavior": "Consent for public info; edit, privacy and save flow",
+      "motion": "Avatar change crossfade after upload success",
+      "reject": "Invented badges, fake follower counters, inaccessible avatar crop",
+      "states": "anonymous; missing avatar; profile locked; long name",
+      "verify": "User can edit and preserve real data across restart",
+      "reference": "Kombai"
+    },
+    {
+      "id": "settings-privacy",
+      "title": "Settings and data control",
+      "job": "Help users change preferences, manage account and understand privacy",
+      "variants": [
+        "Plain grouped controls",
+        "searchable settings",
+        "transparency-first data panel"
+      ],
+      "behavior": "Every toggle persists, consequences understandable; export/delete links real",
+      "motion": "Subtle row state change on saved preference",
+      "reject": "Toggle changes visual only; buried privacy; defaults reset unexpectedly",
+      "states": "offline change; permission blocked; session expired",
+      "verify": "Persist/reopen settings and compare values; screen reader names",
+      "reference": "Kombai"
+    },
+    {
+      "id": "permissions",
+      "title": "Permission request and denial",
+      "job": "Ask for OS capabilities at appropriate moments and recover gracefully",
+      "variants": [
+        "Just-in-time rationale",
+        "feature preview",
+        "settings remediation explanation"
+      ],
+      "behavior": "Respect denial, show alternative path, never fake OS dialog",
+      "motion": "Transition from explain to native prompt only after user intent",
+      "reject": "Permission popup on first launch; endless nags; fake system modal",
+      "states": "deny once; permanent deny; revoked; unsupported hardware",
+      "verify": "iOS/Android OS path verified where device exists",
+      "reference": "Kombai"
+    },
+    {
+      "id": "offline-sync",
+      "title": "Offline work and sync recovery",
+      "job": "Keep important data durable and communicate sync truth",
+      "variants": [
+        "Sync status strip",
+        "conflict review workbench",
+        "queued changes ledger"
+      ],
+      "behavior": "Queued/synced/conflicted clearly different; no data loss",
+      "motion": "State chip morph on acknowledged server sync only",
+      "reject": "Infinite spinner labeled synced; overwriting local user work",
+      "states": "offline; reconnect; conflicting edit; retry backoff",
+      "verify": "Airplane-mode edit then reconcile on reconnection",
+      "reference": "Kombai"
+    },
+    {
+      "id": "empty-states",
+      "title": "Useful empty states",
+      "job": "Explain why there is no data and how to start without shame",
+      "variants": [
+        "Instructional first-run canvas",
+        "illustrated content starter",
+        "filter-reset helper"
+      ],
+      "behavior": "Differentiate fresh account from filtered zero/permission-denied",
+      "motion": "One small invitation reveal, no perpetual floating mascot",
+      "reject": "Sad generic robot; fabricated sample metrics; no action",
+      "states": "fresh; filtered; deleted all; no permissions",
+      "verify": "Primary action exits empty state; no dead sample card",
+      "reference": "Oneko"
+    },
+    {
+      "id": "errors-recovery",
+      "title": "Errors and recovery",
+      "job": "Turn failure into a practical and honest next step",
+      "variants": [
+        "Contextual inline remedy",
+        "retry workbench",
+        "support escalation sheet"
+      ],
+      "behavior": "What failed, what is saved, next action, no PII in logs",
+      "motion": "Attention-preserving error placement; no shaking fields",
+      "reject": "Full-screen 404 for small form error; infinite retries",
+      "states": "timeout; partial failure; backend down; malformed data",
+      "verify": "Recovery works on second attempt; keyboard focus",
+      "reference": "Bencho"
+    },
+    {
+      "id": "undo-confirmation",
+      "title": "Undo and destructive actions",
+      "job": "Make consequential actions reversible or meaningfully confirmed",
+      "variants": [
+        "Inline undo snackbar",
+        "contextual confirmation dialog",
+        "staged delete workflow"
+      ],
+      "behavior": "Label exact object; undo only if real, time limits obvious",
+      "motion": "Small removal collapse after server state confirmed",
+      "reject": "Fake Undo when deletion irreversible; confetti for remove",
+      "states": "delete error; undo expired; double action; focus return",
+      "verify": "Undo data integrity and focus restoration",
+      "reference": "Bencho"
+    },
+    {
+      "id": "accessibility",
+      "title": "Accessibility pass",
+      "job": "Allow users with assistive tech or motor/vision differences to finish tasks",
+      "variants": [
+        "Semantic structure audit",
+        "adaptive text and contrast",
+        "interaction equivalence review"
+      ],
+      "behavior": "Actual VoiceOver/TalkBack/keyboard flows; labels, hints and roles",
+      "motion": "All non-essential motion respects platform reduce-motion preferences",
+      "reject": "Replacing semantics with canvas animation; tiny touch targets",
+      "states": "large font; magnification; screen reader; switch access",
+      "verify": "Document actual device/test setup and incomplete checks",
+      "reference": "ObsidianUI"
+    },
+    {
+      "id": "localization-rtl",
+      "title": "Multilingual and RTL",
+      "job": "Ensure language and reading direction work in the whole workflow",
+      "variants": [
+        "Mirrored navigation by locale",
+        "variable-length content components",
+        "culturally appropriate date panels"
+      ],
+      "behavior": "Genuine translations with native review plan; pluralization, fonts, numerals",
+      "motion": "Direction-aware transitions or none if they confuse",
+      "reject": "Machine translation claimed reviewed; hardcoded LTR SVG arrows",
+      "states": "Arabic/Hebrew; long German; CJK; unsupported font",
+      "verify": "UI mirroring, text overflow and semantics audited",
+      "reference": "Kombai"
+    },
+    {
+      "id": "multi-select-bulk",
+      "title": "Multi-select and bulk actions",
+      "job": "Let users act on sets with reversible consequences",
+      "variants": [
+        "Batch action toolbar",
+        "selection count ledger",
+        "contextual action sheet"
+      ],
+      "behavior": "Selection stays accurate after filter; undo and scope explicit",
+      "motion": "Selected rows respond briefly, sticky bar enters without covering content",
+      "reject": "Exploding checkboxes; delete with no scope preview",
+      "states": "zero selected; select all pages; disabled rows",
+      "verify": "Bulk operation affects only intended record IDs",
+      "reference": "Bencho"
+    },
+    {
+      "id": "table-data",
+      "title": "Dense data tables",
+      "job": "Support scanning, sorting and keyboard manipulation of detailed data",
+      "variants": [
+        "Pinned key columns",
+        "summary plus expandable records",
+        "accessible comparison table"
+      ],
+      "behavior": "Sorting announces order, sticky semantics, units, export truth",
+      "motion": "Row focus highlight and settled sort reflow",
+      "reject": "Spreadsheet in tiny cards; hover-only overflow; fake exported CSV",
+      "states": "thousands rows; horizontal; missing cells; no permission",
+      "verify": "Sort stable, keyboard and screen-reader row labels",
+      "reference": "Kombai"
+    },
+    {
+      "id": "ai-assistant",
+      "title": "AI assistant inside app",
+      "job": "Make agent help transparent, controllable and falsifiable",
+      "variants": [
+        "Evidence-linked chat",
+        "workflow copilot",
+        "side-by-side suggestion review"
+      ],
+      "behavior": "Mark AI uncertainty, citations, consent, tool execution boundaries; never simulate backend",
+      "motion": "Real streaming indication only while streaming; actionable result reveal",
+      "reject": "Fake typing delay; automatic actions without consent; invented citations",
+      "states": "model error; unsupported action; stale context; sensitive data",
+      "verify": "Review every side effect; user cancel and audit trail",
+      "reference": "Bencho"
+    },
+    {
+      "id": "account-deletion",
+      "title": "Account export and deletion",
+      "job": "Allow accountable exit and clear control of personal data",
+      "variants": [
+        "Privacy ledger",
+        "export-first exit",
+        "confirmation and status timeline"
+      ],
+      "behavior": "Exactly describe data retained and timing; comply with actual backend policy",
+      "motion": "Progress shown only on actual deletion state, not timer",
+      "reject": "Decorative hostage UX; hidden delete link; false deletion confirmation",
+      "states": "active subscription; offline; request pending; relogin",
+      "verify": "Deletion request traceable and export valid",
+      "reference": "Kombai"
+    }
+  ]
+}

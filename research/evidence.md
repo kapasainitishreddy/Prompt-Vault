@@ -14,6 +14,17 @@ This is a living **reading list and evidence map**, reviewed October 8, 2026. It
 | Laurençon, Tronchon & Sanh (2024), [WebSight](https://arxiv.org/abs/2403.09029) | Dataset and method for HTML-from-image learning. | Use visual references as analysis cues; verify implementation visually. | Synthetic pair performance is not a guarantee for production apps. |
 | Li et al. (2025), [ScreenSpot-Pro](https://arxiv.org/abs/2504.07981) | High-resolution professional GUI grounding remains hard for models. | Require explicit interaction tests and localized screenshots; do not claim the AI can perceive every UI state accurately. | Agent benchmark is **not** a direct design-aesthetics study. |
 
+## Animation research and limits
+
+- Heer & Robertson (2007), [Animated Transitions in Statistical Data Graphics](https://doi.org/10.1109/TVCG.2007.70539): controlled experiments found that selected animated transitions can improve graphical perception of changing **statistical data graphics**. This is a targeted result, **not evidence that perpetual decorative motion makes conversion better**. Use matched-data transitions for continuity, not fabricated number rolls.
+- Thomas & Calder (2001), [Applying cartoon animation techniques to graphical user interfaces](https://doi.org/10.1145/502907.502909): investigated animation as feedback in direct manipulation. Applied here to drag/reorder and state change, **not as a blanket endorsement of cartoon effects**.
+- [WCAG Pause, Stop, Hide](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide), Level A: for qualifying auto-start moving content lasting more than 5 seconds, pause/stop/hide control is needed, with exact exceptions. Better avoid automatic looping.
+- [WCAG Animation from Interactions](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions), **AAA**: nonessential motion triggered by interaction can be disabled. A useful design target beyond AA, not an AA requirement.
+- [MDN prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/%40media/prefers-reduced-motion): use OS preference to remove or replace unnecessary movement.
+- [web.dev high-performance CSS animation](https://web.dev/articles/animations-guide): prefer composited transform and opacity where practical.
+
+All timing profiles, maximum-one-hero-effect recommendations, originality thresholds and iteration budgets in this repository are **proposed team heuristics**, not scientifically certified timings or evidence of user outcomes.
+
 ## Normative or platform guidance (not papers)
 
 - [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/): aim for AA; text contrast typically **4.5:1** normal and **3:1** large; non-text elements **3:1** where applicable; focus visible, reflow, keyboard navigation, reduced-motion accommodations and meaningful names. WCAG 2.2 AA target sizing is **24 × 24 CSS px OR an allowed spacing/other exception**. Larger targets are often more usable. Automated scanners cannot certify conformance.

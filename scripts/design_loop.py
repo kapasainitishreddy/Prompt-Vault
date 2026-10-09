@@ -56,6 +56,15 @@ def create_round(workspace: Path, iteration: int, state: Dict[str, Any], context
     location.mkdir(parents=True)
     rubric = rubric_for(state["track"])
     template = TRACKS[state["track"]].read_text(encoding="utf-8")
+    if state.get("section"):
+        from section_prompt import render_section
+        overlay = render_section(
+            state["track"], state["section"],
+            (workspace / "brief.md").read_text(encoding="utf-8"),
+            intensity=state.get("motion_level", "quiet"),
+            recipe=state.get("recipe"), context=context,
+        )
+        template += "\n\n---\n\n# SECTION-SPECIFIC IMPLEMENTATION CONTRACT\n\n" + overlay
     replacements = {
         "{{PROJECT_BRIEF}}": (workspace / "brief.md").read_text(encoding="utf-8"),
         "{{ITERATION_CONTEXT}}": context,
@@ -162,10 +171,21 @@ def initialize(args: argparse.Namespace) -> None:
     if not 1 <= args.max_iterations <= 4:
         raise ValueError("max-iterations must be between 1 and 4")
     rubric_for(args.track)
+    if args.section:
+        from section_prompt import catalog, recipe_ids
+        if args.section not in {entry["id"] for entry in catalog(args.track)}:
+            raise ValueError("Unknown section for " + args.track + ": " + args.section)
+        if args.recipe and args.recipe not in recipe_ids():
+            raise ValueError("Unknown motion recipe: " + args.recipe)
+    elif args.recipe:
+        raise ValueError("--recipe requires --section")
     workspace.mkdir(parents=True, exist_ok=True)
     (workspace / "brief.md").write_text(brief.read_text(encoding="utf-8"), encoding="utf-8")
     state = {
         "track": args.track,
+        "section": args.section,
+        "motion_level": args.motion_level,
+        "recipe": args.recipe,
         "current_iteration": 1,
         "max_iterations": args.max_iterations,
         "status": "active",
@@ -220,6 +240,9 @@ def main() -> int:
     init_parser.add_argument("--brief", required=True, type=Path)
     init_parser.add_argument("--workspace", required=True, type=Path)
     init_parser.add_argument("--max-iterations", type=int, default=4)
+    init_parser.add_argument("--section", help="Optional section/flow ID from the catalog")
+    init_parser.add_argument("--motion-level", choices=("off", "quiet", "expressive", "cinematic"), default="quiet")
+    init_parser.add_argument("--recipe", help="Optional specialized motion recipe ID; requires --section")
     advance_parser = sub.add_parser("advance", help="Score current round and create next prompt")
     advance_parser.add_argument("--workspace", required=True, type=Path)
     status_parser = sub.add_parser("status", help="Read current state")
