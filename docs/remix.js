@@ -142,6 +142,8 @@ function setTarget(target,chosenStyle=""){
  state.target=target;state.family="All";state.query="";state.limit=12;
  $("rx-search").value="";
  state.selected=state.styles.find(s=>s.target===target&&s.id===chosenStyle)||state.styles.find(s=>s.target===target);
+ const selectedPosition=state.styles.filter(s=>s.target===target).findIndex(s=>s.id===state.selected?.id);
+ state.limit=Math.max(12,Math.ceil((selectedPosition+1)/12)*12);
  renderTargetButtons();renderFamilies();updateFocus();updateBlueprint();updateConcept();renderGallery();renderSelected();renderPrompt();
  updateShareableUrl();
 }
