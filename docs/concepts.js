@@ -328,7 +328,7 @@ function renderGallery(){
  target.querySelectorAll('[data-preview-id]').forEach(b=>b.addEventListener('click',()=>{
   chooseConcept(b.dataset.previewId);
   const reduced=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-  $('explore')?.scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});
+  $('preview')?.scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});
  }));
 }
 function renderResearch(){
