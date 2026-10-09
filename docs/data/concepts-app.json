@@ -786,7 +786,8 @@
       "sources": [
         "nng-recognition",
         "w3c-aria-apg",
-        "uswds-principles"
+        "uswds-principles",
+        "munzner-2009"
       ],
       "skills": [
         "information architecture",
@@ -855,7 +856,8 @@
       "sources": [
         "nng-recognition",
         "w3c-aria-apg",
-        "uswds-principles"
+        "uswds-principles",
+        "cleveland-1984"
       ],
       "skills": [
         "information architecture",
@@ -878,7 +880,9 @@
       "sources": [
         "nng-recognition",
         "w3c-aria-apg",
-        "uswds-principles"
+        "uswds-principles",
+        "cleveland-1984",
+        "munzner-2009"
       ],
       "skills": [
         "information architecture",
@@ -924,7 +928,8 @@
       "sources": [
         "nng-recognition",
         "w3c-aria-apg",
-        "uswds-principles"
+        "uswds-principles",
+        "kujala-2011"
       ],
       "skills": [
         "information architecture",
@@ -2005,7 +2010,8 @@
       "sources": [
         "android-adaptive-2026",
         "w3c-motion",
-        "mdn-viewtransitions"
+        "mdn-viewtransitions",
+        "heer-2007"
       ],
       "skills": [
         "media accessibility",
@@ -2166,7 +2172,8 @@
       "sources": [
         "sweller-1988",
         "w3c-coga",
-        "w3c-rtl"
+        "w3c-rtl",
+        "kujala-2011"
       ],
       "skills": [
         "instructional design",
