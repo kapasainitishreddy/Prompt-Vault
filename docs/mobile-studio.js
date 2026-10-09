@@ -54,9 +54,44 @@ function taskRows(showCompleted=true){
  if(!found.length)return note("No items here yet. Create one to get started.");
  return itemList(found.map(t=>row((t.done?"✓ ":"○ ")+t.title,t.done?"Completed · tap to undo":"Open · tap to complete","toggle-task",t.id)));
 }
+const scenarioMessages={
+ onboarding:["Example setup complete. The user can open their first task.","Setup was interrupted. Keep the choices and allow a restart."],
+ authentication:["Format accepted locally. No account was created and no session exists.","Unable to sign in. No identity provider is connected; use a real provider to test recovery."],
+ home:["Sample task completed. Progress is updated in this session.","Home content unavailable. Preserve the current task and show a retry."],
+ navigation:["Destination selected and current location remains visible.","Destination unavailable. Keep the user on the previous accessible view."],
+ search:["Matching sample results appear below the search input.","No results found. Keep the search term so it can be edited."],
+ filters:["Filtered sample list is visible and resettable.","Nothing matches. Remove or clear the active filters."],
+ "list-feed":["Activity detail is ready to inspect.","Could not load more activity. Keep already displayed items."],
+ detail:["Item saved for this preview only.","Unable to save. Preserve the current item and allow another try."],
+ "create-edit":["Example task saved in local memory.","Required title missing. Preserve all entered text for correction."],
+ "multi-step-form":["Sample form reviewed. Nothing was submitted to a server.","Form is incomplete. Keep earlier answers and return to the missing field."],
+ "task-management":["Task completion can be undone.","Action failed. Keep the previous task state intact."],
+ calendar:["Selected example date has been displayed.","Could not load schedule. Keep the selected date visible."],
+ "dashboard-data":["Static example metrics loaded; these are not measured results.","Example metrics are unavailable. Do not fabricate replacement numbers."],
+ notifications:["Sample notice marked read locally.","Notification operation unavailable. No OS permission has been changed."],
+ chat:["Message added to this device's sample conversation only.","Message was not sent to a recipient. Preserve it in the composer."],
+ "media-library":["Sample media item selected; no content streamed.","Media unavailable. Keep the collection accessible and give a fallback."],
+ "upload-capture":["Example file selected. No real upload performed.","Simulated upload failed. No file left your device."],
+ checkout:["Mock order reviewed. No money has been charged.","Checkout unavailable. No payment processor has been connected."],
+ paywall:["Example upgrade preview displayed. No subscription began.","Purchase flow unavailable. Existing access remains unchanged."],
+ profile:["Example profile value kept in this view.","Profile was not saved remotely. Retain your typed changes."],
+ "settings-privacy":["Optional preference updated in this demonstration.","Preference update failed. Preserve the original user choice."],
+ permissions:["Permission choice simulated; no OS setting changed.","Permission declined. Show a manual alternative without blocking the app."],
+ "offline-sync":["Example local state visible. No server sync occurred.","Sync unavailable. Keep unsent local changes and a retry path."],
+ "empty-states":["First sample item created in local memory.","Creation unavailable. Continue to offer a clear first action."],
+ "errors-recovery":["Simulated error resolved; no remote data was modified.","Connection example failed. Preserve local work and offer retry."],
+ "undo-confirmation":["Removed item restored within the demo.","Undo unavailable. Do not claim that deletion was reversed."],
+ accessibility:["Example accessibility control is reachable.","Control cannot be operated. Include keyboard and assistive input fallback."],
+ "localization-rtl":["Sample language changed. Full i18n still requires native testing.","Translation missing. Use a transparent fallback instead of broken text."],
+ "multi-select-bulk":["Example selection action completed locally.","Bulk action failed. Preserve selected items and allow safe retry."],
+ "table-data":["Sample ordering updated with consistent column context.","Data table unavailable. Do not show values without their units."],
+ "ai-assistant":["Scripted sample suggestion shown for review, not applied.","No AI provider connected. Keep manual actions available."],
+ "account-deletion":["Explanation shown. No remote account exists to delete.","Deletion not executed. Never display a false completion state."]
+};
 function scenarioNote(){
- if(state.scenario==="success")return note("Success state: an action is complete. Confirm what changed and offer the next step.");
- if(state.scenario==="error")return note("Error state: preserve the draft, explain what happened, and provide a recovery path.",true);
+ const [success,error]=scenarioMessages[state.flow]||["Example state confirmed locally.","An example action failed; retain entered work and retry."];
+ if(state.scenario==="success")return note(success);
+ if(state.scenario==="error")return note(error,true)+button("Return to normal preview","scenario-retry",true);
  return "";
 }
 function renderBody(id){
@@ -313,6 +348,7 @@ function interact(action,value){
  case "toggle-task":state.tasks=state.tasks.map(t=>t.id===value?{...t,done:!t.done}:t);break;
  case "save-task":if(!valueOf("title")){toast("Enter a task title first.");return;}state.tasks.unshift({id:String(Date.now()),title:valueOf("title"),done:false});d.fields.title="";toast("Task created in this browser session.");break;
  case "reset-choice":d.choice="Everything";break;
+ case "scenario-retry":state.scenario="normal";toast("Normal demo restored. No remote service was contacted.");break;
  case "advance-form":if(d.step<2&&!valueOf("answer")){toast("Enter a response first.");return;}if(d.step===2)toast("Example form complete, no data sent.");else d.step++;break;
  case "back-form":d.step=Math.max(0,d.step-1);break;
  case "send":if(!valueOf("message"))return;d.messages.push(valueOf("message"));d.fields.message="";break;
