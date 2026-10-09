@@ -2,7 +2,14 @@
 
 ## Interactive Atlas website
 
-**New:** browse every pattern through an original [seven-page interactive design atlas](docs/index.html). It includes [32 website section previews](docs/websites.html), [32 separate app UI/UX flow previews](docs/apps.html), [23 motion experiments](docs/motion.html), plus [principles/research](docs/principles.html). Each specimen opens a detailed preview with **three design directions**, explanatory interaction notes and its complete copyable Markdown prompt from the repo. Search, category filters, saved ideas, keyboard-friendly dialog and motion-reduction support are built in.
+## Eight open-source references with original interactive previews
+
+Explore the [Open-source Library](docs/resources.html) for **eight independent interactive HTML/CSS studies**, source links, precise license caveats and a full prompt for each: [UI Promptly](https://github.com/dotHP-harshu/ui-promptly), [Superdesign Prompts](https://github.com/superdesigndev/superdesign-prompts), [Motion Primitives](https://github.com/ibelick/motion-primitives), [Uiverse Galaxy](https://github.com/uiverse-io/galaxy), [Magic UI](https://github.com/magicuidesign/magicui), [Origin UI](https://github.com/shadcn/originui), [React Native Reusables](https://github.com/founded-labs/react-native-reusables), [gluestack-ui](https://github.com/gluestack/gluestack-ui).
+
+The expanded Atlas now has **159 original prompts** and **143 illustrative visual studies**, including the eight new reference experiments. These are not 159 completed production sites or copied upstream demos. [Full license/research notes](research/open-source-preview-resources.md). UI Promptly has no visible root license; gluestack README claims MIT but the linked root LICENSE was not present in the inspected listing. Original examples and prompts are MIT; external sources retain their separate rights.
+
+
+**New:** browse every pattern through an original [eight-page interactive design atlas](docs/index.html). It includes [32 website section previews](docs/websites.html), [32 separate app UI/UX flow previews](docs/apps.html), [23 motion experiments](docs/motion.html), plus [principles/research](docs/principles.html). Each specimen opens a detailed preview with **three design directions**, explanatory interaction notes and its complete copyable Markdown prompt from the repo. Search, category filters, saved ideas, keyboard-friendly dialog and motion-reduction support are built in.
 
 **Run it:** `python3 -m http.server 8000` from the repository root, then visit `http://localhost:8000/docs/index.html`. To host on GitHub Pages, choose branch `main` and folder `/docs` in Settings → Pages (no Actions workflow or paid extras required). [Deployment notes](docs/README.md).
 

@@ -18,3 +18,7 @@ This is a **public MIT prompt and original-code library**, not a mirror of third
 
 ## Updating the catalog
 Add matching machine catalog entry and markdown file, then update section index. Keep prompts self-contained. Add test coverage for new runner behavior. Preserve existing public names/links when possible.
+
+## Design reference page
+
+Maintain eight distinct original mini-studies and eight original standalone prompts at `prompts/references/`, mirrored in `docs/prompts/references/`. Catalogs: `catalog/open-source-references.json`, `docs/data/resources.json`. Frontend: `docs/resources.html`, `docs/resources.css`, `docs/resources.js`. Do not import source code, screenshots, visual identities or assets from upstream projects by default; respect license unknown/README-only cases. Keep website, app and motion categories distinct.

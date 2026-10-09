@@ -38,4 +38,6 @@ Original frontend, specimen art and prompts are [MIT licensed](../LICENSE). Thir
 - `skills.html`: the four credited repositories with real license caveats, 16 original focused design workflows, search and three-workflow local prompt composer.
 - Both include the complete source Markdown under `docs/prompts/` and their JSON catalogs under `docs/data/`.
 
-Seven static pages; **151 original prompts**, **135 illustrative visual studies**. These are not production apps or reused vendor code. Copy all `docs/` to any static host.
+Eight static pages; **159 original prompts**, **143 illustrative visual studies**. These are not production apps or reused vendor code. Copy all `docs/` to any static host.
+
+- `resources.html`: eight original interactive studies with filters, upstream source links, license-aware details and eight full same-origin prompts under `docs/prompts/references/`. No vendored external components or screenshots.

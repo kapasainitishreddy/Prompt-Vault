@@ -54,3 +54,7 @@ Reviewed **October 8, 2026** against project repositories. These are optional *i
 - Test with no paid services first: local browsers, OS simulators, and real devices when available. Do not claim device validation if a device was unavailable.
 
 **No external code, fonts or assets are vendored here.** Links and license notes are informational. Prompt-Vault's own files are MIT licensed; external projects keep their own terms.
+
+## More UI/preview open-source libraries
+
+Read the [eight-source license and demo audit](open-source-preview-resources.md), including reference-only UI Promptly (no root LICENSE found) and gluestack (MIT asserted in README, linked root LICENSE absent in observed root listing).
