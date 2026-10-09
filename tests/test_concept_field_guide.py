@@ -207,6 +207,50 @@ class ConceptFieldGuideTests(unittest.TestCase):
         self.assertIn("reportValidity()", self.js)
         self.assertIn("No real checkout", self.html)
 
+    def test_visual_gallery_is_visible_before_text_workbench(self):
+        self.assertLess(self.html.index('id="previews"'),
+                        self.html.index('id="explore"'))
+        for field in ("pv-gallery-items", "pv-gallery-search",
+                      "pv-gallery-more", "pv-gallery-count"):
+            self.assertIn('id="' + field + '"', self.html)
+        self.assertIn('data-gallery-track="website"', self.html)
+        self.assertIn('data-gallery-track="app"', self.html)
+        self.assertIn("function renderGallery()", self.js)
+        self.assertIn("conceptThumbnail(x)", self.js)
+        self.assertIn("chooseConcept(b.dataset.previewId)", self.js)
+        self.assertIn('href="#previews"', self.html)
+        self.assertIn("./concept-previews.css", self.parser.styles)
+
+    def test_preview_renderer_supports_every_catalog_kind(self):
+        for track, dataset in (("webTypes", self.web),
+                               ("appTypes", self.app)):
+            marker = "const " + track + " = new Set(["
+            self.assertIn(marker, self.js)
+            begin = self.js.index(marker) + len(marker)
+            end = self.js.index("])", begin)
+            supported = set(re.findall(r"'([^']+)'", self.js[begin:end]))
+            actual = {item["preview"] for item in dataset["concepts"]}
+            self.assertTrue(actual.issubset(supported),
+                            (track, actual - supported))
+        self.assertIn("function webVisual(", self.js)
+        self.assertIn("function appVisual(", self.js)
+        self.assertIn("pv-mini-phone", self.js)
+        self.assertIn("pv-mini-webhero", self.js)
+
+    def test_gallery_is_responsive_and_not_a_fake_native_preview(self):
+        gallery_css = (DOCS / "concept-previews.css").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn(".pv-gallery-grid", gallery_css)
+        self.assertIn("grid-template-columns:repeat(3", gallery_css)
+        self.assertIn("@media(max-width:760px)", gallery_css)
+        self.assertIn("@media(max-width:520px)", gallery_css)
+        self.assertIn("prefers-reduced-motion:reduce", gallery_css)
+        self.assertIn("illustrative thumbnails", self.html.lower()
+                      + (ROOT / "README.md").read_text(
+                          encoding="utf-8").lower())
+        self.assertNotIn("real checkout", gallery_css.lower())
+
     def test_reduced_motion_keyboard_and_safety_disclosures(self):
         self.assertIn("prefers-reduced-motion:reduce", self.css)
         self.assertIn("aria-expanded", self.html)

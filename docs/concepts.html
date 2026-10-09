@@ -7,6 +7,7 @@
 <title>The Concept Field Guide | Prompt-Vault</title>
 <link rel="stylesheet" href="./styles.css">
 <link rel="stylesheet" href="./concepts.css">
+<link rel="stylesheet" href="./concept-previews.css">
 <script src="./concepts.js" type="module"></script>
 </head>
 <body class="concept-page">
@@ -32,11 +33,34 @@
 <a href="./resources.html">Open-source resources</a>
 </nav>
 <main id="main">
+<section class="pv-gallery" id="previews" aria-labelledby="pv-gallery-title">
+<div class="shell">
+<div class="pv-gallery-heading">
+<h2 id="pv-gallery-title">See the design.<br><em>Then read the reasoning.</em></h2>
+<p>Browse original website and app UI specimens visually. Every concept has a rendered thumbnail and a larger interactive study with placement advice, supporting sources, and copyable prompts. These are honest code-built examples, not finished products.</p>
+</div>
+<div class="pv-gallery-controls">
+<div class="pv-gallery-tracks" role="group" aria-label="Preview design track">
+<button type="button" data-gallery-track="website" aria-pressed="true">Website previews · 100</button>
+<button type="button" data-gallery-track="app" aria-pressed="false">App previews · 100</button>
+</div>
+<div class="pv-gallery-search"><label for="pv-gallery-search">FIND A DESIGN</label><input id="pv-gallery-search" type="search" placeholder="Try navigation, product, AI, forms…" autocomplete="off"></div>
+<span id="pv-gallery-count" role="status" class="pv-gallery-count">Preparing the visual gallery…</span>
+</div>
+<div id="pv-gallery-items" class="pv-gallery-grid" aria-label="Browsable visual design thumbnails">
+<div class="pv-gallery-empty">Loading 200 original interface thumbnails…</div>
+</div>
+<div class="pv-gallery-more">
+<button id="pv-gallery-more" type="button" hidden>Show more visual previews ↓</button>
+<a href="#explore">Explore the complete concept guide and interactive inspector ↗</a>
+</div>
+</div>
+</section>
 <section class="cf-intro shell" aria-labelledby="intro-title">
 <div class="cf-intro-content">
 <h1 id="intro-title">The anatomy<br>of <em>useful</em><br>interfaces.</h1>
 <p>Beyond moodboards. A field guide for choosing a pattern, understanding the reason behind it, recognizing its failure modes, and implementing it with evidence. Two tracks: websites and applications. No automatic template stacks.</p>
-<div class="cf-hero-actions"><a href="#explore" class="cf-button cf-dark">Explore concepts <span aria-hidden="true">↗</span></a><a href="#research" class="cf-link">Inspect the research</a></div>
+<div class="cf-hero-actions"><a href="#previews" class="cf-button cf-dark">See visual previews <span aria-hidden="true">↗</span></a><a href="#research" class="cf-link">Inspect the research</a></div>
 </div>
 <div class="cf-intro-index" aria-label="Catalog overview"><div class="cf-index-heading"><span>THE OPEN FIELD GUIDE</span><span>OCTOBER 2026</span></div>
 <div class="cf-index-entry"><strong id="concept-total">200</strong><span>Individually explained design concepts</span></div>

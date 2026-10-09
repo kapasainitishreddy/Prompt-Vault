@@ -1,5 +1,16 @@
 # Prompt-Vault
 
+## Visual previews are now directly browsable (October 9, 2026)
+
+**[Open the visual gallery](docs/concepts.html#previews)**, not just the text-only index.
+
+- 200 concept-specific **illustrative thumbnails**, 100 Website + 100 App, covering 35 supported preview categories with shared original HTML/CSS renderers. Each entry shows a miniature layout in a searchable, paginated gallery, with art direction informed by its task and concept ID.
+- Click a thumbnail to open its **larger interactive specimen**, where you can switch desktop/tablet/phone viewport, Focused/Editorial/Dense composition, and Normal/Success/Error states.
+- Each concept retains when to use it, when to avoid it, original research/source limitations, required skills, and complete Design/Implement/Audit prompts.
+- This is an honest visual reference library, not 200 production applications, 200 captured real-world websites, actual AI integrations, or App Store simulator screenshots. Preview scenes are independent authored HTML/CSS and do not copy third-party catalog assets.
+- No paid dependencies, remote model calls or GitHub Actions added. The existing 32+32 pattern atlas, 40 guided blueprints, and site styles are preserved.
+
+
 ## New: 100 worked design lessons and optional support
 
 **[Practice Studio](docs/studio.html)** · **[Sponsor/support](docs/support.html)** · **[Learning/QA notes](docs/LEARNING-STUDIO.md)**
