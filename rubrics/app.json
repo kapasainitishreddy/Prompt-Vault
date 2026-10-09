@@ -1,0 +1,35 @@
+{
+  "track": "app",
+  "version": 1,
+  "min_total": 85,
+  "min_dimension": 7,
+  "special_minimums": {
+    "task_success": 8,
+    "state_coverage": 8
+  },
+  "max_iterations": 4,
+  "dimensions": {
+    "task_success": 20,
+    "information_architecture": 15,
+    "state_coverage": 15,
+    "platform_fit": 10,
+    "accessibility": 15,
+    "visual_identity": 10,
+    "reliability": 10,
+    "localization": 5
+  },
+  "required_evidence": [
+    "screenshots",
+    "task_walkthrough",
+    "error_recovery",
+    "accessibility_review",
+    "keyboard_back_review",
+    "language_text_expansion",
+    "license_review"
+  ],
+  "blocking_severities": [
+    "P0",
+    "P1"
+  ],
+  "notes": "A state simulation is not a human user test. Emulators are not physical devices. Unverified features should not be called complete."
+}
