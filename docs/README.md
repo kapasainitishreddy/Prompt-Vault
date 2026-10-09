@@ -5,8 +5,8 @@
 The Concept Field Guide now opens with a searchable visual gallery at
 [concepts.html#previews](concepts.html#previews), instead of requiring
 users to select a text-list item before seeing anything. All 200 concepts
-have original **illustrative thumbnails** from 35 independently designed
-layout families (16 website and 19 app). Click through to an enlarged
+have original **illustrative thumbnails** covering 35 supported
+preview categories (16 website and 19 app), with some shared layout building blocks. Click through to an enlarged
 interactive specimen, device/composition/state controls and its complete
 prompts and research links.
 
