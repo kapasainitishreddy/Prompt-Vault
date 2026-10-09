@@ -446,3 +446,31 @@ window.addEventListener("pv:open-signature",event=>{
  if(journey)state.journey=journey.id;
  state.flow=flow.id;resetDemo();state.scenario="normal";renderAll();
 });
+
+
+/* Same-origin, versioned original React Native sources for direct copy, not generated stubs. */
+async function copyNativeAsset(assetId,buttonId){
+ const paths={flow:"./code/FlowScreen.tsx",signatures:"./code/SignatureScreen.tsx"};
+ const endpoint=paths[assetId],button=document.getElementById(buttonId);
+ if(!endpoint||!button)return;
+ const original=button.textContent;
+ button.disabled=true;button.textContent="Loading real TSX…";
+ try{
+   const result=await fetch(endpoint,{cache:"no-store"});
+   if(!result.ok)throw Error("HTTP "+result.status);
+   const code=await result.text();
+   if(code.length<2500||!code.includes("react-native"))throw Error("Incomplete source file.");
+   if(navigator.clipboard?.writeText)await navigator.clipboard.writeText(code);
+   else{
+     const box=document.createElement("textarea");box.value=code;
+     box.style.position="fixed";box.style.left="-9999px";document.body.appendChild(box);box.select();
+     if(!document.execCommand("copy"))throw Error("Copy permission unavailable");box.remove();
+   }
+   toast("Full React Native TypeScript source copied. Install its dependencies and adapt it to your app.");
+ }catch(error){toast("Couldn't copy TSX: "+String(error.message)+". Open the source link instead.");}
+ finally{button.disabled=false;button.textContent=original;}
+}
+const nativeCopy=document.getElementById("ms-copy-native");
+if(nativeCopy)nativeCopy.addEventListener("click",()=>copyNativeAsset("flow","ms-copy-native"));
+const signatureCopy=document.getElementById("ms-copy-signatures");
+if(signatureCopy)signatureCopy.addEventListener("click",()=>copyNativeAsset("signatures","ms-copy-signatures"));

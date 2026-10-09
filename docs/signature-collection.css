@@ -60,3 +60,5 @@
 @media(max-width:550px){.sg-grid{gap:18px 11px}.sg-stage{height:275px;padding:12px 5px 0}.sg-phone{transform:scale(.79);transform-origin:bottom center;margin:-33px 0 -24px;min-width:190px}.sg-card button:hover .sg-phone,.sg-card button:focus-visible .sg-phone{transform:scale(.79) translateY(-7px)}.sg-meta h3{font-size:18px}.sg-meta small{font-size:8px}.sg-meta b{width:28px;height:28px}.sg-card button>p{font-size:11px;min-height:auto}}
 @media(max-width:370px){.sg-grid{grid-template-columns:1fr}.sg-phone{transform:none;margin:0}.sg-card button:hover .sg-phone{transform:translateY(-7px)}}
 @media(prefers-reduced-motion:reduce){.sg-phone{transition:none}}
+
+.ms-signature-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:25px}.ms-signature-actions a{font-size:12px;font-weight:800;text-underline-offset:4px}
