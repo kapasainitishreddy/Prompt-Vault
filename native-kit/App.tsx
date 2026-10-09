@@ -1,5 +1,6 @@
 import React,{useState} from "react";
-import {SafeAreaView,ScrollView,StatusBar,Text,View,useWindowDimensions} from "react-native";
+import {ScrollView,StatusBar,Text,View,useWindowDimensions} from "react-native";
+import {SafeAreaProvider,SafeAreaView} from "react-native-safe-area-context";
 import catalog from "./catalog.json";
 import {KitButton,KitCard,KitChip,KitNotice,Description,Heading,KitField} from "./src/components";
 import {FlowScreen,type Task} from "./src/FlowScreen";
@@ -22,7 +23,7 @@ export default function App() {
  const go=(id:string)=>{setFlowId(id);setTab("preview");};
  const chooseJourney=(id:string)=>{const next=catalog.journeys.find(x=>x.id===id)||journey;setJourneyId(id);go(next.flows[0]||"home");};
  const next=()=>go(journey.flows[flowIndex+1]||journey.flows[0]||"home");
- return <SafeAreaView style={{flex:1,backgroundColor:p.bg}}>
+ return <SafeAreaProvider><SafeAreaView style={{flex:1,backgroundColor:p.bg}}>
   <StatusBar barStyle={dark?"light-content":"dark-content"} backgroundColor={p.bg}/>
   <View style={{paddingHorizontal:20,paddingTop:12,paddingBottom:14,borderBottomWidth:1,borderBottomColor:p.border,gap:6}}>
    <Text style={{fontSize:12,fontWeight:"900",letterSpacing:2.1,color:p.accent}}>PROMPT / VAULT</Text>
@@ -73,5 +74,5 @@ export default function App() {
     <KitCard title="Before release" detail="Integrate real services, storage, security, store compliance and Android/iOS device QA." p={p}/>
    </>:null}
   </ScrollView>
- </SafeAreaView>;
+ </SafeAreaView></SafeAreaProvider>;
 }

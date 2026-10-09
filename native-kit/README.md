@@ -10,7 +10,7 @@ From the native-kit directory:
     npx expo install --fix
     npx expo start
 
-Target: Expo SDK 54, React 19.1, React Native 0.81. Node 20.19+ required. See https://docs.expo.dev/versions/v54.0.0/. Check with npx expo-doctor before a native release.
+Target: Expo SDK 54, React 19.1, React Native 0.81. The Safe Area provider uses react-native-safe-area-context ~5.6.0 for Android 16 edge-to-edge and notched devices. Node 20.19+ required. See https://docs.expo.dev/versions/v54.0.0/. Check with npx expo-doctor before a native release.
 
 ## Copy into your project
 
