@@ -71,7 +71,7 @@ export function SignatureScreen({id,onExplore}:{id:string;onExplore:()=>void}){
  }
  return <View style={{gap:15}}>
   <View style={{backgroundColor:c.bg,borderRadius:23,padding:22,gap:17,borderWidth:1,borderColor:c.ink+"33",minHeight:410}}>{body}</View>
-  <Pressable accessibilityRole="button" accessibilityLabel="Open matching interactive demo" onPress={onExplore} style={({pressed})=>({minHeight:52,backgroundColor:pressed?c.soft:c.accent,padding:14,borderRadius:13,justifyContent:"center",alignItems:"center"})}>
+  <Pressable accessibilityRole="button" accessibilityLabel="Open matching interactive demo" onPress={onExplore} style={({pressed})=>({minHeight:52,backgroundColor:pressed?c.soft:c.ink,padding:14,borderRadius:13,justifyContent:"center",alignItems:"center"})}>
    <Text style={{fontSize:15,fontWeight:"800",color:c.bg}}>Try interactive workflow  →</Text></Pressable>
   <Text style={{fontSize:12,color:"#637568",lineHeight:19}}>Original Expo composition. Illustrative data only. Real integrations and device testing are required before release.</Text>
  </View>;
