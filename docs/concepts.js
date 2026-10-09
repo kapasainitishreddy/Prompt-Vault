@@ -1,9 +1,119 @@
+/* Original Prompt-Vault thumbnail studies. No stock imagery or upstream component code. */
+const esc = value => String(value == null ? '' : value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[ch]));
+const palettes = ['forest','orange','cobalt','plum','clay','teal','sand'];
+const webTypes = new Set(['hero','editorial','form','article','comparison','navigation','search','dashboard','workflow','commerce','trust','motion','chart','spatial','system','portfolio']);
+const appTypes = new Set(['onboarding','form','workflow','navigation','dashboard','search','editor','status','chart','social','trust','ai','billing','comparison','media','spatial','motion','learning','system']);
+function hash(str) {
+  let a = 19;
+  for (const character of String(str)) a = ((a << 5) - a + character.charCodeAt(0)) | 0;
+  return Math.abs(a);
+}
+function trim(text,max=42) {
+  const value=String(text||'');
+  return esc(value.length>max?value.slice(0,max-1).trimEnd()+'…':value);
+}
+const strip = '<div class="pv-mini-lines"><i></i><i></i><i></i></div>';
+const nav = '<div class="pv-mini-nav"><b>FIELD / STUDIO</b><span>WORK　 ABOUT　 ↗</span></div>';
+function webVisual(c){
+ const title=trim(c.title,43),purpose=trim(c.purpose,76),kind=c.preview;
+ switch(kind){
+  case 'hero':
+   return nav+'<div class="pv-mini-webhero"><span class="pv-mini-eyebrow">DESIGNED TO MATTER / 001</span><strong>'+title+'</strong><p>'+purpose+'</p><em>Discover the idea ↗</em></div>';
+  case 'editorial':
+   return '<div class="pv-mini-edition"><span>JOURNAL / 2026</span><span>IDEAS IN CONTEXT　↗</span></div><div class="pv-mini-editorial"><div><small>01 / DISPATCH</small><strong>'+title+'</strong><span>Read the perspective ↗</span></div><div class="pv-mini-editorial-art"><b>FORM<br>&amp;<br>FUNCTION</b></div></div>';
+  case 'navigation':
+   return '<div class="pv-mini-nav pv-mini-nav-wide"><b>atlas<span>.</span></b><span>Products　Learn　Company</span><span>Menu ↓</span></div><div class="pv-mini-mega"><strong>Find your next destination</strong><div><span>01　Overview</span><span>02　Patterns</span><span>03　Documentation</span></div><small>'+title+'</small></div>';
+  case 'search':
+   return '<div class="pv-mini-search-head"><span>DISCOVER / KNOWLEDGE</span><strong>Search by what matters.</strong></div><div class="pv-mini-search-bar">⌕　Find something specific <b>↗</b></div><div class="pv-mini-search-results"><span>01 / '+title+'</span><span>02 / Related patterns</span><span>03 / Further reading</span></div>';
+  case 'form':
+   return '<div class="pv-mini-form-heading"><small>YOUR NEXT STEP</small><strong>'+title+'</strong></div><div class="pv-mini-form-field">Project name <span>Studio notes</span></div><div class="pv-mini-form-field">What matters most? <span>Choose an outcome ▾</span></div><div class="pv-mini-form-submit">Continue to review ↗</div><small class="pv-mini-under">An illustrative form, not a submission.</small>';
+  case 'workflow':
+   return '<div class="pv-mini-process-heading"><small>MAKE THE WORK CLEAR</small><strong>'+title+'</strong></div><div class="pv-mini-process"><div><b>01</b><span>Understand</span></div><div><b>02</b><span>Design</span></div><div><b>03</b><span>Verify</span></div></div><div class="pv-mini-process-foot">NEXT / RESPECT THE USER JOURNEY　→</div>';
+  case 'comparison':
+   return '<div class="pv-mini-comparison"><small>COMPARE THE ESSENTIALS</small><strong>'+title+'</strong><div class="pv-mini-compare-row pv-mini-compare-head"><span>CAPABILITY</span><span>OPTION A</span><span>OPTION B</span></div><div class="pv-mini-compare-row"><span>Access</span><span>Included</span><span>Optional</span></div><div class="pv-mini-compare-row"><span>Offline</span><span>Yes</span><span>—</span></div><div class="pv-mini-compare-row"><span>Recovery</span><span>Undo</span><span>Retry</span></div></div>';
+  case 'dashboard': case 'chart':
+   return '<div class="pv-mini-dash"><div class="pv-mini-dash-head"><span>OVERVIEW / SAMPLE</span><strong>↗</strong></div><strong>'+title+'</strong><div class="pv-mini-stat"><b>DATA</b><span>Not actual metrics</span></div><div class="pv-mini-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="pv-mini-dash-ticks">MON　TUE　WED　THU　FRI　SAT　SUN</div></div>';
+  case 'commerce':
+   return '<div class="pv-mini-shopbar">ATELIER / OBJECTS <span>COLLECTION　 BAG ↗</span></div><div class="pv-mini-shop"><div class="pv-mini-object"><i></i></div><div><small>CURATED GOODS / DEMO</small><strong>'+title+'</strong><p>Review materials, fit and returns.</p><b>Explore item ↗</b></div></div>';
+  case 'trust':
+   return '<div class="pv-mini-trust"><small>YOUR DATA. YOUR CHOICE.</small><strong>'+title+'</strong><p>Clear terms, informed permission and a path to change your mind.</p><div class="pv-mini-switches"><span>Required security <i>ON</i></span><span>Optional insights <i>OFF</i></span></div><b>Review choices ↗</b></div>';
+  case 'article':
+   return '<div class="pv-mini-paper"><small>FIELDNOTES / ARTICLE INDEX</small><strong>'+title+'</strong><div class="pv-mini-article-abstract">'+strip+'<div class="pv-mini-dropcap">A</div></div><p>'+purpose+'</p><span>Source notes　·　Read more ↗</span></div>';
+  case 'portfolio':
+   return '<div class="pv-mini-portfolio"><span>SELECTED / WORK</span><strong>'+title+'</strong><div class="pv-mini-portfolio-works"><span>01<br>RESEARCH</span><span>02<br>BUILD</span><span>03<br>SHIP</span></div><small>THE WORK / THE DECISIONS / THE OUTCOME</small></div>';
+  case 'motion':
+   return '<div class="pv-mini-motion"><small>STUDY IN CONTINUITY</small><strong>'+title+'</strong><div class="pv-mini-motion-rail"><i>01</i><span>→</span><i>02</i><span>→</span><i>03</i></div><p>A visible cause, a meaningful change.</p><b>Replay a transition ↻</b></div>';
+  case 'spatial':
+   return '<div class="pv-mini-spatial"><div><small>SPATIAL / EXPERIMENT</small><strong>'+title+'</strong><p>Inspect the shape. Keep a static fallback.</p></div><div class="pv-mini-spatial-scene"><span class="pv-mini-spatial-solid"></span></div></div>';
+  case 'system':
+   return '<div class="pv-mini-system"><small>DESIGN LANGUAGE / COMPONENTS</small><strong>'+title+'</strong><div class="pv-mini-system-swatches"><span></span><span></span><span></span><span></span></div><div class="pv-mini-system-text">Aa　01 02 03</div><div class="pv-mini-system-actions"><i>Primary ↗</i><i>Secondary</i></div></div>';
+  default:return nav+'<div class="pv-mini-webhero"><strong>'+title+'</strong><p>'+purpose+'</p></div>';
+ }
+}
+function appVisual(c){
+ const title=trim(c.title,38),kind=c.preview;
+ let inside='';
+ switch(kind){
+  case 'onboarding':
+   inside='<small>YOUR SPACE / 01</small><div class="pv-mini-app-illustration"><i></i><b>Start small.<br>Build momentum.</b></div><strong>'+title+'</strong><span>Start with a real action</span><em>Continue ↗</em>';break;
+  case 'navigation':
+   inside='<small>WORKSPACE / TODAY</small><strong>'+title+'</strong><div class="pv-mini-app-rows"><span>Home　　●</span><span>Explore　　↗</span><span>Settings　　⚙</span></div>';break;
+  case 'editor':
+   inside='<small>NOTES / NEW</small><strong>'+title+'</strong><div class="pv-mini-app-editor">Something worth writing…<i></i><i></i><i></i></div><em>Saved in this demo</em>';break;
+  case 'search':
+   inside='<small>LIBRARY / EXPLORE</small><strong>'+title+'</strong><div class="pv-mini-app-input">⌕　Find in your collection</div><div class="pv-mini-app-rows"><span>Recent idea　↗</span><span>Saved result　↗</span></div>';break;
+  case 'dashboard':case 'chart':
+   inside='<small>INSIGHT / SAMPLE DATA</small><strong>'+title+'</strong><div class="pv-mini-app-stat">Overview <b>—</b></div><div class="pv-mini-app-chart"><i></i><i></i><i></i><i></i><i></i></div><span>Meaning first, numbers with sources.</span>';break;
+  case 'status':
+   inside='<small>WORK / STATUS</small><strong>'+title+'</strong><div class="pv-mini-app-status"><span>● Saved on device</span><span>◯ Pending sync</span><span>↻ Recover and retry</span></div>';break;
+  case 'form':
+   inside='<small>STEP 02 / 04</small><strong>'+title+'</strong><div class="pv-mini-app-input">Your name　▏</div><div class="pv-mini-app-input">Choose an answer ▾</div><em>Review answers ↗</em>';break;
+  case 'workflow':
+   inside='<small>YOUR NEXT ACTION</small><strong>'+title+'</strong><div class="pv-mini-app-task"><i>✓</i> Define the first step</div><div class="pv-mini-app-task"><i>○</i> Complete the next step</div><em>Mark complete ↗</em>';break;
+  case 'social':
+   inside='<small>CONVERSATION / DEMO</small><strong>'+title+'</strong><div class="pv-mini-bubble">This conversation has context.</div><div class="pv-mini-bubble pv-mini-bubble-alt">And clear privacy controls.</div><span>Audience: selected members</span>';break;
+  case 'ai':
+   inside='<small>ASSISTANT / NO MODEL CONNECTED</small><strong>'+title+'</strong><div class="pv-mini-bubble">Summarize my selected note?</div><div class="pv-mini-bubble pv-mini-bubble-alt">Preview suggestion before applying.</div><em>Review before action ↗</em>';break;
+  case 'billing':
+   inside='<small>PREMIUM / MOCK TERMS</small><strong>'+title+'</strong><div class="pv-mini-bill"><b>Clear access</b><span>Price and renewal here</span><span>Restore purchases</span></div><em>Review terms ↗</em>';break;
+  case 'media':
+   inside='<small>NOW PLAYING / SAMPLE</small><strong>'+title+'</strong><div class="pv-mini-media-cover"><span>▶</span></div><div class="pv-mini-media-progress"><i></i></div><span>Captions　Audio　Speed</span>';break;
+  case 'spatial':
+   inside='<small>INSPECT / SPATIAL</small><strong>'+title+'</strong><div class="pv-mini-spatial-scene pv-mini-app-spatial"><span class="pv-mini-spatial-solid"></span></div><span>Static geometry demo only.</span>';break;
+  case 'motion':
+   inside='<small>FEEDBACK / ANIMATION</small><strong>'+title+'</strong><div class="pv-mini-app-task"><i>✓</i> Action completed</div><em>Motion off supported</em>';break;
+  case 'learning':
+   inside='<small>LEARN / PRACTICE</small><strong>'+title+'</strong><div class="pv-mini-app-lesson"><b>One useful idea</b><span>Practice → Feedback → Review</span></div><em>Check understanding ↗</em>';break;
+  case 'trust':
+   inside='<small>PRIVACY / CONTROL</small><strong>'+title+'</strong><div class="pv-mini-app-status"><span>Data stays yours</span><span>Export and deletion</span></div><em>Review choices ↗</em>';break;
+  case 'comparison':
+   inside='<small>COMPARE / VALUES</small><strong>'+title+'</strong><div class="pv-mini-app-rows"><span>Feature / Plan A</span><span>Feature / Plan B</span><span>Missing shown as —</span></div>';break;
+  case 'system':
+   inside='<small>DESIGN SYSTEM</small><strong>'+title+'</strong><div class="pv-mini-system-swatches"><span></span><span></span><span></span><span></span></div><div class="pv-mini-app-task">Aa · 24 · 16 · 12</div>';break;
+  default:
+   inside='<small>FLOW / REAL TASK</small><strong>'+title+'</strong><div class="pv-mini-app-task">Simple next action</div><em>Continue ↗</em>';
+ }
+ return '<div class="pv-mini-phone"><div class="pv-mini-notch"></div><div class="pv-mini-phone-head"><span>9:41</span><span>●●● ▰</span></div><div class="pv-mini-phone-content">'+inside+'</div><div class="pv-mini-phone-tabs"><span>⌂</span><span>◇</span><span>◎</span></div></div>';
+}
+function conceptThumbnail(concept) {
+ if(!concept||typeof concept.id!=='string')return '';
+ const isApp=concept.track==='app';
+ const kind=String(concept.preview||'');
+ const safeKind=(isApp?appTypes:webTypes).has(kind)?kind:(isApp?'onboarding':'hero');
+ const palette=palettes[hash(concept.id)%palettes.length];
+ return '<div class="pv-thumb pv-thumb--'+(isApp?'app':'web')+' pv-thumb--'+safeKind+' pv-thumb--'+palette+'" aria-hidden="true">'+
+ (isApp?appVisual(concept):webVisual(concept))+
+ '</div>';
+}
+const thumbnailTypeCounts = {website:webTypes.size,app:appTypes.size};
+
+
 /* Prompt-Vault Concept Field Guide. Static original research-linked concept browser. */
 const $=id=>document.getElementById(id);
 const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]));
 const safeUrl=value=>typeof value==='string'&&/^https:\/\/[a-z0-9.-]+(?:\/[\w.\-~:/?#\[\]@!$&'()*+,;=%]*)?$/i.test(value);
 const clean=value=>String(value??'').trim();
-const state={data:{website:[],app:[],sources:[],resources:[]},track:'website',selected:null,query:'',family:'all',savedOnly:false,saved:new Set(),prompt:'design',device:'desktop',direction:'focus',scenario:'normal',researchQuery:'',researchType:'all',researchLimit:10,resourceQuery:'',resourceKind:'all',resourceLimit:12};
+const state={data:{website:[],app:[],sources:[],resources:[]},track:'website',selected:null,query:'',family:'all',savedOnly:false,saved:new Set(),prompt:'design',device:'desktop',direction:'focus',scenario:'normal',researchQuery:'',researchType:'all',researchLimit:10,resourceQuery:'',resourceKind:'all',resourceLimit:12,gallerySearch:'',galleryLimit:12};
 let toastTimeout;
 try{state.saved=new Set(JSON.parse(localStorage.getItem('pv-concept-saves')||'[]'));}catch{}
 const showToast=message=>{const el=$('concept-toast');el.textContent=message;el.hidden=false;clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.hidden=true,2600);};
@@ -61,13 +171,13 @@ function renderDetail(){
 function chooseConcept(id,writeHash=true){
  const c=conceptById(id);if(!c)return;
  state.selected=c.id;state.scenario='normal';
- if(c.track!==state.track){state.track=c.track;state.family='all';state.query='';$('concept-search').value='';collectionFilters();}
+ if(c.track!==state.track){state.track=c.track;state.family='all';state.query='';state.gallerySearch='';state.galleryLimit=12;$('pv-gallery-search').value='';$('concept-search').value='';collectionFilters();}
  document.querySelectorAll('[data-track]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.track===state.track)));
  if(writeHash){history.replaceState(null,'','#'+encodeURIComponent(c.id));}
- renderConceptList();renderDetail();
+ renderConceptList();renderDetail();renderGallery();
 }
 function chooseTrack(track){
- state.track=track==='app'?'app':'website';state.selected=activeData()[0]?.id||null;state.family='all';state.query='';state.scenario='normal';
+ state.track=track==='app'?'app':'website';state.selected=activeData()[0]?.id||null;state.family='all';state.query='';state.scenario='normal';state.galleryLimit=12;state.gallerySearch='';$('pv-gallery-search').value='';
  $('concept-search').value='';collectionFilters();
  document.querySelectorAll('[data-track]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.track===state.track)));
  chooseConcept(state.selected);
@@ -198,6 +308,29 @@ function researchFiltered(){
  const q=state.researchQuery.toLowerCase();
  return state.data.sources.filter(s=>(state.researchType==='all'||s.type===state.researchType)&&(!q||[s.title,s.type,s.insight,s.limitation,...(s.tags||[])].join(' ').toLowerCase().includes(q)));
 }
+
+function renderGallery(){
+ const target=$('pv-gallery-items');
+ if(!target || !state.data?.website?.length || !state.data?.app?.length)return;
+ const q=state.gallerySearch.trim().toLowerCase();
+ const filtered=activeData().filter(x=>!q||[x.title,x.family,x.purpose,x.useWhen,...x.skills].join(' ').toLowerCase().includes(q));
+ const visible=filtered.slice(0,state.galleryLimit);
+ $('pv-gallery-count').textContent=filtered.length+' visual studies / '+(state.track==='app'?'App Design':'Website Design');
+ document.querySelectorAll('[data-gallery-track]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.galleryTrack===state.track)));
+ target.innerHTML=visible.length?visible.map(x=>
+   '<button class="pv-gallery-card" type="button" data-preview-id="'+escapeHTML(x.id)+'" aria-label="Open full visual preview and guide for '+escapeHTML(x.title)+'" aria-current="'+String(current()?.id===x.id)+'">'+
+   conceptThumbnail(x)+
+   '<span class="pv-gallery-card-meta"><span><small>'+escapeHTML(x.family)+(state.saved.has(x.id)?' · SAVED':'')+'</small><strong>'+escapeHTML(x.title)+'</strong></span><span class="pv-card-arrow" aria-hidden="true">↗</span></span>'+
+   '</button>'
+ ).join(''):'<p class="pv-gallery-empty">No matching designs. Try another phrase or switch tracks.</p>';
+ $('pv-gallery-more').hidden=visible.length>=filtered.length;
+ $('pv-gallery-more').textContent='Show more visual previews ('+visible.length+' of '+filtered.length+') ↓';
+ target.querySelectorAll('[data-preview-id]').forEach(b=>b.addEventListener('click',()=>{
+  chooseConcept(b.dataset.previewId);
+  const reduced=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  $('explore')?.scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});
+ }));
+}
 function renderResearch(){
  const all=researchFiltered(),arr=all.slice(0,state.researchLimit);
  $('research-count').textContent=all.length+' matching records';
@@ -229,11 +362,15 @@ function bind(){
  const menuButton=document.querySelector('.mobile-menu'),mobileMenu=$('mobile-navigation');
  if(menuButton&&mobileMenu){menuButton.addEventListener('click',()=>{mobileMenu.hidden=!mobileMenu.hidden;menuButton.setAttribute('aria-expanded',String(!mobileMenu.hidden));});document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!mobileMenu.hidden){mobileMenu.hidden=true;menuButton.setAttribute('aria-expanded','false');menuButton.focus();}const specimenMenu=$('specimen')?.querySelector('.cs-menu');if(specimenMenu&&!specimenMenu.hidden){specimenMenu.hidden=true;const trigger=$('specimen').querySelector('[data-demo=menu]');trigger?.setAttribute('aria-expanded','false');trigger?.focus();}}});}
  document.querySelectorAll('[data-track]').forEach(b=>b.addEventListener('click',()=>chooseTrack(b.dataset.track)));
+ document.querySelectorAll('[data-gallery-track]').forEach(b=>b.addEventListener('click',()=>chooseTrack(b.dataset.galleryTrack)));
+ $('pv-gallery-search').addEventListener('input',e=>{state.gallerySearch=e.target.value;state.galleryLimit=12;renderGallery();});
+ $('pv-gallery-more').addEventListener('click',()=>{state.galleryLimit=Math.min(100,state.galleryLimit+12);renderGallery();});
+
  $('concept-search').addEventListener('input',e=>{state.query=e.target.value;renderConceptList();});
  $('concept-family').addEventListener('change',e=>{state.family=e.target.value;renderConceptList();});
  $('concept-saved-only').addEventListener('change',e=>{state.savedOnly=e.target.checked;renderConceptList();});
  $('reset-concept-filters').addEventListener('click',()=>{state.query='';state.family='all';state.savedOnly=false;$('concept-search').value='';$('concept-family').value='all';$('concept-saved-only').checked=false;renderConceptList();});
- $('save-concept').addEventListener('click',()=>{const id=current()?.id;if(!id)return;if(state.saved.has(id))state.saved.delete(id);else state.saved.add(id);try{localStorage.setItem('pv-concept-saves',JSON.stringify([...state.saved]));}catch{}renderDetail();renderConceptList();});
+ $('save-concept').addEventListener('click',()=>{const id=current()?.id;if(!id)return;if(state.saved.has(id))state.saved.delete(id);else state.saved.add(id);try{localStorage.setItem('pv-concept-saves',JSON.stringify([...state.saved]));}catch{}renderDetail();renderConceptList();renderGallery();});
  $('copy-link').addEventListener('click',()=>toastCopy(location.origin+location.pathname+'#'+encodeURIComponent(current()?.id||'')));
  document.querySelectorAll('[data-prompt]').forEach(b=>b.addEventListener('click',()=>{state.prompt=b.dataset.prompt;document.querySelectorAll('[data-prompt]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderPrompt();}));
  $('project-brief').addEventListener('input',renderPrompt);
