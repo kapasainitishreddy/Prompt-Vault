@@ -434,3 +434,15 @@ function initComposer(){
  $("ms-compose-copy").addEventListener("click",copyPlan);
 }
 initComposer();
+
+
+/* Open a selected signature composition in its existing interactive journey. */
+window.addEventListener("pv:open-signature",event=>{
+ const detail=event.detail||{};
+ if(!state.ready){toast("The journey catalog is not available. Open the App Atlas instead.");return;}
+ const journey=state.journeys.find(j=>j.id===detail.journey);
+ const flow=state.flows.find(f=>f.id===detail.flow);
+ if(!flow){toast("This design's interactive flow is unavailable.");return;}
+ if(journey)state.journey=journey.id;
+ state.flow=flow.id;resetDemo();state.scenario="normal";renderAll();
+});
