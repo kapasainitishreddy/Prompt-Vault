@@ -239,6 +239,11 @@ function displayResources(){
   (goodUrl(x.url)?'<a target="_blank" rel="noopener noreferrer" href="'+esc(x.url)+'">Upstream source ↗</a>':'')+'</article>'
  ).join('');
 }
+function displaySignals(){
+ byId('academy-signals').innerHTML=(state.data?.marketSignals||[]).map(x=>
+ '<article class="ac-signal"><span class="ac-signal-figure">'+esc(x.figure)+'</span><h4>'+esc(x.label)+'</h4><p>'+esc(x.implication)+'</p><small>LIMIT: '+esc(x.caution)+'</small></article>'
+ ).join('');
+}
 function displayEarners(){
  byId('academy-earners').innerHTML=(state.data?.topEarners||[]).map(x=>
   '<article class="ac-earner-card"><span class="ac-rank">'+esc(x.rank).padStart(2,'0')+'</span><small>'+esc(x.year)+' / GLOBAL NON-GAME IAP</small><h3>'+esc(x.name)+'</h3><p>'+esc(x.pattern)+'</p><small>ANALYSIS, NOT EVIDENCE OF DESIGN CAUSALITY</small></article>'
@@ -284,7 +289,7 @@ async function init(){
   if(!data.website?.length||!data.app?.length||!data.sources?.length)throw Error('Invalid academy catalog');
   state.data=data;
   byId('academy-figures').textContent=data.website.length+' website blueprints · '+data.app.length+' app journeys · '+data.sources.length+' sources';
-  displayResearch();displayResources();displayEarners();displayModules();
+  displayResearch();displayResources();displayEarners();displaySignals();displayModules();
   activate('website','saas-product');
  }catch(e){
   byId('academy-catalog').textContent='Unable to load the academy dataset.';
