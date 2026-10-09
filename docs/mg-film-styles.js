@@ -44,6 +44,7 @@
     empty.hidden = visible !== 0;
   }
   controls.hidden = false;
+  applyFilters();
   search.addEventListener('input', applyFilters);
   kind.addEventListener('change', applyFilters);
   byId('mf-reset').addEventListener('click', () => {
