@@ -1,0 +1,2319 @@
+{
+  "version": "2026-10-08",
+  "track": "website",
+  "scope": "Original pattern guidance and code-rendered specimens, not proven layouts or copied third-party screenshots",
+  "families": [
+    "Type & visual hierarchy",
+    "Navigation & discoverability",
+    "Product storytelling & conversion",
+    "Commerce & marketplaces",
+    "Forms & service journeys",
+    "Trust, inclusion & privacy",
+    "Documentation & knowledge",
+    "Motion, canvas & 3D",
+    "Design systems & accessible patterns",
+    "Portfolio, company & subdomains"
+  ],
+  "concepts": [
+    {
+      "id": "web-editorial-first-fold",
+      "track": "website",
+      "family": "Type & visual hierarchy",
+      "title": "Editorial first-fold",
+      "purpose": "Lead with a clear thesis and one real piece of visual evidence.",
+      "useWhen": "Narrative products, studios, long-form brands.",
+      "avoidWhen": "A product requiring immediate filtering or account access.",
+      "preview": "hero",
+      "sources": [
+        "nng-recognition",
+        "sweller-1988",
+        "w3c-clear"
+      ],
+      "skills": [
+        "typography",
+        "content architecture",
+        "responsive CSS"
+      ],
+      "successSignal": "Can readers locate the purpose and next action without scanning the entire page?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-asymmetric-grid",
+      "track": "website",
+      "family": "Type & visual hierarchy",
+      "title": "Asymmetric grid",
+      "purpose": "Create distinct visual weight while retaining a predictable reading path.",
+      "useWhen": "Case studies or creative direction with contrasting content.",
+      "avoidWhen": "A dense dashboard where asymmetric data ordering confuses comparisons.",
+      "preview": "editorial",
+      "sources": [
+        "nng-recognition",
+        "sweller-1988",
+        "w3c-clear"
+      ],
+      "skills": [
+        "typography",
+        "content architecture",
+        "responsive CSS"
+      ],
+      "successSignal": "Can readers locate the purpose and next action without scanning the entire page?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-oversized-typographic-hierarchy",
+      "track": "website",
+      "family": "Type & visual hierarchy",
+      "title": "Oversized typographic hierarchy",
+      "purpose": "Let type carry the message with readable follow-up content.",
+      "useWhen": "Strong concise product positioning and art-directed portfolios.",
+      "avoidWhen": "Long localized headings or tiny supporting copy.",
+      "preview": "hero",
+      "sources": [
+        "nng-recognition",
+        "sweller-1988",
+        "w3c-clear"
+      ],
+      "skills": [
+        "typography",
+        "content architecture",
+        "responsive CSS"
+      ],
+      "successSignal": "Can readers locate the purpose and next action without scanning the entire page?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-split-screen-narrative",
+      "track": "website",
+      "family": "Type & visual hierarchy",
+      "title": "Split-screen narrative",
+      "purpose": "Place outcome and interactive evidence beside one another.",
+      "useWhen": "A feature users cannot understand through words alone.",
+      "avoidWhen": "The image is decorative or blocks a narrow viewport.",
+      "preview": "hero",
+      "sources": [
+        "nng-recognition",
+        "sweller-1988",
+        "w3c-clear"
+      ],
+      "skills": [
+        "typography",
+        "content architecture",
+        "responsive CSS"
+      ],
+      "successSignal": "Can readers locate the purpose and next action without scanning the entire page?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-minimalist-utility",
+      "track": "website",
+      "family": "Type & visual hierarchy",
+      "title": "Minimalist utility",
+      "purpose": "Use restraint to make one important function unmistakable.",
+      "useWhen": "Focused tools, contact pages, essential settings.",
+      "avoidWhen": "Critical options become invisible in the name of simplicity.",
+      "preview": "form",
+      "sources": [
+        "nng-recognition",
+        "sweller-1988",
+        "w3c-clear"
+      ],
+      "skills": [
+        "typography",
+        "content architecture",
+        "responsive CSS"
+      ],
+      "successSignal": "Can readers locate the purpose and next action without scanning the entire page?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-editorial-table-of-contents",
+      "track": "website",
+      "family": "Type & visual hierarchy",
+      "title": "Editorial table of contents",
+      "purpose": "Expose chapter structure and active position in lengthy content.",
+      "useWhen": "Research libraries, docs, guides and field reports.",
+      "avoidWhen": "Short articles where extra navigation only adds noise.",
+      "preview": "article",
+      "sources": [
+        "nng-recognition",
+        "sweller-1988",
+        "w3c-clear"
+      ],
+      "skills": [
+        "typography",
+        "content architecture",
+        "responsive CSS"
+      ],
+      "successSignal": "Can readers locate the purpose and next action without scanning the entire page?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-scannable-comparison-hierarchy",
+      "track": "website",
+      "family": "Type & visual hierarchy",
+      "title": "Scannable comparison hierarchy",
+      "purpose": "Align attributes and units so alternatives can be compared at a glance.",
+      "useWhen": "Plan, feature or technical specification selection.",
+      "avoidWhen": "Objects have fundamentally incomparable data.",
+      "preview": "comparison",
+      "sources": [
+        "nng-recognition",
+        "sweller-1988",
+        "w3c-clear"
+      ],
+      "skills": [
+        "typography",
+        "content architecture",
+        "responsive CSS"
+      ],
+      "successSignal": "Can readers locate the purpose and next action without scanning the entire page?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-immersive-reading-measure",
+      "track": "website",
+      "family": "Type & visual hierarchy",
+      "title": "Immersive reading measure",
+      "purpose": "Choose type measure, line-height and controls for sustained reading.",
+      "useWhen": "Books, research reports and long tutorials.",
+      "avoidWhen": "A high-density task workspace with little prose.",
+      "preview": "article",
+      "sources": [
+        "nng-recognition",
+        "sweller-1988",
+        "w3c-clear"
+      ],
+      "skills": [
+        "typography",
+        "content architecture",
+        "responsive CSS"
+      ],
+      "successSignal": "Can readers locate the purpose and next action without scanning the entire page?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-responsive-art-directed-type",
+      "track": "website",
+      "family": "Type & visual hierarchy",
+      "title": "Responsive art-directed type",
+      "purpose": "Preserve typographic personality without clipping on small screens.",
+      "useWhen": "Display-heavy campaigns, multilingual marketing pages.",
+      "avoidWhen": "Fonts or rigid line breaks cause overlap or assistive-tech loss.",
+      "preview": "editorial",
+      "sources": [
+        "nng-recognition",
+        "sweller-1988",
+        "w3c-clear"
+      ],
+      "skills": [
+        "typography",
+        "content architecture",
+        "responsive CSS"
+      ],
+      "successSignal": "Can readers locate the purpose and next action without scanning the entire page?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-mixed-media-editorial-rhythm",
+      "track": "website",
+      "family": "Type & visual hierarchy",
+      "title": "Mixed-media editorial rhythm",
+      "purpose": "Sequence images, captions, quotations and text by importance.",
+      "useWhen": "Process stories, creator showcases and magazines.",
+      "avoidWhen": "Media dominates before users can find the meaning.",
+      "preview": "article",
+      "sources": [
+        "nng-recognition",
+        "sweller-1988",
+        "w3c-clear"
+      ],
+      "skills": [
+        "typography",
+        "content architecture",
+        "responsive CSS"
+      ],
+      "successSignal": "Can readers locate the purpose and next action without scanning the entire page?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-task-first-navigation",
+      "track": "website",
+      "family": "Navigation & discoverability",
+      "title": "Task-first navigation",
+      "purpose": "Organize labels around user goals rather than internal departments.",
+      "useWhen": "Companies with mixed visitor intent.",
+      "avoidWhen": "Internal jargon forces visitors to guess categories.",
+      "preview": "navigation",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "hyman-1953"
+      ],
+      "skills": [
+        "information architecture",
+        "keyboard interactions",
+        "wayfinding"
+      ],
+      "successSignal": "Can users get from entry to a named destination and return without confusion?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-adaptive-desktop-navigation",
+      "track": "website",
+      "family": "Navigation & discoverability",
+      "title": "Adaptive desktop navigation",
+      "purpose": "Keep a stable set of destinations as available width changes.",
+      "useWhen": "Cross-device corporate or product sites.",
+      "avoidWhen": "A mobile menu merely hides unreachable links.",
+      "preview": "navigation",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "hyman-1953"
+      ],
+      "skills": [
+        "information architecture",
+        "keyboard interactions",
+        "wayfinding"
+      ],
+      "successSignal": "Can users get from entry to a named destination and return without confusion?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-progressive-navigation-disclosure",
+      "track": "website",
+      "family": "Navigation & discoverability",
+      "title": "Progressive navigation disclosure",
+      "purpose": "Offer a small set of visible routes and show the rest on demand.",
+      "useWhen": "Layered documentation and expansive sites.",
+      "avoidWhen": "Primary actions are hidden behind unexplained menus.",
+      "preview": "navigation",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "hyman-1953"
+      ],
+      "skills": [
+        "information architecture",
+        "keyboard interactions",
+        "wayfinding"
+      ],
+      "successSignal": "Can users get from entry to a named destination and return without confusion?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-accessible-mega-menu",
+      "track": "website",
+      "family": "Navigation & discoverability",
+      "title": "Accessible mega-menu",
+      "purpose": "Group many destinations with clear headings and keyboard escape.",
+      "useWhen": "Genuine high-volume product or service catalogs.",
+      "avoidWhen": "A small site with six links wastes space.",
+      "preview": "navigation",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "hyman-1953"
+      ],
+      "skills": [
+        "information architecture",
+        "keyboard interactions",
+        "wayfinding"
+      ],
+      "successSignal": "Can users get from entry to a named destination and return without confusion?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-breadcrumb-hierarchy",
+      "track": "website",
+      "family": "Navigation & discoverability",
+      "title": "Breadcrumb hierarchy",
+      "purpose": "Show parent context and a short return path.",
+      "useWhen": "Deep articles, taxonomy pages and product collections.",
+      "avoidWhen": "Flat sites with no meaningful parent chain.",
+      "preview": "navigation",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "hyman-1953"
+      ],
+      "skills": [
+        "information architecture",
+        "keyboard interactions",
+        "wayfinding"
+      ],
+      "successSignal": "Can users get from entry to a named destination and return without confusion?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-persistent-contextual-subnav",
+      "track": "website",
+      "family": "Navigation & discoverability",
+      "title": "Persistent contextual subnav",
+      "purpose": "Keep local sections reachable as an article or case study grows.",
+      "useWhen": "Long scientific or technical references.",
+      "avoidWhen": "Sticky navigation consumes small screens.",
+      "preview": "navigation",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "hyman-1953"
+      ],
+      "skills": [
+        "information architecture",
+        "keyboard interactions",
+        "wayfinding"
+      ],
+      "successSignal": "Can users get from entry to a named destination and return without confusion?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-search-first-orientation",
+      "track": "website",
+      "family": "Navigation & discoverability",
+      "title": "Search-first orientation",
+      "purpose": "Start with a discoverable query when users know what they want.",
+      "useWhen": "Documentation, component catalogs and directories.",
+      "avoidWhen": "Search is unreliable and browsing paths are omitted.",
+      "preview": "search",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "hyman-1953"
+      ],
+      "skills": [
+        "information architecture",
+        "keyboard interactions",
+        "wayfinding"
+      ],
+      "successSignal": "Can users get from entry to a named destination and return without confusion?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-faceted-filtering",
+      "track": "website",
+      "family": "Navigation & discoverability",
+      "title": "Faceted filtering",
+      "purpose": "Use meaningful attributes, active chips, counts and reset.",
+      "useWhen": "Large product lists with real metadata.",
+      "avoidWhen": "Filtering small result sets adds cost and complexity.",
+      "preview": "search",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "hyman-1953"
+      ],
+      "skills": [
+        "information architecture",
+        "keyboard interactions",
+        "wayfinding"
+      ],
+      "successSignal": "Can users get from entry to a named destination and return without confusion?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-keyboard-command-palette",
+      "track": "website",
+      "family": "Navigation & discoverability",
+      "title": "Keyboard command palette",
+      "purpose": "Give expert users accelerated access to actions and pages.",
+      "useWhen": "Complex authenticated web apps.",
+      "avoidWhen": "It is the only path to fundamental navigation.",
+      "preview": "search",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "hyman-1953"
+      ],
+      "skills": [
+        "information architecture",
+        "keyboard interactions",
+        "wayfinding"
+      ],
+      "successSignal": "Can users get from entry to a named destination and return without confusion?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-helpful-empty-search",
+      "track": "website",
+      "family": "Navigation & discoverability",
+      "title": "Helpful empty search",
+      "purpose": "Preserve query and propose nearby categories or corrective terms.",
+      "useWhen": "Catalog search with varied terminology.",
+      "avoidWhen": "The system fabricates products or silently changes scope.",
+      "preview": "search",
+      "sources": [
+        "nng-recognition",
+        "w3c-aria-apg",
+        "hyman-1953"
+      ],
+      "skills": [
+        "information architecture",
+        "keyboard interactions",
+        "wayfinding"
+      ],
+      "successSignal": "Can users get from entry to a named destination and return without confusion?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-outcome-led-hero",
+      "track": "website",
+      "family": "Product storytelling & conversion",
+      "title": "Outcome-led hero",
+      "purpose": "State who benefits, what changes and the supported action.",
+      "useWhen": "New SaaS or focused mobile product launch.",
+      "avoidWhen": "Claims rely on imaginary results.",
+      "preview": "hero",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "product positioning",
+        "conversion copy",
+        "storyboarding"
+      ],
+      "successSignal": "Can a visitor explain the product's benefit and identify the next real step?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-problem-to-solution-story",
+      "track": "website",
+      "family": "Product storytelling & conversion",
+      "title": "Problem-to-solution story",
+      "purpose": "Show a relatable problem before the demonstrated solution.",
+      "useWhen": "Products introducing an unfamiliar workflow.",
+      "avoidWhen": "An invented pain point replaces customer research.",
+      "preview": "editorial",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "product positioning",
+        "conversion copy",
+        "storyboarding"
+      ],
+      "successSignal": "Can a visitor explain the product's benefit and identify the next real step?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-real-product-interface-showcase",
+      "track": "website",
+      "family": "Product storytelling & conversion",
+      "title": "Real-product interface showcase",
+      "purpose": "Show the actual system in its authentic state.",
+      "useWhen": "Apps and developer tools whose workflow is a selling point.",
+      "avoidWhen": "Mock screens are presented as real product features.",
+      "preview": "dashboard",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "product positioning",
+        "conversion copy",
+        "storyboarding"
+      ],
+      "successSignal": "Can a visitor explain the product's benefit and identify the next real step?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-interactive-product-demo",
+      "track": "website",
+      "family": "Product storytelling & conversion",
+      "title": "Interactive product demo",
+      "purpose": "Let visitors experience a bounded, reversible feature.",
+      "useWhen": "SaaS features with a small safe interaction.",
+      "avoidWhen": "The demo needs personal data, fake backends or expensive inference.",
+      "preview": "workflow",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "product positioning",
+        "conversion copy",
+        "storyboarding"
+      ],
+      "successSignal": "Can a visitor explain the product's benefit and identify the next real step?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-feature-to-outcome-mapping",
+      "track": "website",
+      "family": "Product storytelling & conversion",
+      "title": "Feature-to-outcome mapping",
+      "purpose": "Connect capability, mechanism and human outcome without repetitive cards.",
+      "useWhen": "Products with multiple meaningful capabilities.",
+      "avoidWhen": "A list of buzzwords substitutes for a demonstration.",
+      "preview": "comparison",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "product positioning",
+        "conversion copy",
+        "storyboarding"
+      ],
+      "successSignal": "Can a visitor explain the product's benefit and identify the next real step?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-persona-specific-landing-paths",
+      "track": "website",
+      "family": "Product storytelling & conversion",
+      "title": "Persona-specific landing paths",
+      "purpose": "Route role-specific users toward distinct useful proof.",
+      "useWhen": "B2B with engineers, operators and executives.",
+      "avoidWhen": "Personas are demographic stereotypes or unverified.",
+      "preview": "navigation",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "product positioning",
+        "conversion copy",
+        "storyboarding"
+      ],
+      "successSignal": "Can a visitor explain the product's benefit and identify the next real step?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-use-case-walkthrough",
+      "track": "website",
+      "family": "Product storytelling & conversion",
+      "title": "Use-case walkthrough",
+      "purpose": "Demonstrate a real step-by-step task with limitations.",
+      "useWhen": "Tools with multiple steps or roles.",
+      "avoidWhen": "The steps are invented and cannot be completed.",
+      "preview": "workflow",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "product positioning",
+        "conversion copy",
+        "storyboarding"
+      ],
+      "successSignal": "Can a visitor explain the product's benefit and identify the next real step?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-comparative-value-section",
+      "track": "website",
+      "family": "Product storytelling & conversion",
+      "title": "Comparative value section",
+      "purpose": "Describe honest alternatives with comparable evaluation dimensions.",
+      "useWhen": "Buyers evaluating real options.",
+      "avoidWhen": "Competitor names or claims are invented.",
+      "preview": "comparison",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "product positioning",
+        "conversion copy",
+        "storyboarding"
+      ],
+      "successSignal": "Can a visitor explain the product's benefit and identify the next real step?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-live-but-safe-configurator",
+      "track": "website",
+      "family": "Product storytelling & conversion",
+      "title": "Live-but-safe configurator",
+      "purpose": "Let users vary a few realistic inputs and inspect outcomes.",
+      "useWhen": "Pricing estimation or product configuration.",
+      "avoidWhen": "An estimator implies precise quotes without data.",
+      "preview": "form",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "product positioning",
+        "conversion copy",
+        "storyboarding"
+      ],
+      "successSignal": "Can a visitor explain the product's benefit and identify the next real step?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-decision-focused-final-action",
+      "track": "website",
+      "family": "Product storytelling & conversion",
+      "title": "Decision-focused final action",
+      "purpose": "Resolve remaining objections before a single explicit call to action.",
+      "useWhen": "Conversion pages with a clear next task.",
+      "avoidWhen": "Multiple competing purchase prompts pressure visitors.",
+      "preview": "hero",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "product positioning",
+        "conversion copy",
+        "storyboarding"
+      ],
+      "successSignal": "Can a visitor explain the product's benefit and identify the next real step?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-search-autocomplete-suggestions",
+      "track": "website",
+      "family": "Commerce & marketplaces",
+      "title": "Search autocomplete suggestions",
+      "purpose": "Offer transparent completions that respect typed wording.",
+      "useWhen": "Large inventories with synonym-rich queries.",
+      "avoidWhen": "Suggestions override, mislead or cannot be keyboard selected.",
+      "preview": "search",
+      "sources": [
+        "baymard-search2",
+        "baymard-filter2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "product listing UX",
+        "commerce forms",
+        "data clarity"
+      ],
+      "successSignal": "Can users find, compare and purchase without hidden fees or mistakes?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-filterable-product-listing",
+      "track": "website",
+      "family": "Commerce & marketplaces",
+      "title": "Filterable product listing",
+      "purpose": "Keep relevant product facts comparable and selected filters visible.",
+      "useWhen": "Catalogs where attributes actually narrow choices.",
+      "avoidWhen": "Filter options are fabricated or hide the result count.",
+      "preview": "commerce",
+      "sources": [
+        "baymard-search2",
+        "baymard-filter2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "product listing UX",
+        "commerce forms",
+        "data clarity"
+      ],
+      "successSignal": "Can users find, compare and purchase without hidden fees or mistakes?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-sort-with-honest-defaults",
+      "track": "website",
+      "family": "Commerce & marketplaces",
+      "title": "Sort with honest defaults",
+      "purpose": "Explain price basis, popularity, recency and sponsorship clearly.",
+      "useWhen": "Marketplaces with several reasonable ordering needs.",
+      "avoidWhen": "A paid placement masquerades as impartial ranking.",
+      "preview": "commerce",
+      "sources": [
+        "baymard-search2",
+        "baymard-filter2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "product listing UX",
+        "commerce forms",
+        "data clarity"
+      ],
+      "successSignal": "Can users find, compare and purchase without hidden fees or mistakes?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-product-variation-selector",
+      "track": "website",
+      "family": "Commerce & marketplaces",
+      "title": "Product variation selector",
+      "purpose": "Expose size, color, stock and selected variation with feedback.",
+      "useWhen": "Physical products with meaningful variants.",
+      "avoidWhen": "Out-of-stock choices remain clickable without explanation.",
+      "preview": "commerce",
+      "sources": [
+        "baymard-search2",
+        "baymard-filter2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "product listing UX",
+        "commerce forms",
+        "data clarity"
+      ],
+      "successSignal": "Can users find, compare and purchase without hidden fees or mistakes?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-image-zoom-and-scale",
+      "track": "website",
+      "family": "Commerce & marketplaces",
+      "title": "Image zoom and scale",
+      "purpose": "Show honest product media with dimensions and usage context.",
+      "useWhen": "Objects where materials and measurements influence purchase.",
+      "avoidWhen": "Low-resolution placeholders imply fake product evidence.",
+      "preview": "commerce",
+      "sources": [
+        "baymard-search2",
+        "baymard-filter2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "product listing UX",
+        "commerce forms",
+        "data clarity"
+      ],
+      "successSignal": "Can users find, compare and purchase without hidden fees or mistakes?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-side-by-side-comparison",
+      "track": "website",
+      "family": "Commerce & marketplaces",
+      "title": "Side-by-side comparison",
+      "purpose": "Keep dimensions, prices and constraints aligned across candidates.",
+      "useWhen": "High-consideration devices, plans or services.",
+      "avoidWhen": "Unequal metrics make one alternative seem misleadingly superior.",
+      "preview": "comparison",
+      "sources": [
+        "baymard-search2",
+        "baymard-filter2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "product listing UX",
+        "commerce forms",
+        "data clarity"
+      ],
+      "successSignal": "Can users find, compare and purchase without hidden fees or mistakes?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-cart-review-and-editing",
+      "track": "website",
+      "family": "Commerce & marketplaces",
+      "title": "Cart review and editing",
+      "purpose": "Allow quantity, variant and removal edits before commitment.",
+      "useWhen": "Checkout flows with multiple purchased items.",
+      "avoidWhen": "Totals change without notice.",
+      "preview": "commerce",
+      "sources": [
+        "baymard-search2",
+        "baymard-filter2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "product listing UX",
+        "commerce forms",
+        "data clarity"
+      ],
+      "successSignal": "Can users find, compare and purchase without hidden fees or mistakes?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-transparent-checkout-totals",
+      "track": "website",
+      "family": "Commerce & marketplaces",
+      "title": "Transparent checkout totals",
+      "purpose": "Display fees, shipping, taxes and final amount before paying.",
+      "useWhen": "Any actual transactional website.",
+      "avoidWhen": "Hidden costs appear late or the button submits twice.",
+      "preview": "form",
+      "sources": [
+        "baymard-search2",
+        "baymard-filter2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "product listing UX",
+        "commerce forms",
+        "data clarity"
+      ],
+      "successSignal": "Can users find, compare and purchase without hidden fees or mistakes?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-guest-checkout",
+      "track": "website",
+      "family": "Commerce & marketplaces",
+      "title": "Guest checkout",
+      "purpose": "Let eligible buyers finish without forcing an account.",
+      "useWhen": "Retail orders where login provides little immediate value.",
+      "avoidWhen": "Seller obligations truly require verified identity.",
+      "preview": "form",
+      "sources": [
+        "baymard-search2",
+        "baymard-filter2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "product listing UX",
+        "commerce forms",
+        "data clarity"
+      ],
+      "successSignal": "Can users find, compare and purchase without hidden fees or mistakes?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-returns-and-delivery-clarity",
+      "track": "website",
+      "family": "Commerce & marketplaces",
+      "title": "Returns and delivery clarity",
+      "purpose": "Answer how, when and under which conditions goods can be returned.",
+      "useWhen": "Ecommerce where delivery and trust influence decisions.",
+      "avoidWhen": "Policy snippets contradict the actual legal terms.",
+      "preview": "trust",
+      "sources": [
+        "baymard-search2",
+        "baymard-filter2",
+        "mathur-2019"
+      ],
+      "skills": [
+        "product listing UX",
+        "commerce forms",
+        "data clarity"
+      ],
+      "successSignal": "Can users find, compare and purchase without hidden fees or mistakes?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-one-question-per-step",
+      "track": "website",
+      "family": "Forms & service journeys",
+      "title": "One-question-per-step",
+      "purpose": "Turn genuinely demanding data collection into small understandable tasks.",
+      "useWhen": "Government, insurance or long eligibility journeys.",
+      "avoidWhen": "A three-field form becomes needless pagination.",
+      "preview": "form",
+      "sources": [
+        "gov-patterns",
+        "gov-errors",
+        "uswds-form"
+      ],
+      "skills": [
+        "form design",
+        "field validation",
+        "service blueprints"
+      ],
+      "successSignal": "Can a person complete the form and recover from mistakes without losing entered information?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-grouped-fieldsets",
+      "track": "website",
+      "family": "Forms & service journeys",
+      "title": "Grouped fieldsets",
+      "purpose": "Put related selections under clear legends and instructions.",
+      "useWhen": "Questionnaires with checkboxes and radio groups.",
+      "avoidWhen": "Visual grouping differs from DOM and screen-reader order.",
+      "preview": "form",
+      "sources": [
+        "gov-patterns",
+        "gov-errors",
+        "uswds-form"
+      ],
+      "skills": [
+        "form design",
+        "field validation",
+        "service blueprints"
+      ],
+      "successSignal": "Can a person complete the form and recover from mistakes without losing entered information?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-date-input-by-task",
+      "track": "website",
+      "family": "Forms & service journeys",
+      "title": "Date input by task",
+      "purpose": "Choose date text fields or calendar based on whether users know the date.",
+      "useWhen": "Birth dates, booking dates and approximate periods.",
+      "avoidWhen": "A month grid is required for dates decades ago.",
+      "preview": "form",
+      "sources": [
+        "gov-patterns",
+        "gov-errors",
+        "uswds-form"
+      ],
+      "skills": [
+        "form design",
+        "field validation",
+        "service blueprints"
+      ],
+      "successSignal": "Can a person complete the form and recover from mistakes without losing entered information?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-contextual-input-constraints",
+      "track": "website",
+      "family": "Forms & service journeys",
+      "title": "Contextual input constraints",
+      "purpose": "Show units, formats and examples near fields before mistakes.",
+      "useWhen": "Complex financial, shipping or technical details.",
+      "avoidWhen": "Unexplained regex rules appear only after submission.",
+      "preview": "form",
+      "sources": [
+        "gov-patterns",
+        "gov-errors",
+        "uswds-form"
+      ],
+      "skills": [
+        "form design",
+        "field validation",
+        "service blueprints"
+      ],
+      "successSignal": "Can a person complete the form and recover from mistakes without losing entered information?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-inline-validation-with-restraint",
+      "track": "website",
+      "family": "Forms & service journeys",
+      "title": "Inline validation with restraint",
+      "purpose": "Give timely guidance without announcing errors before the user can respond.",
+      "useWhen": "Forms with complex but knowable requirements.",
+      "avoidWhen": "Per-keystroke warnings punish partial entry.",
+      "preview": "form",
+      "sources": [
+        "gov-patterns",
+        "gov-errors",
+        "uswds-form"
+      ],
+      "skills": [
+        "form design",
+        "field validation",
+        "service blueprints"
+      ],
+      "successSignal": "Can a person complete the form and recover from mistakes without losing entered information?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-error-summary-plus-field-messages",
+      "track": "website",
+      "family": "Forms & service journeys",
+      "title": "Error summary plus field messages",
+      "purpose": "Identify a repair path for each invalid field and preserve values.",
+      "useWhen": "Long service forms with several invalid answers.",
+      "avoidWhen": "Only a red outline signals failure.",
+      "preview": "form",
+      "sources": [
+        "gov-patterns",
+        "gov-errors",
+        "uswds-form"
+      ],
+      "skills": [
+        "form design",
+        "field validation",
+        "service blueprints"
+      ],
+      "successSignal": "Can a person complete the form and recover from mistakes without losing entered information?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-save-and-resume-workflow",
+      "track": "website",
+      "family": "Forms & service journeys",
+      "title": "Save-and-resume workflow",
+      "purpose": "Persist progress with visible save status and clear privacy scope.",
+      "useWhen": "Long forms interrupted by life events.",
+      "avoidWhen": "A short anonymous flow requires an account.",
+      "preview": "workflow",
+      "sources": [
+        "gov-patterns",
+        "gov-errors",
+        "uswds-form"
+      ],
+      "skills": [
+        "form design",
+        "field validation",
+        "service blueprints"
+      ],
+      "successSignal": "Can a person complete the form and recover from mistakes without losing entered information?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-answer-review-before-submit",
+      "track": "website",
+      "family": "Forms & service journeys",
+      "title": "Answer review before submit",
+      "purpose": "Let users confirm consequential information and correct it easily.",
+      "useWhen": "Applications, tax forms and legal declarations.",
+      "avoidWhen": "Review cannot link back to edit fields.",
+      "preview": "comparison",
+      "sources": [
+        "gov-patterns",
+        "gov-errors",
+        "uswds-form"
+      ],
+      "skills": [
+        "form design",
+        "field validation",
+        "service blueprints"
+      ],
+      "successSignal": "Can a person complete the form and recover from mistakes without losing entered information?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-multi-task-service-checklist",
+      "track": "website",
+      "family": "Forms & service journeys",
+      "title": "Multi-task service checklist",
+      "purpose": "Represent larger journeys as named tasks with explicit statuses.",
+      "useWhen": "Processes that span several sessions.",
+      "avoidWhen": "A short linear flow gains a fake dashboard.",
+      "preview": "workflow",
+      "sources": [
+        "gov-patterns",
+        "gov-errors",
+        "uswds-form"
+      ],
+      "skills": [
+        "form design",
+        "field validation",
+        "service blueprints"
+      ],
+      "successSignal": "Can a person complete the form and recover from mistakes without losing entered information?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-success-receipt-and-next-steps",
+      "track": "website",
+      "family": "Forms & service journeys",
+      "title": "Success receipt and next steps",
+      "purpose": "Provide reference, changes made and next contact after real completion.",
+      "useWhen": "Applications, purchases, support requests.",
+      "avoidWhen": "A mocked success message pretends to confirm an unperformed transaction.",
+      "preview": "trust",
+      "sources": [
+        "gov-patterns",
+        "gov-errors",
+        "uswds-form"
+      ],
+      "skills": [
+        "form design",
+        "field validation",
+        "service blueprints"
+      ],
+      "successSignal": "Can a person complete the form and recover from mistakes without losing entered information?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-authentic-social-proof",
+      "track": "website",
+      "family": "Trust, inclusion & privacy",
+      "title": "Authentic social proof",
+      "purpose": "Show verifiable endorsements with sources and context.",
+      "useWhen": "Customer stories or public reviews exist with permission.",
+      "avoidWhen": "Placeholder logos or fake quotes imply real endorsement.",
+      "preview": "trust",
+      "sources": [
+        "mathur-2019",
+        "w3c-coga",
+        "uswds-principles"
+      ],
+      "skills": [
+        "ethical UX",
+        "accessible language",
+        "privacy-first patterns"
+      ],
+      "successSignal": "Can users understand claims, exercise meaningful choice and correct a mistake?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-source-linked-claims",
+      "track": "website",
+      "family": "Trust, inclusion & privacy",
+      "title": "Source-linked claims",
+      "purpose": "Attach trustworthy, dated evidence to measurable product claims.",
+      "useWhen": "Healthcare, finance, AI and professional services.",
+      "avoidWhen": "Headline metrics omit definitions or base rates.",
+      "preview": "article",
+      "sources": [
+        "mathur-2019",
+        "w3c-coga",
+        "uswds-principles"
+      ],
+      "skills": [
+        "ethical UX",
+        "accessible language",
+        "privacy-first patterns"
+      ],
+      "successSignal": "Can users understand claims, exercise meaningful choice and correct a mistake?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-privacy-by-default",
+      "track": "website",
+      "family": "Trust, inclusion & privacy",
+      "title": "Privacy by default",
+      "purpose": "Explain minimal collection, retention and data controls clearly.",
+      "useWhen": "Apps and sites handling personal information.",
+      "avoidWhen": "A polished policy link hides unexpected data sharing.",
+      "preview": "trust",
+      "sources": [
+        "mathur-2019",
+        "w3c-coga",
+        "uswds-principles"
+      ],
+      "skills": [
+        "ethical UX",
+        "accessible language",
+        "privacy-first patterns"
+      ],
+      "successSignal": "Can users understand claims, exercise meaningful choice and correct a mistake?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-granular-consent",
+      "track": "website",
+      "family": "Trust, inclusion & privacy",
+      "title": "Granular consent",
+      "purpose": "Separate required processing from optional analytics or marketing.",
+      "useWhen": "Products with distinct data uses.",
+      "avoidWhen": "Acceptance is forced through confusing toggles.",
+      "preview": "form",
+      "sources": [
+        "mathur-2019",
+        "w3c-coga",
+        "uswds-principles"
+      ],
+      "skills": [
+        "ethical UX",
+        "accessible language",
+        "privacy-first patterns"
+      ],
+      "successSignal": "Can users understand claims, exercise meaningful choice and correct a mistake?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-account-deletion-clarity",
+      "track": "website",
+      "family": "Trust, inclusion & privacy",
+      "title": "Account deletion clarity",
+      "purpose": "Explain consequences, export and expected completion realistically.",
+      "useWhen": "Account services and subscription products.",
+      "avoidWhen": "Deletion is buried or disguised as logout.",
+      "preview": "form",
+      "sources": [
+        "mathur-2019",
+        "w3c-coga",
+        "uswds-principles"
+      ],
+      "skills": [
+        "ethical UX",
+        "accessible language",
+        "privacy-first patterns"
+      ],
+      "successSignal": "Can users understand claims, exercise meaningful choice and correct a mistake?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-accessible-contact-and-support",
+      "track": "website",
+      "family": "Trust, inclusion & privacy",
+      "title": "Accessible contact and support",
+      "purpose": "Expose a clear escalation path and what users can expect.",
+      "useWhen": "Services involving risk or long-running requests.",
+      "avoidWhen": "A chatbot is the only contact method.",
+      "preview": "trust",
+      "sources": [
+        "mathur-2019",
+        "w3c-coga",
+        "uswds-principles"
+      ],
+      "skills": [
+        "ethical UX",
+        "accessible language",
+        "privacy-first patterns"
+      ],
+      "successSignal": "Can users understand claims, exercise meaningful choice and correct a mistake?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-transparent-sponsorship-labels",
+      "track": "website",
+      "family": "Trust, inclusion & privacy",
+      "title": "Transparent sponsorship labels",
+      "purpose": "Distinguish organic results from paid placements.",
+      "useWhen": "Directories, marketplaces and affiliate comparisons.",
+      "avoidWhen": "Paid listings appear neutral.",
+      "preview": "commerce",
+      "sources": [
+        "mathur-2019",
+        "w3c-coga",
+        "uswds-principles"
+      ],
+      "skills": [
+        "ethical UX",
+        "accessible language",
+        "privacy-first patterns"
+      ],
+      "successSignal": "Can users understand claims, exercise meaningful choice and correct a mistake?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-inclusive-content-examples",
+      "track": "website",
+      "family": "Trust, inclusion & privacy",
+      "title": "Inclusive content examples",
+      "purpose": "Show representative language without cultural assumptions.",
+      "useWhen": "Global multi-language products and organizations.",
+      "avoidWhen": "Stereotypes stand in for user interviews.",
+      "preview": "article",
+      "sources": [
+        "mathur-2019",
+        "w3c-coga",
+        "uswds-principles"
+      ],
+      "skills": [
+        "ethical UX",
+        "accessible language",
+        "privacy-first patterns"
+      ],
+      "successSignal": "Can users understand claims, exercise meaningful choice and correct a mistake?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-plain-language-crisis-routing",
+      "track": "website",
+      "family": "Trust, inclusion & privacy",
+      "title": "Plain-language crisis routing",
+      "purpose": "Provide a human route for safety-critical issues.",
+      "useWhen": "Health, crisis or high-stakes service pages.",
+      "avoidWhen": "Generic AI advice is presented as an emergency service.",
+      "preview": "trust",
+      "sources": [
+        "mathur-2019",
+        "w3c-coga",
+        "uswds-principles"
+      ],
+      "skills": [
+        "ethical UX",
+        "accessible language",
+        "privacy-first patterns"
+      ],
+      "successSignal": "Can users understand claims, exercise meaningful choice and correct a mistake?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-accessibility-statement-with-reality",
+      "track": "website",
+      "family": "Trust, inclusion & privacy",
+      "title": "Accessibility statement with reality",
+      "purpose": "Explain tested coverage, supported assistive tech and how to report defects.",
+      "useWhen": "Services claiming accessible digital access.",
+      "avoidWhen": "A badge claims compliance without evidence.",
+      "preview": "article",
+      "sources": [
+        "mathur-2019",
+        "w3c-coga",
+        "uswds-principles"
+      ],
+      "skills": [
+        "ethical UX",
+        "accessible language",
+        "privacy-first patterns"
+      ],
+      "successSignal": "Can users understand claims, exercise meaningful choice and correct a mistake?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-quickstart-first-documentation",
+      "track": "website",
+      "family": "Documentation & knowledge",
+      "title": "Quickstart-first documentation",
+      "purpose": "Show prerequisites and minimal successful steps with runnable snippets.",
+      "useWhen": "Developer SDKs and integration tools.",
+      "avoidWhen": "Instructions refer to unsupported versions.",
+      "preview": "article",
+      "sources": [
+        "nng-recognition",
+        "w3c-clear",
+        "uswds-principles"
+      ],
+      "skills": [
+        "technical writing",
+        "information architecture",
+        "example verification"
+      ],
+      "successSignal": "Can a new reader reach a correct first result and find recovery documentation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-version-aware-references",
+      "track": "website",
+      "family": "Documentation & knowledge",
+      "title": "Version-aware references",
+      "purpose": "Show SDK/API version, changes and supported environments.",
+      "useWhen": "Fast-changing API products.",
+      "avoidWhen": "Examples for old versions are silently mixed with current ones.",
+      "preview": "article",
+      "sources": [
+        "nng-recognition",
+        "w3c-clear",
+        "uswds-principles"
+      ],
+      "skills": [
+        "technical writing",
+        "information architecture",
+        "example verification"
+      ],
+      "successSignal": "Can a new reader reach a correct first result and find recovery documentation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-task-oriented-tutorials",
+      "track": "website",
+      "family": "Documentation & knowledge",
+      "title": "Task-oriented tutorials",
+      "purpose": "Explain one complete real user task per guide.",
+      "useWhen": "Users learning a nontrivial workflow.",
+      "avoidWhen": "Features are listed without an end-to-end outcome.",
+      "preview": "workflow",
+      "sources": [
+        "nng-recognition",
+        "w3c-clear",
+        "uswds-principles"
+      ],
+      "skills": [
+        "technical writing",
+        "information architecture",
+        "example verification"
+      ],
+      "successSignal": "Can a new reader reach a correct first result and find recovery documentation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-api-schema-explorer",
+      "track": "website",
+      "family": "Documentation & knowledge",
+      "title": "API schema explorer",
+      "purpose": "Present endpoints, parameters, responses, auth and error cases.",
+      "useWhen": "Programmatic integrations with multiple endpoints.",
+      "avoidWhen": "Examples contain live private keys or fake responses.",
+      "preview": "article",
+      "sources": [
+        "nng-recognition",
+        "w3c-clear",
+        "uswds-principles"
+      ],
+      "skills": [
+        "technical writing",
+        "information architecture",
+        "example verification"
+      ],
+      "successSignal": "Can a new reader reach a correct first result and find recovery documentation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-troubleshooting-decision-tree",
+      "track": "website",
+      "family": "Documentation & knowledge",
+      "title": "Troubleshooting decision tree",
+      "purpose": "Connect symptoms to reproducible causes and recovery steps.",
+      "useWhen": "Support-heavy libraries and deployments.",
+      "avoidWhen": "A wall of generic troubleshooting repeats the same advice.",
+      "preview": "workflow",
+      "sources": [
+        "nng-recognition",
+        "w3c-clear",
+        "uswds-principles"
+      ],
+      "skills": [
+        "technical writing",
+        "information architecture",
+        "example verification"
+      ],
+      "successSignal": "Can a new reader reach a correct first result and find recovery documentation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-terminology-glossary",
+      "track": "website",
+      "family": "Documentation & knowledge",
+      "title": "Terminology glossary",
+      "purpose": "Define unavoidable terms where people meet them.",
+      "useWhen": "Complex domains with specialist vocabulary.",
+      "avoidWhen": "Jargon expands rather than clarifies ideas.",
+      "preview": "article",
+      "sources": [
+        "nng-recognition",
+        "w3c-clear",
+        "uswds-principles"
+      ],
+      "skills": [
+        "technical writing",
+        "information architecture",
+        "example verification"
+      ],
+      "successSignal": "Can a new reader reach a correct first result and find recovery documentation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-copyable-annotated-code",
+      "track": "website",
+      "family": "Documentation & knowledge",
+      "title": "Copyable annotated code",
+      "purpose": "Give examples with required setup and expected observable results.",
+      "useWhen": "Integration guides where code reuse is legitimate.",
+      "avoidWhen": "Copy buttons capture secrets or omit dependencies.",
+      "preview": "article",
+      "sources": [
+        "nng-recognition",
+        "w3c-clear",
+        "uswds-principles"
+      ],
+      "skills": [
+        "technical writing",
+        "information architecture",
+        "example verification"
+      ],
+      "successSignal": "Can a new reader reach a correct first result and find recovery documentation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-inline-research-citations",
+      "track": "website",
+      "family": "Documentation & knowledge",
+      "title": "Inline research citations",
+      "purpose": "Support claims with primary papers and explicit limits.",
+      "useWhen": "Evidence-based product guidance and technical articles.",
+      "avoidWhen": "Paper titles are decoration without a connection to the claim.",
+      "preview": "article",
+      "sources": [
+        "nng-recognition",
+        "w3c-clear",
+        "uswds-principles"
+      ],
+      "skills": [
+        "technical writing",
+        "information architecture",
+        "example verification"
+      ],
+      "successSignal": "Can a new reader reach a correct first result and find recovery documentation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-information-architecture-maps",
+      "track": "website",
+      "family": "Documentation & knowledge",
+      "title": "Information architecture maps",
+      "purpose": "Explain where each topic lives and how topics relate.",
+      "useWhen": "Extensive documentation and research hubs.",
+      "avoidWhen": "A purely decorative network makes navigation harder.",
+      "preview": "navigation",
+      "sources": [
+        "nng-recognition",
+        "w3c-clear",
+        "uswds-principles"
+      ],
+      "skills": [
+        "technical writing",
+        "information architecture",
+        "example verification"
+      ],
+      "successSignal": "Can a new reader reach a correct first result and find recovery documentation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-living-changelog-and-migrations",
+      "track": "website",
+      "family": "Documentation & knowledge",
+      "title": "Living changelog and migrations",
+      "purpose": "Explain breaking changes, affected users and safe upgrade paths.",
+      "useWhen": "APIs, design systems and released applications.",
+      "avoidWhen": "Marketing-only entries omit migration risks.",
+      "preview": "article",
+      "sources": [
+        "nng-recognition",
+        "w3c-clear",
+        "uswds-principles"
+      ],
+      "skills": [
+        "technical writing",
+        "information architecture",
+        "example verification"
+      ],
+      "successSignal": "Can a new reader reach a correct first result and find recovery documentation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-continuity-preserving-view-transition",
+      "track": "website",
+      "family": "Motion, canvas & 3D",
+      "title": "Continuity-preserving view transition",
+      "purpose": "Show the relationship between source and destination after navigation.",
+      "useWhen": "Apps or sites with meaningful shared content.",
+      "avoidWhen": "Motion implies a false relationship or hides the destination.",
+      "preview": "motion",
+      "sources": [
+        "mdn-viewtransitions",
+        "w3c-motion",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "animation",
+        "performance profiling",
+        "spatial interaction"
+      ],
+      "successSignal": "Does the movement explain a real change and remain usable without animation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-animated-progress-feedback",
+      "track": "website",
+      "family": "Motion, canvas & 3D",
+      "title": "Animated progress feedback",
+      "purpose": "Show meaningful ongoing work, not a fake progress clock.",
+      "useWhen": "Uploads, exports or true processing jobs.",
+      "avoidWhen": "A progress bar invents percentages.",
+      "preview": "motion",
+      "sources": [
+        "mdn-viewtransitions",
+        "w3c-motion",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "animation",
+        "performance profiling",
+        "spatial interaction"
+      ],
+      "successSignal": "Does the movement explain a real change and remain usable without animation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-gesture-responsive-card",
+      "track": "website",
+      "family": "Motion, canvas & 3D",
+      "title": "Gesture-responsive card",
+      "purpose": "Communicate drag position and revert on cancellation.",
+      "useWhen": "Small collections with direct manipulation.",
+      "avoidWhen": "Mouse-only gestures hide the action.",
+      "preview": "motion",
+      "sources": [
+        "mdn-viewtransitions",
+        "w3c-motion",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "animation",
+        "performance profiling",
+        "spatial interaction"
+      ],
+      "successSignal": "Does the movement explain a real change and remain usable without animation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-data-transition-animation",
+      "track": "website",
+      "family": "Motion, canvas & 3D",
+      "title": "Data transition animation",
+      "purpose": "Help readers track changes between chart states.",
+      "useWhen": "Small annotated statistical comparisons.",
+      "avoidWhen": "Animation distorts magnitudes or blocks reduced-motion users.",
+      "preview": "chart",
+      "sources": [
+        "mdn-viewtransitions",
+        "w3c-motion",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "animation",
+        "performance profiling",
+        "spatial interaction"
+      ],
+      "successSignal": "Does the movement explain a real change and remain usable without animation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-scroll-driven-chapter-marker",
+      "track": "website",
+      "family": "Motion, canvas & 3D",
+      "title": "Scroll-driven chapter marker",
+      "purpose": "Keep reading position visible without forcing scroll.",
+      "useWhen": "Long research or editorial narrative.",
+      "avoidWhen": "Parallax hijacks navigation and assistive technology.",
+      "preview": "article",
+      "sources": [
+        "mdn-viewtransitions",
+        "w3c-motion",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "animation",
+        "performance profiling",
+        "spatial interaction"
+      ],
+      "successSignal": "Does the movement explain a real change and remain usable without animation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-purposeful-microinteraction",
+      "track": "website",
+      "family": "Motion, canvas & 3D",
+      "title": "Purposeful microinteraction",
+      "purpose": "Confirm state change with one restrained animated response.",
+      "useWhen": "Toggles, saved objects and completed tasks.",
+      "avoidWhen": "Animation is the only success feedback.",
+      "preview": "motion",
+      "sources": [
+        "mdn-viewtransitions",
+        "w3c-motion",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "animation",
+        "performance profiling",
+        "spatial interaction"
+      ],
+      "successSignal": "Does the movement explain a real change and remain usable without animation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-css-stateful-illustration",
+      "track": "website",
+      "family": "Motion, canvas & 3D",
+      "title": "CSS stateful illustration",
+      "purpose": "Explain a product process with simple responsive DOM/SVG.",
+      "useWhen": "Small models that benefit from state inspection.",
+      "avoidWhen": "Artwork imitates real evidence or adds unnecessary heavy rendering.",
+      "preview": "motion",
+      "sources": [
+        "mdn-viewtransitions",
+        "w3c-motion",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "animation",
+        "performance profiling",
+        "spatial interaction"
+      ],
+      "successSignal": "Does the movement explain a real change and remain usable without animation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-3d-product-turntable",
+      "track": "website",
+      "family": "Motion, canvas & 3D",
+      "title": "3D product turntable",
+      "purpose": "Let users inspect shape and materials alongside real specifications.",
+      "useWhen": "Spatial objects with authentic 3D models.",
+      "avoidWhen": "A low-fidelity render implies inaccurate size/texture.",
+      "preview": "spatial",
+      "sources": [
+        "mdn-viewtransitions",
+        "w3c-motion",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "animation",
+        "performance profiling",
+        "spatial interaction"
+      ],
+      "successSignal": "Does the movement explain a real change and remain usable without animation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-comparative-3d-exploded-view",
+      "track": "website",
+      "family": "Motion, canvas & 3D",
+      "title": "Comparative 3D exploded view",
+      "purpose": "Show how relevant parts assemble or differ.",
+      "useWhen": "Engineering, hardware and educational diagrams.",
+      "avoidWhen": "Users cannot navigate without a GPU or pointer.",
+      "preview": "spatial",
+      "sources": [
+        "mdn-viewtransitions",
+        "w3c-motion",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "animation",
+        "performance profiling",
+        "spatial interaction"
+      ],
+      "successSignal": "Does the movement explain a real change and remain usable without animation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-realtime-visual-simulation",
+      "track": "website",
+      "family": "Motion, canvas & 3D",
+      "title": "Realtime visual simulation",
+      "purpose": "Let users change inputs and view an explicitly simulated output.",
+      "useWhen": "Learning and design tools with a meaningful model.",
+      "avoidWhen": "Generated visuals are labeled as predictions or real physical behavior.",
+      "preview": "spatial",
+      "sources": [
+        "mdn-viewtransitions",
+        "w3c-motion",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "animation",
+        "performance profiling",
+        "spatial interaction"
+      ],
+      "successSignal": "Does the movement explain a real change and remain usable without animation?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-semantic-component-primitives",
+      "track": "website",
+      "family": "Design systems & accessible patterns",
+      "title": "Semantic component primitives",
+      "purpose": "Use native HTML before adding custom ARIA widgets.",
+      "useWhen": "Forms, toggles, navigation and typical web controls.",
+      "avoidWhen": "Custom div buttons require avoidable keyboard repair.",
+      "preview": "system",
+      "sources": [
+        "w3c-aria-apg",
+        "w3c-target",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "design tokens",
+        "accessibility QA",
+        "component architecture"
+      ],
+      "successSignal": "Do interactive states remain recognizable and operable across themes, devices and assistive tech?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-tokenized-type-and-spacing",
+      "track": "website",
+      "family": "Design systems & accessible patterns",
+      "title": "Tokenized type and spacing",
+      "purpose": "Define meaningful scale and hierarchy reusable across pages.",
+      "useWhen": "Growing multi-product design systems.",
+      "avoidWhen": "Tokens hide inconsistent product-specific needs.",
+      "preview": "system",
+      "sources": [
+        "w3c-aria-apg",
+        "w3c-target",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "design tokens",
+        "accessibility QA",
+        "component architecture"
+      ],
+      "successSignal": "Do interactive states remain recognizable and operable across themes, devices and assistive tech?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-accessible-overlay-dialog",
+      "track": "website",
+      "family": "Design systems & accessible patterns",
+      "title": "Accessible overlay dialog",
+      "purpose": "Use a real focus-trapped dialog only for an interruptive task.",
+      "useWhen": "Confirmed destructive actions or scoped editing.",
+      "avoidWhen": "Modal panels are used as ordinary navigation.",
+      "preview": "form",
+      "sources": [
+        "w3c-aria-apg",
+        "w3c-target",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "design tokens",
+        "accessibility QA",
+        "component architecture"
+      ],
+      "successSignal": "Do interactive states remain recognizable and operable across themes, devices and assistive tech?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-theme-without-content-loss",
+      "track": "website",
+      "family": "Design systems & accessible patterns",
+      "title": "Theme without content loss",
+      "purpose": "Support accessible light/dark themes with equivalent states.",
+      "useWhen": "Products with long sessions and user preference.",
+      "avoidWhen": "Contrast disappears in one theme.",
+      "preview": "system",
+      "sources": [
+        "w3c-aria-apg",
+        "w3c-target",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "design tokens",
+        "accessibility QA",
+        "component architecture"
+      ],
+      "successSignal": "Do interactive states remain recognizable and operable across themes, devices and assistive tech?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-responsive-density-modes",
+      "track": "website",
+      "family": "Design systems & accessible patterns",
+      "title": "Responsive density modes",
+      "purpose": "Fit appropriate information per window while preserving meaning.",
+      "useWhen": "Dashboards and data-heavy enterprise tools.",
+      "avoidWhen": "Small-screen variants omit essential controls.",
+      "preview": "dashboard",
+      "sources": [
+        "w3c-aria-apg",
+        "w3c-target",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "design tokens",
+        "accessibility QA",
+        "component architecture"
+      ],
+      "successSignal": "Do interactive states remain recognizable and operable across themes, devices and assistive tech?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-internationalized-layouts",
+      "track": "website",
+      "family": "Design systems & accessible patterns",
+      "title": "Internationalized layouts",
+      "purpose": "Handle long strings, RTL, date/number formats and bilingual content.",
+      "useWhen": "Products serving global locales.",
+      "avoidWhen": "Only labels are translated while user tasks break.",
+      "preview": "system",
+      "sources": [
+        "w3c-aria-apg",
+        "w3c-target",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "design tokens",
+        "accessibility QA",
+        "component architecture"
+      ],
+      "successSignal": "Do interactive states remain recognizable and operable across themes, devices and assistive tech?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-accessible-data-visualization",
+      "track": "website",
+      "family": "Design systems & accessible patterns",
+      "title": "Accessible data visualization",
+      "purpose": "Include table summaries, legends, distinguishable series and context.",
+      "useWhen": "Analytics and public metrics.",
+      "avoidWhen": "Color-only charts convey facts.",
+      "preview": "chart",
+      "sources": [
+        "w3c-aria-apg",
+        "w3c-target",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "design tokens",
+        "accessibility QA",
+        "component architecture"
+      ],
+      "successSignal": "Do interactive states remain recognizable and operable across themes, devices and assistive tech?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-accessible-icon-language",
+      "track": "website",
+      "family": "Design systems & accessible patterns",
+      "title": "Accessible icon language",
+      "purpose": "Use recognizable controls with labels, focus and large targets.",
+      "useWhen": "Toolbar-heavy navigation.",
+      "avoidWhen": "Decorative icons replace understandable words.",
+      "preview": "navigation",
+      "sources": [
+        "w3c-aria-apg",
+        "w3c-target",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "design tokens",
+        "accessibility QA",
+        "component architecture"
+      ],
+      "successSignal": "Do interactive states remain recognizable and operable across themes, devices and assistive tech?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-component-state-matrix",
+      "track": "website",
+      "family": "Design systems & accessible patterns",
+      "title": "Component state matrix",
+      "purpose": "Document empty, disabled, loading, active, invalid and focus states.",
+      "useWhen": "Reusable component libraries.",
+      "avoidWhen": "Only default screenshots are cataloged.",
+      "preview": "system",
+      "sources": [
+        "w3c-aria-apg",
+        "w3c-target",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "design tokens",
+        "accessibility QA",
+        "component architecture"
+      ],
+      "successSignal": "Do interactive states remain recognizable and operable across themes, devices and assistive tech?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-cross-browser-progressive-enhancement",
+      "track": "website",
+      "family": "Design systems & accessible patterns",
+      "title": "Cross-browser progressive enhancement",
+      "purpose": "Offer a basic working path before optional advanced APIs.",
+      "useWhen": "Sites using browser-dependent animations or graphics.",
+      "avoidWhen": "Unsupported browsers see a blank page.",
+      "preview": "system",
+      "sources": [
+        "w3c-aria-apg",
+        "w3c-target",
+        "w3c-wcag22"
+      ],
+      "skills": [
+        "design tokens",
+        "accessibility QA",
+        "component architecture"
+      ],
+      "successSignal": "Do interactive states remain recognizable and operable across themes, devices and assistive tech?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-evidence-led-project-case-study",
+      "track": "website",
+      "family": "Portfolio, company & subdomains",
+      "title": "Evidence-led project case study",
+      "purpose": "Tell challenge, constraints, decisions, actual contribution and outcome.",
+      "useWhen": "Developer and creative portfolios.",
+      "avoidWhen": "A gallery screenshot substitutes for proof of work.",
+      "preview": "portfolio",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "brand systems",
+        "case-study narrative",
+        "multi-site IA"
+      ],
+      "successSignal": "Does each audience find a focused path with credible work and a real contact/action?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-company-product-directory",
+      "track": "website",
+      "family": "Portfolio, company & subdomains",
+      "title": "Company product directory",
+      "purpose": "Give every product its own understandable destination.",
+      "useWhen": "Studios with multiple offerings or SaaS apps.",
+      "avoidWhen": "Every product is marketed as the same thing.",
+      "preview": "navigation",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "brand systems",
+        "case-study narrative",
+        "multi-site IA"
+      ],
+      "successSignal": "Does each audience find a focused path with credible work and a real contact/action?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-focused-product-subdomain",
+      "track": "website",
+      "family": "Portfolio, company & subdomains",
+      "title": "Focused product subdomain",
+      "purpose": "Put one product promise and real screenshots on its subdomain.",
+      "useWhen": "Companies with several independently useful apps.",
+      "avoidWhen": "The subdomain repeats the parent company's generic hero.",
+      "preview": "hero",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "brand systems",
+        "case-study narrative",
+        "multi-site IA"
+      ],
+      "successSignal": "Does each audience find a focused path with credible work and a real contact/action?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-unified-identity-across-apps",
+      "track": "website",
+      "family": "Portfolio, company & subdomains",
+      "title": "Unified identity across apps",
+      "purpose": "Share family trust, typography and support while preserving product distinction.",
+      "useWhen": "Multi-brand software families.",
+      "avoidWhen": "Crosslinks overwhelm the individual product story.",
+      "preview": "system",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "brand systems",
+        "case-study narrative",
+        "multi-site IA"
+      ],
+      "successSignal": "Does each audience find a focused path with credible work and a real contact/action?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-founder-story-with-evidence",
+      "track": "website",
+      "family": "Portfolio, company & subdomains",
+      "title": "Founder story with evidence",
+      "purpose": "Explain mission, role and work without invented milestones.",
+      "useWhen": "Early-stage founder portfolios and companies.",
+      "avoidWhen": "Personal biography dominates product value.",
+      "preview": "editorial",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "brand systems",
+        "case-study narrative",
+        "multi-site IA"
+      ],
+      "successSignal": "Does each audience find a focused path with credible work and a real contact/action?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-case-study-archive-index",
+      "track": "website",
+      "family": "Portfolio, company & subdomains",
+      "title": "Case-study archive index",
+      "purpose": "Keep projects browsable by sector, problem and year.",
+      "useWhen": "Consultancies with enough genuine completed work.",
+      "avoidWhen": "Speculative samples look like commissioned client work.",
+      "preview": "portfolio",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "brand systems",
+        "case-study narrative",
+        "multi-site IA"
+      ],
+      "successSignal": "Does each audience find a focused path with credible work and a real contact/action?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-role-aware-company-landing",
+      "track": "website",
+      "family": "Portfolio, company & subdomains",
+      "title": "Role-aware company landing",
+      "purpose": "Offer entry points for buyers, recruits, partners and press.",
+      "useWhen": "Organizations serving distinct stakeholder tasks.",
+      "avoidWhen": "Four equal CTAs compete before the mission is clear.",
+      "preview": "navigation",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "brand systems",
+        "case-study narrative",
+        "multi-site IA"
+      ],
+      "successSignal": "Does each audience find a focused path with credible work and a real contact/action?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-portfolio-with-no-portrait",
+      "track": "website",
+      "family": "Portfolio, company & subdomains",
+      "title": "Portfolio with no portrait",
+      "purpose": "Express a developer's personality through shipped work and writing.",
+      "useWhen": "Builders who prefer no face photo.",
+      "avoidWhen": "Anonymous marketing makes authorship unverifiable.",
+      "preview": "portfolio",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "brand systems",
+        "case-study narrative",
+        "multi-site IA"
+      ],
+      "successSignal": "Does each audience find a focused path with credible work and a real contact/action?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-trustworthy-job-and-careers-page",
+      "track": "website",
+      "family": "Portfolio, company & subdomains",
+      "title": "Trustworthy job and careers page",
+      "purpose": "Disclose location, work model and real eligibility details.",
+      "useWhen": "Companies actively hiring.",
+      "avoidWhen": "Ghost job listings are presented as open.",
+      "preview": "trust",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "brand systems",
+        "case-study narrative",
+        "multi-site IA"
+      ],
+      "successSignal": "Does each audience find a focused path with credible work and a real contact/action?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    },
+    {
+      "id": "web-products-to-docs-handoff",
+      "track": "website",
+      "family": "Portfolio, company & subdomains",
+      "title": "Products-to-docs handoff",
+      "purpose": "Move qualified visitors from product promise to real usage instructions.",
+      "useWhen": "Developer tools with separate marketing and reference pages.",
+      "avoidWhen": "Docs URL is buried or lacks matching versions.",
+      "preview": "article",
+      "sources": [
+        "uswds-principles",
+        "nng-heuristics2",
+        "web-vitals-2026"
+      ],
+      "skills": [
+        "brand systems",
+        "case-study narrative",
+        "multi-site IA"
+      ],
+      "successSignal": "Does each audience find a focused path with credible work and a real contact/action?",
+      "accessibility": "Use semantic structure, visible focus, readable labels, responsive layout, keyboard paths and reduced-motion alternatives where relevant.",
+      "recovery": "Show honest missing-data, error and completion feedback; keep the real primary action reachable."
+    }
+  ]
+}
