@@ -1,5 +1,25 @@
 # Prompt-Vault
 
+## New: research-backed Website + App Design Academy (October 2026)
+
+**[Open the guided Design Academy](docs/academy.html)** | **[Read the evidence handbook](research/design-academy-2026.md)**
+
+The product now has **two main design tracks**: **Website Design** and **App Design (iOS/App Store + Android/Google Play)**. Motion, 3D, AI integrations, skills and open-source resources are optional supporting toolkits, not additional primary product tracks.
+
+- **16 website archetypes**, including portfolio, company, SaaS, ecommerce, product detail, publishing, docs, services, B2B pricing, and app-specific subdomain sites. Each has a thoughtful order of sections.
+- **14 app journeys**, including productivity, knowledge, wellbeing, learning, shopping, finance, social, AI, media, travel, reading, business and entertainment. Separate native platform guidance.
+- **220 granular placement decisions and copy-ready section/screen prompts** across the 30 archetypes. Every archetype also composes complete **Design**, **Build**, and **Audit** prompts.
+- **30 scoped research sources**, including Apple and Android guidelines, W3C, NN/g, Baymard, scientific UX papers, Google web.dev, Sensor Tower, and RevenueCat State of Subscription Apps 2026.
+- **63 upstream reference repositories** across UI, mobile, motion, 3D, AI and testing. Filter by category; verify licenses before reuse.
+- **Eight RevenueCat/Sensor Tower market signals**, with limitations and three top 2025 worldwide non-game IAP app examples (TikTok, Google One, ChatGPT). Rankings and observational benchmarks are *not* evidence that a UI design caused revenue.
+- **Original interactive HTML/CSS previews** for every archetype's ordered steps. Switch desktop/tablet/mobile; advance the stage; compare iOS/Android concepts. These are illustrations, not production applications or certified tests.
+- No required paid API or Actions runner. Original code and content remain MIT; external sources do not inherit that license.
+
+**Use locally:** `python3 -m http.server 8000` from repository root, then open `http://localhost:8000/docs/academy.html`.
+
+**Validation boundary:** static catalog, markup, JS syntax and source consistency checks are in `tests/test_academy.py`. Live browser, native device, accessibility and paid integration verification require independent execution; the academy must not claim these were tested without evidence.
+
+
 ## Interactive Atlas website
 
 ## Eight open-source references with original interactive previews
