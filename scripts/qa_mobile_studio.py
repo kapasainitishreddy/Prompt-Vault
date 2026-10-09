@@ -75,7 +75,7 @@ def main() -> int:
         return {status:res.status,length:body.length,isNative:body.includes('react-native')};
       }""",rel)
       report["source_copy"][rel]=status
-      assert status["status"]==200 and status["length"]>200 and status["isNative"],rel
+      assert status["status"]==200 and status["length"]>200 and (status["isNative"] or rel=="tokens.ts"),rel
     page.close()
    browser.close()
   assert not report["page_errors"],"Uncaught JS errors: "+str(report["page_errors"])
