@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Prompt Vault Native Kit",
+    "slug": "prompt-vault-native-kit",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "edgeToEdgeEnabled": true
+    }
+  }
+}

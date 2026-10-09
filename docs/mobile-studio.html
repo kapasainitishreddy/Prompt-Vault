@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f3f1ea">
+<meta name="description" content="Prompt-Vault Mobile Studio: 32 interactive app design patterns, 20 guided journeys, native Expo source and research-backed prompts.">
+<title>Mobile Studio | Prompt-Vault Atlas</title>
+<link rel="stylesheet" href="./mobile-studio.css">
+<script src="./mobile-studio.js" type="module"></script>
+</head>
+<body>
+<a href="#main" class="ms-skip">Skip to mobile studio</a>
+<header class="ms-site-header">
+  <a class="ms-brand" href="./index.html" aria-label="Prompt-Vault homepage">PROMPT<span>·</span>VAULT <small>ATLAS</small></a>
+  <nav aria-label="Primary">
+    <a href="./index.html">Home</a><a href="./concepts.html#previews">Inspiration</a>
+    <a href="./apps.html">App flows</a><a href="./studio.html">Practice</a><a href="./faq.html">FAQ</a>
+  </nav>
+  <a class="ms-header-code" href="https://github.com/kapasainitishreddy/Prompt-Vault/tree/main/native-kit" target="_blank" rel="noopener noreferrer">Native source ↗</a>
+</header>
+<main id="main">
+  <section class="ms-hero">
+    <div class="ms-eyebrow"><span class="ms-dot"></span> THE MOBILE DESIGN WORKBENCH <span>01 / EXPERIENCE → IMPLEMENTATION</span></div>
+    <div class="ms-hero-body">
+      <h1>See it.<br><em>Try it.</em> Build it.</h1>
+      <div class="ms-hero-side">
+        <p>Design real app journeys, not just decorative screens. Explore the interactions, understand the decisions, and open the React Native implementation.</p>
+        <div class="ms-hero-numbers"><div><strong>32</strong><span>native pattern demos</span></div><div><strong>20</strong><span>connected journeys</span></div><div><strong>0</strong><span>paid APIs needed</span></div></div>
+      </div>
+    </div>
+    <div class="ms-hero-note"><span>Browser previews are interactive HTML studies. Expo source is separate and must be device-tested.</span><a href="#workbench">Enter workbench ↓</a></div>
+  </section>
+  <section id="workbench" class="ms-workbench" aria-labelledby="workbench-title">
+    <div class="ms-section-heading"><div><p class="ms-label">01 / MOBILE WORKBENCH</p><h2 id="workbench-title">One journey. Every decision.</h2></div><p>Pick an app type, step through its screens, and exercise real interface states.</p></div>
+    <div class="ms-layout">
+      <aside class="ms-sidebar">
+        <div class="ms-sidebar-head"><span class="ms-label">CHOOSE AN APP JOURNEY</span><span id="ms-journey-count">20</span></div>
+        <label class="ms-field-label" for="ms-journey-search">Find a project type</label>
+        <input id="ms-journey-search" class="ms-search" type="search" placeholder="Reading, fitness, travel..." autocomplete="off">
+        <div id="ms-journeys" class="ms-journeys">
+          <button type="button" class="ms-journey" aria-current="true"><strong>Tasks & to-dos</strong><span>Start with the next meaningful action →</span></button>
+          <p class="ms-boundary">More journeys load from the local project catalog. If they do not appear, <a href="./guided.html">open the guided atlas</a>.</p>
+        </div>
+        <div class="ms-sidebar-foot"><span class="ms-label">BUILDING AN ACTUAL APP?</span><p>All 32 Expo examples use native Pressable, TextInput and state rather than CSS phone screenshots.</p><a href="https://github.com/kapasainitishreddy/Prompt-Vault/tree/main/native-kit" target="_blank" rel="noopener noreferrer">Open Expo Native Kit ↗</a></div>
+      </aside>
+      <div class="ms-live-area">
+        <div class="ms-live-header">
+          <div><span class="ms-label">CURRENT PRODUCT</span><h3 id="ms-current-journey">Task and to-do app</h3><p id="ms-current-job">Capture, prioritize, finish and undo actions without losing work.</p></div>
+          <span class="ms-live-status"><i></i> INTERACTIVE REFERENCE</span>
+        </div>
+        <div class="ms-progress-top"><span id="ms-step-count">STEP 1 OF 9</span><span id="ms-flow-name">Onboarding</span></div>
+        <div id="ms-steps" class="ms-steps" aria-label="Journey steps"><button type="button" class="ms-step is-active">01 First run</button></div>
+        <div class="ms-preview-bar" role="group" aria-label="Preview settings">
+          <div class="ms-toggle-set"><button type="button" data-platform="ios" aria-pressed="false">iOS</button><button type="button" data-platform="android" aria-pressed="true">Android</button></div>
+          <div class="ms-toggle-set"><button type="button" data-theme="light" aria-pressed="true">Light</button><button type="button" data-theme="dark" aria-pressed="false">Dark</button></div>
+          <div class="ms-toggle-set"><button type="button" data-scenario="normal" aria-pressed="true">Normal</button><button type="button" data-scenario="success" aria-pressed="false">Success</button><button type="button" data-scenario="error" aria-pressed="false">Error</button></div>
+        </div>
+        <div class="ms-stage">
+          <div class="ms-stage-grid" aria-hidden="true"></div>
+          <div class="ms-phone" id="ms-phone" data-platform="android" data-theme="light">
+            <div class="ms-phone-status" aria-hidden="true"><span>9:41</span><span>◆ ◕ ▰</span></div>
+            <div class="ms-phone-screen" id="ms-phone-screen">
+              <div class="ms-app-kicker">TODAY / FOCUS</div>
+              <div class="ms-app-heading">Good morning.</div>
+              <p class="ms-app-muted">One useful action at a time.</p>
+              <div class="ms-app-feature"><span>YOUR NEXT STEP</span><strong>Write a useful brief</strong><small>Start small and make it real.</small></div>
+              <button class="ms-app-primary" type="button">Begin →</button>
+            </div>
+            <div class="ms-phone-bottom" aria-hidden="true"><span>⌂</span><span>◈</span><span>◎</span></div>
+          </div>
+          <div class="ms-stage-aside"><span class="ms-stage-index">PV / LIVE 01</span><p>No endless loading spinner. A visible preview exists before the catalog arrives.</p><span class="ms-stage-mark" aria-hidden="true">✳</span></div>
+          <div id="ms-toast" class="ms-toast" role="status" hidden></div>
+        </div>
+        <div class="ms-flow-controls">
+          <button type="button" id="ms-prev" class="ms-secondary">← Previous screen</button>
+          <button type="button" id="ms-next" class="ms-primary">Next screen →</button>
+        </div>
+      </div>
+      <aside class="ms-inspector">
+        <div class="ms-inspector-head"><span class="ms-label">02 / INSPECT THIS SCREEN</span><strong id="ms-current-flow">Onboarding and first run</strong></div>
+        <div class="ms-tabs" role="tablist" aria-label="Inspector">
+          <button type="button" role="tab" aria-selected="true" data-tab="decisions">Why</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="build">Build</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="qa">Test</button>
+        </div>
+        <div id="ms-inspector-content" class="ms-inspector-content" role="tabpanel">
+          <p class="ms-inspector-caption">THE JOB TO BE DONE</p><p>Help someone take their first meaningful action.</p>
+        </div>
+        <div class="ms-inspector-cta">
+          <button type="button" id="ms-copy-prompt" class="ms-primary">Copy build prompt ↗</button>
+          <a id="ms-open-source" href="https://github.com/kapasainitishreddy/Prompt-Vault/blob/main/native-kit/src/FlowScreen.tsx" target="_blank" rel="noopener noreferrer">View React Native TSX ↗</a>
+        </div>
+        <p id="ms-load-status" role="status" class="ms-small">Visible example ready. Enriching it from local catalog…</p>
+      </aside>
+    </div>
+  </section>
+  <section class="ms-patterns" id="all-patterns" aria-labelledby="ms-patterns-title">
+    <div class="ms-section-heading"><div><p class="ms-label">02 / PATTERN LIBRARY</p><h2 id="ms-patterns-title">All the screens.<br>None of the guesswork.</h2></div><p>Browse by task, state or failure. Choose any pattern to open its working preview above.</p></div>
+    <label class="ms-field-label" for="ms-pattern-search">Search all mobile patterns</label>
+    <input id="ms-pattern-search" class="ms-search ms-pattern-search" type="search" placeholder="onboarding, paywall, settings, empty state...">
+    <div id="ms-pattern-grid" class="ms-pattern-grid"><a href="./apps.html">Browse the original app atlas while the catalog loads →</a></div>
+    <div class="ms-pattern-bottom"><span id="ms-pattern-total">32 supported patterns</span><a href="./concepts.html#previews">Explore 100 more mobile concepts ↗</a></div>
+  </section>
+  <section class="ms-generator" id="build-plan" aria-labelledby="ms-composer-title">
+    <div class="ms-section-heading"><div><p class="ms-label">03 / YOUR PROJECT, YOUR PLAN</p><h2 id="ms-composer-title">From an idea<br>to a real brief.</h2></div><p>No API key or account. This structured prompt generator runs in your browser and can be pasted into your preferred coding assistant.</p></div>
+    <div class="ms-compose-layout">
+      <div class="ms-compose-inputs">
+        <label class="ms-field-label" for="ms-compose-idea">Describe the app you want to make</label>
+        <textarea id="ms-compose-idea" rows="4" maxlength="600" placeholder="For example: A calm reading app that remembers where I stopped and works offline.">A distraction-free mobile app for planning meaningful daily work.</textarea>
+        <label class="ms-field-label" for="ms-compose-journey">App category</label>
+        <select class="ms-search" id="ms-compose-journey"><option value="tasks">Task and to-do app</option></select>
+        <label class="ms-field-label" for="ms-compose-platform">Target platform</label>
+        <select class="ms-search" id="ms-compose-platform"><option value="both">Android and iOS</option><option value="android">Android first</option><option value="ios">iOS first</option></select>
+        <label class="ms-field-label" for="ms-compose-style">Visual direction</label>
+        <select class="ms-search" id="ms-compose-style"><option value="editorial">Warm editorial minimalism</option><option value="native">Native platform clarity</option><option value="technical">Technical and precise</option><option value="playful">Playful and tactile</option><option value="calm">Calm and private</option></select>
+        <button type="button" id="ms-compose-generate" class="ms-primary">Create complete build brief ↗</button>
+        <p class="ms-small">No AI is running inside this tool. It generates an editable prompt from researched flow definitions, not a working application or validated research result.</p>
+      </div>
+      <div class="ms-compose-output">
+        <div class="ms-compose-output-head"><span class="ms-label">COPY-READY / BUILD PLAN</span><button id="ms-compose-copy" type="button" class="ms-secondary">Copy text</button></div>
+        <label for="ms-compose-result" class="ms-field-label">Full editable instruction for your coding agent</label>
+        <textarea id="ms-compose-result" rows="18" spellcheck="false" aria-label="Editable generated build plan">Choose a category and click Create complete build brief. Your plan will appear here.</textarea>
+        <div class="ms-compose-output-footer"><span>Design → Implement → Test → Review → Release</span><a href="https://github.com/kapasainitishreddy/Prompt-Vault/tree/main/native-kit" target="_blank" rel="noopener noreferrer">Open native source ↗</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="ms-learning" aria-labelledby="ms-learning-title">
+    <p class="ms-label">04 / FROM IDEA TO RELEASE</p><h2 id="ms-learning-title">One continuous workflow.</h2>
+    <div class="ms-learning-grid">
+      <article><span>01 / DISCOVER</span><h3>Choose the problem</h3><p>Find the right app journey, goals, user permissions and real required states.</p><a href="./guided.html">Browse journeys ↗</a></article>
+      <article><span>02 / EXPERIENCE</span><h3>Test the screens</h3><p>Switch platforms, compare states, complete actions and study why they work.</p><a href="#workbench">Open preview ↗</a></article>
+      <article><span>03 / IMPLEMENT</span><h3>Copy native source</h3><p>Start from actual Expo components, adapt tokens and connect your own data/services.</p><a href="https://github.com/kapasainitishreddy/Prompt-Vault/tree/main/native-kit" target="_blank" rel="noopener noreferrer">Native Kit ↗</a></article>
+      <article><span>04 / VERIFY</span><h3>Prove it works</h3><p>Use the QA rubric; test real Android/iOS devices before claiming release readiness.</p><a href="./principles.html">Review standards ↗</a></article>
+    </div>
+  </section>
+</main>
+<footer class="ms-footer"><span>© PROMPT-VAULT / ORIGINAL MIT CODE</span><span>Research-linked. Source-conscious. Real service integrations are yours to implement.</span><a href="https://github.com/kapasainitishreddy/Prompt-Vault" target="_blank" rel="noopener noreferrer">GitHub ↗</a></footer>
+<noscript><p class="ms-noscript">Interactive browsing requires JavaScript. Browse the <a href="./apps.html">32 static design studies</a> or <a href="./guided.html">20 guided blueprints</a> without it.</p></noscript>
+</body>
+</html>

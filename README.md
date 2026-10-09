@@ -1,3 +1,10 @@
+## Mobile Studio and Expo Native Kit (October 9, 2026)
+
+- [Try Mobile Studio](docs/mobile-studio.html): interactive browser workbench across 32 mobile flow IDs and 20 guided journeys, light/dark, Android/iOS-inspired preview frames, success/error states, research guidance and copyable prompts. A phone preview is present even before JavaScript loads.
+- [Run Expo Native Kit](native-kit/README.md): real React Native TSX starter with 32 interactive pattern screens, 20 connected journeys and reusable controls. This is a demo starter, not a production-certified native UI library.
+- Billing, sign-in, cloud sync, AI inference, uploads, permissions and account deletion are visibly simulated without external side effects. Real services and real-device QA remain required.
+- A 10/10 product claim requires independent hosted, compile, device, usability and accessibility verification, not just source files or static tests.
+
 ## Guided tours and FAQ (October 9, 2026)
 
 - **[Show me around / product tours](docs/tour.js)**: an optional real [Driver.js](https://github.com/nilbuild/driver.js) 1.9.0 MIT tour. Visitors explicitly launch it using the homepage or film-gallery button or the small “Help & tour” menu. It highlights important UI with simple explanations, progress, Back / Next / Done controls and Escape-to-close support. Customized tours cover the homepage, Start Here, website previews, app previews, Motion Lab, Motion Library, 15 Motion Films, Style Lab, and FAQ. Other pages receive a minimal generic orientation and reliable FAQ / Beginner guide links. Tour JS/CSS loads from version-pinned jsDelivr only after click, not on ordinary site visits. If unavailable, the normal site and beginner/FAQ links continue working.
