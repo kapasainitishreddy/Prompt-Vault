@@ -67,7 +67,7 @@ body.motion-off *,body.motion-off *::before,body.motion-off *::after{transition:
 .style-row{background:#e4e7db}.style-row:hover{background:#d5e0cc}.skill-row{background:#e8dfd7}.skill-row:hover{background:#d8c7ba}
 
 .reference-row{background:#dbe8da}.reference-row:hover{background:#c9dccc}
-@media(min-width:741px) and (max-width:1040px){.main-nav{display:none}.mobile-menu{display:flex;align-items:center;gap:7px;min-height:42px;padding:8px 10px;border:1px solid var(--ink);background:transparent;margin-left:auto;font-size:.72rem;font-weight:800}.mobile-navigation:not([hidden]){display:flex;flex-direction:column;gap:0;padding-top:6px;padding-bottom:12px;background:var(--paper);border-bottom:1px solid var(--ink);position:relative;z-index:8}.mobile-navigation a{padding:9px 3px;font-weight:800;font-size:.9rem;text-decoration:none}}
+@media(min-width:741px) and (max-width:1250px){.main-nav{display:none}.mobile-menu{display:flex;align-items:center;gap:7px;min-height:42px;padding:8px 10px;border:1px solid var(--ink);background:transparent;margin-left:auto;font-size:.72rem;font-weight:800}.mobile-navigation:not([hidden]){display:flex;flex-direction:column;gap:0;padding-top:6px;padding-bottom:12px;background:var(--paper);border-bottom:1px solid var(--ink);position:relative;z-index:8}.mobile-navigation a{padding:9px 3px;font-weight:800;font-size:.9rem;text-decoration:none}}
 
 
 /* Web/App are the primary practices. Other galleries are discoverable tools. */
@@ -84,3 +84,10 @@ body.motion-off *,body.motion-off *::before,body.motion-off *::after{transition:
 .pv-secondary-tracks summary:hover{background:#d4e3ca}
 .pv-secondary-tracks .collection-row{background:#e5e9da}
 @media(max-width:850px){.pv-home-academy{align-items:flex-start;flex-direction:column;padding:23px 22px;gap:15px}.pv-home-academy .micro{max-width:none}.pv-home-academy-arrow{font-size:.65rem}}
+
+/* Deep concept field guide within the existing Website/App track structure. */
+.pv-home-concept{display:flex;align-items:center;justify-content:space-between;gap:23px;text-decoration:none;background:#e2e9d3;border-top:1px solid #a4b3a0;border-bottom:1px solid #a4b3a0;padding:19px 26px;margin-bottom:20px;color:#213a28}
+.pv-home-concept>span{font-size:.65rem;letter-spacing:.07em;font-weight:850;line-height:1.5}
+.pv-home-concept strong{font:normal clamp(1.1rem,1.7vw,1.6rem)/1.25 Georgia,serif;letter-spacing:-.02em;max-width:570px}
+.pv-home-concept:hover{background:#d3e5b4}
+@media(max-width:830px){.pv-home-concept{align-items:flex-start;flex-direction:column;padding:18px 19px;gap:9px}}

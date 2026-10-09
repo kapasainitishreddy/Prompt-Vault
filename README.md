@@ -1,5 +1,22 @@
 # Prompt-Vault
 
+## NEW: Deep Research Concept Field Guide (October 2026)
+
+**[Explore all 200 new concepts and previews](docs/concepts.html)** · [Website + App concept index](catalog/CONCEPT-INDEX.md) · [Research and decision handbook](research/concept-field-guide.md)
+
+The current Atlas now has two layers: the **30 complete Website/App archetype blueprints** from the original Academy, and **200 additional detailed design concepts** (100 website and 100 app, organized into 20 families). These are complements, not 230 separate complete app builds. The two primary tracks remain Website Design and App Design.
+
+- Every concept explains its user job, when it is appropriate, when **not** to use it, suggested skills, an evaluation question, accessibility/recovery concerns, and specific linked research.
+- **50 additional annotated research records**, including **12 peer-reviewed HCI papers**, plus normative W3C, Apple, Android, GOV.UK, USWDS, Google PAIR and OWASP material. Source limitations are explicit; these are not guaranteed conversion tactics.
+- **62 additional public source-code references**, giving **123 unique upstream URLs** when combined with the 63 Academy references. UI, agentic AI, rich text, diagrams, native mobile, data grids, motion and QA. Some are proprietary/restricted source-available tools. React Bits and tldraw are specifically flagged for non-permissive uses. **No upstream components were vendored into MIT code.**
+- An original [interactive design field guide](docs/concepts.html): search/sort by concept family and task terms, bookmark, deep-link; inspect design reasoning; copy tailored **Design**, **Implement** and **Audit** prompts; view illustrative HTML/CSS previews at desktop/tablet/phone sizes, three compositions, and normal/success/error states.
+- The previews share original renderer families for related concepts. They are **not 200 separately functioning production templates or App Store/Play Store apps**. Live service calls, billing, AI inference and accessibility certification are not simulated as completed.
+- Static assets only; no required npm install, database, model provider, paid deployment or GitHub Actions. The existing Atlas and Academy remain fully accessible.
+
+**Local:** `python3 -m http.server 8000` then open `http://localhost:8000/docs/concepts.html`.
+
+**Test:** `python3 -m unittest discover -s tests -v`. The new stdlib suite is `tests/test_concept_field_guide.py`; real browser/assistive tech and native-device QA must be conducted separately. Do not mistake tests authored or source checks for proof of production behavior.
+
 ## New: research-backed Website + App Design Academy (October 2026)
 
 **[Open the guided Design Academy](docs/academy.html)** | **[Read the evidence handbook](research/design-academy-2026.md)**

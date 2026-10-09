@@ -164,3 +164,10 @@ html{scroll-behavior:smooth}body.academy-page{margin:0;background:var(--ac-cream
 .ac-resource-controls input{width:min(100%,280px)}
 .ac-resource-controls span{font-size:.65rem;color:#52644f;font-weight:800;margin-left:auto}
 @media(max-width:650px){.ac-resource-controls{align-items:stretch}.ac-resource-controls>*{flex-basis:100%;max-width:none!important}.ac-resource-controls input{width:100%}}
+
+/* A clear bridge from archetype-level blueprints to detailed pattern choices. */
+.ac-deep-concepts{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:24px;padding-bottom:24px;border-top:1px solid #afbeaa}
+.ac-deep-concepts strong{font:normal clamp(1.55rem,2.4vw,2.7rem)/1.1 Georgia,serif;letter-spacing:-.02em}
+.ac-deep-concepts p{color:#48634e;font-size:.83rem;max-width:690px;line-height:1.5;margin:8px 0 0}
+.ac-deep-concepts .ac-button{flex-shrink:0}
+@media(max-width:750px){.ac-deep-concepts{flex-direction:column;align-items:flex-start}}

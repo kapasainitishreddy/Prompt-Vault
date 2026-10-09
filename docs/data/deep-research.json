@@ -1,0 +1,656 @@
+{
+  "published": "2026-10-08",
+  "scope": "Curated, high-signal primary papers, professional research, public standards and platform guidance. Not a systematic review or an exhaustive list of all research.",
+  "policy": "Each record states what a source supports and what it cannot prove. External articles are linked, not redistributed.",
+  "sources": [
+    {
+      "id": "fitts-1954",
+      "title": "Fitts (1954): Information capacity of the motor system",
+      "year": 1954,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1037/h0055392",
+      "insight": "Experiments link pointing time with movement amplitude and target tolerance. Use target size and reachability as hypotheses for controls.",
+      "limitation": "Original controlled motor tasks do not set one universal minimum pixel size; apply current WCAG/platform rules.",
+      "tags": [
+        "interaction",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "hyman-1953",
+      "title": "Hyman (1953): Stimulus information and reaction time",
+      "year": 1953,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1037/h0056940",
+      "insight": "Choice reaction time is affected by the amount of stimulus information; use it to question unnecessarily complex selections.",
+      "limitation": "It is not evidence that all products should offer fewer than a fixed number of choices.",
+      "tags": [
+        "navigation",
+        "cognitive"
+      ]
+    },
+    {
+      "id": "sweller-1988",
+      "title": "Sweller (1988): Cognitive load during problem solving",
+      "year": 1988,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1207/s15516709cog1202_4",
+      "insight": "High task demands can interfere with learning; separate teaching from demanding action in complex onboarding.",
+      "limitation": "Learning science is not an A/B result for any specific mobile onboarding design.",
+      "tags": [
+        "learning",
+        "cognitive"
+      ]
+    },
+    {
+      "id": "amershi-2019",
+      "title": "Amershi et al. (2019): Guidelines for Human-AI Interaction",
+      "year": 2019,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1145/3290605.3300233",
+      "insight": "Eighteen empirically evaluated guidelines address what AI can do, expectations, feedback, correction and trust.",
+      "limitation": "Guidelines are broad and were evaluated in specified research settings; validate real models and users.",
+      "tags": [
+        "ai",
+        "trust"
+      ]
+    },
+    {
+      "id": "mathur-2019",
+      "title": "Mathur et al. (2019): Dark Patterns at Scale",
+      "year": 2019,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1145/3359183",
+      "insight": "A large web crawl cataloged deceptive commerce patterns; design rejection tests for fake urgency, hidden costs, pressured choices.",
+      "limitation": "Observational crawl of shopping websites, not a universal present-day prevalence estimate.",
+      "tags": [
+        "ethics",
+        "commerce"
+      ]
+    },
+    {
+      "id": "umux-2013",
+      "title": "Lewis et al. (2013): UMUX-LITE",
+      "year": 2013,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1145/2470654.2481287",
+      "insight": "A brief usefulness-and-usability questionnaire can complement observed task results.",
+      "limitation": "Self-reported usability does not replace direct observation or accessibility testing.",
+      "tags": [
+        "metrics",
+        "research"
+      ]
+    },
+    {
+      "id": "nng-recognition",
+      "title": "Nielsen Norman Group: Recognition Rather Than Recall",
+      "year": 2024,
+      "type": "practitioner",
+      "url": "https://www.nngroup.com/articles/recognition-and-recall/",
+      "insight": "Offer visible choices, labels and history instead of forcing users to recall hidden commands.",
+      "limitation": "A design heuristic, not causal evidence for a specific app.",
+      "tags": [
+        "navigation",
+        "memory"
+      ]
+    },
+    {
+      "id": "nng-heuristics2",
+      "title": "Nielsen Norman Group: 10 Usability Heuristics",
+      "year": 2024,
+      "type": "practitioner",
+      "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "insight": "System status, matching real-world language, control, consistency, error prevention and recovery guide reviews.",
+      "limitation": "Heuristic evaluations should be paired with user/task evidence.",
+      "tags": [
+        "ux",
+        "audit"
+      ]
+    },
+    {
+      "id": "w3c-aria-apg",
+      "title": "W3C: ARIA Authoring Practices patterns",
+      "year": 2026,
+      "type": "standard-guidance",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+      "insight": "Detailed interaction contracts for comboboxes, dialogs, menus, tabs, treegrids and more.",
+      "limitation": "ARIA examples require correct semantics, keyboard support and testing; native HTML is preferred when sufficient.",
+      "tags": [
+        "accessibility",
+        "interaction"
+      ]
+    },
+    {
+      "id": "w3c-dialog",
+      "title": "W3C: Modal dialog pattern",
+      "year": 2026,
+      "type": "standard-guidance",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+      "insight": "Dialogs require contained focus, appropriately inert background and an exit route.",
+      "limitation": "Do not use dialogs for ordinary reading/navigation; exact focus choices depend on content.",
+      "tags": [
+        "accessibility",
+        "modal"
+      ]
+    },
+    {
+      "id": "w3c-coga",
+      "title": "W3C: Cognitive Accessibility",
+      "year": 2026,
+      "type": "standard-guidance",
+      "url": "https://www.w3.org/WAI/cognitive/",
+      "insight": "Support comprehension, memory and attention with clear language, predictable structure and multiple cues.",
+      "limitation": "W3C cognitive guidance includes supplemental notes, not all are WCAG success criteria.",
+      "tags": [
+        "cognitive",
+        "inclusion"
+      ]
+    },
+    {
+      "id": "w3c-clear",
+      "title": "W3C: Clear and Understandable Content",
+      "year": 2022,
+      "type": "standard-guidance",
+      "url": "https://www.w3.org/WAI/WCAG2/supplemental/objectives/o3-clear-content/",
+      "insight": "Use simple, direct language and recognizable chunks to improve comprehension.",
+      "limitation": "Supplemental guidance beyond minimum WCAG criteria, not a certification checklist.",
+      "tags": [
+        "content",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "w3c-rtl",
+      "title": "W3C: Handling bidirectional text in HTML",
+      "year": 2026,
+      "type": "standard-guidance",
+      "url": "https://www.w3.org/International/articles/inline-bidi-markup/",
+      "insight": "Use correct direction attributes for mixed RTL/LTR content and test data, controls and reading order.",
+      "limitation": "Directional handling varies by language and content; avoid automatically reversing everything.",
+      "tags": [
+        "localization",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "w3c-motion",
+      "title": "W3C: Animation from Interactions",
+      "year": 2026,
+      "type": "standard-guidance",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+      "insight": "Provide ways to disable nonessential motion triggered by interaction when required.",
+      "limitation": "Specific success criterion has applicability conditions; not a ban on all animation.",
+      "tags": [
+        "motion",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "w3c-target",
+      "title": "W3C: Target Size (Minimum)",
+      "year": 2026,
+      "type": "standard-guidance",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "insight": "Target size and spacing have accessibility implications, especially for pointer users.",
+      "limitation": "Includes exceptions and nuanced counting; do not substitute this for native platform guidance.",
+      "tags": [
+        "accessibility",
+        "touch"
+      ]
+    },
+    {
+      "id": "gov-patterns",
+      "title": "GOV.UK Design System: Patterns",
+      "year": 2026,
+      "type": "public-sector-guidance",
+      "url": "https://design-system.service.gov.uk/patterns/",
+      "insight": "Task-focused patterns for dates, accounts, checking answers, identity, forms and service recovery.",
+      "limitation": "UK public services are a specific domain; adapt patterns to local laws and audiences.",
+      "tags": [
+        "forms",
+        "service"
+      ]
+    },
+    {
+      "id": "gov-errors",
+      "title": "GOV.UK: Error summary",
+      "year": 2026,
+      "type": "public-sector-guidance",
+      "url": "https://design-system.service.gov.uk/components/error-summary/",
+      "insight": "For multi-field validation, summarize mistakes and link to fields while giving local repair instructions.",
+      "limitation": "This is GOV.UK's explicit implementation pattern, not mandatory for every web form.",
+      "tags": [
+        "forms",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "gov-date",
+      "title": "GOV.UK: Ask users for dates",
+      "year": 2026,
+      "type": "public-sector-guidance",
+      "url": "https://design-system.service.gov.uk/patterns/dates/",
+      "insight": "Dates of birth, future bookings and approximate dates require different input approaches.",
+      "limitation": "This guidance is context-specific; test users, locale and format.",
+      "tags": [
+        "forms",
+        "localization"
+      ]
+    },
+    {
+      "id": "gov-tasks",
+      "title": "GOV.UK: Complete multiple tasks",
+      "year": 2026,
+      "type": "public-sector-guidance",
+      "url": "https://design-system.service.gov.uk/patterns/complete-multiple-tasks/",
+      "insight": "Group long processes into legible tasks with visible status and resumable progress.",
+      "limitation": "Only helps sufficiently complex workflows; a short flow does not need a task dashboard.",
+      "tags": [
+        "workflow",
+        "service"
+      ]
+    },
+    {
+      "id": "uswds-principles",
+      "title": "U.S. Web Design System: Design Principles",
+      "year": 2026,
+      "type": "public-sector-guidance",
+      "url": "https://designsystem.digital.gov/design-principles/",
+      "insight": "Real user needs, accessibility, consistency and iteration should govern component selection.",
+      "limitation": "Government context; useful general principles but not product-specific experimental evidence.",
+      "tags": [
+        "research",
+        "service"
+      ]
+    },
+    {
+      "id": "uswds-form",
+      "title": "U.S. Web Design System: Form",
+      "year": 2026,
+      "type": "public-sector-guidance",
+      "url": "https://designsystem.digital.gov/components/form/",
+      "insight": "Preserve DOM reading order and associate instructions/errors with the relevant controls.",
+      "limitation": "USWDS patterns may not be ideal for every product domain and require implementation testing.",
+      "tags": [
+        "forms",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "uswds-validation",
+      "title": "U.S. Web Design System: Validation deprecation note",
+      "year": 2025,
+      "type": "public-sector-guidance",
+      "url": "https://designsystem.digital.gov/components/validation/",
+      "insight": "USWDS itself found usability/accessibility issues and deprecated its live validation component; test flashy validation before shipping.",
+      "limitation": "A useful counterexample, not proof that all inline validation is bad.",
+      "tags": [
+        "forms",
+        "ethics"
+      ]
+    },
+    {
+      "id": "baymard-search2",
+      "title": "Baymard Institute: Ecommerce Search UX",
+      "year": 2026,
+      "type": "field-research",
+      "url": "https://baymard.com/research/ecommerce-search",
+      "insight": "Search field, autocomplete and result guidance affect how customers find items.",
+      "limitation": "Study context is ecommerce, and many detailed findings are proprietary.",
+      "tags": [
+        "search",
+        "commerce"
+      ]
+    },
+    {
+      "id": "baymard-filter2",
+      "title": "Baymard Institute: Product Lists & Filtering UX",
+      "year": 2026,
+      "type": "field-research",
+      "url": "https://baymard.com/research/ecommerce-product-lists",
+      "insight": "Comparable result cards and meaningful filters support narrowing large commerce catalogs.",
+      "limitation": "Tests focus on ecommerce; do not infer a universal filter placement or sales uplift.",
+      "tags": [
+        "commerce",
+        "search"
+      ]
+    },
+    {
+      "id": "apple-tab-2026",
+      "title": "Apple HIG: Tab bars (2026)",
+      "year": 2026,
+      "type": "platform-guidance",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/tab-bars",
+      "insight": "Use tab bars for top-level destinations, preserving navigation state across tabs.",
+      "limitation": "Do not repurpose tabs as action buttons; platform guidance can change.",
+      "tags": [
+        "ios",
+        "navigation"
+      ]
+    },
+    {
+      "id": "apple-sheet-2026",
+      "title": "Apple HIG: Sheets (2026)",
+      "year": 2026,
+      "type": "platform-guidance",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sheets",
+      "insight": "Use sheets for a scoped task related to the underlying view rather than permanent navigation.",
+      "limitation": "Different sheet behavior on iOS/iPadOS and other Apple platforms.",
+      "tags": [
+        "ios",
+        "modal"
+      ]
+    },
+    {
+      "id": "apple-layout-2026",
+      "title": "Apple HIG: Layout",
+      "year": 2026,
+      "type": "platform-guidance",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/layout",
+      "insight": "Group related information, respect safe areas and let essential content remain discoverable.",
+      "limitation": "Platform rules change and require testing across supported form factors.",
+      "tags": [
+        "ios",
+        "layout"
+      ]
+    },
+    {
+      "id": "apple-materials-2026",
+      "title": "Apple HIG: Materials and Liquid Glass",
+      "year": 2026,
+      "type": "platform-guidance",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/materials",
+      "insight": "Distinguish functional navigation/control materials from the underlying content surfaces.",
+      "limitation": "Materials differ by OS/version and are not an instruction to imitate system visuals everywhere.",
+      "tags": [
+        "ios",
+        "visual"
+      ]
+    },
+    {
+      "id": "android-adaptive-2026",
+      "title": "Android: Adaptive App Quality Guidelines",
+      "year": 2026,
+      "type": "platform-guidance",
+      "url": "https://developer.android.com/develop/adaptive-apps/quality-guidelines/adaptive-app-quality",
+      "insight": "Design responsive flows across phones, tablets, foldables, desktop modes and relevant input types.",
+      "limitation": "The checklist is tiered; apply requirements appropriate to an app's supported form factors.",
+      "tags": [
+        "android",
+        "adaptive"
+      ]
+    },
+    {
+      "id": "android-core-2026",
+      "title": "Android: Core App Quality Guidelines",
+      "year": 2026,
+      "type": "platform-guidance",
+      "url": "https://developer.android.com/docs/quality-guidelines/core-app-quality",
+      "insight": "Support predictable navigation, platform behaviors, stable UI and permissions.",
+      "limitation": "Store acceptance and performance need actual device/release testing.",
+      "tags": [
+        "android",
+        "quality"
+      ]
+    },
+    {
+      "id": "pair-patterns",
+      "title": "Google PAIR: Human-centered AI Patterns",
+      "year": 2026,
+      "type": "design-framework",
+      "url": "https://pair.withgoogle.com/guidebook-v2/patterns",
+      "insight": "Determine whether AI helps, set expectations, explain boundaries, preserve feedback and reversibility.",
+      "limitation": "A practitioner framework informed by research, not a guarantee of model accuracy.",
+      "tags": [
+        "ai",
+        "trust"
+      ]
+    },
+    {
+      "id": "pair-codelab-2026",
+      "title": "Google: Trusted AI Product Guidebook Codelab",
+      "year": 2026,
+      "type": "design-framework",
+      "url": "https://codelabs.developers.google.com/codelabs/pair-guidebook",
+      "insight": "Apply concrete exercises to AI mental models, explanation and calibrated trust.",
+      "limitation": "Teaching exercise rather than direct evidence of conversion or safety.",
+      "tags": [
+        "ai",
+        "education"
+      ]
+    },
+    {
+      "id": "nist-ai-rmf",
+      "title": "NIST: AI Risk Management Framework",
+      "year": 2023,
+      "type": "risk-framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "insight": "Use governance, measurement and documented risks for consequential AI product features.",
+      "limitation": "Voluntary framework; does not replace applicable regulation or a security review.",
+      "tags": [
+        "ai",
+        "governance"
+      ]
+    },
+    {
+      "id": "owasp-llm-2025",
+      "title": "OWASP: 2025 LLM Top 10 Risks",
+      "year": 2025,
+      "type": "security-guidance",
+      "url": "https://genai.owasp.org/llm-top-10/",
+      "insight": "Address prompt injection, sensitive information disclosure, supply chain and excessive agency in AI UX.",
+      "limitation": "A threat-modeling reference, not evidence that a specific integration is secure.",
+      "tags": [
+        "ai",
+        "security"
+      ]
+    },
+    {
+      "id": "mdn-viewtransitions",
+      "title": "MDN: View Transition API",
+      "year": 2026,
+      "type": "developer-documentation",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API",
+      "insight": "Use transitions to maintain continuity across DOM/navigation state changes where browser support allows.",
+      "limitation": "Progressive enhancement, motion preferences and browser compatibility required.",
+      "tags": [
+        "motion",
+        "web"
+      ]
+    },
+    {
+      "id": "web-vitals-2026",
+      "title": "Google web.dev: Core Web Vitals",
+      "year": 2026,
+      "type": "developer-documentation",
+      "url": "https://web.dev/articles/vitals",
+      "insight": "Measure loading, input responsiveness and visual stability with suitable tooling.",
+      "limitation": "Good Core Web Vitals do not alone guarantee accessibility, ranking or sales.",
+      "tags": [
+        "performance",
+        "web"
+      ]
+    },
+    {
+      "id": "w3c-wcag22",
+      "title": "W3C: WCAG 2.2",
+      "year": 2023,
+      "type": "standard",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "insight": "Reference keyboard, perceivability, focus, zoom and target-size conformance criteria.",
+      "limitation": "Automated tooling can only cover some requirements; human review required.",
+      "tags": [
+        "accessibility"
+      ]
+    },
+    {
+      "id": "usability-sus",
+      "title": "Brooke (1996): System Usability Scale",
+      "year": 1996,
+      "type": "research-instrument",
+      "url": "https://doi.org/10.1201/9781498710411",
+      "insight": "A standard post-task perceived-usability scale can complement observed task completion.",
+      "limitation": "SUS measures subjective perception, not task efficiency or accessibility conformance.",
+      "tags": [
+        "metrics",
+        "research"
+      ]
+    },
+    {
+      "id": "apple-onboarding-2026",
+      "title": "Apple HIG: Onboarding",
+      "year": 2026,
+      "type": "platform-guidance",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/onboarding",
+      "insight": "Keep first-run teaching optional and rooted in action where it is necessary.",
+      "limitation": "Not a requirement that every app should have an onboarding flow.",
+      "tags": [
+        "ios",
+        "onboarding"
+      ]
+    },
+    {
+      "id": "nng-disclosure",
+      "title": "NN/g: Progressive Disclosure",
+      "year": 2026,
+      "type": "practitioner",
+      "url": "https://www.nngroup.com/articles/progressive-disclosure/",
+      "insight": "Progressively reveal advanced functionality without hiding essential actions or context.",
+      "limitation": "Complexity management principle; test whether novices can still discover what they need.",
+      "tags": [
+        "navigation",
+        "cognitive"
+      ]
+    },
+    {
+      "id": "w3c-forms",
+      "title": "W3C WAI: Forms Tutorial",
+      "year": 2026,
+      "type": "standard-guidance",
+      "url": "https://www.w3.org/WAI/tutorials/forms/",
+      "insight": "Ensure labels, instructions, grouping and error identification are available to assistive technology.",
+      "limitation": "Examples are foundations and must be adapted to the actual platform/data.",
+      "tags": [
+        "forms",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "android-accessibility",
+      "title": "Android Developers: Build Accessible Apps",
+      "year": 2026,
+      "type": "platform-guidance",
+      "url": "https://developer.android.com/guide/topics/ui/accessibility",
+      "insight": "Use content descriptions, focus order and TalkBack testing for real task flows.",
+      "limitation": "API details and supported behavior depend on Android versions/framework.",
+      "tags": [
+        "android",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "react-aria",
+      "title": "Adobe: React Aria accessibility patterns",
+      "year": 2026,
+      "type": "implementation-guidance",
+      "url": "https://react-aria.adobe.com/",
+      "insight": "Accessible component primitives can reduce custom interaction defects when used correctly.",
+      "limitation": "Framework implementation is not certification; verify your content and app behavior.",
+      "tags": [
+        "accessibility",
+        "opensource"
+      ]
+    },
+    {
+      "id": "material-guidance",
+      "title": "Google Material Design 3",
+      "year": 2026,
+      "type": "design-framework",
+      "url": "https://m3.material.io/",
+      "insight": "Use tokens, adaptive navigation and conventional interaction behavior as appropriate.",
+      "limitation": "Visual style guidance should be adapted rather than pasted without product context.",
+      "tags": [
+        "android",
+        "design"
+      ]
+    },
+    {
+      "id": "cleveland-1984",
+      "title": "Cleveland & McGill (1984): Graphical Perception",
+      "year": 1984,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1080/01621459.1984.10478080",
+      "insight": "Controlled experiments examine how accurately people decode quantitative values using different graphical encodings.",
+      "limitation": "Results apply to tested chart tasks, not a universal ban on pie charts or all ornament.",
+      "tags": [
+        "data",
+        "visualization"
+      ]
+    },
+    {
+      "id": "heer-2007",
+      "title": "Heer & Robertson (2007): Animated Transitions in Statistical Data Graphics",
+      "year": 2007,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1109/TVCG.2007.70539",
+      "insight": "Controlled studies examine how staged animated transitions can assist perception of changes in statistical graphics.",
+      "limitation": "Only certain chart transitions were tested; respect reduced motion and task relevance.",
+      "tags": [
+        "motion",
+        "visualization"
+      ]
+    },
+    {
+      "id": "munzner-2009",
+      "title": "Munzner (2009): Nested Model for Visualization Design and Validation",
+      "year": 2009,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1109/TVCG.2009.111",
+      "insight": "Separates domain problem, task/data abstraction, visual encoding/interaction and algorithm implementation to structure validation.",
+      "limitation": "Framework for visual analysis, not a guarantee that one chart type is optimal.",
+      "tags": [
+        "research",
+        "visualization"
+      ]
+    },
+    {
+      "id": "borkin-2013",
+      "title": "Borkin et al. (2013): What Makes a Visualization Memorable?",
+      "year": 2013,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1109/TVCG.2013.234",
+      "insight": "Study of memorability across sampled static visualizations finds consistent differences across visual forms and features.",
+      "limitation": "Memorability is not equivalent to accuracy, actionability or accessibility.",
+      "tags": [
+        "memory",
+        "visualization"
+      ]
+    },
+    {
+      "id": "hassenzahl-2004",
+      "title": "Hassenzahl (2004): Interplay of Beauty, Goodness and Usability",
+      "year": 2004,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1207/s15327051hci1904_2",
+      "insight": "Studies distinguish perceived usability, hedonic attributes and aesthetic evaluation for tested interface skins.",
+      "limitation": "Small product/skin context; does not quantify revenue or prove attractive designs are usable.",
+      "tags": [
+        "aesthetics",
+        "ux"
+      ]
+    },
+    {
+      "id": "kujala-2011",
+      "title": "Kujala et al. (2011): UX Curve and Long-term Experience",
+      "year": 2011,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1016/j.intcom.2011.06.005",
+      "insight": "A retrospective method helps investigate how users' experiences change with continued product use.",
+      "limitation": "Retrospective recall and sample context require cautious interpretation; not a controlled retention forecast.",
+      "tags": [
+        "research",
+        "longitudinal"
+      ]
+    }
+  ]
+}

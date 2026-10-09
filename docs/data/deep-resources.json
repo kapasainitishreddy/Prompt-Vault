@@ -1,0 +1,565 @@
+{
+  "version": "2026-10-08",
+  "scope": "Curated source-linked packages and reference-only/source-available projects. Not all are permissively licensed. No external code copied.",
+  "licensePolicy": "Verified-restriction and unverified entries must not be described as MIT; consult upstream source before reuse.",
+  "resources": [
+    {
+      "name": "React Bits",
+      "url": "https://github.com/DavidHDev/react-bits",
+      "kind": "motion",
+      "purpose": "Animated React text and interaction specimens",
+      "licenseStatus": "restricted",
+      "licenseNotes": "MIT plus Commons Clause; components cannot be resold or redistributed as a catalog.",
+      "licenseSource": "https://github.com/DavidHDev/react-bits/blob/main/LICENSE.md"
+    },
+    {
+      "name": "tldraw SDK",
+      "url": "https://github.com/tldraw/tldraw",
+      "kind": "canvas",
+      "purpose": "Infinite canvas drawing and collaborative experiences",
+      "licenseStatus": "restricted",
+      "licenseNotes": "Source available; production SDK requires a qualifying license/key. Not permissive open-source SDK.",
+      "licenseSource": "https://github.com/tldraw/tldraw/blob/main/apps/docs/content/community/license.mdx"
+    },
+    {
+      "name": "CopilotKit",
+      "url": "https://github.com/CopilotKit/CopilotKit",
+      "kind": "ai",
+      "purpose": "AI assistant state, approval and generative UI patterns",
+      "licenseStatus": "verified-permissive",
+      "licenseNotes": "Repository source claims MIT; commercial add-on services have independent terms.",
+      "licenseSource": "https://github.com/CopilotKit/CopilotKit/blob/main/README.md"
+    },
+    {
+      "name": "OpenGenerativeUI",
+      "url": "https://github.com/CopilotKit/OpenGenerativeUI",
+      "kind": "ai",
+      "purpose": "Interactive agent-generated visualizations in sandboxed iframe contexts",
+      "licenseStatus": "verified-permissive",
+      "licenseNotes": "MIT repository according to upstream; review model costs and runtime security.",
+      "licenseSource": "https://github.com/CopilotKit/OpenGenerativeUI"
+    },
+    {
+      "name": "React Flow",
+      "url": "https://github.com/xyflow/xyflow",
+      "kind": "data",
+      "purpose": "Interactive node-and-edge workflows and visual editors",
+      "licenseStatus": "verified-permissive",
+      "licenseNotes": "React Flow package README says MIT; Pro tooling and examples may have separate terms.",
+      "licenseSource": "https://github.com/xyflow/xyflow/blob/main/packages/react/README.md"
+    },
+    {
+      "name": "WAI ARIA Practices",
+      "url": "https://github.com/w3c/aria-practices",
+      "kind": "accessibility",
+      "purpose": "Accessible interaction designs, examples and keyboard patterns",
+      "licenseStatus": "reference",
+      "licenseNotes": "Documentation and example license/attribution must be checked per file.",
+      "licenseSource": "https://github.com/w3c/aria-practices"
+    },
+    {
+      "name": "assistant-ui",
+      "url": "https://github.com/assistant-ui/assistant-ui",
+      "kind": "ai",
+      "purpose": "Structured chat interfaces with streaming and tool displays",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check code license, runtime connectors and hosted offerings.",
+      "licenseSource": null
+    },
+    {
+      "name": "Vercel AI SDK",
+      "url": "https://github.com/vercel/ai",
+      "kind": "ai",
+      "purpose": "Streaming AI user interfaces and provider abstraction",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check upstream SDK package and model-provider charges.",
+      "licenseSource": null
+    },
+    {
+      "name": "AG-UI Protocol",
+      "url": "https://github.com/ag-ui-protocol/ag-ui",
+      "kind": "ai",
+      "purpose": "Protocol for app-agent shared state and generative UI",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check protocol and individual implementation licenses.",
+      "licenseSource": null
+    },
+    {
+      "name": "TanStack Table",
+      "url": "https://github.com/TanStack/table",
+      "kind": "data",
+      "purpose": "Accessible enterprise-grade table logic",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check package/version and examples for license details.",
+      "licenseSource": null
+    },
+    {
+      "name": "TanStack Query",
+      "url": "https://github.com/TanStack/query",
+      "kind": "data",
+      "purpose": "Server state, caching, retries and invalidation",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check package license and storage/privacy requirements.",
+      "licenseSource": null
+    },
+    {
+      "name": "TanStack Router",
+      "url": "https://github.com/TanStack/router",
+      "kind": "navigation",
+      "purpose": "Typed routes and data-driven navigation",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check upstream version and license.",
+      "licenseSource": null
+    },
+    {
+      "name": "TanStack Virtual",
+      "url": "https://github.com/TanStack/virtual",
+      "kind": "data",
+      "purpose": "Virtualized large lists and grids",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check package license and accessibility of virtualized content.",
+      "licenseSource": null
+    },
+    {
+      "name": "TanStack Form",
+      "url": "https://github.com/TanStack/form",
+      "kind": "forms",
+      "purpose": "Form state management and validation",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check package license and avoid relying only on frontend validation.",
+      "licenseSource": null
+    },
+    {
+      "name": "React Hook Form",
+      "url": "https://github.com/react-hook-form/react-hook-form",
+      "kind": "forms",
+      "purpose": "Form handling and field state",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check current package license.",
+      "licenseSource": null
+    },
+    {
+      "name": "Zod",
+      "url": "https://github.com/colinhacks/zod",
+      "kind": "forms",
+      "purpose": "Runtime input schema validation",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check package license; not a substitute for server authorization.",
+      "licenseSource": null
+    },
+    {
+      "name": "FormKit",
+      "url": "https://github.com/formkit/formkit",
+      "kind": "forms",
+      "purpose": "Form schema/components and animations",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Different FormKit packages/add-ons may have different terms.",
+      "licenseSource": null
+    },
+    {
+      "name": "Chart.js",
+      "url": "https://github.com/chartjs/Chart.js",
+      "kind": "data",
+      "purpose": "Common statistical chart types",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check package license and add accessible data alternatives.",
+      "licenseSource": null
+    },
+    {
+      "name": "ECharts",
+      "url": "https://github.com/apache/echarts",
+      "kind": "data",
+      "purpose": "Interactive multi-series plots and visual analytics",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check Apache licensing and any media contributions.",
+      "licenseSource": null
+    },
+    {
+      "name": "visx",
+      "url": "https://github.com/airbnb/visx",
+      "kind": "data",
+      "purpose": "Low-level React visualization primitives",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check package licenses and data rights.",
+      "licenseSource": null
+    },
+    {
+      "name": "Nivo",
+      "url": "https://github.com/plouc/nivo",
+      "kind": "data",
+      "purpose": "React charts and responsive examples",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check upstream license and copy only authorized example code.",
+      "licenseSource": null
+    },
+    {
+      "name": "Observable Plot",
+      "url": "https://github.com/observablehq/plot",
+      "kind": "data",
+      "purpose": "Grammar-driven accessible statistical figures",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check library and data licenses.",
+      "licenseSource": null
+    },
+    {
+      "name": "Dagre",
+      "url": "https://github.com/dagrejs/dagre",
+      "kind": "data",
+      "purpose": "Graph auto-layout for workflows",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check repo license and maintenance status.",
+      "licenseSource": null
+    },
+    {
+      "name": "ELK.js",
+      "url": "https://github.com/kieler/elkjs",
+      "kind": "data",
+      "purpose": "Complex graph layout engine",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check license and runtime requirements.",
+      "licenseSource": null
+    },
+    {
+      "name": "Lexical",
+      "url": "https://github.com/facebook/lexical",
+      "kind": "editor",
+      "purpose": "Rich text authoring with editor state",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check repo/package licenses and plugin dependencies.",
+      "licenseSource": null
+    },
+    {
+      "name": "Tiptap",
+      "url": "https://github.com/ueberdosis/tiptap",
+      "kind": "editor",
+      "purpose": "Collaborative rich text editor building blocks",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Core/extensions and hosted collaboration products differ in license.",
+      "licenseSource": null
+    },
+    {
+      "name": "Milkdown",
+      "url": "https://github.com/Milkdown/milkdown",
+      "kind": "editor",
+      "purpose": "Markdown/WYSIWYG editor patterns",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check plugins/packages and licensing.",
+      "licenseSource": null
+    },
+    {
+      "name": "CodeMirror",
+      "url": "https://github.com/codemirror/dev",
+      "kind": "editor",
+      "purpose": "Programmable text and code editor",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check package licenses.",
+      "licenseSource": null
+    },
+    {
+      "name": "Monaco Editor",
+      "url": "https://github.com/microsoft/monaco-editor",
+      "kind": "editor",
+      "purpose": "IDE-style code editing in browser",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check package/license and worker loading security.",
+      "licenseSource": null
+    },
+    {
+      "name": "Shiki",
+      "url": "https://github.com/shikijs/shiki",
+      "kind": "editor",
+      "purpose": "Syntax highlighting for code guides",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check current package and theme rights.",
+      "licenseSource": null
+    },
+    {
+      "name": "Excalidraw",
+      "url": "https://github.com/excalidraw/excalidraw",
+      "kind": "canvas",
+      "purpose": "Hand-drawn-style diagrams and spatial thinking",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check source, fonts, media and commercial terms separately.",
+      "licenseSource": null
+    },
+    {
+      "name": "Leaflet",
+      "url": "https://github.com/Leaflet/Leaflet",
+      "kind": "maps",
+      "purpose": "Lightweight interactive geographic maps",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check map tile/provider terms and privacy.",
+      "licenseSource": null
+    },
+    {
+      "name": "MapLibre GL JS",
+      "url": "https://github.com/maplibre/maplibre-gl-js",
+      "kind": "maps",
+      "purpose": "Vector map rendering and spatial UI",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Map data/styles remain separately licensed.",
+      "licenseSource": null
+    },
+    {
+      "name": "OpenLayers",
+      "url": "https://github.com/openlayers/openlayers",
+      "kind": "maps",
+      "purpose": "Map interactions and geospatial visualization",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check map provider and data licensing.",
+      "licenseSource": null
+    },
+    {
+      "name": "React Navigation",
+      "url": "https://github.com/react-navigation/react-navigation",
+      "kind": "mobile",
+      "purpose": "Native navigation stacks, tabs and deep links",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check framework versions and package license.",
+      "licenseSource": null
+    },
+    {
+      "name": "Expo",
+      "url": "https://github.com/expo/expo",
+      "kind": "mobile",
+      "purpose": "React Native app platform, router, APIs and workflows",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Open-source code differs from optional hosted build services.",
+      "licenseSource": null
+    },
+    {
+      "name": "React Native",
+      "url": "https://github.com/facebook/react-native",
+      "kind": "mobile",
+      "purpose": "Cross-platform native UI foundation",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check upstream license and third-party package rights.",
+      "licenseSource": null
+    },
+    {
+      "name": "Android Compose Samples",
+      "url": "https://github.com/android/compose-samples",
+      "kind": "mobile",
+      "purpose": "Official sample Android Compose applications",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Samples and media may have separate licensing.",
+      "licenseSource": null
+    },
+    {
+      "name": "Now in Android",
+      "url": "https://github.com/android/nowinandroid",
+      "kind": "mobile",
+      "purpose": "Official Android architecture/Compose design example",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check package, asset and sample licenses.",
+      "licenseSource": null
+    },
+    {
+      "name": "Ionic Framework",
+      "url": "https://github.com/ionic-team/ionic-framework",
+      "kind": "mobile",
+      "purpose": "Cross-platform hybrid application components",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check code license and native runtime limitations.",
+      "licenseSource": null
+    },
+    {
+      "name": "Capacitor",
+      "url": "https://github.com/ionic-team/capacitor",
+      "kind": "mobile",
+      "purpose": "Web-to-native device bridge",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Review plugin capabilities and rights individually.",
+      "licenseSource": null
+    },
+    {
+      "name": "React Native Calendars",
+      "url": "https://github.com/wix/react-native-calendars",
+      "kind": "mobile",
+      "purpose": "Calendars, marked dates and scheduling UI",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check package and test timezone/locale behavior.",
+      "licenseSource": null
+    },
+    {
+      "name": "React Native Maps",
+      "url": "https://github.com/react-native-maps/react-native-maps",
+      "kind": "maps",
+      "purpose": "Native map rendering integration",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Map platform/provider terms apply.",
+      "licenseSource": null
+    },
+    {
+      "name": "React Native MMKV",
+      "url": "https://github.com/mrousavy/react-native-mmkv",
+      "kind": "mobile",
+      "purpose": "High performance key/value mobile storage",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check data protection; package alone is not encryption compliance.",
+      "licenseSource": null
+    },
+    {
+      "name": "WatermelonDB",
+      "url": "https://github.com/Nozbe/WatermelonDB",
+      "kind": "mobile",
+      "purpose": "Local-first synchronization-friendly database",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Review actual sync protocol and repo maintenance.",
+      "licenseSource": null
+    },
+    {
+      "name": "Floating UI",
+      "url": "https://github.com/floating-ui/floating-ui",
+      "kind": "navigation",
+      "purpose": "Position popovers, tooltips and menus accessibly",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Geometry does not replace keyboard/focus behavior.",
+      "licenseSource": null
+    },
+    {
+      "name": "Vaul",
+      "url": "https://github.com/emilkowalski/vaul",
+      "kind": "navigation",
+      "purpose": "Mobile-inspired drawer and sheet interactions",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check component source and accessibility behavior.",
+      "licenseSource": null
+    },
+    {
+      "name": "Sonner",
+      "url": "https://github.com/emilkowalski/sonner",
+      "kind": "motion",
+      "purpose": "Toast notifications and status feedback",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Announcements need accessibility validation.",
+      "licenseSource": null
+    },
+    {
+      "name": "Lucide",
+      "url": "https://github.com/lucide-icons/lucide",
+      "kind": "visual",
+      "purpose": "Consistent icon system across interfaces",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check icon license and trademark boundaries.",
+      "licenseSource": null
+    },
+    {
+      "name": "Phosphor Icons",
+      "url": "https://github.com/phosphor-icons/core",
+      "kind": "visual",
+      "purpose": "Flexible open icon language",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check per-package license.",
+      "licenseSource": null
+    },
+    {
+      "name": "Motion Canvas",
+      "url": "https://github.com/motion-canvas/motion-canvas",
+      "kind": "motion",
+      "purpose": "Programmatic animation and explainers",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check runtime and rendering requirements.",
+      "licenseSource": null
+    },
+    {
+      "name": "Lottie Android",
+      "url": "https://github.com/airbnb/lottie-android",
+      "kind": "motion",
+      "purpose": "Vector animation rendering on Android",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Animation JSON/media assets have independent rights.",
+      "licenseSource": null
+    },
+    {
+      "name": "Lottie iOS",
+      "url": "https://github.com/airbnb/lottie-ios",
+      "kind": "motion",
+      "purpose": "Vector animation rendering on iOS",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Animation JSON/media assets have independent rights.",
+      "licenseSource": null
+    },
+    {
+      "name": "React Hot Toast",
+      "url": "https://github.com/timolins/react-hot-toast",
+      "kind": "motion",
+      "purpose": "Minimal toast interactions",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check React version and aria-live semantics.",
+      "licenseSource": null
+    },
+    {
+      "name": "HyperUI",
+      "url": "https://github.com/markmead/hyperui",
+      "kind": "visual",
+      "purpose": "Free visual HTML/Tailwind component ideas",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check actual upstream redistribution license.",
+      "licenseSource": null
+    },
+    {
+      "name": "Flowbite",
+      "url": "https://github.com/themesberg/flowbite",
+      "kind": "visual",
+      "purpose": "Tailwind component patterns and docs",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Free/premium layers may have different rights.",
+      "licenseSource": null
+    },
+    {
+      "name": "Preline",
+      "url": "https://github.com/htmlstreamofficial/preline",
+      "kind": "visual",
+      "purpose": "Web app component library reference",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Review individual package licenses and commercial usage.",
+      "licenseSource": null
+    },
+    {
+      "name": "Park UI",
+      "url": "https://github.com/cschroeter/park-ui",
+      "kind": "visual",
+      "purpose": "Styled accessible component reference",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Review generator/templates and icon/font rights.",
+      "licenseSource": null
+    },
+    {
+      "name": "GOV.UK Frontend",
+      "url": "https://github.com/alphagov/govuk-frontend",
+      "kind": "accessibility",
+      "purpose": "Tested task-oriented form/service components",
+      "licenseStatus": "verified-permissive",
+      "licenseNotes": "Design system code is public and described by GOV.UK as MIT; review assets/brand separately.",
+      "licenseSource": "https://design-system.service.gov.uk/components/"
+    },
+    {
+      "name": "USWDS",
+      "url": "https://github.com/uswds/uswds",
+      "kind": "accessibility",
+      "purpose": "Public-service inclusive design primitives",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Check government component and asset terms.",
+      "licenseSource": null
+    },
+    {
+      "name": "Playwright",
+      "url": "https://github.com/microsoft/playwright",
+      "kind": "qa",
+      "purpose": "Cross-browser task and screenshot tests",
+      "licenseStatus": "unverified",
+      "licenseNotes": "License check before redistribution; tests require browser runtime.",
+      "licenseSource": null
+    },
+    {
+      "name": "axe-core",
+      "url": "https://github.com/dequelabs/axe-core",
+      "kind": "qa",
+      "purpose": "Automated accessibility rule checks",
+      "licenseStatus": "unverified",
+      "licenseNotes": "Does not certify accessibility compliance.",
+      "licenseSource": null
+    }
+  ]
+}
