@@ -227,7 +227,7 @@ function fallbackCopy(value){
 }
 function bind(){
  const menuButton=document.querySelector('.mobile-menu'),mobileMenu=$('mobile-navigation');
- if(menuButton&&mobileMenu){menuButton.addEventListener('click',()=>{mobileMenu.hidden=!mobileMenu.hidden;menuButton.setAttribute('aria-expanded',String(!mobileMenu.hidden));});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!mobileMenu.hidden){mobileMenu.hidden=true;menuButton.setAttribute('aria-expanded','false');menuButton.focus();}});}
+ if(menuButton&&mobileMenu){menuButton.addEventListener('click',()=>{mobileMenu.hidden=!mobileMenu.hidden;menuButton.setAttribute('aria-expanded',String(!mobileMenu.hidden));});document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!mobileMenu.hidden){mobileMenu.hidden=true;menuButton.setAttribute('aria-expanded','false');menuButton.focus();}const specimenMenu=$('specimen')?.querySelector('.cs-menu');if(specimenMenu&&!specimenMenu.hidden){specimenMenu.hidden=true;const trigger=$('specimen').querySelector('[data-demo=menu]');trigger?.setAttribute('aria-expanded','false');trigger?.focus();}}});}
  document.querySelectorAll('[data-track]').forEach(b=>b.addEventListener('click',()=>chooseTrack(b.dataset.track)));
  $('concept-search').addEventListener('input',e=>{state.query=e.target.value;renderConceptList();});
  $('concept-family').addEventListener('change',e=>{state.family=e.target.value;renderConceptList();});
@@ -247,7 +247,7 @@ function bind(){
  $('resource-search').addEventListener('input',e=>{state.resourceQuery=e.target.value;state.resourceLimit=12;renderResources();});
  $('resource-kind').addEventListener('change',e=>{state.resourceKind=e.target.value;state.resourceLimit=12;renderResources();});
  $('resource-more').addEventListener('click',()=>{state.resourceLimit+=12;renderResources();});
- window.addEventListener('hashchange',()=>{const id=decodeURIComponent(location.hash.replace(/^#/,''));if(conceptById(id))chooseConcept(id,false);});
+ window.addEventListener('hashchange',()=>{let id='';try{id=decodeURIComponent(location.hash.replace(/^#/,''));}catch{return;}if(conceptById(id))chooseConcept(id,false);});
 }
 async function loadJSON(url){
  const res=await fetch(url,{cache:'no-cache'});if(!res.ok)throw Error(url+': HTTP '+res.status);return res.json();
