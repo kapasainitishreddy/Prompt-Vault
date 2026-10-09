@@ -1,0 +1,3151 @@
+{
+  "version": "2026-10-08",
+  "status": "Research-backed guidance and original illustrative interactive previews, not a validated ranking of design effectiveness.",
+  "tracks": [
+    "website",
+    "app"
+  ],
+  "sources": [
+    {
+      "id": "nng-heuristics",
+      "org": "Nielsen Norman Group",
+      "title": "10 Usability Heuristics",
+      "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "kind": "UX heuristic",
+      "finding": "Visibility of system status, user control, consistency, prevention and recovery are useful evaluation lenses.",
+      "limit": "Heuristics are guidance, not proof of conversion uplift."
+    },
+    {
+      "id": "nng-testing",
+      "org": "Nielsen Norman Group",
+      "title": "Usability Testing 101",
+      "url": "https://www.nngroup.com/articles/usability-testing-101/",
+      "kind": "Research method",
+      "finding": "Watch representative people attempt meaningful real tasks and observe where they struggle.",
+      "limit": "Synthesized personas are not participant evidence."
+    },
+    {
+      "id": "apple-onboarding",
+      "org": "Apple",
+      "title": "Human Interface Guidelines: Onboarding",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/onboarding",
+      "kind": "iOS UX",
+      "finding": "Prefer quick, optional, contextual onboarding that teaches through action.",
+      "limit": "Applies to Apple platforms; not a blanket recommendation to add onboarding."
+    },
+    {
+      "id": "apple-layout",
+      "org": "Apple",
+      "title": "Human Interface Guidelines: Layout",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/layout",
+      "kind": "iOS layout",
+      "finding": "Use familiar groupings, safe areas, flexible layouts and appropriate prominence.",
+      "limit": "Check the latest OS and device variations."
+    },
+    {
+      "id": "apple-tabs",
+      "org": "Apple",
+      "title": "Human Interface Guidelines: Tab bars",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/tab-bars",
+      "kind": "iOS navigation",
+      "finding": "Tabs are destinations, not action buttons; preserve position and context.",
+      "limit": "Not all apps benefit from tab bars."
+    },
+    {
+      "id": "apple-review",
+      "org": "Apple",
+      "title": "App Review Guidelines",
+      "url": "https://developer.apple.com/app-store/review/guidelines/",
+      "kind": "iOS distribution",
+      "finding": "Check review access, platform design, safety, purchase rules, privacy and working services before submitting.",
+      "limit": "A guide cannot guarantee approval; rules change and vary by region."
+    },
+    {
+      "id": "android-core",
+      "org": "Android Developers",
+      "title": "Core app quality guidelines",
+      "url": "https://developer.android.com/docs/quality-guidelines/core-app-quality",
+      "kind": "Android quality",
+      "finding": "Follow platform-appropriate interactions and quality requirements.",
+      "limit": "This is a current release checklist, not an aesthetic scoring system."
+    },
+    {
+      "id": "android-adaptive",
+      "org": "Android Developers",
+      "title": "Adaptive app quality guidelines",
+      "url": "https://developer.android.com/develop/adaptive-apps/quality-guidelines/adaptive-app-quality",
+      "kind": "Android adaptive",
+      "finding": "Test multiple window sizes, tablets, foldables and meaningful resize behavior.",
+      "limit": "Choose applicable tiers and test real app contexts."
+    },
+    {
+      "id": "android-compose",
+      "org": "Android Developers",
+      "title": "Build adaptive apps",
+      "url": "https://developer.android.com/develop/ui/compose/build-adaptive-apps",
+      "kind": "Android implementation",
+      "finding": "Use window size classes and layouts that adapt to available space.",
+      "limit": "Native Compose examples may require translation for React Native or Flutter."
+    },
+    {
+      "id": "play-payments",
+      "org": "Google Play",
+      "title": "Payments policy",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9858738",
+      "kind": "Android distribution",
+      "finding": "Audit payment methods against the current store policy before release.",
+      "limit": "Policies have exceptions and country-specific rules."
+    },
+    {
+      "id": "wcag22",
+      "org": "W3C WAI",
+      "title": "Web Content Accessibility Guidelines 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "kind": "Accessibility standard",
+      "finding": "Design and test keyboard, contrast, focus, resizing, target size and other applicable criteria.",
+      "limit": "Passing automated checks alone is not conformance."
+    },
+    {
+      "id": "web-vitals",
+      "org": "Google web.dev",
+      "title": "Core Web Vitals",
+      "url": "https://web.dev/articles/vitals",
+      "kind": "Web performance",
+      "finding": "Assess LCP, INP and CLS using field evidence and reliable lab tooling.",
+      "limit": "Targets describe web quality, not ranking guarantees."
+    },
+    {
+      "id": "baymard-pdp",
+      "org": "Baymard Institute",
+      "title": "Product Page UX 2026",
+      "url": "https://baymard.com/research-articles/current-state-ecommerce-product-page-ux",
+      "kind": "Commerce research",
+      "finding": "Make option selection, image inspection, pricing and essential facts discoverable.",
+      "limit": "Study targets commerce; do not generalize to every website."
+    },
+    {
+      "id": "baymard-tabs",
+      "org": "Baymard Institute",
+      "title": "Avoid Horizontal Tabs on Product Pages",
+      "url": "https://baymard.com/research-articles/avoid-horizontal-tabs",
+      "kind": "Commerce research",
+      "finding": "Prefer expanded or vertically collapsible core product content over easy-to-miss horizontal tabs.",
+      "limit": "This conclusion concerns ecommerce product details, not all interface tabs."
+    },
+    {
+      "id": "baymard-checkout",
+      "org": "Baymard Institute",
+      "title": "Checkout UX 2025",
+      "url": "https://baymard.com/research-articles/current-state-of-checkout-ux",
+      "kind": "Commerce research",
+      "finding": "Reduce confusing fields and totals, show progress and recovery at checkout.",
+      "limit": "Benchmarks are category-specific and may change."
+    },
+    {
+      "id": "baymard-products",
+      "org": "Baymard Institute",
+      "title": "Product Page UX research",
+      "url": "https://baymard.com/research/product-page",
+      "kind": "Commerce research",
+      "finding": "Use rich, informative product images and adequate specs to support purchase decisions.",
+      "limit": "Detailed paid findings must not be copied verbatim."
+    },
+    {
+      "id": "sensor-2026",
+      "org": "Sensor Tower",
+      "title": "State of Mobile 2026",
+      "url": "https://sensortower.com/press/press-release-boosted-by-gen-ai-services-consumers-spent-more-money-in-apps-than-games-for-first-time",
+      "kind": "Market report",
+      "finding": "2025 global IAP reached $167B; top three nongame earners were TikTok, Google One, ChatGPT according to Sensor Tower.",
+      "limit": "Revenue ranking does not establish UI causality, profit or store-specific rank."
+    },
+    {
+      "id": "lindgaard",
+      "org": "Lindgaard et al.",
+      "title": "Attention web designers: you have 50 milliseconds",
+      "url": "https://doi.org/10.1080/01449290500330448",
+      "kind": "Academic paper",
+      "finding": "Visual first impressions can form quickly in experimental settings.",
+      "limit": "Do not claim 50ms as a universal design or conversion rule."
+    },
+    {
+      "id": "tuch",
+      "org": "Tuch et al.",
+      "title": "The role of visual complexity and prototypicality",
+      "url": "https://doi.org/10.1016/j.ijhcs.2012.06.003",
+      "kind": "Academic paper",
+      "finding": "Visual complexity and recognizable structures can affect initial aesthetic judgments.",
+      "limit": "Controlled image experiments are not full-product usability tests."
+    },
+    {
+      "id": "motion-a11y",
+      "org": "Motion",
+      "title": "Accessible animation and reduced motion",
+      "url": "https://motion.dev/docs/react-accessibility",
+      "kind": "Motion implementation",
+      "finding": "Adapt large transforms and parallax to reduced-motion preferences.",
+      "limit": "Implementation guide, not clinical evidence."
+    },
+    {
+      "id": "three",
+      "org": "Three.js",
+      "title": "Three.js manual",
+      "url": "https://threejs.org/manual/",
+      "kind": "3D implementation",
+      "finding": "3D is suitable for spatial, inspectable objects when it conveys unique value.",
+      "limit": "Test battery, memory, FPS, keyboard and static fallbacks."
+    },
+    {
+      "id": "r3f",
+      "org": "React Three Fiber",
+      "title": "React Three Fiber",
+      "url": "https://github.com/pmndrs/react-three-fiber",
+      "kind": "3D implementation",
+      "finding": "Declarative Three.js scenes work within a React composition.",
+      "limit": "API/version and asset licenses must be checked."
+    },
+    {
+      "id": "model-viewer",
+      "org": "Google",
+      "title": "model-viewer interactive 3D and AR",
+      "url": "https://developers.google.com/ar/develop/webxr/model-viewer",
+      "kind": "3D implementation",
+      "finding": "A product viewer can let people inspect models and use AR on supported devices.",
+      "limit": "Not every browser/device supports AR; use a static alternative."
+    },
+    {
+      "id": "webllm",
+      "org": "MLC AI",
+      "title": "WebLLM",
+      "url": "https://github.com/mlc-ai/web-llm",
+      "kind": "On-device AI",
+      "finding": "Run supported language models in-browser using WebGPU acceleration.",
+      "limit": "Models can be large and device/browser compatibility varies."
+    },
+    {
+      "id": "transformers",
+      "org": "Hugging Face",
+      "title": "Transformers.js WebGPU",
+      "url": "https://huggingface.co/docs/transformers.js/guides/webgpu",
+      "kind": "On-device AI",
+      "finding": "Run supported embeddings and other models in browsers, with WebGPU where available.",
+      "limit": "Not all models or devices support GPU execution."
+    },
+    {
+      "id": "puter",
+      "org": "Puter",
+      "title": "Puter.js documentation",
+      "url": "https://docs.puter.com/",
+      "kind": "Hosted frontend AI",
+      "finding": "Call cloud AI and storage from front-end JavaScript through user-based accounts.",
+      "limit": "Not local model inference; users cover their own metered usage."
+    },
+    {
+      "id": "puter-chat",
+      "org": "Puter",
+      "title": "Site-grounded AI chatbot tutorial",
+      "url": "https://developer.puter.com/tutorials/add-ai-chatbot-to-your-website/",
+      "kind": "Hosted frontend AI",
+      "finding": "Use page-grounded context and disclose that visitors may need a Puter account.",
+      "limit": "AI outputs still need guardrails, disclosure and user consent."
+    },
+    {
+      "id": "google-search",
+      "org": "Google Search Central",
+      "title": "Search Essentials",
+      "url": "https://developers.google.com/search/docs/essentials",
+      "kind": "SEO documentation",
+      "finding": "Publish useful, accessible, crawlable content with clear structure and real expertise.",
+      "limit": "SEO does not guarantee ranking."
+    },
+    {
+      "id": "material",
+      "org": "Google",
+      "title": "Material Design 3",
+      "url": "https://m3.material.io/",
+      "kind": "Android design system",
+      "finding": "Use system-consistent type, color, component and interaction foundations.",
+      "limit": "Implementation must follow the actual Android UI framework."
+    },
+    {
+      "id": "revenuecat2026",
+      "org": "RevenueCat",
+      "title": "State of Subscription Apps 2026",
+      "url": "https://www.revenuecat.com/state-of-subscription-apps",
+      "kind": "Subscription benchmarks",
+      "finding": "Analyzes 2025 subscription performance of over 115,000 apps and more than $16B in revenue. Reports conversion, churn, trial and platform differences.",
+      "limit": "RevenueCat platform cohort only, observational comparisons, varying categories/regions; not proof that a paywall, pricing or AI design causes revenue growth."
+    }
+  ],
+  "website": [
+    {
+      "id": "developer-portfolio",
+      "title": "Developer portfolio",
+      "kind": "Personal",
+      "job": "Show credible work and convert interest into conversations.",
+      "lens": "Work first, proof close, no invented employers.",
+      "sources": [
+        "nng-heuristics",
+        "lindgaard",
+        "wcag22"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Identity hero",
+          "why": "Say what you build, for whom and why a visitor should care.",
+          "skill": "editorial composition, typography",
+          "decision": "Essential",
+          "microPrompt": "Design the Identity hero section with a clear hierarchy and working interaction. Say what you build, for whom and why a visitor should care. Use editorial composition, typography. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Selected projects",
+          "why": "Show 2–5 real projects with your role, impact, tools and live/repo links.",
+          "skill": "case-study storytelling",
+          "decision": "Essential",
+          "microPrompt": "Design the Selected projects section with a clear hierarchy and working interaction. Show 2–5 real projects with your role, impact, tools and live/repo links. Use case-study storytelling. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Deep project case study",
+          "why": "Explain problem, constraints, trade-offs, shipped outcomes and limitations.",
+          "skill": "research storytelling",
+          "decision": "Essential",
+          "microPrompt": "Design the Deep project case study section with a clear hierarchy and working interaction. Explain problem, constraints, trade-offs, shipped outcomes and limitations. Use research storytelling. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Capabilities",
+          "why": "Name honest strengths and working technologies without a logo wall.",
+          "skill": "information hierarchy",
+          "decision": "Useful",
+          "microPrompt": "Design the Capabilities section with a clear hierarchy and working interaction. Name honest strengths and working technologies without a logo wall. Use information hierarchy. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Writing or experiments",
+          "why": "Show your thinking only when relevant to the audience.",
+          "skill": "editorial grid",
+          "decision": "Optional",
+          "microPrompt": "Design the Writing or experiments section with a clear hierarchy and working interaction. Show your thinking only when relevant to the audience. Use editorial grid. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Experience or credibility",
+          "why": "Provide real timeline, collaborators or public proof only.",
+          "skill": "source verification",
+          "decision": "Useful",
+          "microPrompt": "Design the Experience or credibility section with a clear hierarchy and working interaction. Provide real timeline, collaborators or public proof only. Use source verification. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Contact invitation",
+          "why": "Offer accessible email, social or booking link.",
+          "skill": "conversion form, keyboard QA",
+          "decision": "Essential",
+          "microPrompt": "Design the Contact invitation section with a clear hierarchy and working interaction. Offer accessible email, social or booking link. Use conversion form, keyboard QA. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "company-home",
+      "title": "Company website",
+      "kind": "Company",
+      "job": "Explain the company and route customers, recruits and partners.",
+      "lens": "One company promise; distinct paths for each audience.",
+      "sources": [
+        "nng-heuristics",
+        "web-vitals",
+        "wcag22"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Utility navigation",
+          "why": "Surface products, solutions, trust and contact in a stable structure.",
+          "skill": "information architecture",
+          "decision": "Essential",
+          "microPrompt": "Design the Utility navigation section with a clear hierarchy and working interaction. Surface products, solutions, trust and contact in a stable structure. Use information architecture. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Positioning hero",
+          "why": "Make the company offer and target customer explicit above the fold.",
+          "skill": "copy hierarchy",
+          "decision": "Essential",
+          "microPrompt": "Design the Positioning hero section with a clear hierarchy and working interaction. Make the company offer and target customer explicit above the fold. Use copy hierarchy. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Product/solution map",
+          "why": "Route visitor segments to the right destination.",
+          "skill": "card taxonomy",
+          "decision": "Essential",
+          "microPrompt": "Design the Product/solution map section with a clear hierarchy and working interaction. Route visitor segments to the right destination. Use card taxonomy. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "How it works",
+          "why": "Explain what customers actually do and receive.",
+          "skill": "process diagram",
+          "decision": "Useful",
+          "microPrompt": "Design the How it works section with a clear hierarchy and working interaction. Explain what customers actually do and receive. Use process diagram. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Trust and evidence",
+          "why": "Use authentic clients, policies, research and verifiable metrics.",
+          "skill": "evidence disclosure",
+          "decision": "When available",
+          "microPrompt": "Design the Trust and evidence section with a clear hierarchy and working interaction. Use authentic clients, policies, research and verifiable metrics. Use evidence disclosure. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Case studies",
+          "why": "Tie customer problems to documented results.",
+          "skill": "narrative design",
+          "decision": "When available",
+          "microPrompt": "Design the Case studies section with a clear hierarchy and working interaction. Tie customer problems to documented results. Use narrative design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "About and people",
+          "why": "Show accountable people and company information.",
+          "skill": "editorial photography",
+          "decision": "Useful",
+          "microPrompt": "Design the About and people section with a clear hierarchy and working interaction. Show accountable people and company information. Use editorial photography. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 8,
+          "name": "Careers and contact",
+          "why": "Support recruiting and business outreach without friction.",
+          "skill": "forms and link testing",
+          "decision": "Essential",
+          "microPrompt": "Design the Careers and contact section with a clear hierarchy and working interaction. Support recruiting and business outreach without friction. Use forms and link testing. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "saas-product",
+      "title": "SaaS product landing",
+      "kind": "Product",
+      "job": "Convert interest into trial, demo or documentation.",
+      "lens": "Job → workflow → evidence → decision.",
+      "sources": [
+        "nng-heuristics",
+        "web-vitals",
+        "wcag22"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Sticky product navigation",
+          "why": "Keep product, use cases, pricing and docs reachable.",
+          "skill": "responsive navigation",
+          "decision": "Useful",
+          "microPrompt": "Design the Sticky product navigation section with a clear hierarchy and working interaction. Keep product, use cases, pricing and docs reachable. Use responsive navigation. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Outcome-first hero",
+          "why": "Name a real user outcome and one primary CTA.",
+          "skill": "messaging",
+          "decision": "Essential",
+          "microPrompt": "Design the Outcome-first hero section with a clear hierarchy and working interaction. Name a real user outcome and one primary CTA. Use messaging. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Product interaction",
+          "why": "Show real screenshots or a safe, functional demo.",
+          "skill": "interactive demo",
+          "decision": "Essential",
+          "microPrompt": "Design the Product interaction section with a clear hierarchy and working interaction. Show real screenshots or a safe, functional demo. Use interactive demo. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Capability narrative",
+          "why": "Map top capabilities to jobs; avoid feature dumping.",
+          "skill": "content design",
+          "decision": "Essential",
+          "microPrompt": "Design the Capability narrative section with a clear hierarchy and working interaction. Map top capabilities to jobs; avoid feature dumping. Use content design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Use-case stories",
+          "why": "Explain which role uses each capability and why.",
+          "skill": "user journeys",
+          "decision": "Useful",
+          "microPrompt": "Design the Use-case stories section with a clear hierarchy and working interaction. Explain which role uses each capability and why. Use user journeys. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Integrations/architecture",
+          "why": "Show only supported real integrations with source links.",
+          "skill": "technical diagrams",
+          "decision": "When relevant",
+          "microPrompt": "Design the Integrations/architecture section with a clear hierarchy and working interaction. Show only supported real integrations with source links. Use technical diagrams. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Trust/security",
+          "why": "Provide real privacy and availability commitments.",
+          "skill": "security UX",
+          "decision": "When available",
+          "microPrompt": "Design the Trust/security section with a clear hierarchy and working interaction. Provide real privacy and availability commitments. Use security UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 8,
+          "name": "Transparent pricing",
+          "why": "Describe pricing, caps and billing timing clearly.",
+          "skill": "pricing tables",
+          "decision": "When selling",
+          "microPrompt": "Design the Transparent pricing section with a clear hierarchy and working interaction. Describe pricing, caps and billing timing clearly. Use pricing tables. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 9,
+          "name": "FAQ and final CTA",
+          "why": "Resolve objections with genuine answers and a real next step.",
+          "skill": "FAQ disclosure",
+          "decision": "Essential",
+          "microPrompt": "Design the FAQ and final CTA section with a clear hierarchy and working interaction. Resolve objections with genuine answers and a real next step. Use FAQ disclosure. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "physical-product",
+      "title": "Physical product landing",
+      "kind": "Product",
+      "job": "Help buyers evaluate a single physical product.",
+      "lens": "Show utility, size and constraints before spectacle.",
+      "sources": [
+        "baymard-pdp",
+        "baymard-tabs",
+        "web-vitals"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Product name and value",
+          "why": "Show exact product and strongest fit statement.",
+          "skill": "product photography",
+          "decision": "Essential",
+          "microPrompt": "Design the Product name and value section with a clear hierarchy and working interaction. Show exact product and strongest fit statement. Use product photography. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Visual gallery",
+          "why": "Use scale, use, details and honest media.",
+          "skill": "responsive gallery",
+          "decision": "Essential",
+          "microPrompt": "Design the Visual gallery section with a clear hierarchy and working interaction. Use scale, use, details and honest media. Use responsive gallery. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Specifications and variants",
+          "why": "Surface all important dimensions and available options.",
+          "skill": "data presentation",
+          "decision": "Essential",
+          "microPrompt": "Design the Specifications and variants section with a clear hierarchy and working interaction. Surface all important dimensions and available options. Use data presentation. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Benefits in context",
+          "why": "Show credible use instead of empty adjective grids.",
+          "skill": "scenario storytelling",
+          "decision": "Useful",
+          "microPrompt": "Design the Benefits in context section with a clear hierarchy and working interaction. Show credible use instead of empty adjective grids. Use scenario storytelling. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "3D inspection",
+          "why": "Offer rotatable model only if spatial inspection matters.",
+          "skill": "model-viewer, static fallback",
+          "decision": "Optional",
+          "microPrompt": "Design the 3D inspection section with a clear hierarchy and working interaction. Offer rotatable model only if spatial inspection matters. Use model-viewer, static fallback. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Shipping and returns",
+          "why": "Show eligibility, timing, cost and policy accurately.",
+          "skill": "transaction UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Shipping and returns section with a clear hierarchy and working interaction. Show eligibility, timing, cost and policy accurately. Use transaction UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Authentic reviews",
+          "why": "Make source and counts verifiable.",
+          "skill": "evidence UX",
+          "decision": "When available",
+          "microPrompt": "Design the Authentic reviews section with a clear hierarchy and working interaction. Make source and counts verifiable. Use evidence UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 8,
+          "name": "Buy section",
+          "why": "Keep price, quantity, availability and action legible.",
+          "skill": "commerce patterns",
+          "decision": "Essential",
+          "microPrompt": "Design the Buy section section with a clear hierarchy and working interaction. Keep price, quantity, availability and action legible. Use commerce patterns. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "ecommerce-storefront",
+      "title": "Commerce storefront",
+      "kind": "Commerce",
+      "job": "Support discovery, comparison and checkout without confusion.",
+      "lens": "Fast find → compare → choose → pay.",
+      "sources": [
+        "baymard-pdp",
+        "baymard-checkout",
+        "baymard-products"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Findable catalog navigation",
+          "why": "Clear category names, search and location.",
+          "skill": "taxonomy",
+          "decision": "Essential",
+          "microPrompt": "Design the Findable catalog navigation section with a clear hierarchy and working interaction. Clear category names, search and location. Use taxonomy. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Useful merchandising hero",
+          "why": "Promote relevant collection; don't push essentials below fold.",
+          "skill": "product content",
+          "decision": "Useful",
+          "microPrompt": "Design the Useful merchandising hero section with a clear hierarchy and working interaction. Promote relevant collection; don't push essentials below fold. Use product content. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Categories and filters",
+          "why": "Show real attributes and how many results remain.",
+          "skill": "filter UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Categories and filters section with a clear hierarchy and working interaction. Show real attributes and how many results remain. Use filter UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Comparable product cards",
+          "why": "Show title, price, image, variation and genuine rating if available.",
+          "skill": "product list UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Comparable product cards section with a clear hierarchy and working interaction. Show title, price, image, variation and genuine rating if available. Use product list UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Product details",
+          "why": "Show availability, size, benefits, imagery and returns.",
+          "skill": "ecommerce UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Product details section with a clear hierarchy and working interaction. Show availability, size, benefits, imagery and returns. Use ecommerce UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Shopping cart",
+          "why": "Allow quantity edits, removal and clear totals.",
+          "skill": "state transitions",
+          "decision": "Essential",
+          "microPrompt": "Design the shopping cart section with a clear hierarchy and working interaction. Allow quantity edits, removal and clear totals. Use state transitions. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Checkout",
+          "why": "Keep total, taxes, shipping and failures recoverable.",
+          "skill": "form accessibility",
+          "decision": "Essential",
+          "microPrompt": "Design the Checkout section with a clear hierarchy and working interaction. Keep total, taxes, shipping and failures recoverable. Use form accessibility. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 8,
+          "name": "Help and policy",
+          "why": "Make delivery, returns and support straightforward.",
+          "skill": "content strategy",
+          "decision": "Essential",
+          "microPrompt": "Design the Help and policy section with a clear hierarchy and working interaction. Make delivery, returns and support straightforward. Use content strategy. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "product-detail",
+      "title": "Product details page",
+      "kind": "Commerce",
+      "job": "Let users confidently decide to buy or leave.",
+      "lens": "Product truth above novel animation.",
+      "sources": [
+        "baymard-pdp",
+        "baymard-tabs",
+        "baymard-products"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Product title and offer",
+          "why": "Name item, base price and selected variant clearly.",
+          "skill": "buy-section hierarchy",
+          "decision": "Essential",
+          "microPrompt": "Design the Product title and offer section with a clear hierarchy and working interaction. Name item, base price and selected variant clearly. Use buy-section hierarchy. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Image and scale gallery",
+          "why": "Include descriptive context and accessible zoom.",
+          "skill": "media UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Image and scale gallery section with a clear hierarchy and working interaction. Include descriptive context and accessible zoom. Use media UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Variant and stock selection",
+          "why": "Expose sizes/colors and out-of-stock states.",
+          "skill": "selection component",
+          "decision": "Essential",
+          "microPrompt": "Design the Variant and stock selection section with a clear hierarchy and working interaction. Expose sizes/colors and out-of-stock states. Use selection component. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Specifications and use",
+          "why": "Keep factual details in expanded, findable sections.",
+          "skill": "comparison content",
+          "decision": "Essential",
+          "microPrompt": "Design the Specifications and use section with a clear hierarchy and working interaction. Keep factual details in expanded, findable sections. Use comparison content. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Shipping and returns",
+          "why": "Answer when/how delivered and returns costs.",
+          "skill": "policy design",
+          "decision": "Essential",
+          "microPrompt": "Design the Shipping and returns section with a clear hierarchy and working interaction. Answer when/how delivered and returns costs. Use policy design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Genuine reviews",
+          "why": "Support sorting and distinguish verified from sample data.",
+          "skill": "review architecture",
+          "decision": "If available",
+          "microPrompt": "Design the Genuine reviews section with a clear hierarchy and working interaction. Support sorting and distinguish verified from sample data. Use review architecture. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Alternatives",
+          "why": "Offer genuinely comparable options without interrupting purchase.",
+          "skill": "recommendation UX",
+          "decision": "Optional",
+          "microPrompt": "Design the Alternatives section with a clear hierarchy and working interaction. Offer genuinely comparable options without interrupting purchase. Use recommendation UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 8,
+          "name": "Add-to-cart feedback",
+          "why": "Show selection, cart state and recovery or error.",
+          "skill": "interaction feedback",
+          "decision": "Essential",
+          "microPrompt": "Design the Add-to-cart feedback section with a clear hierarchy and working interaction. Show selection, cart state and recovery or error. Use interaction feedback. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "developer-documentation",
+      "title": "Developer docs",
+      "kind": "Documentation",
+      "job": "Move readers from curiosity to a working integration.",
+      "lens": "Readable paths, runnable code, recovery.",
+      "sources": [
+        "nng-heuristics",
+        "web-vitals",
+        "wcag22"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Audience-specific landing",
+          "why": "Separate quick start, API reference, guides and support.",
+          "skill": "information architecture",
+          "decision": "Essential",
+          "microPrompt": "Design the Audience-specific landing section with a clear hierarchy and working interaction. Separate quick start, API reference, guides and support. Use information architecture. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Version and platform cues",
+          "why": "State release, SDK/runtime and authentication prerequisites.",
+          "skill": "developer experience",
+          "decision": "Essential",
+          "microPrompt": "Design the Version and platform cues section with a clear hierarchy and working interaction. State release, SDK/runtime and authentication prerequisites. Use developer experience. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Quick start",
+          "why": "Offer a successful minimal example and time expectation.",
+          "skill": "code presentation",
+          "decision": "Essential",
+          "microPrompt": "Design the Quick start section with a clear hierarchy and working interaction. Offer a successful minimal example and time expectation. Use code presentation. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Navigation and search",
+          "why": "Keep sections and anchor links stable, useful and keyboard-accessible.",
+          "skill": "docs layout",
+          "decision": "Essential",
+          "microPrompt": "Design the Navigation and search section with a clear hierarchy and working interaction. Keep sections and anchor links stable, useful and keyboard-accessible. Use docs layout. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Concept guides",
+          "why": "Explain mental models with diagrams and examples.",
+          "skill": "technical writing",
+          "decision": "Essential",
+          "microPrompt": "Design the Concept guides section with a clear hierarchy and working interaction. Explain mental models with diagrams and examples. Use technical writing. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "API reference",
+          "why": "Provide copyable valid examples, fields, errors and pagination.",
+          "skill": "reference IA",
+          "decision": "Essential",
+          "microPrompt": "Design the API reference section with a clear hierarchy and working interaction. Provide copyable valid examples, fields, errors and pagination. Use reference IA. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Troubleshooting",
+          "why": "Cover permissions, rate limits, retries and support.",
+          "skill": "diagnostic UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Troubleshooting section with a clear hierarchy and working interaction. Cover permissions, rate limits, retries and support. Use diagnostic UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 8,
+          "name": "Changelog",
+          "why": "Show dated breaking changes and migrations.",
+          "skill": "content workflow",
+          "decision": "Useful",
+          "microPrompt": "Design the Changelog section with a clear hierarchy and working interaction. Show dated breaking changes and migrations. Use content workflow. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "editorial-publication",
+      "title": "Editorial publication",
+      "kind": "Editorial",
+      "job": "Make articles discoverable and comfortable to read.",
+      "lens": "Reading rhythm and transparent authorship.",
+      "sources": [
+        "nng-heuristics",
+        "wcag22",
+        "tuch"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Publication identity",
+          "why": "Define topics and editorial point of view.",
+          "skill": "type system",
+          "decision": "Essential",
+          "microPrompt": "Design the Publication identity section with a clear hierarchy and working interaction. Define topics and editorial point of view. Use type system. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Featured story",
+          "why": "Signal priority without overwhelming the article list.",
+          "skill": "editorial layout",
+          "decision": "Useful",
+          "microPrompt": "Design the Featured story section with a clear hierarchy and working interaction. Signal priority without overwhelming the article list. Use editorial layout. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Topic browsing",
+          "why": "Let readers scan and filter by meaningful sections.",
+          "skill": "content taxonomy",
+          "decision": "Essential",
+          "microPrompt": "Design the Topic browsing section with a clear hierarchy and working interaction. Let readers scan and filter by meaningful sections. Use content taxonomy. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Article feed",
+          "why": "Show titles, bylines, dates and reading cues.",
+          "skill": "information scent",
+          "decision": "Essential",
+          "microPrompt": "Design the Article feed section with a clear hierarchy and working interaction. Show titles, bylines, dates and reading cues. Use information scent. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Article body",
+          "why": "Use readable measure, headings, captions and footnotes.",
+          "skill": "typesetting",
+          "decision": "Essential",
+          "microPrompt": "Design the Article body section with a clear hierarchy and working interaction. Use readable measure, headings, captions and footnotes. Use typesetting. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Source and author context",
+          "why": "Separate reporting, commentary and external sources.",
+          "skill": "trust content",
+          "decision": "Essential",
+          "microPrompt": "Design the Source and author context section with a clear hierarchy and working interaction. Separate reporting, commentary and external sources. Use trust content. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Subscription invite",
+          "why": "Ask after reader receives value.",
+          "skill": "newsletter UX",
+          "decision": "Optional",
+          "microPrompt": "Design the Subscription invite section with a clear hierarchy and working interaction. Ask after reader receives value. Use newsletter UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 8,
+          "name": "Archive and search",
+          "why": "Retain findability and dated context.",
+          "skill": "search UX",
+          "decision": "Useful",
+          "microPrompt": "Design the Archive and search section with a clear hierarchy and working interaction. Retain findability and dated context. Use search UX. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "blog-personal",
+      "title": "Personal blog",
+      "kind": "Editorial",
+      "job": "Make writing easy to read and follow.",
+      "lens": "Personality through type and voice, not overlays.",
+      "sources": [
+        "wcag22",
+        "web-vitals",
+        "nng-heuristics"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Site identity",
+          "why": "Define theme and simple navigation.",
+          "skill": "typography",
+          "decision": "Essential",
+          "microPrompt": "Design the Site identity section with a clear hierarchy and working interaction. Define theme and simple navigation. Use typography. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Recent posts",
+          "why": "Present true dates and scannable summaries.",
+          "skill": "editorial cards",
+          "decision": "Essential",
+          "microPrompt": "Design the Recent posts section with a clear hierarchy and working interaction. Present true dates and scannable summaries. Use editorial cards. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Topic or series index",
+          "why": "Let readers follow an idea across posts.",
+          "skill": "taxonomy",
+          "decision": "Useful",
+          "microPrompt": "Design the Topic or series index section with a clear hierarchy and working interaction. Let readers follow an idea across posts. Use taxonomy. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Article template",
+          "why": "Readable long-form text, headings, media and citations.",
+          "skill": "content layout",
+          "decision": "Essential",
+          "microPrompt": "Design the Article template section with a clear hierarchy and working interaction. Readable long-form text, headings, media and citations. Use content layout. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Related reading",
+          "why": "Help readers continue along coherent themes.",
+          "skill": "relevance UX",
+          "decision": "Optional",
+          "microPrompt": "Design the Related reading section with a clear hierarchy and working interaction. Help readers continue along coherent themes. Use relevance UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "About author",
+          "why": "Provide accurate author context and contact route.",
+          "skill": "bio content",
+          "decision": "Useful",
+          "microPrompt": "Design the About author section with a clear hierarchy and working interaction. Provide accurate author context and contact route. Use bio content. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "RSS or newsletter",
+          "why": "Make following optional and privacy-conscious.",
+          "skill": "subscription interaction",
+          "decision": "Optional",
+          "microPrompt": "Design the RSS or newsletter section with a clear hierarchy and working interaction. Make following optional and privacy-conscious. Use subscription interaction. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "creator-showcase",
+      "title": "Creative showcase",
+      "kind": "Portfolio",
+      "job": "Make the work itself unforgettable and discoverable.",
+      "lens": "Artwork first, controls never hidden.",
+      "sources": [
+        "tuch",
+        "wcag22",
+        "web-vitals"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Statement and navigation",
+          "why": "Give context without stealing attention from work.",
+          "skill": "editorial art direction",
+          "decision": "Essential",
+          "microPrompt": "Design the Statement and navigation section with a clear hierarchy and working interaction. Give context without stealing attention from work. Use editorial art direction. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Selected work gallery",
+          "why": "Show original visuals and clear labels.",
+          "skill": "media grid",
+          "decision": "Essential",
+          "microPrompt": "Design the Selected work gallery section with a clear hierarchy and working interaction. Show original visuals and clear labels. Use media grid. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Project detail",
+          "why": "Describe process, date, collaborators and credits.",
+          "skill": "media storytelling",
+          "decision": "Essential",
+          "microPrompt": "Design the Project detail section with a clear hierarchy and working interaction. Describe process, date, collaborators and credits. Use media storytelling. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Process notes",
+          "why": "Explain craft choices to interested viewers.",
+          "skill": "case-study design",
+          "decision": "Useful",
+          "microPrompt": "Design the Process notes section with a clear hierarchy and working interaction. Explain craft choices to interested viewers. Use case-study design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Motion or 3D specimen",
+          "why": "Use only when work itself benefits from temporal or spatial viewing.",
+          "skill": "motion, 3D",
+          "decision": "Optional",
+          "microPrompt": "Design the Motion or 3D specimen section with a clear hierarchy and working interaction. Use only when work itself benefits from temporal or spatial viewing. Use motion, 3D. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Press/recognition",
+          "why": "Show verifiable credit and licensing.",
+          "skill": "attribution",
+          "decision": "If available",
+          "microPrompt": "Design the Press/recognition section with a clear hierarchy and working interaction. Show verifiable credit and licensing. Use attribution. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Commission inquiry",
+          "why": "Offer a precise path for work requests.",
+          "skill": "contact UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Commission inquiry section with a clear hierarchy and working interaction. Offer a precise path for work requests. Use contact UX. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "local-service",
+      "title": "Local service website",
+      "kind": "Service",
+      "job": "Help people check fit, area, hours and request service.",
+      "lens": "Trust, specificity and accessibility.",
+      "sources": [
+        "nng-heuristics",
+        "wcag22",
+        "google-search"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Service + location hero",
+          "why": "Name offering, location served and primary next step.",
+          "skill": "local copywriting",
+          "decision": "Essential",
+          "microPrompt": "Design the Service + location hero section with a clear hierarchy and working interaction. Name offering, location served and primary next step. Use local copywriting. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Service list",
+          "why": "Make scope and exclusions explicit.",
+          "skill": "taxonomy",
+          "decision": "Essential",
+          "microPrompt": "Design the Service list section with a clear hierarchy and working interaction. Make scope and exclusions explicit. Use taxonomy. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Pricing expectations",
+          "why": "Explain ranges or quote process when available.",
+          "skill": "honest pricing",
+          "decision": "Useful",
+          "microPrompt": "Design the Pricing expectations section with a clear hierarchy and working interaction. Explain ranges or quote process when available. Use honest pricing. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Service area and hours",
+          "why": "Display verified area, actual hours and contact routes.",
+          "skill": "structured data",
+          "decision": "Essential",
+          "microPrompt": "Design the Service area and hours section with a clear hierarchy and working interaction. Display verified area, actual hours and contact routes. Use structured data. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Process",
+          "why": "Set practical expectations about booking and delivery.",
+          "skill": "step design",
+          "decision": "Useful",
+          "microPrompt": "Design the Process section with a clear hierarchy and working interaction. Set practical expectations about booking and delivery. Use step design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Reviews and credentials",
+          "why": "Publish authentic reviews and checked licensure only.",
+          "skill": "credibility UX",
+          "decision": "When available",
+          "microPrompt": "Design the Reviews and credentials section with a clear hierarchy and working interaction. Publish authentic reviews and checked licensure only. Use credibility UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Booking/contact",
+          "why": "Use a simple accessible form with confirmation.",
+          "skill": "form design",
+          "decision": "Essential",
+          "microPrompt": "Design the Booking/contact section with a clear hierarchy and working interaction. Use a simple accessible form with confirmation. Use form design. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "nonprofit",
+      "title": "Nonprofit or cause",
+      "kind": "Organization",
+      "job": "Communicate mission and make participation safe and clear.",
+      "lens": "Impact claims need provenance.",
+      "sources": [
+        "nng-heuristics",
+        "wcag22",
+        "web-vitals"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Mission statement",
+          "why": "State who is served and what changes.",
+          "skill": "mission copy",
+          "decision": "Essential",
+          "microPrompt": "Design the Mission statement section with a clear hierarchy and working interaction. State who is served and what changes. Use mission copy. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Programs and eligibility",
+          "why": "Explain where and how assistance works.",
+          "skill": "service design",
+          "decision": "Essential",
+          "microPrompt": "Design the Programs and eligibility section with a clear hierarchy and working interaction. Explain where and how assistance works. Use service design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Impact evidence",
+          "why": "Show method, timeframe and real numbers only.",
+          "skill": "data integrity",
+          "decision": "If available",
+          "microPrompt": "Design the Impact evidence section with a clear hierarchy and working interaction. Show method, timeframe and real numbers only. Use data integrity. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Stories with consent",
+          "why": "Respect subject safety, privacy and permission.",
+          "skill": "ethical media",
+          "decision": "If available",
+          "microPrompt": "Design the Stories with consent section with a clear hierarchy and working interaction. Respect subject safety, privacy and permission. Use ethical media. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Volunteer path",
+          "why": "Clearly describe effort, location and conditions.",
+          "skill": "journey design",
+          "decision": "Useful",
+          "microPrompt": "Design the Volunteer path section with a clear hierarchy and working interaction. Clearly describe effort, location and conditions. Use journey design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Donation flow",
+          "why": "Show supported payment, fee and recurring terms.",
+          "skill": "payments UX",
+          "decision": "If applicable",
+          "microPrompt": "Design the Donation flow section with a clear hierarchy and working interaction. Show supported payment, fee and recurring terms. Use payments UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Contact and governance",
+          "why": "Give accountable contact, policies and reports.",
+          "skill": "trust layout",
+          "decision": "Essential",
+          "microPrompt": "Design the Contact and governance section with a clear hierarchy and working interaction. Give accountable contact, policies and reports. Use trust layout. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "event-conference",
+      "title": "Event or launch site",
+      "kind": "Event",
+      "job": "Make schedule, value, location and registration easy.",
+      "lens": "Deadline and timezone clarity.",
+      "sources": [
+        "nng-heuristics",
+        "wcag22",
+        "web-vitals"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Event promise",
+          "why": "Name title, date, location or online format.",
+          "skill": "hero composition",
+          "decision": "Essential",
+          "microPrompt": "Design the Event promise section with a clear hierarchy and working interaction. Name title, date, location or online format. Use hero composition. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "What attendees gain",
+          "why": "Describe learning and audience fit.",
+          "skill": "agenda storytelling",
+          "decision": "Essential",
+          "microPrompt": "Design the What attendees gain section with a clear hierarchy and working interaction. Describe learning and audience fit. Use agenda storytelling. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Program and times",
+          "why": "Show time zones, tracks and status of changes.",
+          "skill": "schedule UI",
+          "decision": "Essential",
+          "microPrompt": "Design the Program and times section with a clear hierarchy and working interaction. Show time zones, tracks and status of changes. Use schedule UI. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Speakers",
+          "why": "Use actual speakers with permission and correct bios.",
+          "skill": "profile cards",
+          "decision": "If available",
+          "microPrompt": "Design the Speakers section with a clear hierarchy and working interaction. Use actual speakers with permission and correct bios. Use profile cards. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Venue or join logistics",
+          "why": "Show maps or online join instructions.",
+          "skill": "responsive maps",
+          "decision": "Essential",
+          "microPrompt": "Design the Venue or join logistics section with a clear hierarchy and working interaction. Show maps or online join instructions. Use responsive maps. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Ticket details",
+          "why": "Disclose prices, refund and eligibility accurately.",
+          "skill": "commerce forms",
+          "decision": "When paid",
+          "microPrompt": "Design the Ticket details section with a clear hierarchy and working interaction. Disclose prices, refund and eligibility accurately. Use commerce forms. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "FAQ and registration",
+          "why": "Keep CTA accessible as date approaches.",
+          "skill": "conversion flow",
+          "decision": "Essential",
+          "microPrompt": "Design the FAQ and registration section with a clear hierarchy and working interaction. Keep CTA accessible as date approaches. Use conversion flow. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "subdomain-product",
+      "title": "Product subdomain",
+      "kind": "Product",
+      "job": "Give a specific app its own identity while remaining part of a family.",
+      "lens": "One app, one promise, a clear parent-brand connection.",
+      "sources": [
+        "nng-heuristics",
+        "web-vitals",
+        "google-search"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Product and parent identity",
+          "why": "Keep app name prominent with unobtrusive parent link.",
+          "skill": "information architecture",
+          "decision": "Essential",
+          "microPrompt": "Design the Product and parent identity section with a clear hierarchy and working interaction. Keep app name prominent with unobtrusive parent link. Use information architecture. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Focused product hero",
+          "why": "Sell the app job, not the whole parent company.",
+          "skill": "messaging",
+          "decision": "Essential",
+          "microPrompt": "Design the Focused product hero section with a clear hierarchy and working interaction. Sell the app job, not the whole parent company. Use messaging. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Screens and real demo",
+          "why": "Show real product capabilities with accurate limitations.",
+          "skill": "product media",
+          "decision": "Essential",
+          "microPrompt": "Design the Screens and real demo section with a clear hierarchy and working interaction. Show real product capabilities with accurate limitations. Use product media. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Platform or access options",
+          "why": "Make Web, iOS and Android availability truthful.",
+          "skill": "cross-platform UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Platform or access options section with a clear hierarchy and working interaction. Make Web, iOS and Android availability truthful. Use cross-platform UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Pricing and account path",
+          "why": "Keep billing, support and account links consistent.",
+          "skill": "purchase flow",
+          "decision": "When selling",
+          "microPrompt": "Design the Pricing and account path section with a clear hierarchy and working interaction. Keep billing, support and account links consistent. Use purchase flow. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Trust and legal links",
+          "why": "Show accurate company, support, privacy and terms.",
+          "skill": "legal navigation",
+          "decision": "Essential",
+          "microPrompt": "Design the Trust and legal links section with a clear hierarchy and working interaction. Show accurate company, support, privacy and terms. Use legal navigation. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Related family products",
+          "why": "Provide quiet links, not a distracting app mall.",
+          "skill": "cross-navigation",
+          "decision": "Optional",
+          "microPrompt": "Design the Related family products section with a clear hierarchy and working interaction. Provide quiet links, not a distracting app mall. Use cross-navigation. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "marketplace",
+      "title": "Marketplace and directory",
+      "kind": "Marketplace",
+      "job": "Match intent to trustworthy, comparable results.",
+      "lens": "Find → evaluate → contact/transact.",
+      "sources": [
+        "nng-heuristics",
+        "baymard-pdp",
+        "wcag22"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Search and categories",
+          "why": "Support both browsing and direct intent.",
+          "skill": "search architecture",
+          "decision": "Essential",
+          "microPrompt": "Design the Search and categories section with a clear hierarchy and working interaction. Support both browsing and direct intent. Use search architecture. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Filters and sorting",
+          "why": "Explain dimensions, eligibility and counts.",
+          "skill": "filter behavior",
+          "decision": "Essential",
+          "microPrompt": "Design the Filters and sorting section with a clear hierarchy and working interaction. Explain dimensions, eligibility and counts. Use filter behavior. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Result cards",
+          "why": "Include comparable attributes, availability and price basis.",
+          "skill": "dense layouts",
+          "decision": "Essential",
+          "microPrompt": "Design the Result cards section with a clear hierarchy and working interaction. Include comparable attributes, availability and price basis. Use dense layouts. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Profile/detail",
+          "why": "Explain provider/product quality with evidence.",
+          "skill": "details layout",
+          "decision": "Essential",
+          "microPrompt": "Design the Profile/detail section with a clear hierarchy and working interaction. Explain provider/product quality with evidence. Use details layout. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Trust and moderation",
+          "why": "Disclose identity checks, reviews and issue handling.",
+          "skill": "trust design",
+          "decision": "Essential",
+          "microPrompt": "Design the Trust and moderation section with a clear hierarchy and working interaction. Disclose identity checks, reviews and issue handling. Use trust design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Transaction/contact",
+          "why": "Make next step transparent, reversible where possible.",
+          "skill": "workflow design",
+          "decision": "Essential",
+          "microPrompt": "Design the Transaction/contact section with a clear hierarchy and working interaction. Make next step transparent, reversible where possible. Use workflow design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Empty and error states",
+          "why": "Help recover from zero results and stale listings.",
+          "skill": "state machines",
+          "decision": "Essential",
+          "microPrompt": "Design the Empty and error states section with a clear hierarchy and working interaction. Help recover from zero results and stale listings. Use state machines. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "b2b-pricing",
+      "title": "B2B pricing and plans",
+      "kind": "Product",
+      "job": "Help buyers compare limits and contact sales if needed.",
+      "lens": "Make units, quotas, exclusions and billing explicit.",
+      "sources": [
+        "nng-heuristics",
+        "wcag22",
+        "baymard-checkout"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Plan introduction",
+          "why": "Describe target customers and payment basis.",
+          "skill": "copy strategy",
+          "decision": "Essential",
+          "microPrompt": "Design the Plan introduction section with a clear hierarchy and working interaction. Describe target customers and payment basis. Use copy strategy. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Plan matrix",
+          "why": "Compare real limits and relevant features.",
+          "skill": "accessible comparison",
+          "decision": "Essential",
+          "microPrompt": "Design the Plan matrix section with a clear hierarchy and working interaction. Compare real limits and relevant features. Use accessible comparison. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Usage estimator",
+          "why": "Use honest assumptions, not fake savings figures.",
+          "skill": "interactive calculation",
+          "decision": "Useful",
+          "microPrompt": "Design the Usage estimator section with a clear hierarchy and working interaction. Use honest assumptions, not fake savings figures. Use interactive calculation. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Billing/fees policy",
+          "why": "Show currencies, taxes, trial and cancellation terms.",
+          "skill": "billing UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Billing/fees policy section with a clear hierarchy and working interaction. Show currencies, taxes, trial and cancellation terms. Use billing UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Security and procurement",
+          "why": "Link DPA, uptime and compliance proof when available.",
+          "skill": "enterprise content",
+          "decision": "If relevant",
+          "microPrompt": "Design the Security and procurement section with a clear hierarchy and working interaction. Link DPA, uptime and compliance proof when available. Use enterprise content. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Frequently asked questions",
+          "why": "Resolve overages, upgrades, refunds and access questions.",
+          "skill": "expandable disclosure",
+          "decision": "Essential",
+          "microPrompt": "Design the frequently asked questions section with a clear hierarchy and working interaction. Resolve overages, upgrades, refunds and access questions. Use expandable disclosure. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Checkout or sales contact",
+          "why": "One clear next step per buyer intent.",
+          "skill": "conversion forms",
+          "decision": "Essential",
+          "microPrompt": "Design the Checkout or sales contact section with a clear hierarchy and working interaction. One clear next step per buyer intent. Use conversion forms. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    }
+  ],
+  "app": [
+    {
+      "id": "personal-productivity",
+      "title": "Tasks and productivity",
+      "kind": "Productivity",
+      "job": "Capture tasks quickly; plan, complete and recover.",
+      "lens": "Minimize friction to first completed task.",
+      "sources": [
+        "apple-onboarding",
+        "android-core",
+        "nng-heuristics",
+        "revenuecat2026"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "First task",
+          "why": "Let users create an item before complex configuration.",
+          "skill": "onboarding",
+          "decision": "Essential",
+          "microPrompt": "Design the First task screen with a clear hierarchy and working interaction. Let users create an item before complex configuration. Use onboarding. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Today or home",
+          "why": "Show immediate prioritized work and one primary action.",
+          "skill": "information hierarchy",
+          "decision": "Essential",
+          "microPrompt": "Design the Today or home screen with a clear hierarchy and working interaction. Show immediate prioritized work and one primary action. Use information hierarchy. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Create and edit",
+          "why": "Keep short-form data entry reliable.",
+          "skill": "forms, validation",
+          "decision": "Essential",
+          "microPrompt": "Design the Create and edit screen with a clear hierarchy and working interaction. Keep short-form data entry reliable. Use forms, validation. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Lists and filters",
+          "why": "Make finding, sorting and completion predictable.",
+          "skill": "list states",
+          "decision": "Essential",
+          "microPrompt": "Design the Lists and filters screen with a clear hierarchy and working interaction. Make finding, sorting and completion predictable. Use list states. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Calendar or schedule",
+          "why": "Optional temporal view grounded in real dates.",
+          "skill": "calendar UI",
+          "decision": "Useful",
+          "microPrompt": "Design the Calendar or schedule screen with a clear hierarchy and working interaction. Optional temporal view grounded in real dates. Use calendar UI. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Reminders",
+          "why": "Ask permission at the point of value; support denied state.",
+          "skill": "notification permissions",
+          "decision": "Optional",
+          "microPrompt": "Design the Reminders screen with a clear hierarchy and working interaction. Ask permission at the point of value; support denied state. Use notification permissions. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Undo and offline",
+          "why": "Protect edits and allow recovery on reconnect.",
+          "skill": "sync state UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Undo and offline screen with a clear hierarchy and working interaction. Protect edits and allow recovery on reconnect. Use sync state UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 8,
+          "name": "Settings and account",
+          "why": "Handle export, privacy, sign out and deletion.",
+          "skill": "settings architecture",
+          "decision": "Essential",
+          "microPrompt": "Design the Settings and account screen with a clear hierarchy and working interaction. Handle export, privacy, sign out and deletion. Use settings architecture. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "notes-knowledge",
+      "title": "Notes and personal knowledge",
+      "kind": "Productivity",
+      "job": "Capture, organize and resurface information.",
+      "lens": "Search and retrieval matter more than decoration.",
+      "sources": [
+        "nng-heuristics",
+        "apple-layout",
+        "android-adaptive"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Quick capture",
+          "why": "Open directly into fast capture or a usable list.",
+          "skill": "writing UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Quick capture screen with a clear hierarchy and working interaction. Open directly into fast capture or a usable list. Use writing UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Workspace index",
+          "why": "Organize notes/spaces without forcing a taxonomy.",
+          "skill": "navigation",
+          "decision": "Essential",
+          "microPrompt": "Design the Workspace index screen with a clear hierarchy and working interaction. Organize notes/spaces without forcing a taxonomy. Use navigation. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Editor",
+          "why": "Autosave clearly with rich-content accessibility.",
+          "skill": "editor interactions",
+          "decision": "Essential",
+          "microPrompt": "Design the Editor screen with a clear hierarchy and working interaction. Autosave clearly with rich-content accessibility. Use editor interactions. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Search",
+          "why": "Return useful snippets and no-result recovery.",
+          "skill": "search UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Search screen with a clear hierarchy and working interaction. Return useful snippets and no-result recovery. Use search UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Collections or backlinks",
+          "why": "Only add structure when it aids retrieval.",
+          "skill": "graph UI",
+          "decision": "Optional",
+          "microPrompt": "Design the Collections or backlinks screen with a clear hierarchy and working interaction. Only add structure when it aids retrieval. Use graph UI. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Offline/sync history",
+          "why": "Make pending, conflict and last-synced status visible.",
+          "skill": "offline patterns",
+          "decision": "Essential",
+          "microPrompt": "Design the Offline/sync history screen with a clear hierarchy and working interaction. Make pending, conflict and last-synced status visible. Use offline patterns. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Export/privacy",
+          "why": "Support control over owned text and data.",
+          "skill": "account UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Export/privacy screen with a clear hierarchy and working interaction. Support control over owned text and data. Use account UX. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "habit-wellness",
+      "title": "Habits and self-care",
+      "kind": "Lifestyle",
+      "job": "Support sustainable action without shame or coercion.",
+      "lens": "Progress should be optional and comprehensible.",
+      "sources": [
+        "apple-onboarding",
+        "nng-heuristics",
+        "wcag22",
+        "revenuecat2026"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Intent selection",
+          "why": "Ask user what they want and allow changes.",
+          "skill": "onboarding",
+          "decision": "Essential",
+          "microPrompt": "Design the Intent selection screen with a clear hierarchy and working interaction. Ask user what they want and allow changes. Use onboarding. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Gentle first activity",
+          "why": "Let user complete a useful activity before registration.",
+          "skill": "activation",
+          "decision": "Essential",
+          "microPrompt": "Design the Gentle first activity screen with a clear hierarchy and working interaction. Let user complete a useful activity before registration. Use activation. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Today plan",
+          "why": "Present a manageable next action.",
+          "skill": "dashboard composition",
+          "decision": "Essential",
+          "microPrompt": "Design the Today plan screen with a clear hierarchy and working interaction. Present a manageable next action. Use dashboard composition. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Log/check-in",
+          "why": "Use simple controls and flexible frequency.",
+          "skill": "form UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Log/check-in screen with a clear hierarchy and working interaction. Use simple controls and flexible frequency. Use form UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "History",
+          "why": "Represent trends honestly without manipulative streak punishment.",
+          "skill": "chart accessibility",
+          "decision": "Useful",
+          "microPrompt": "Design the History screen with a clear hierarchy and working interaction. Represent trends honestly without manipulative streak punishment. Use chart accessibility. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Reminders",
+          "why": "Support no-notification route and pause controls.",
+          "skill": "permission handling",
+          "decision": "Optional",
+          "microPrompt": "Design the Reminders screen with a clear hierarchy and working interaction. Support no-notification route and pause controls. Use permission handling. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Safety and privacy",
+          "why": "Avoid unsupported health outcome claims.",
+          "skill": "privacy controls",
+          "decision": "Essential",
+          "microPrompt": "Design the Safety and privacy screen with a clear hierarchy and working interaction. Avoid unsupported health outcome claims. Use privacy controls. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "learning-course",
+      "title": "Learning and courses",
+      "kind": "Education",
+      "job": "Guide learners from first lesson to demonstrable understanding.",
+      "lens": "Teach, practice, check, revisit.",
+      "sources": [
+        "apple-onboarding",
+        "nng-heuristics",
+        "wcag22",
+        "revenuecat2026"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Goal and level",
+          "why": "Use confirmable level selection, not assumed expertise.",
+          "skill": "onboarding",
+          "decision": "Essential",
+          "microPrompt": "Design the Goal and level screen with a clear hierarchy and working interaction. Use confirmable level selection, not assumed expertise. Use onboarding. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Course map",
+          "why": "Show prerequisites, progress and learning outcomes.",
+          "skill": "information architecture",
+          "decision": "Essential",
+          "microPrompt": "Design the Course map screen with a clear hierarchy and working interaction. Show prerequisites, progress and learning outcomes. Use information architecture. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Lesson reader/player",
+          "why": "Combine readable media with captions and controls.",
+          "skill": "content delivery",
+          "decision": "Essential",
+          "microPrompt": "Design the Lesson reader/player screen with a clear hierarchy and working interaction. Combine readable media with captions and controls. Use content delivery. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Practice exercise",
+          "why": "Make learning active, with helpful feedback.",
+          "skill": "interactive state",
+          "decision": "Essential",
+          "microPrompt": "Design the Practice exercise screen with a clear hierarchy and working interaction. Make learning active, with helpful feedback. Use interactive state. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Assessment",
+          "why": "Test specific skills with clear evidence and answer rationale.",
+          "skill": "assessment design",
+          "decision": "Essential",
+          "microPrompt": "Design the Assessment screen with a clear hierarchy and working interaction. Test specific skills with clear evidence and answer rationale. Use assessment design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Review path",
+          "why": "Help revisit mistakes and master prerequisites.",
+          "skill": "spaced review UX",
+          "decision": "Useful",
+          "microPrompt": "Design the Review path screen with a clear hierarchy and working interaction. Help revisit mistakes and master prerequisites. Use spaced review UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Download and offline",
+          "why": "Handle download progress and incomplete assets.",
+          "skill": "offline design",
+          "decision": "Optional",
+          "microPrompt": "Design the Download and offline screen with a clear hierarchy and working interaction. Handle download progress and incomplete assets. Use offline design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 8,
+          "name": "Account/settings",
+          "why": "Offer language, accessibility and data controls.",
+          "skill": "settings",
+          "decision": "Essential",
+          "microPrompt": "Design the Account/settings screen with a clear hierarchy and working interaction. Offer language, accessibility and data controls. Use settings. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "mobile-commerce",
+      "title": "Mobile shopping",
+      "kind": "Commerce",
+      "job": "Find, compare, decide and buy with confidence.",
+      "lens": "Product truth and checkout recovery before upsell.",
+      "sources": [
+        "baymard-pdp",
+        "baymard-checkout",
+        "android-core"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Discover",
+          "why": "Search and browse relevant categories.",
+          "skill": "information scent",
+          "decision": "Essential",
+          "microPrompt": "Design the Discover screen with a clear hierarchy and working interaction. Search and browse relevant categories. Use information scent. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Catalog and filters",
+          "why": "Expose clear criteria with result counts.",
+          "skill": "filters",
+          "decision": "Essential",
+          "microPrompt": "Design the Catalog and filters screen with a clear hierarchy and working interaction. Expose clear criteria with result counts. Use filters. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Product detail",
+          "why": "Show real images, available sizes and shipping.",
+          "skill": "PDP design",
+          "decision": "Essential",
+          "microPrompt": "Design the Product detail screen with a clear hierarchy and working interaction. Show real images, available sizes and shipping. Use PDP design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Shopping cart",
+          "why": "Permit edits and show actual totals.",
+          "skill": "transaction state",
+          "decision": "Essential",
+          "microPrompt": "Design the shopping cart screen with a clear hierarchy and working interaction. Permit edits and show actual totals. Use transaction state. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Checkout",
+          "why": "Support address, shipping, payment and errors.",
+          "skill": "form reliability",
+          "decision": "Essential",
+          "microPrompt": "Design the Checkout screen with a clear hierarchy and working interaction. Support address, shipping, payment and errors. Use form reliability. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Order status",
+          "why": "Show receipts and fulfillment updates honestly.",
+          "skill": "status design",
+          "decision": "Essential",
+          "microPrompt": "Design the Order status screen with a clear hierarchy and working interaction. Show receipts and fulfillment updates honestly. Use status design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Returns/support",
+          "why": "Make issue resolution accessible.",
+          "skill": "support UI",
+          "decision": "Essential",
+          "microPrompt": "Design the Returns/support screen with a clear hierarchy and working interaction. Make issue resolution accessible. Use support UI. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "finance-utility",
+      "title": "Personal finance utility",
+      "kind": "Finance",
+      "job": "Let users understand transactions and act carefully.",
+      "lens": "Clarity, traceability and privacy over hype.",
+      "sources": [
+        "nng-heuristics",
+        "apple-layout",
+        "wcag22"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Permission and scope",
+          "why": "Explain data access and manual alternative.",
+          "skill": "trust onboarding",
+          "decision": "Essential",
+          "microPrompt": "Design the Permission and scope screen with a clear hierarchy and working interaction. Explain data access and manual alternative. Use trust onboarding. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Accounts or overview",
+          "why": "Clearly label freshness, currency and source.",
+          "skill": "dashboard data",
+          "decision": "Essential",
+          "microPrompt": "Design the Accounts or overview screen with a clear hierarchy and working interaction. Clearly label freshness, currency and source. Use dashboard data. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Activity ledger",
+          "why": "Search/filter real transactions and pending states.",
+          "skill": "table accessibility",
+          "decision": "Essential",
+          "microPrompt": "Design the Activity ledger screen with a clear hierarchy and working interaction. Search/filter real transactions and pending states. Use table accessibility. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Insights",
+          "why": "Explain definitions and missing data.",
+          "skill": "data explanation",
+          "decision": "Useful",
+          "microPrompt": "Design the Insights screen with a clear hierarchy and working interaction. Explain definitions and missing data. Use data explanation. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Budget or alerts",
+          "why": "Offer reversible edits and meaningful notification controls.",
+          "skill": "alert UX",
+          "decision": "Optional",
+          "microPrompt": "Design the Budget or alerts screen with a clear hierarchy and working interaction. Offer reversible edits and meaningful notification controls. Use alert UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Corrections and export",
+          "why": "Support disputes, error states and portable data.",
+          "skill": "user control",
+          "decision": "Essential",
+          "microPrompt": "Design the Corrections and export screen with a clear hierarchy and working interaction. Support disputes, error states and portable data. Use user control. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Security and deletion",
+          "why": "Surface session, privacy and account controls.",
+          "skill": "secure UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Security and deletion screen with a clear hierarchy and working interaction. Surface session, privacy and account controls. Use secure UX. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "social-community",
+      "title": "Community and social",
+      "kind": "Social",
+      "job": "Enable healthy conversation and content discovery.",
+      "lens": "Control, safety and meaningful relationships.",
+      "sources": [
+        "nng-heuristics",
+        "apple-review",
+        "android-core"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Community orientation",
+          "why": "Explain norms without blocking all exploration.",
+          "skill": "onboarding",
+          "decision": "Essential",
+          "microPrompt": "Design the Community orientation screen with a clear hierarchy and working interaction. Explain norms without blocking all exploration. Use onboarding. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Feed and discovery",
+          "why": "Show content context, controls and boundaries.",
+          "skill": "feed design",
+          "decision": "Essential",
+          "microPrompt": "Design the Feed and discovery screen with a clear hierarchy and working interaction. Show content context, controls and boundaries. Use feed design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Composer",
+          "why": "Make attachments, edit and error recovery usable.",
+          "skill": "creation UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Composer screen with a clear hierarchy and working interaction. Make attachments, edit and error recovery usable. Use creation UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Conversation",
+          "why": "Support threads and correct moderation feedback.",
+          "skill": "threaded UI",
+          "decision": "Essential",
+          "microPrompt": "Design the Conversation screen with a clear hierarchy and working interaction. Support threads and correct moderation feedback. Use threaded UI. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Notifications",
+          "why": "Prioritize opt-in value and quiet settings.",
+          "skill": "alerts",
+          "decision": "Useful",
+          "microPrompt": "Design the Notifications screen with a clear hierarchy and working interaction. Prioritize opt-in value and quiet settings. Use alerts. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Report/block/mute",
+          "why": "Make safety actions visible and confirmed.",
+          "skill": "trust/safety UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Report/block/mute screen with a clear hierarchy and working interaction. Make safety actions visible and confirmed. Use trust/safety UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Profile and privacy",
+          "why": "Explain audience and account deletion.",
+          "skill": "settings",
+          "decision": "Essential",
+          "microPrompt": "Design the Profile and privacy screen with a clear hierarchy and working interaction. Explain audience and account deletion. Use settings. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "ai-copilot",
+      "title": "AI assistant app",
+      "kind": "AI",
+      "job": "Help users solve bounded tasks with uncertainty and control.",
+      "lens": "AI must earn its place; output needs provenance.",
+      "sources": [
+        "nng-heuristics",
+        "webllm",
+        "puter",
+        "apple-review",
+        "revenuecat2026"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Capability disclosure",
+          "why": "Explain AI scope, privacy path and limitations.",
+          "skill": "AI onboarding",
+          "decision": "Essential",
+          "microPrompt": "Design the Capability disclosure screen with a clear hierarchy and working interaction. Explain AI scope, privacy path and limitations. Use AI onboarding. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Starter task",
+          "why": "Offer real examples instead of empty chat theater.",
+          "skill": "task UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Starter task screen with a clear hierarchy and working interaction. Offer real examples instead of empty chat theater. Use task UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Prompt and context",
+          "why": "Make data sources visible and editable.",
+          "skill": "context management",
+          "decision": "Essential",
+          "microPrompt": "Design the Prompt and context screen with a clear hierarchy and working interaction. Make data sources visible and editable. Use context management. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Response",
+          "why": "Display citations if actually supported and uncertainty honestly.",
+          "skill": "streaming chat UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Response screen with a clear hierarchy and working interaction. Display citations if actually supported and uncertainty honestly. Use streaming chat UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Inspect and refine",
+          "why": "Allow correction and follow-up without losing state.",
+          "skill": "conversation design",
+          "decision": "Essential",
+          "microPrompt": "Design the Inspect and refine screen with a clear hierarchy and working interaction. Allow correction and follow-up without losing state. Use conversation design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Approval before action",
+          "why": "Show preview, affected data and undo when possible.",
+          "skill": "human-in-the-loop",
+          "decision": "Essential",
+          "microPrompt": "Design the Approval before action screen with a clear hierarchy and working interaction. Show preview, affected data and undo when possible. Use human-in-the-loop. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Cost and privacy",
+          "why": "Disclose local vs cloud, account and usage costs.",
+          "skill": "AI governance",
+          "decision": "Essential",
+          "microPrompt": "Design the Cost and privacy screen with a clear hierarchy and working interaction. Disclose local vs cloud, account and usage costs. Use AI governance. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "media-creation",
+      "title": "Photo, video and creator tools",
+      "kind": "Creator",
+      "job": "Edit and export assets without surprising users.",
+      "lens": "Direct manipulation and predictable progress.",
+      "sources": [
+        "nng-heuristics",
+        "android-adaptive",
+        "apple-layout"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Projects library",
+          "why": "Organize drafts, recent work and storage.",
+          "skill": "library UI",
+          "decision": "Essential",
+          "microPrompt": "Design the Projects library screen with a clear hierarchy and working interaction. Organize drafts, recent work and storage. Use library UI. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Import and permissions",
+          "why": "Handle media permission denied and large files.",
+          "skill": "native picker UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Import and permissions screen with a clear hierarchy and working interaction. Handle media permission denied and large files. Use native picker UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Editor canvas",
+          "why": "Offer familiar tools with safe areas and access.",
+          "skill": "interactive canvas",
+          "decision": "Essential",
+          "microPrompt": "Design the Editor canvas screen with a clear hierarchy and working interaction. Offer familiar tools with safe areas and access. Use interactive canvas. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Adjustments",
+          "why": "Make changes previewable and reversible.",
+          "skill": "state history",
+          "decision": "Essential",
+          "microPrompt": "Design the Adjustments screen with a clear hierarchy and working interaction. Make changes previewable and reversible. Use state history. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Timeline/layers",
+          "why": "Only expose complexity when project needs it.",
+          "skill": "advanced controls",
+          "decision": "Useful",
+          "microPrompt": "Design the Timeline/layers screen with a clear hierarchy and working interaction. Only expose complexity when project needs it. Use advanced controls. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Export",
+          "why": "Show format, size, quality, processing and errors.",
+          "skill": "progress feedback",
+          "decision": "Essential",
+          "microPrompt": "Design the Export screen with a clear hierarchy and working interaction. Show format, size, quality, processing and errors. Use progress feedback. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Recovery",
+          "why": "Autosave/version history and low-storage handling.",
+          "skill": "resilience",
+          "decision": "Essential",
+          "microPrompt": "Design the Recovery screen with a clear hierarchy and working interaction. Autosave/version history and low-storage handling. Use resilience. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "travel-booking",
+      "title": "Travel and reservations",
+      "kind": "Travel",
+      "job": "Move users from exploration to confirmed booking.",
+      "lens": "Timezones, dates, rules and totals must be unambiguous.",
+      "sources": [
+        "nng-heuristics",
+        "apple-layout",
+        "wcag22"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Search intent",
+          "why": "Capture where, when, party and constraints.",
+          "skill": "structured search",
+          "decision": "Essential",
+          "microPrompt": "Design the Search intent screen with a clear hierarchy and working interaction. Capture where, when, party and constraints. Use structured search. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Results",
+          "why": "Display grounded availability and filters.",
+          "skill": "comparison UI",
+          "decision": "Essential",
+          "microPrompt": "Design the Results screen with a clear hierarchy and working interaction. Display grounded availability and filters. Use comparison UI. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Detail and policies",
+          "why": "Show terms and current price source.",
+          "skill": "data disclosure",
+          "decision": "Essential",
+          "microPrompt": "Design the Detail and policies screen with a clear hierarchy and working interaction. Show terms and current price source. Use data disclosure. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Traveler info",
+          "why": "Validate accessible forms and saved data consent.",
+          "skill": "accessible forms",
+          "decision": "Essential",
+          "microPrompt": "Design the Traveler info screen with a clear hierarchy and working interaction. Validate accessible forms and saved data consent. Use forms. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Review and payment",
+          "why": "Expose dates, fees, cancellation and time zone.",
+          "skill": "transaction UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Review and payment screen with a clear hierarchy and working interaction. Expose dates, fees, cancellation and time zone. Use transaction UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Confirmation",
+          "why": "Provide confirmation ID only after real success.",
+          "skill": "transaction state",
+          "decision": "Essential",
+          "microPrompt": "Design the Confirmation screen with a clear hierarchy and working interaction. Provide confirmation ID only after real success. Use transaction state. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Changes and support",
+          "why": "Provide support and modification paths.",
+          "skill": "recovery UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Changes and support screen with a clear hierarchy and working interaction. Provide support and modification paths. Use recovery UX. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "reading-library",
+      "title": "Ebooks and reading",
+      "kind": "Content",
+      "job": "Discover, read and resume written works.",
+      "lens": "Readable by default, progress portable.",
+      "sources": [
+        "apple-layout",
+        "wcag22",
+        "nng-heuristics"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Library",
+          "why": "Show owned, sampled and recent books accurately.",
+          "skill": "collection UI",
+          "decision": "Essential",
+          "microPrompt": "Design the Library screen with a clear hierarchy and working interaction. Show owned, sampled and recent books accurately. Use collection UI. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Discovery",
+          "why": "Separate browse, search and recommendations.",
+          "skill": "content taxonomy",
+          "decision": "Useful",
+          "microPrompt": "Design the Discovery screen with a clear hierarchy and working interaction. Separate browse, search and recommendations. Use content taxonomy. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Book details",
+          "why": "Explain length, access, series and pricing honestly.",
+          "skill": "book metadata",
+          "decision": "Essential",
+          "microPrompt": "Design the Book details screen with a clear hierarchy and working interaction. Explain length, access, series and pricing honestly. Use book metadata. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Reader",
+          "why": "Let users tune typography, spacing, theme and assistive tech.",
+          "skill": "reading UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Reader screen with a clear hierarchy and working interaction. Let users tune typography, spacing, theme and assistive tech. Use reading UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Bookmarks and progress",
+          "why": "Keep position reliable across devices when sync exists.",
+          "skill": "sync feedback",
+          "decision": "Essential",
+          "microPrompt": "Design the Bookmarks and progress screen with a clear hierarchy and working interaction. Keep position reliable across devices when sync exists. Use sync feedback. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Offline downloads",
+          "why": "Handle storage, license and failed downloads.",
+          "skill": "offline media",
+          "decision": "Optional",
+          "microPrompt": "Design the Offline downloads screen with a clear hierarchy and working interaction. Handle storage, license and failed downloads. Use offline media. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Purchases/settings",
+          "why": "Clarify access, restore and deletion.",
+          "skill": "commerce compliance",
+          "decision": "Essential",
+          "microPrompt": "Design the Purchases/settings screen with a clear hierarchy and working interaction. Clarify access, restore and deletion. Use commerce compliance. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "enterprise-operations",
+      "title": "Business operations",
+      "kind": "B2B",
+      "job": "Complete complex work reliably with clear records.",
+      "lens": "Dense screens need hierarchy and auditability.",
+      "sources": [
+        "android-adaptive",
+        "apple-layout",
+        "nng-heuristics"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Workspace access",
+          "why": "Support roles and permissions clearly.",
+          "skill": "permission design",
+          "decision": "Essential",
+          "microPrompt": "Design the Workspace access screen with a clear hierarchy and working interaction. Support roles and permissions clearly. Use permission design. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Dashboard",
+          "why": "Surface actionable work, not vanity metrics.",
+          "skill": "operational hierarchy",
+          "decision": "Essential",
+          "microPrompt": "Design the Dashboard screen with a clear hierarchy and working interaction. Surface actionable work, not vanity metrics. Use operational hierarchy. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Table and filters",
+          "why": "Support search, sort, pagination and bulk actions.",
+          "skill": "data grids",
+          "decision": "Essential",
+          "microPrompt": "Design the Table and filters screen with a clear hierarchy and working interaction. Support search, sort, pagination and bulk actions. Use data grids. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Detail editor",
+          "why": "Show revision history, validation and save status.",
+          "skill": "complex forms",
+          "decision": "Essential",
+          "microPrompt": "Design the Detail editor screen with a clear hierarchy and working interaction. Show revision history, validation and save status. Use complex forms. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Approval workflow",
+          "why": "Label pending, approved, rejected and escalation.",
+          "skill": "status feedback",
+          "decision": "Useful",
+          "microPrompt": "Design the Approval workflow screen with a clear hierarchy and working interaction. Label pending, approved, rejected and escalation. Use status feedback. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Audit trail",
+          "why": "Expose accurate provenance and timestamps.",
+          "skill": "history UI",
+          "decision": "Useful",
+          "microPrompt": "Design the Audit trail screen with a clear hierarchy and working interaction. Expose accurate provenance and timestamps. Use history UI. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Offline and errors",
+          "why": "Do not silently drop changes or duplicate actions.",
+          "skill": "reliability",
+          "decision": "Essential",
+          "microPrompt": "Design the Offline and errors screen with a clear hierarchy and working interaction. Do not silently drop changes or duplicate actions. Use reliability. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "personal-journal",
+      "title": "Private journal",
+      "kind": "Lifestyle",
+      "job": "Make reflection easy while prioritizing privacy.",
+      "lens": "Calm interface, no growth pressure.",
+      "sources": [
+        "nng-heuristics",
+        "apple-onboarding",
+        "wcag22"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Privacy introduction",
+          "why": "Explain storage and sync truthfully.",
+          "skill": "onboarding copy",
+          "decision": "Essential",
+          "microPrompt": "Design the Privacy introduction screen with a clear hierarchy and working interaction. Explain storage and sync truthfully. Use onboarding copy. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Today entry",
+          "why": "Make writing possible in one action.",
+          "skill": "editor UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Today entry screen with a clear hierarchy and working interaction. Make writing possible in one action. Use editor UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Optional prompts",
+          "why": "Offer skip and self-directed input.",
+          "skill": "content prompts",
+          "decision": "Optional",
+          "microPrompt": "Design the Optional prompts screen with a clear hierarchy and working interaction. Offer skip and self-directed input. Use content prompts. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Past entries",
+          "why": "Private searchable timeline and date navigation.",
+          "skill": "timeline UX",
+          "decision": "Essential",
+          "microPrompt": "Design the Past entries screen with a clear hierarchy and working interaction. Private searchable timeline and date navigation. Use timeline UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Mood or tags",
+          "why": "Offer optional labels without interpreting them as diagnoses.",
+          "skill": "tag input",
+          "decision": "Optional",
+          "microPrompt": "Design the Mood or tags screen with a clear hierarchy and working interaction. Offer optional labels without interpreting them as diagnoses. Use tag input. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Export or lock",
+          "why": "Provide portable data and available device protections.",
+          "skill": "privacy settings",
+          "decision": "Essential",
+          "microPrompt": "Design the Export or lock screen with a clear hierarchy and working interaction. Provide portable data and available device protections. Use privacy settings. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Deletion",
+          "why": "Support clear confirmation and user control.",
+          "skill": "account control",
+          "decision": "Essential",
+          "microPrompt": "Design the Deletion screen with a clear hierarchy and working interaction. Support clear confirmation and user control. Use account control. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    },
+    {
+      "id": "streaming-content",
+      "title": "Streaming and media subscription",
+      "kind": "Entertainment",
+      "job": "Find, consume and manage media access.",
+      "lens": "Discovery, playback and continuity.",
+      "sources": [
+        "apple-tabs",
+        "android-core",
+        "sensor-2026",
+        "revenuecat2026"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "name": "Browse and search",
+          "why": "Surface genres, continue-listening/watching and explicit filters.",
+          "skill": "content IA",
+          "decision": "Essential",
+          "microPrompt": "Design the Browse and search screen with a clear hierarchy and working interaction. Surface genres, continue-listening/watching and explicit filters. Use content IA. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 2,
+          "name": "Title details",
+          "why": "Show accurate availability, maturity and language.",
+          "skill": "media metadata",
+          "decision": "Essential",
+          "microPrompt": "Design the Title details screen with a clear hierarchy and working interaction. Show accurate availability, maturity and language. Use media metadata. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 3,
+          "name": "Playback",
+          "why": "Make seek, captions, tracks and cast controllable.",
+          "skill": "media accessibility",
+          "decision": "Essential",
+          "microPrompt": "Design the Playback screen with a clear hierarchy and working interaction. Make seek, captions, tracks and cast controllable. Use media accessibility. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 4,
+          "name": "Downloads",
+          "why": "Explain offline rights, status and expiration.",
+          "skill": "offline state",
+          "decision": "Optional",
+          "microPrompt": "Design the Downloads screen with a clear hierarchy and working interaction. Explain offline rights, status and expiration. Use offline state. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 5,
+          "name": "Recommendations",
+          "why": "Differentiate personalization from featured placement.",
+          "skill": "transparency",
+          "decision": "Useful",
+          "microPrompt": "Design the Recommendations screen with a clear hierarchy and working interaction. Differentiate personalization from featured placement. Use transparency. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 6,
+          "name": "Subscription screen",
+          "why": "Show exact billing and restore paths.",
+          "skill": "entitlements UX",
+          "decision": "When paid",
+          "microPrompt": "Design the Subscription screen screen with a clear hierarchy and working interaction. Show exact billing and restore paths. Use entitlements UX. Provide states, accessibility and a smaller-screen variant."
+        },
+        {
+          "order": 7,
+          "name": "Account and safety",
+          "why": "Offer profiles, history, privacy and safeguards.",
+          "skill": "settings",
+          "decision": "Essential",
+          "microPrompt": "Design the Account and safety screen with a clear hierarchy and working interaction. Offer profiles, history, privacy and safeguards. Use settings. Provide states, accessibility and a smaller-screen variant."
+        }
+      ]
+    }
+  ],
+  "craft": [
+    {
+      "id": "motion",
+      "title": "Motion and state animation",
+      "track": "website/app",
+      "when": "Animate feedback and orientation, never hide content or force scroll.",
+      "skills": "Motion; CSS transitions; reduced-motion preferences",
+      "how": "Build meaningful entry, action feedback and reversal. Keep transforms modest, disable nonessential parallax for reduced-motion.",
+      "source": "motion-a11y"
+    },
+    {
+      "id": "3d",
+      "title": "3D and spatial previews",
+      "track": "website/app",
+      "when": "Use 3D only to inspect a physical, spatial or creative object.",
+      "skills": "Three.js; React Three Fiber; model-viewer",
+      "how": "Add a real turntable or orbit-controls model only when geometry explains the product. Provide keyboard support and a static image alternative.",
+      "source": "model-viewer"
+    },
+    {
+      "id": "ai-cloud",
+      "title": "Hosted frontend AI",
+      "track": "website/app",
+      "when": "Puter.js is user-account cloud AI, not locally executed models.",
+      "skills": "Puter.js; disclosure; privacy consent; safe prompt construction",
+      "how": "Add an optional, clearly labeled assistant for a specific task. Require user consent, disclose account/usage, ground responses and gate consequential actions.",
+      "source": "puter"
+    },
+    {
+      "id": "ai-local",
+      "title": "In-browser on-device AI",
+      "track": "website/app",
+      "when": "Local inference can reduce data transfer but depends on device and model weight.",
+      "skills": "WebLLM; Transformers.js; WebGPU detection; fallback",
+      "how": "Make a small, consented local classification or drafting task. Test WebGPU support, downloads, memory failure and a no-AI fallback.",
+      "source": "webllm"
+    },
+    {
+      "id": "ai-service",
+      "title": "Server-mediated AI",
+      "track": "website/app",
+      "when": "Use an authenticated backend for shared data, secrets and centrally paid API calls.",
+      "skills": "API gateway; auth; rate limiting; data retention",
+      "how": "Build minimal server endpoint with secret vault, abuse controls and safe logging. Never expose third-party secret keys in frontend code.",
+      "source": "nng-heuristics"
+    },
+    {
+      "id": "accessibility",
+      "title": "Accessibility and localization",
+      "track": "website/app",
+      "when": "Assistive technology, RTL, enlargement and reduced motion are core states.",
+      "skills": "WCAG 2.2; VoiceOver; TalkBack; RTL layout",
+      "how": "Test keyboard, reading order, voice labels, touch targets, zoom, translated expansion and right-to-left mirroring with real users/devices.",
+      "source": "wcag22"
+    },
+    {
+      "id": "performance",
+      "title": "Performance and battery",
+      "track": "website/app",
+      "when": "Prioritize meaningful content and smooth response over spectacle.",
+      "skills": "Core Web Vitals; profiling; lazy loading",
+      "how": "Measure LCP, INP, CLS for web and real app startup/frame smoothness; defer heavy visuals; provide fallbacks.",
+      "source": "web-vitals"
+    },
+    {
+      "id": "seo",
+      "title": "Discoverability and content",
+      "track": "website",
+      "when": "Use crawlable meaning, titles, proper metadata and real content.",
+      "skills": "Search Central; semantic HTML; schema only where valid",
+      "how": "Write specific metadata, heading hierarchy and readable copy; verify canonical URLs and internal links; avoid generated keyword stuffing.",
+      "source": "google-search"
+    },
+    {
+      "id": "research",
+      "title": "Research-to-wireframe",
+      "track": "website/app",
+      "when": "Use real tasks and evidence; choose sections from an explicit goal.",
+      "skills": "User interviews; journey maps; heuristic review",
+      "how": "Draft three contrasting layouts, validate on representative tasks and remove unnecessary sections. Separate observed findings from hypotheses.",
+      "source": "nng-testing"
+    },
+    {
+      "id": "state-machine",
+      "title": "Errors, offline and recovery",
+      "track": "website/app",
+      "when": "A polished default screen does not prove real UX quality.",
+      "skills": "State modeling; undo; optimistic UI; network testing",
+      "how": "Define empty, loading, slow, offline, permission denied, error, retry, conflict and success for each critical action.",
+      "source": "nng-heuristics"
+    },
+    {
+      "id": "native-ios",
+      "title": "iOS and App Store",
+      "track": "app",
+      "when": "Platform-aware navigation, safe areas, purchase rules and accessible presentation.",
+      "skills": "Apple HIG; SwiftUI/React Native; StoreKit review",
+      "how": "Honor safe areas and tab semantics. Check App Review rules and IAP eligibility. Verify restore, account deletion, permissions and real-device VoiceOver.",
+      "source": "apple-review"
+    },
+    {
+      "id": "native-android",
+      "title": "Android and Google Play",
+      "track": "app",
+      "when": "Adaptive layouts and platform-appropriate billing, back behavior and accessibility.",
+      "skills": "Material 3; Compose/React Native; Play Billing",
+      "how": "Check Android window classes, back navigation, TalkBack, large screens, Play policies and functional purchase/restore/account-deletion flows.",
+      "source": "android-core"
+    },
+    {
+      "id": "monetization",
+      "title": "Paywalls and honest billing",
+      "track": "app",
+      "when": "Present price, term, trials, restore and cancellation plainly.",
+      "skills": "Entitlements; StoreKit; Play Billing; experiments",
+      "how": "Place paywall after demonstrated value where appropriate; do not claim any arrangement maximizes revenue without experiments.",
+      "source": "play-payments"
+    },
+    {
+      "id": "design-system",
+      "title": "Visual grammar and components",
+      "track": "website/app",
+      "when": "Tokens, type, spacing, states and repeatable foundations support coherence.",
+      "skills": "CSS variables; components; typography",
+      "how": "Define 3 typographic roles, spacing scale, color semantics and accessible component states; present 3 distinct art directions.",
+      "source": "tuch"
+    },
+    {
+      "id": "subdomains",
+      "title": "Parent sites and subdomains",
+      "track": "website",
+      "when": "Connect product site and parent without duplicated, contradictory identity.",
+      "skills": "Information architecture; canonical URLs; navigation",
+      "how": "Design parent company index and focused subdomain landing; expose contextual crosslinks, consistent support/privacy and clear product naming.",
+      "source": "google-search"
+    },
+    {
+      "id": "evaluation",
+      "title": "Preview and device test lab",
+      "track": "website/app",
+      "when": "Previews are illustrative until tested in a real rendering environment.",
+      "skills": "Browser automation; screenshots; manual QA",
+      "how": "Test desktop/tablet/mobile and native iOS/Android where applicable, keyboard, focus, errors, reduced motion, translations, accessibility and performance.",
+      "source": "nng-testing"
+    }
+  ],
+  "openSource": [
+    {
+      "name": "UI Promptly",
+      "url": "https://github.com/dotHP-harshu/ui-promptly",
+      "track": "website",
+      "value": "Prompt and rendered-style browsing",
+      "license": "Check upstream"
+    },
+    {
+      "name": "Superdesign Prompts",
+      "url": "https://github.com/superdesigndev/superdesign-prompts",
+      "track": "website",
+      "value": "Prompt and design-spec gallery",
+      "license": "MIT code; CC0 prompts"
+    },
+    {
+      "name": "Motion Primitives",
+      "url": "https://github.com/ibelick/motion-primitives",
+      "track": "motion",
+      "value": "Interactive motion examples",
+      "license": "Check upstream"
+    },
+    {
+      "name": "Uiverse Galaxy",
+      "url": "https://github.com/uiverse-io/galaxy",
+      "track": "website",
+      "value": "Community UI experiments",
+      "license": "Check item rights"
+    },
+    {
+      "name": "Magic UI",
+      "url": "https://github.com/magicuidesign/magicui",
+      "track": "motion",
+      "value": "Component and effect studies",
+      "license": "Check upstream"
+    },
+    {
+      "name": "Origin UI",
+      "url": "https://github.com/shadcn/originui",
+      "track": "website",
+      "value": "Application components",
+      "license": "Check upstream"
+    },
+    {
+      "name": "React Native Reusables",
+      "url": "https://github.com/founded-labs/react-native-reusables",
+      "track": "app",
+      "value": "React Native primitives",
+      "license": "Check upstream"
+    },
+    {
+      "name": "gluestack-ui",
+      "url": "https://github.com/gluestack/gluestack-ui",
+      "track": "app",
+      "value": "Native UI framework",
+      "license": "Check upstream"
+    },
+    {
+      "name": "shadcn/ui",
+      "url": "https://github.com/shadcn-ui/ui",
+      "track": "website",
+      "value": "Composable UI patterns",
+      "license": "Check upstream"
+    },
+    {
+      "name": "Radix UI",
+      "url": "https://github.com/radix-ui/primitives",
+      "track": "website",
+      "value": "Accessible unstyled web primitives",
+      "license": "Check upstream"
+    },
+    {
+      "name": "React Aria",
+      "url": "https://github.com/adobe/react-spectrum",
+      "track": "website",
+      "value": "Accessibility hooks and components",
+      "license": "Check package"
+    },
+    {
+      "name": "Material UI",
+      "url": "https://github.com/mui/material-ui",
+      "track": "website",
+      "value": "React component system",
+      "license": "Check package"
+    },
+    {
+      "name": "Mantine",
+      "url": "https://github.com/mantinedev/mantine",
+      "track": "website",
+      "value": "React UI components",
+      "license": "Check upstream"
+    },
+    {
+      "name": "Tamagui",
+      "url": "https://github.com/tamagui/tamagui",
+      "track": "app",
+      "value": "Web and native design system",
+      "license": "Check upstream"
+    },
+    {
+      "name": "NativeWind",
+      "url": "https://github.com/nativewind/nativewind",
+      "track": "app",
+      "value": "Styling for React Native",
+      "license": "Check upstream"
+    },
+    {
+      "name": "Three.js",
+      "url": "https://github.com/mrdoob/three.js",
+      "track": "3d",
+      "value": "WebGL 3D graphics",
+      "license": "Check upstream"
+    },
+    {
+      "name": "React Three Fiber",
+      "url": "https://github.com/pmndrs/react-three-fiber",
+      "track": "3d",
+      "value": "React 3D renderer",
+      "license": "Check upstream"
+    },
+    {
+      "name": "drei",
+      "url": "https://github.com/pmndrs/drei",
+      "track": "3d",
+      "value": "R3F 3D helpers",
+      "license": "Check upstream"
+    },
+    {
+      "name": "model-viewer",
+      "url": "https://github.com/google/model-viewer",
+      "track": "3d",
+      "value": "Interactive product 3D and AR",
+      "license": "Check upstream"
+    },
+    {
+      "name": "Motion",
+      "url": "https://github.com/motiondivision/motion",
+      "track": "motion",
+      "value": "Animation library",
+      "license": "Check upstream"
+    },
+    {
+      "name": "GSAP",
+      "url": "https://github.com/greensock/GSAP",
+      "track": "motion",
+      "value": "Timeline animation",
+      "license": "Verify commercial license"
+    },
+    {
+      "name": "Lottie Web",
+      "url": "https://github.com/airbnb/lottie-web",
+      "track": "motion",
+      "value": "Vector motion playback",
+      "license": "Check asset and renderer rights"
+    },
+    {
+      "name": "WebLLM",
+      "url": "https://github.com/mlc-ai/web-llm",
+      "track": "ai",
+      "value": "On-device browser LLMs",
+      "license": "Check models and package"
+    },
+    {
+      "name": "Transformers.js",
+      "url": "https://github.com/huggingface/transformers.js",
+      "track": "ai",
+      "value": "Browser/local model inference",
+      "license": "Check model and package"
+    },
+    {
+      "name": "Puter.js",
+      "url": "https://github.com/HeyPuter/puter.js",
+      "track": "ai",
+      "value": "Frontend access to hosted AI",
+      "license": "User-pays model; check SDK rights"
+    },
+    {
+      "name": "Tailwind CSS",
+      "url": "https://github.com/tailwindlabs/tailwindcss",
+      "track": "website",
+      "value": "Utility-first responsive styling",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Headless UI",
+      "url": "https://github.com/tailwindlabs/headlessui",
+      "track": "website",
+      "value": "Accessible unstyled React/Vue primitives",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "daisyUI",
+      "url": "https://github.com/saadeghi/daisyui",
+      "track": "website",
+      "value": "Themeable Tailwind component layer",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "HeroUI",
+      "url": "https://github.com/heroui-inc/heroui",
+      "track": "website",
+      "value": "Accessible React component system",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Chakra UI",
+      "url": "https://github.com/chakra-ui/chakra-ui",
+      "track": "website",
+      "value": "Accessible React components and tokens",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Ark UI",
+      "url": "https://github.com/chakra-ui/ark",
+      "track": "website",
+      "value": "Headless accessible component patterns",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Shoelace",
+      "url": "https://github.com/shoelace-style/shoelace",
+      "track": "website",
+      "value": "Framework-neutral Web Components",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Fluent UI",
+      "url": "https://github.com/microsoft/fluentui",
+      "track": "website",
+      "value": "Enterprise patterns and components",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Carbon Design System",
+      "url": "https://github.com/carbon-design-system/carbon",
+      "track": "website",
+      "value": "Data-dense enterprise UI patterns",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Ant Design",
+      "url": "https://github.com/ant-design/ant-design",
+      "track": "website",
+      "value": "Form and admin interface patterns",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "PrimeReact",
+      "url": "https://github.com/primefaces/primereact",
+      "track": "website",
+      "value": "Advanced tables and UI elements",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Storybook",
+      "url": "https://github.com/storybookjs/storybook",
+      "track": "tools",
+      "value": "Isolated component visual states and documentation",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Playwright",
+      "url": "https://github.com/microsoft/playwright",
+      "track": "tools",
+      "value": "Browser-based cross-device testing",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "axe-core",
+      "url": "https://github.com/dequelabs/axe-core",
+      "track": "tools",
+      "value": "Automated accessibility checks, not certification",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Lighthouse",
+      "url": "https://github.com/GoogleChrome/lighthouse",
+      "track": "tools",
+      "value": "Website auditing, performance guidance",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "React Spring",
+      "url": "https://github.com/pmndrs/react-spring",
+      "track": "motion",
+      "value": "Spring-based gesture and interaction animation",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Anime.js",
+      "url": "https://github.com/juliangarnier/anime",
+      "track": "motion",
+      "value": "Timeline-based animation",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "AutoAnimate",
+      "url": "https://github.com/formkit/auto-animate",
+      "track": "motion",
+      "value": "Small DOM layout transitions",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Lenis",
+      "url": "https://github.com/darkroomengineering/lenis",
+      "track": "motion",
+      "value": "Optional smoother scrolling; consider native UX",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Theatre.js",
+      "url": "https://github.com/theatre-js/theatre",
+      "track": "motion",
+      "value": "Sequenced 3D and motion authoring",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "PixiJS",
+      "url": "https://github.com/pixijs/pixijs",
+      "track": "motion",
+      "value": "Hardware accelerated canvas and 2D scenes",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "OGL",
+      "url": "https://github.com/oframe/ogl",
+      "track": "3d",
+      "value": "Lightweight WebGL rendering",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Babylon.js",
+      "url": "https://github.com/BabylonJS/Babylon.js",
+      "track": "3d",
+      "value": "3D engine with input and rendering",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "PlayCanvas Engine",
+      "url": "https://github.com/playcanvas/engine",
+      "track": "3d",
+      "value": "Realtime WebGL/WebGPU engine",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Threlte",
+      "url": "https://github.com/threlte/threlte",
+      "track": "3d",
+      "value": "Svelte-powered declarative 3D",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "TresJS",
+      "url": "https://github.com/Tresjs/tres",
+      "track": "3d",
+      "value": "Vue 3D renderer",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "React Native Paper",
+      "url": "https://github.com/callstack/react-native-paper",
+      "track": "app",
+      "value": "Material UI component design for RN",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "React Native Reanimated",
+      "url": "https://github.com/software-mansion/react-native-reanimated",
+      "track": "motion",
+      "value": "Native-thread animated interactions",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "React Native Gesture Handler",
+      "url": "https://github.com/software-mansion/react-native-gesture-handler",
+      "track": "app",
+      "value": "Native gesture recognition",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "React Native Skia",
+      "url": "https://github.com/Shopify/react-native-skia",
+      "track": "app",
+      "value": "Custom 2D mobile graphics and effects",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Expo Router",
+      "url": "https://github.com/expo/router",
+      "track": "app",
+      "value": "File-based Expo / React Native navigation (verify maintained path)",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Flutter",
+      "url": "https://github.com/flutter/flutter",
+      "track": "app",
+      "value": "Cross-platform native-rendered UI toolkit",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Flutter Samples",
+      "url": "https://github.com/flutter/samples",
+      "track": "app",
+      "value": "Flutter application UI example code",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "TFLite / MediaPipe",
+      "url": "https://github.com/google-ai-edge/mediapipe",
+      "track": "ai",
+      "value": "On-device camera and audio ML pipelines",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "ONNX Runtime",
+      "url": "https://github.com/microsoft/onnxruntime",
+      "track": "ai",
+      "value": "In-browser and mobile model inference",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "TensorFlow.js",
+      "url": "https://github.com/tensorflow/tfjs",
+      "track": "ai",
+      "value": "Browser-local ML in JavaScript",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "ComfyUI",
+      "url": "https://github.com/comfyanonymous/ComfyUI",
+      "track": "ai",
+      "value": "Visual pipeline examples for generative workflows",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    },
+    {
+      "name": "Rive Runtimes",
+      "url": "https://github.com/rive-app/rive-runtime",
+      "track": "motion",
+      "value": "Interactive vector animation runtimes; check runtime licensing",
+      "license": "Verify exact upstream package, assets and commercial terms"
+    }
+  ],
+  "topEarners": [
+    {
+      "name": "TikTok",
+      "rank": 1,
+      "year": 2025,
+      "measure": "Global non-game app in-app purchase revenue (Sensor Tower)",
+      "pattern": "Personalized short-video discovery and creator engagement are visible product characteristics; ranking does not establish that those UI choices caused its revenue.",
+      "source": "sensor-2026"
+    },
+    {
+      "name": "Google One",
+      "rank": 2,
+      "year": 2025,
+      "measure": "Global non-game app in-app purchase revenue (Sensor Tower)",
+      "pattern": "Subscription value, account services and recurring use can be examined as a product model; do not infer any particular flow is optimum.",
+      "source": "sensor-2026"
+    },
+    {
+      "name": "ChatGPT",
+      "rank": 3,
+      "year": 2025,
+      "measure": "Global non-game app in-app purchase revenue (Sensor Tower)",
+      "pattern": "A task-focused conversational entry and progressively revealed capabilities are observable patterns; ranking cannot prove their impact.",
+      "source": "sensor-2026"
+    }
+  ],
+  "marketSignals": [
+    {
+      "id": "paywall",
+      "figure": "10.7% vs 2.1%",
+      "label": "Day 35 paid conversion in hard-paywall vs freemium groups",
+      "implication": "Explain pricing early, test purchase intent, and choose a paywall model based on product use and growth channels.",
+      "caution": "Observational groups may differ; not a recommendation to always hard-gate onboarding.",
+      "source": "revenuecat2026"
+    },
+    {
+      "id": "first-session",
+      "figure": "55%",
+      "label": "Share of three-day trial cancellations occurring on Day 0",
+      "implication": "Design a useful first session and transparent trial/cancel flow before layering on engagement tricks.",
+      "caution": "This is among cancellations of three-day trials, not 55% of all trials.",
+      "source": "revenuecat2026"
+    },
+    {
+      "id": "ai-retention",
+      "figure": "+41% / +30%",
+      "label": "AI apps' revenue per payer uplift / faster churn",
+      "implication": "Place AI after a measurable use case and audit recurring value, reliability, latency and cost.",
+      "caution": "RevenueCat sample comparison, not proof that AI directly causes either effect.",
+      "source": "revenuecat2026"
+    },
+    {
+      "id": "android-billing",
+      "figure": "31% vs 14%",
+      "label": "Google Play versus App Store cancellations attributed to billing failures",
+      "implication": "Treat grace period, restore, retry and payment-method recovery as first-class Android UX.",
+      "caution": "Exact failure mix varies by app and plan; verify current billing APIs.",
+      "source": "revenuecat2026"
+    },
+    {
+      "id": "trials",
+      "figure": "42.5% vs 25.5%",
+      "label": "Median trial-to-paid conversion for 17–32-day vs <=4-day trials",
+      "implication": "Select trial length from time-to-value, category and actual product experiments, not the shortest possible timer.",
+      "caution": "Observational groups; longer trials can bias cohorts and outcomes.",
+      "source": "revenuecat2026"
+    },
+    {
+      "id": "conversion-split",
+      "figure": "2.6% vs 0.9%",
+      "label": "Global median D35 download-to-paid, iOS versus Android (report segment)",
+      "implication": "Design platform-specific growth and billing recovery flows. Compare cohorts on the same funnel definitions.",
+      "caution": "Report contains multiple denominators/segments; verify filters and definitions before using in decisions.",
+      "source": "revenuecat2026"
+    },
+    {
+      "id": "yearly-retention",
+      "figure": "20–40%",
+      "label": "Reported median year-one retention range for yearly subscription plans",
+      "implication": "Build renewal confidence, ongoing user value and understandable subscription management.",
+      "caution": "Category-dependent; not a promise that yearly plans are always preferable.",
+      "source": "revenuecat2026"
+    },
+    {
+      "id": "revenue",
+      "figure": "$167B",
+      "label": "2025 worldwide total mobile IAP across apps and games",
+      "implication": "Mobile is a large market, but distribution and retention matter much more than copying the UI of a top-grosser.",
+      "caution": "Sensor Tower estimates, global apps and games together; not profit.",
+      "source": "sensor-2026"
+    }
+  ]
+}

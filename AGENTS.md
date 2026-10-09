@@ -22,3 +22,29 @@ Add matching machine catalog entry and markdown file, then update section index.
 ## Design reference page
 
 Maintain eight distinct original mini-studies and eight original standalone prompts at `prompts/references/`, mirrored in `docs/prompts/references/`. Catalogs: `catalog/open-source-references.json`, `docs/data/resources.json`. Frontend: `docs/resources.html`, `docs/resources.css`, `docs/resources.js`. Do not import source code, screenshots, visual identities or assets from upstream projects by default; respect license unknown/README-only cases. Keep website, app and motion categories distinct.
+
+## New guided academy (2026)
+
+- Only **Website** and **App** are primary tracks. Design disciplines
+  including 3D, AI, animation, business research and upstream libraries
+  are secondary tools inside these tracks.
+- Maintain `docs/data/academy.json`, `docs/academy.html`,
+  `docs/academy.js`, `docs/academy.css`,
+  `research/design-academy-2026.md`, and `tests/test_academy.py`.
+  Blueprint steps require placement reasons, recommended skills,
+  inclusion criteria and actionable individual prompts.
+- Include separate native iOS/App Store and Android/Play Store design
+  and release considerations. Never imply simulated HTML screens are real
+  device or store tests.
+- Connect research-backed guidelines to source URLs with the finding
+  *and* its limitations. Revenue benchmarks and top-grossing rankings
+  must not imply causation, expected sales, or guaranteed retention.
+- Distinguish hosted frontend Puter.js from on-device WebLLM and
+  Transformers.js. Never claim hosted AI executes locally.
+- The static academy is dependency-free and uses original specimen code.
+  New assets may be MIT only if authored or legally licensed. Do not
+  mirror restricted third-party UI templates or textures.
+- Every new UI control must have a meaningful action. Test JS parsing,
+  JSON schema/content invariants and relative links before shipping.
+- Website browser screenshots and actual iOS/Android device QA must be
+  reported as pending unless performed and evidenced.
