@@ -67,7 +67,7 @@ body.motion-off *,body.motion-off *::before,body.motion-off *::after{transition:
 .style-row{background:#e4e7db}.style-row:hover{background:#d5e0cc}.skill-row{background:#e8dfd7}.skill-row:hover{background:#d8c7ba}
 
 .reference-row{background:#dbe8da}.reference-row:hover{background:#c9dccc}
-@media(min-width:741px) and (max-width:1040px){.main-nav{display:none}.mobile-menu{display:flex;align-items:center;gap:7px;min-height:42px;padding:8px 10px;border:1px solid var(--ink);background:transparent;margin-left:auto;font-size:.72rem;font-weight:800}.mobile-navigation:not([hidden]){display:flex;flex-direction:column;gap:0;padding-top:6px;padding-bottom:12px;background:var(--paper);border-bottom:1px solid var(--ink);position:relative;z-index:8}.mobile-navigation a{padding:9px 3px;font-weight:800;font-size:.9rem;text-decoration:none}}
+@media(min-width:741px) and (max-width:1250px){.main-nav{display:none}.mobile-menu{display:flex;align-items:center;gap:7px;min-height:42px;padding:8px 10px;border:1px solid var(--ink);background:transparent;margin-left:auto;font-size:.72rem;font-weight:800}.mobile-navigation:not([hidden]){display:flex;flex-direction:column;gap:0;padding-top:6px;padding-bottom:12px;background:var(--paper);border-bottom:1px solid var(--ink);position:relative;z-index:8}.mobile-navigation a{padding:9px 3px;font-weight:800;font-size:.9rem;text-decoration:none}}
 
 
 /* Web/App are the primary practices. Other galleries are discoverable tools. */
