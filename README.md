@@ -1,3 +1,11 @@
+## Signature mobile collection and verified source handoff (October 9, 2026)
+
+- The [Mobile Studio](docs/mobile-studio.html) now includes **16 intentionally distinct original mobile interface compositions**, each connected to a relevant interactive flow in the 32-pattern, 20-journey catalog.
+- The [Expo Native Kit](native-kit/README.md) now includes a **Showcase tab** with 16 source-available React Native implementations in `src/SignatureScreen.tsx`, not just HTML phone mockups.
+- The website now offers same-origin **copyable Expo code** for the signature screens, FlowScreen, shared components and design tokens. The website's copies are verified against the native source by a regression test.
+- [Run browser smoke testing](scripts/qa_mobile_studio.py) across four viewport widths, all 32 flows, sixteen design cards, edit/copy workflows, and source fetching. This requires Playwright locally; it has not been run or passed on a real browser in this environment.
+- See [QUALITY-GATES.md](QUALITY-GATES.md) for acceptance criteria and remaining native/device validation.
+
 ## Mobile Studio and Expo Native Kit (October 9, 2026)
 
 - [Try Mobile Studio](docs/mobile-studio.html): interactive browser workbench across 32 mobile flow IDs and 20 guided journeys, light/dark, Android/iOS-inspired preview frames, success/error states, research guidance and copyable prompts. A phone preview is present even before JavaScript loads.

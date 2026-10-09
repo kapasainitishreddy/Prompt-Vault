@@ -1,0 +1,130 @@
+[
+  {
+    "id": "literary",
+    "name": "The Reading Room",
+    "category": "READING / EDITORIAL",
+    "journey": "reader",
+    "flow": "media-library",
+    "why": "Prioritize books, continuity and reading progress."
+  },
+  {
+    "id": "aviation",
+    "name": "Departure Board",
+    "category": "AVIATION / TASKS",
+    "journey": "calendar",
+    "flow": "calendar",
+    "why": "A consistent departure status system for scheduling."
+  },
+  {
+    "id": "calm",
+    "name": "Quiet Mind",
+    "category": "WELLBEING / QUIET",
+    "journey": "wellness",
+    "flow": "onboarding",
+    "why": "Make the central action peaceful, not gamified."
+  },
+  {
+    "id": "learning",
+    "name": "GPU Architecture",
+    "category": "LEARNING / TECH",
+    "journey": "learning",
+    "flow": "home",
+    "why": "Teach complex hardware concepts through a clear map."
+  },
+  {
+    "id": "finance",
+    "name": "Quiet Ledger",
+    "category": "FINANCE / CLARITY",
+    "journey": "finance",
+    "flow": "dashboard-data",
+    "why": "Keep units and source attribution above visual decoration."
+  },
+  {
+    "id": "fitness",
+    "name": "Form & Focus",
+    "category": "FITNESS / SETS",
+    "journey": "fitness",
+    "flow": "task-management",
+    "why": "Show reps and remaining set work with a high-contrast hierarchy."
+  },
+  {
+    "id": "social",
+    "name": "A Shared Space",
+    "category": "COMMUNITY / PEOPLE",
+    "journey": "messaging",
+    "flow": "chat",
+    "why": "Create legible participant identity and message context."
+  },
+  {
+    "id": "commerce",
+    "name": "The Object Index",
+    "category": "COMMERCE / OBJECTS",
+    "journey": "shopping",
+    "flow": "list-feed",
+    "why": "Treat products as the subject, with honest prices and an intentional catalog."
+  },
+  {
+    "id": "travel",
+    "name": "Field Notes",
+    "category": "TRAVEL / ROUTES",
+    "journey": "travel",
+    "flow": "detail",
+    "why": "Keep visit order and local times easy to scan."
+  },
+  {
+    "id": "creator",
+    "name": "Open Canvas",
+    "category": "CREATIVE / EDITOR",
+    "journey": "creator",
+    "flow": "create-edit",
+    "why": "Let the canvas dominate and keep tools contextual."
+  },
+  {
+    "id": "media",
+    "name": "After Light",
+    "category": "MUSIC / PLAYER",
+    "journey": "streaming",
+    "flow": "media-library",
+    "why": "Prioritize cover art, legible controls and playback metadata."
+  },
+  {
+    "id": "journal",
+    "name": "Private Pages",
+    "category": "JOURNAL / WRITING",
+    "journey": "journal",
+    "flow": "create-edit",
+    "why": "Protect the writing experience from competing widgets."
+  },
+  {
+    "id": "offline",
+    "name": "Local First",
+    "category": "OFFLINE / TRUST",
+    "journey": "offline-notes",
+    "flow": "offline-sync",
+    "why": "Show recoverability and explicit local status."
+  },
+  {
+    "id": "assistant",
+    "name": "Review Before AI",
+    "category": "AI / APPROVAL",
+    "journey": "ai-copilot",
+    "flow": "ai-assistant",
+    "why": "Separate the model's proposal from a user-approved action."
+  },
+  {
+    "id": "habits",
+    "name": "Little Victories",
+    "category": "HABITS / FEEDBACK",
+    "journey": "habits",
+    "flow": "task-management",
+    "why": "Celebrate progress without streak shame."
+  },
+  {
+    "id": "b2b",
+    "name": "Release Control",
+    "category": "DEVTOOLS / STATUS",
+    "journey": "b2b-dashboard",
+    "flow": "dashboard-data",
+    "why": "Evidence-first release status with explicit remaining checks."
+  }
+]

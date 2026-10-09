@@ -12,6 +12,8 @@ This file is an honest status ledger, not a claim that every UI pattern is produ
 | Visual design, themes, states | Mobile Studio page | Dark/light, iOS/Android-inspired and normal/success/error controls exist | Device/OS visual parity, contrast, screen reader, reduced motion checks |
 | 32 native pattern demos | Expo React Native TSX | One native case per original app-flow ID | npm install, TypeScript check, Android and iOS build/device QA |
 | Native reusable components | Basic buttons/chips/cards/toggles/fields/progress/notice/type | Original source included | Publishable API, documentation and wider component coverage |
+| Signature design studio | 16 independent editorial web studies + 16 matching Expo compositions | IDs, journey mappings, and source-copy parity checked | Real web render, physical device polish, feedback from novice and advanced users |
+| Copyable native source | Website buttons copy same-origin full TSX source and design tokens | Source mirrors checked in tests | Actual clipboard permission and paste-to-project install test |
 | Build-plan composer | Browser-only deterministic template | Reads 20 source-linked journeys | Human review of generated briefs |
 | MCP server | 7 read-only catalog tools | APIs match MCP SDK v2 signatures in public docs | npm install, run MCP inspector, invoke tools from a host |
 | Existing 32 website section prompts | Preserved and MCP-searchable | Source catalog mapped | Independent website UX and browser QA |
@@ -24,6 +26,8 @@ The website ships as static files under docs/. Serve it with:
     python3 -m http.server 8000
 
 From a browser, open http://localhost:8000/docs/mobile-studio.html. Check: visible fallback before JS, 20 journeys rendered, all 32 flow patterns found, search, step navigation, input interactions, copy prompt, project brief, dark theme, iOS/Android frame, success/error, keyboard navigation and 360/390/768/1440px layouts. Test fresh load and direct links, screen readers and reduced motion.
+
+The additional scripted Chromium smoke suite is `python3 scripts/qa_mobile_studio.py`. This requires `pip install playwright` and `playwright install chromium`; it writes screenshots and a report to `.qa-artifacts/mobile-studio/` and does not use GitHub Actions. **It is not proof of passing until actually run.**
 
 The mobile starter is under native-kit/:
 
