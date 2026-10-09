@@ -6,6 +6,49 @@ Open-source, model-agnostic, no paid API, no subscription, no required GitHub Ac
 
 > **Two separate tracks:** websites/landing pages/hero sections and products/mobile/desktop application UI/UX. A marketing hero and a task-oriented app are **not** the same design problem.
 
+## New: animation-rich prompts for every section
+
+**32 website sections, 32 app UI/UX flows, and 23 dedicated motion recipes.** Every one is a separate, self-contained prompt: three different compositions, real states, meaningful animation options, reduced-motion fallback, anti-slop rejection tests, implementation, screenshots when available, and a four-round review limit.
+
+| Pick your scope | Open these prompts |
+| --- | --- |
+| Website heroes, navbar, feature narrative, pricing, footer, blogs, shops, forms, checkout... | [Website section index](prompts/website/SECTIONS.md) |
+| App onboarding, home, navigation, search, task management, offline sync, payments, accessibility, RTL... | [App flow index](prompts/app/FLOWS.md) |
+| ASCII sweep, frosted glass, dissolve, task feedback, scroll storytelling, reordering, pixel cat... | [23 motion recipes](prompts/motion/README.md) |
+| Motion art-direction rules and four intensity levels | [Motion Director](prompts/shared/MOTION-DIRECTOR.md) |
+| Stronger no-template QA and originality auditing | [Anti-slop reviewer](prompts/shared/ANTI-SLOP-AUDIT.md) |
+| How to borrow *ideas* while honoring licenses | [Reference protocol](prompts/shared/REFERENCE-PROTOCOL.md) |
+| Supplied animation libraries and license restrictions | [Research and source table](research/supplied-resources.md) |
+| Auto-plan a whole website or app without using every section | [Design Autopilot](prompts/shared/DESIGN-AUTOPILOT.md) |
+
+### Generate one ready-to-paste section prompt
+
+```bash
+python3 scripts/section_prompt.py --list
+python3 scripts/section_prompt.py --track website --section hero \
+  --brief examples/website-brief-filled.md --intensity expressive --recipe editorial-entrance \
+  --output .design-runs/website-hero.md
+python3 scripts/section_prompt.py --track app --section task-management \
+  --brief examples/app-brief-filled.md --intensity quiet --recipe todo-completion \
+  --output .design-runs/app-tasks.md
+```
+
+### Run the evidence-based section loop
+
+```bash
+python3 scripts/design_loop.py init --track website --section hero --motion-level expressive \
+  --brief examples/website-brief-filled.md --workspace .design-runs/hero-review
+# Give the generated round-01/prompt.md to your coding assistant.
+# Fill observed scores AND evidence_notes in round-01/scorecard.json.
+python3 scripts/design_loop.py advance --workspace .design-runs/hero-review
+```
+
+Try the [original, dependency-free motion lab](examples/animated-section-lab.html) to inspect editorial transitions, real task completion, undo and a motion-off control. It contains **no** vendored visual library code.
+
+The optional loop manager **does not call any model, take screenshots, certify accessibility, or pay for APIs**. A human/agent with real browser or device access must supply truthfully observed results.
+
+> **Rights matter:** Canvas UI is MIT + Commons Clause; Originkit’s component catalog restricts redistribution even though its plugin repository has MIT code. Bencho blocks are MIT but site media/branding are not. Kombai designs and Oneko Studio skins need item-level asset verification. These are **references**, not contents of this MIT repository.
+
 ## Start in 60 seconds
 
 **For a website:** copy [templates/website-brief.md](templates/website-brief.md), fill in what you know, then give it and [prompts/website/LOOP.md](prompts/website/LOOP.md) to an AI that can inspect/edit your project. For a hero only, use [prompts/website/HERO-LAB.md](prompts/website/HERO-LAB.md).

@@ -111,5 +111,37 @@ class DesignLoopTests(unittest.TestCase):
         self.assertIn("distinctiveness=7", output.stdout)
 
 
+    def test_section_overlay_in_bounded_loop(self):
+        self.command(
+            "init", "--track", "website", "--section", "hero", "--motion-level", "expressive",
+            "--recipe", "ascii-sweep", "--brief", str(self.brief),
+            "--workspace", str(self.workspace)
+        )
+        prompt = (self.workspace / "round-01" / "prompt.md").read_text(encoding="utf-8")
+        self.assertIn("SECTION-SPECIFIC IMPLEMENTATION CONTRACT", prompt)
+        self.assertIn("WEBSITE SECTION PROMPT", prompt)
+        self.assertIn("ASCII sweep", prompt)
+        self.assertNotIn("{{PROJECT_BRIEF}}", prompt)
+        self.fill_card(score=0, evidence=False)
+        self.command("advance", "--workspace", str(self.workspace))
+        round_two = (self.workspace / "round-02" / "prompt.md").read_text(encoding="utf-8")
+        self.assertIn("SECTION-SPECIFIC IMPLEMENTATION CONTRACT", round_two)
+        state = json.loads((self.workspace / "state.json").read_text(encoding="utf-8"))
+        self.assertEqual(state["section"], "hero")
+
+    def test_unknown_section_rejected_before_workspace_creation(self):
+        self.command(
+            "init", "--track", "app", "--section", "../../x",
+            "--brief", str(self.brief), "--workspace", str(self.workspace), expect=2
+        )
+        self.assertFalse(self.workspace.exists())
+
+    def test_recipe_requires_section(self):
+        self.command(
+            "init", "--track", "website", "--recipe", "text-scramble",
+            "--brief", str(self.brief), "--workspace", str(self.workspace), expect=2
+        )
+        self.assertFalse(self.workspace.exists())
+
 if __name__ == "__main__":
     unittest.main()

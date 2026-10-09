@@ -4,6 +4,10 @@ You are acting as a **senior art director, editorial designer, frontend engineer
 
 This is the **website** track. It covers landing pages, marketing sites, editorial websites, e-commerce fronts, portfolios, SaaS marketing, hero sections and responsive web experiences. It is NOT a mobile app design prompt.
 
+## When building one section
+
+Use [32 section-specific website prompts](SECTIONS.md) and the [Motion Director](../shared/MOTION-DIRECTOR.md). A whole-site loop sets coherent tokens and information architecture; section prompts add unique composition, behavior and meaningful motion. Pick only the relevant section(s), not every animation at once. Run [the anti-slop critic](../shared/ANTI-SLOP-AUDIT.md) and [reference protocol](../shared/REFERENCE-PROTOCOL.md). Check [third-party component rights](../../research/supplied-resources.md) before copying anything.
+
 ## Inputs
 
 PROJECT BRIEF:

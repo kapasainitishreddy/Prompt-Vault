@@ -1,0 +1,236 @@
+{
+  "version": "1.0",
+  "count": 23,
+  "recipes": [
+    {
+      "id": "editorial-entrance",
+      "title": "Editorial entrance choreography",
+      "purpose": "Introduce a high-value section's actual hierarchy once without withholding meaning",
+      "trigger": "Viewport entry after content already rendered",
+      "recipe": "Opacity 0.001-to-1 with small translateY 8–18px at 350–600ms; stagger subordinates by 45–80ms; keep heading and CTA readable from first frame",
+      "fallback": "Instant display or opacity-only 100ms; no moving essential text",
+      "reject": "Fading every paragraph on every scroll; hidden H1 until animation",
+      "reference": "CSS or Motion"
+    },
+    {
+      "id": "text-scramble",
+      "title": "Meaningful text character reveal",
+      "purpose": "Reveal a changed label/status in a technology/terminal context",
+      "trigger": "Explicit click to switch semantic content",
+      "recipe": "Keep real DOM text in place for accessibility; animate only aria-hidden display duplicate for 300–500ms; final text always matches actual state",
+      "fallback": "Set real text immediately and omit decorative overlay",
+      "reject": "Perpetual glitch text; scrambling prices or legal terms",
+      "reference": "Originkit"
+    },
+    {
+      "id": "ascii-sweep",
+      "title": "ASCII sweep between states",
+      "purpose": "Visually distinguish two authored display modes, not hide actual UI",
+      "trigger": "Actual user-controlled tab/view change",
+      "recipe": "Content stays semantic HTML; reversible ASCII overlay follows 400–750ms only in compatible environments; no GPU dependency for interaction",
+      "fallback": "CSS opacity swap with instant semantic state change",
+      "reject": "Mandatory WebGL; copying Canvas UI source into MIT pack; unreadable text during sweep",
+      "reference": "Canvas UI"
+    },
+    {
+      "id": "frosted-glass",
+      "title": "Contextual frosted glass refraction",
+      "purpose": "Establish layered spatial relationship for navigation or gallery material",
+      "trigger": "Menu/drawer overlay or deliberate drag",
+      "recipe": "Use bounded backdrop-filter blur when supported; transition opacity and transform 120–260ms; contrast on translucent panel checked",
+      "fallback": "Opaque semantic panel with same focus behavior",
+      "reject": "Default 3D glass on every card; invisible contrast; page-wide giant blur",
+      "reference": "ObsidianUI"
+    },
+    {
+      "id": "dissolve-reveal",
+      "title": "Dissolve and crawl reveal",
+      "purpose": "Transition between alternative versions of illustrative text or artwork",
+      "trigger": "User requests before/after, version or chapter",
+      "recipe": "Clip/mask or small noise dissolve over 250–650ms with stable DOM/focus; original implementation, never imported without checked rights",
+      "fallback": "Simple crossfade or instant replacement",
+      "reject": "Dissolving form fields while user types; seizure-like flicker",
+      "reference": "VengeanceUI"
+    },
+    {
+      "id": "tab-content",
+      "title": "Directional tab and panel change",
+      "purpose": "Maintain orientation when switching related information panels",
+      "trigger": "Keyboard/click tab selection",
+      "recipe": "Move indicator 130–210ms; panel crossfade up to 220ms; choose direction matching document order and RTL",
+      "fallback": "Immediate panel change, static selected indicator",
+      "reject": "Tabs that wait on cinematic 2s sweep; no arrow-key access",
+      "reference": "CSS"
+    },
+    {
+      "id": "button-press",
+      "title": "Tactile button micro-feedback",
+      "purpose": "Confirm that a controllable action was received",
+      "trigger": "Press, activation or valid submission",
+      "recipe": "Small scale to 0.97 for 60–110ms then release, only when appropriate; state changes announced semantically",
+      "fallback": "Color/outline emphasis with no size change",
+      "reject": "Animated button dodges pointer or sends fake success",
+      "reference": "Bencho"
+    },
+    {
+      "id": "todo-completion",
+      "title": "Task completion and undo",
+      "purpose": "Show which list item changed and offer actual recovery",
+      "trigger": "Server/local state successfully changed",
+      "recipe": "Checkbox fill 140ms; row collapse 180–260ms after user sees result; undo toast with keyboard action",
+      "fallback": "Instant state change plus text confirmation",
+      "reject": "Fake confetti for every task; optimistic remove without rollback",
+      "reference": "Bencho"
+    },
+    {
+      "id": "reorder-list",
+      "title": "Direct manipulation reorder",
+      "purpose": "Maintain object identity while reordering list items",
+      "trigger": "Pointer drag or keyboard reorder command",
+      "recipe": "Animate displacement 150–220ms after drop; keep drag overlay bounded and pointer-cancel safe",
+      "fallback": "Immediate reorder with move up/down buttons",
+      "reject": "Physics that shifts items while finger hovers; lost focus",
+      "reference": "Bencho"
+    },
+    {
+      "id": "modal-drawer",
+      "title": "Dialog and drawer motion",
+      "purpose": "Establish a new interaction plane and return attention safely",
+      "trigger": "User opens dialog or settings drawer",
+      "recipe": "Backdrop fade ~150ms, panel translate 140–260ms; focus first meaningful control only after open; restore on close",
+      "fallback": "Instant dialog with accessible focus and Escape",
+      "reject": "Heavy spring bounce during a destructive confirmation",
+      "reference": "CSS or Motion"
+    },
+    {
+      "id": "scroll-chapters",
+      "title": "Scroll-driven editorial chapters",
+      "purpose": "Connect sequential evidence or product process without scroll hijacking",
+      "trigger": "Normal user scrolling",
+      "recipe": "Small sticky illustration changes keyed to section intersections; content scrolls normally; avoid blocking gestures",
+      "fallback": "Linear stacked content with static illustrations and anchors",
+      "reject": "Mandatory wheel hijack, pinning that traps touch, decorative perpetual 3D spin",
+      "reference": "Motion"
+    },
+    {
+      "id": "progress-line",
+      "title": "Process or timeline progress",
+      "purpose": "Show where the reader or user is inside an ordered flow",
+      "trigger": "Scroll progress or explicit step advance",
+      "recipe": "SVG line reveal keyed to real position with CSS progress if supported; active step labels retained",
+      "fallback": "Static numbered steps and current marker",
+      "reject": "Fake percentage unsupported by task progress",
+      "reference": "CSS"
+    },
+    {
+      "id": "matched-detail",
+      "title": "Detail view continuity",
+      "purpose": "Preserve object identity between a list and a detail screen",
+      "trigger": "Click/open item and return",
+      "recipe": "Matched element transition 180–380ms when platform supports; do not animate layout on huge content",
+      "fallback": "Immediate navigation and focus restored on Back",
+      "reject": "Massive zoom flying off-screen; reparenting that loses semantic state",
+      "reference": "Motion"
+    },
+    {
+      "id": "gallery-transition",
+      "title": "Media/gallery transition",
+      "purpose": "Help users understand which media item they are examining",
+      "trigger": "Carousel, thumbnail activation or lightbox",
+      "recipe": "Crossfade 180–300ms plus controlled image crop; preserve aspect; preload only needed neighbors",
+      "fallback": "Instant selected image with alt and location index",
+      "reject": "Auto-advancing unpausable carousel; 3D coverflow on mobile controls",
+      "reference": "Bencho"
+    },
+    {
+      "id": "image-comparison",
+      "title": "Before and after inspection",
+      "purpose": "Expose a trustworthy difference through direct manipulation",
+      "trigger": "User drags or arrow-keys divider",
+      "recipe": "Divider follows pointer directly, no gratuitous inertia; capture two accessible media labels; on release settle <=120ms",
+      "fallback": "Side-by-side images with clear labels",
+      "reject": "Misleading photos, mouse-only slider, low-res images",
+      "reference": "Bencho"
+    },
+    {
+      "id": "data-transition",
+      "title": "Data graphic morph",
+      "purpose": "Reveal continuity when legitimate numeric series/filter changes",
+      "trigger": "User changes real data filter or time range",
+      "recipe": "Interpolate matched data points 220–450ms, coordinate identity retained; label values remain honest and tables available",
+      "fallback": "Instant accessible table/chart with selected filter visible",
+      "reject": "Counting invented KPIs; animated bars not tied to data",
+      "reference": "Motion"
+    },
+    {
+      "id": "form-feedback",
+      "title": "Validation and form state feedback",
+      "purpose": "Show when user can recover from bad input or complete action",
+      "trigger": "Blur/submit/validated response",
+      "recipe": "Border/status message change 100–180ms; success only after real confirmation; preserve focus",
+      "fallback": "Immediate error text and accessible role/status",
+      "reject": "Shaking an entire form; green glow for failed backend save",
+      "reference": "CSS"
+    },
+    {
+      "id": "upload-progress",
+      "title": "Upload and processing progress",
+      "purpose": "Communicate real work without lying about completion",
+      "trigger": "Measured progress or actual server state updates",
+      "recipe": "Bar width bound to actual fraction if measurable; indeterminate only when progress unknown; cancel action always visible",
+      "fallback": "Text status 'Uploading' or 'Processing' and final server confirmation",
+      "reject": "Scripted progress to 99% with no backend; infinite shimmer",
+      "reference": "Bencho"
+    },
+    {
+      "id": "page-transition",
+      "title": "Route or view transition",
+      "purpose": "Explain navigation context while keeping content fast and accessible",
+      "trigger": "Actual route change",
+      "recipe": "Shared backdrop or 140–250ms transition; never block route loader or hide new content on hydration",
+      "fallback": "Instant page with correct title/heading and focus",
+      "reject": "Full-screen loading intro on every click; inaccessible overlay",
+      "reference": "Motion"
+    },
+    {
+      "id": "cursor-companion",
+      "title": "Optional pixel character companion",
+      "purpose": "Add memorable playful identity only on opted-in playful sites",
+      "trigger": "Explicit enable/disable; hover/cursor move on desktop",
+      "recipe": "Cursor-follow character with pause, hide, keep-out zones and touch resting behavior; no pointer capture",
+      "fallback": "Still decorative character or none for reduced motion/touch",
+      "reject": "Tracking user invisibly; covering controls; forced chasing mascot",
+      "reference": "Oneko"
+    },
+    {
+      "id": "magnetic-hover",
+      "title": "Magnetic control attention",
+      "purpose": "Give a restrained playful feel to a low-stakes isolated action",
+      "trigger": "Mouse or stylus hover; keyboard focus stays normal",
+      "recipe": "Max 3–6px transform and quick 120ms return; never move interactive hit target away",
+      "fallback": "Static hover underline and visible keyboard focus",
+      "reject": "Button escapes click; impossible tap target; navigation wobble",
+      "reference": "Originkit"
+    },
+    {
+      "id": "subtle-particles",
+      "title": "Atmospheric particle field",
+      "purpose": "Express genuine scientific/artistic material only where it supports identity",
+      "trigger": "Optional hero engagement or scroll chapter",
+      "recipe": "One canvas contained to decorative region, opacity low, finite duration; pause offscreen; cap DPR and particle count",
+      "fallback": "Flat authored SVG/static texture or no decoration",
+      "reject": "Sparkles over every section; particles blocking readability",
+      "reference": "Canvas UI"
+    },
+    {
+      "id": "status-feedback",
+      "title": "State chip and notification motion",
+      "purpose": "Confirm a real system state change clearly",
+      "trigger": "Saved/synced/failed/resumed events",
+      "recipe": "Chip color/shape swap 130–220ms with text and aria-live updates, no phantom promise",
+      "fallback": "Instant text + icon and persistent status",
+      "reject": "Endless pulsing 'syncing' after failure; error hidden in toast",
+      "reference": "Bencho"
+    }
+  ]
+}

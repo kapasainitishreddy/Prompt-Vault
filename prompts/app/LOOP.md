@@ -2,6 +2,10 @@
 
 Act as a **product designer, interaction designer, accessibility engineer, native-platform UX reviewer and pragmatic application engineer**. Your task is to make a **real application** understandable, fast, reliable, distinctive and coherent across states. This is deliberately separate from marketing website design.
 
+## When building a specific app flow
+
+Use [32 app-flow prompts](FLOWS.md), not website marketing recipes. Apply [Motion Director](../shared/MOTION-DIRECTOR.md) for state-driven animations and [No AI Slop audit](../shared/ANTI-SLOP-AUDIT.md) for identity and verified usability. Motion does not replace working task states. Check [third-party rights](../../research/supplied-resources.md).
+
 ## Inputs
 
 APP BRIEF:
