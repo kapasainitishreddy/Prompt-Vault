@@ -1,0 +1,59 @@
+/* Prompt-Vault Atlas beginner FAQ. Original styles. */
+.pvfaq-page{background:#f4f0e7;color:#17221e}
+.pvfaq-shell{width:min(1100px,calc(100% - 44px));margin-inline:auto}
+.pvfaq-header{padding:19px 0 22px;display:flex;gap:20px;justify-content:space-between;align-items:center;border-bottom:1px solid #17221e}
+.pvfaq-logo{font:900 1.28rem/.9 var(--sans);text-decoration:none;letter-spacing:-.07em}
+.pvfaq-header nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:clamp(10px,2.4vw,25px)}
+.pvfaq-header nav a{text-decoration:none;font-size:.84rem;font-weight:800}.pvfaq-header nav a:hover{text-decoration:underline}
+.pvfaq-eyebrow{font:800 .7rem/1.45 var(--sans);text-transform:uppercase;letter-spacing:.15em}
+.pvfaq-hero{padding:70px 0 65px}
+.pvfaq-hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(225px,.6fr);gap:clamp(26px,5vw,65px);align-items:end;margin-top:20px}
+.pvfaq-hero h1{font:400 clamp(4rem,8vw,8rem)/.9 var(--display);letter-spacing:-.09em;max-width:740px;margin:0 0 23px}
+.pvfaq-hero h1 em{color:#c8543a;font-style:italic}
+.pvfaq-hero-grid>div>p{font:1.12rem/1.65 var(--sans);color:#465a4c;max-width:620px}
+.pvfaq-button{display:inline-flex;align-items:center;justify-content:center;background:#17221e;color:#fff;text-decoration:none;min-height:49px;padding:13px 18px;font:800 .86rem var(--sans);border:1px solid #17221e;cursor:pointer;margin-top:16px}
+.pvfaq-button:hover{background:#354b3a}
+.pvfaq-hero-note{border:1px solid #9ca99e;padding:24px;background:#d9e5cd;display:flex;flex-direction:column;gap:22px;min-height:290px}
+.pvfaq-hero-note span{font-size:.68rem;font-weight:850;letter-spacing:.12em}
+.pvfaq-hero-note strong{font:400 clamp(1.65rem,2.5vw,2.7rem)/1.15 var(--display);letter-spacing:-.055em}
+.pvfaq-hero-note p{font:.86rem/1.5 var(--sans);color:#435448;margin:0}
+.pvfaq-quick-path{border-block:1px solid #17221e;padding:16px 0;display:flex;gap:14px 24px;flex-wrap:wrap;align-items:center}
+.pvfaq-quick-path span{font-size:.67rem;font-weight:850;letter-spacing:.13em}
+.pvfaq-quick-path a{font-size:.83rem;font-weight:800;text-decoration:none}.pvfaq-quick-path a:hover{text-decoration:underline}
+.pvfaq-search-area{padding:47px 0 48px}
+.pvfaq-search-area label{display:block;font:800 .78rem var(--sans);letter-spacing:.03em;margin-bottom:12px}
+.pvfaq-search-area>div{display:flex;gap:10px;align-items:center}
+#pvfaq-search{width:min(690px,100%);border:1px solid #849485;background:#fffefa;font:1.02rem/1.4 var(--sans);padding:15px 17px;min-height:55px;border-radius:0}
+#pvfaq-clear{padding:14px;border:1px solid #849485;background:transparent;font:.84rem var(--sans);font-weight:800;min-height:55px}
+.pvfaq-search-area p{margin:13px 0 0;font:.82rem/1.6 var(--sans);color:#465849}
+#pvfaq-results{font-weight:800;min-height:1.2rem}
+.pvfaq-group{border-top:1px solid #17221e;padding:45px 0 62px;scroll-margin-top:16px}
+.pvfaq-group-intro{display:flex;justify-content:space-between;gap:35px;align-items:flex-start;margin-bottom:25px}
+.pvfaq-group h2{font:400 clamp(2.55rem,5vw,4.8rem)/1 var(--display);letter-spacing:-.075em;margin:15px 0}
+.pvfaq-group-intro p{color:#4a5b4e;font:.94rem/1.6 var(--sans);max-width:570px;margin:0}
+.pvfaq-group-label{font:800 .7rem var(--sans);text-transform:uppercase;letter-spacing:.13em;border-bottom:1px solid #87968a;padding-bottom:7px;margin-top:7px}
+.pvfaq-questions{border-top:1px solid #9aa99b}
+.pvfaq-item{border-bottom:1px solid #adb9ab}
+.pvfaq-item[hidden]{display:none}
+.pvfaq-item summary{cursor:pointer;display:flex;justify-content:space-between;gap:25px;align-items:center;font:750 clamp(1rem,1.55vw,1.2rem)/1.4 var(--sans);padding:23px 0;list-style:none}
+.pvfaq-item summary::-webkit-details-marker{display:none}
+.pvfaq-item summary:hover{color:#b54c36}
+.pvfaq-item summary::marker{content:""}
+.pvfaq-plus{position:relative;width:23px;height:23px;flex:0 0 23px}
+.pvfaq-plus:before,.pvfaq-plus:after{content:"";position:absolute;left:3px;top:11px;width:17px;height:1.5px;background:currentColor;transition:transform .15s}
+.pvfaq-plus:after{transform:rotate(90deg)}
+.pvfaq-item[open] .pvfaq-plus:after{transform:rotate(0)}
+.pvfaq-answer{padding:0 34px 25px 0;max-width:830px}
+.pvfaq-answer p{font:1rem/1.7 var(--sans);color:#455b4a;margin:0}
+.pvfaq-answer a{font-weight:800}
+.pvfaq-end{border-top:1px solid #17221e;padding:73px 0 92px;display:flex;justify-content:space-between;gap:35px;align-items:center}
+.pvfaq-end h2{font:400 clamp(2.6rem,5vw,4.5rem)/.99 var(--display);letter-spacing:-.07em;max-width:680px;margin:15px 0}
+.pvfaq-end p{max-width:550px;font:.96rem/1.6 var(--sans);color:#4f5e54}
+.pvfaq-end>div:last-child{display:flex;flex-direction:column;align-items:flex-start;gap:16px;min-width:210px}
+.pvfaq-simple-link{font:.87rem var(--sans);font-weight:800}
+.pvfaq-footer{display:flex;flex-wrap:wrap;gap:15px;justify-content:space-between;padding:25px 0;border-top:1px solid #17221e;font:.76rem var(--sans);font-weight:750}
+.pvfaq-footer a{text-decoration:none}
+.pvfaq-footer a:hover{text-decoration:underline}
+@media(max-width:700px){.pvfaq-hero{padding:46px 0}.pvfaq-hero-grid{grid-template-columns:1fr;gap:22px}.pvfaq-hero h1{font-size:clamp(3.3rem,11vw,5rem)}.pvfaq-hero-note{min-height:160px}.pvfaq-group-intro,.pvfaq-end{display:block}.pvfaq-group-label{display:inline-block;margin-top:19px}.pvfaq-group h2{font-size:3rem}.pvfaq-end>div:last-child{margin-top:22px}.pvfaq-header nav{gap:10px}}
+@media(max-width:420px){.pvfaq-header nav a{font-size:.75rem}.pvfaq-hero h1{font-size:3.1rem}.pvfaq-search-area>div{flex-wrap:wrap}.pvfaq-search-area input{flex:1 1 100%}.pvfaq-item summary{padding:17px 0}}
+@media(prefers-reduced-motion:reduce){.pvfaq-page *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
