@@ -1,5 +1,23 @@
 # Prompt-Vault Atlas website
 
+## Visual-first previews
+
+The Concept Field Guide now opens with a searchable visual gallery at
+[concepts.html#previews](concepts.html#previews), instead of requiring
+users to select a text-list item before seeing anything. All 200 concepts
+have original **illustrative thumbnails** from 35 independently designed
+layout families (16 website and 19 app). Click through to an enlarged
+interactive specimen, device/composition/state controls and its complete
+prompts and research links.
+
+UI files: `concept-previews.css` and the thumbnail renderer in
+`concepts.js`. The existing site is static, no third-party images are
+copied. These are original miniature UI layouts, not captured real-world
+website screenshots, 200 separately engineered production apps or native
+device simulations. Browser QA should check all 35 preview types as well
+as phone/desktop layouts, click-through selection and reduced motion.
+
+
 **Practice Studio (new)**: [100 accessible learning prompts](studio.html) (60 apps/40 websites; demos, research, test scenarios, prompt export), plus a separate [Support & Sponsorship page](support.html) whose coffee, paid sponsors and video remain disabled until verified. See [learning/QA guide](LEARNING-STUDIO.md).
 
 
