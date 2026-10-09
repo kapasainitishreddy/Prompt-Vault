@@ -68,3 +68,19 @@ body.motion-off *,body.motion-off *::before,body.motion-off *::after{transition:
 
 .reference-row{background:#dbe8da}.reference-row:hover{background:#c9dccc}
 @media(min-width:741px) and (max-width:1040px){.main-nav{display:none}.mobile-menu{display:flex;align-items:center;gap:7px;min-height:42px;padding:8px 10px;border:1px solid var(--ink);background:transparent;margin-left:auto;font-size:.72rem;font-weight:800}.mobile-navigation:not([hidden]){display:flex;flex-direction:column;gap:0;padding-top:6px;padding-bottom:12px;background:var(--paper);border-bottom:1px solid var(--ink);position:relative;z-index:8}.mobile-navigation a{padding:9px 3px;font-weight:800;font-size:.9rem;text-decoration:none}}
+
+
+/* Web/App are the primary practices. Other galleries are discoverable tools. */
+.pv-home-academy{display:flex;align-items:center;justify-content:space-between;gap:24px;background:#263d2e;color:#e7eee1!important;text-decoration:none;padding:29px 33px;margin:30px 0 5px;border:1px solid #263d2e}
+.pv-home-academy strong{font:normal clamp(1.25rem,2.1vw,2.2rem)/1.12 var(--display);letter-spacing:-.045em;max-width:480px}
+.pv-home-academy .micro{color:#d2e887;max-width:110px}
+.pv-home-academy-arrow{font-size:.7rem;letter-spacing:.07em;font-weight:900;white-space:nowrap;border-bottom:1px solid #bfd98e;padding-bottom:7px}
+.pv-home-academy:hover{background:#36573b}
+.pv-secondary-tracks{margin-top:12px;border-top:1px solid #a8b5aa}
+.pv-secondary-tracks summary{list-style:none;cursor:pointer;padding:22px 18px 23px;font-size:.9rem;font-weight:850;background:#e3e9db;display:flex;align-items:center;justify-content:space-between}
+.pv-secondary-tracks summary::-webkit-details-marker{display:none}
+.pv-secondary-tracks summary:after{content:"＋";font-size:1.3rem}
+.pv-secondary-tracks[open] summary:after{content:"−"}
+.pv-secondary-tracks summary:hover{background:#d4e3ca}
+.pv-secondary-tracks .collection-row{background:#e5e9da}
+@media(max-width:850px){.pv-home-academy{align-items:flex-start;flex-direction:column;padding:23px 22px;gap:15px}.pv-home-academy .micro{max-width:none}.pv-home-academy-arrow{font-size:.65rem}}
