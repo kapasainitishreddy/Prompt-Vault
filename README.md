@@ -1,3 +1,11 @@
+## New visitor experience (October 9, 2026)
+
+**Start Here:** [docs/start-here.html](docs/start-here.html) shows first-time users what websites, app screens, and build prompts mean, with visible real HTML/CSS previews and a local prompt builder. There are no account or model API requirements.
+
+**Motion Library:** [docs/motion-library.html](docs/motion-library.html) adds original interactive concept previews for Motion, GSAP, Locomotive Scroll v5, React Bits and Three.js, with upstream source links and license-aware prompts. This is a source-linked educational guide, **not** a redistribution of third-party components. The separate [Lenis lesson](docs/lenis-scroll.html) provides an opt-in live Lenis comparison.
+
+**Website previews:** [docs/websites.html](docs/websites.html) offers 32 original section studies. [docs/concepts.html#previews](docs/concepts.html#previews) has a searchable 100-website/100-app illustrative preview gallery. Miniatures are not whole commercial websites. The homepage now embeds a few visible CSS previews that do not depend on gallery JavaScript.
+
 # Prompt-Vault
 
 ## Visual previews are now directly browsable (October 9, 2026)

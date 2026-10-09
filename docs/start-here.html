@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f4f0e7">
+<meta name="description" content="Brand new to web and app design? Pick a project, inspect an actual visual example, and copy a simple starting prompt. No account or coding knowledge needed.">
+<title>Start Here: Your First Design | Prompt-Vault Atlas</title>
+<link rel="stylesheet" href="./styles.css">
+<style>
+.bv-page{--bv-ink:#17221e;--bv-soft:#ede9df;--bv-border:#bbbfb4;--bv-accent:#c8543a}
+.bv-shell{width:min(1100px,calc(100% - 40px));margin-inline:auto}
+.bv-header{border-bottom:1px solid var(--bv-ink);display:flex;align-items:center;justify-content:space-between;gap:18px;padding:19px 0}
+.bv-header a{font-weight:750;font-size:.9rem}.bv-header nav{display:flex;gap:20px;flex-wrap:wrap}
+.bv-wordmark{font:700 1.35rem/.95 var(--display);letter-spacing:-.055em;text-decoration:none}
+.bv-kicker{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;font-weight:800}
+.bv-hero{padding:76px 0 57px;border-bottom:1px solid var(--bv-ink)}
+.bv-hero h1{font:400 clamp(3.8rem,9vw,7.7rem)/.94 var(--display);letter-spacing:-.085em;max-width:890px;margin:12px 0 25px}
+.bv-hero h1 em{color:var(--bv-accent)}
+.bv-lead{font:1.15rem/1.6 var(--sans);max-width:660px;color:#48564c}
+.bv-micro{color:#566157;font-size:.83rem}
+.bv-section{padding:54px 0;border-bottom:1px solid var(--bv-border)}
+.bv-index{display:flex;gap:16px;align-items:baseline;font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;margin-bottom:20px}
+.bv-index span{font:400 2rem var(--display);letter-spacing:0;color:var(--bv-accent)}
+.bv-section h2{font:400 clamp(2.2rem,5vw,4rem)/1.03 var(--display);letter-spacing:-.06em;margin:0 0 18px}
+.bv-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:23px 0}
+.bv-choice{border:1px solid var(--bv-ink);padding:17px 16px;display:flex;align-items:center;gap:11px;cursor:pointer;background:transparent;min-height:65px;font-weight:750}
+.bv-choice:has(input:checked){background:var(--bv-ink);color:#fff}
+.bv-choice input{accent-color:var(--bv-accent);width:17px;height:17px;flex-shrink:0}
+.bv-guide{background:var(--bv-soft);padding:16px 20px;font-size:.95rem}
+.bv-visual-layout{display:grid;grid-template-columns:minmax(0,1.32fr) minmax(280px,.68fr);gap:30px;align-items:start}
+.bv-visual-frame{border:1px solid #242824;background:#fff;box-shadow:10px 10px 0 #ddded5;min-width:0;overflow:hidden}
+.bv-browser-bar{border-bottom:1px solid #d6d9d3;background:#f7f7f4;display:flex;align-items:center;gap:9px;padding:10px 12px;font:.7rem var(--sans);color:#626c63}
+.bv-dots{display:flex;gap:4px}.bv-dots i{display:block;width:7px;height:7px;border-radius:50%;background:#aeb7ae}
+.bv-screen{min-height:365px;overflow:hidden}
+.bv-example-web{background:#efeee8;color:#2a3b2c;font-family:Georgia,serif}
+.bv-web-top{display:flex;justify-content:space-between;align-items:center;padding:17px 22px;border-bottom:1px solid #b8c4b8;gap:12px}
+.bv-web-top strong{font:italic 700 1.35rem Georgia,serif}
+.bv-web-top small{font:700 .63rem Arial,sans-serif;letter-spacing:.14em}
+.bv-web-content{display:grid;grid-template-columns:1.06fr .94fr;min-height:320px}
+.bv-web-copy{padding:clamp(20px,4vw,40px) 20px 26px 26px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.bv-web-copy h3{font:400 clamp(2.2rem,5vw,3.9rem)/.98 Georgia,serif;letter-spacing:-.055em;margin:10px 0}
+.bv-web-copy p{font: .83rem/1.6 Arial,sans-serif;max-width:240px;color:#4c5f50}
+.bv-web-button{display:inline-block;background:#253b2e;color:#fff;font:700 .68rem Arial,sans-serif;padding:12px 16px;text-decoration:none;margin-top:15px}
+.bv-web-picture{background:#c5b4a0;display:grid;place-items:center;position:relative;overflow:hidden}
+.bv-web-picture::before{content:"";width:66%;aspect-ratio:1;border-radius:50%;background:#eee0c4;box-shadow:0 5px 2px #bda68e,15px 20px 0 #917f68;transform:rotate(-14deg)}
+.bv-web-picture::after{content:"☕";position:absolute;font-size:clamp(3.5rem,6vw,5.5rem);filter:grayscale(.85)}
+.bv-phone-demo{display:grid;place-items:center;background:#d9ddd4;padding:20px}
+.bv-phone{width:min(280px,100%);background:#fdfcf9;border:7px solid #27382f;border-radius:28px;padding:20px 15px 12px;box-shadow:12px 14px 0 #b5bbb0}
+.bv-phone-head{display:flex;justify-content:space-between;font:700 .72rem Arial,sans-serif;color:#536157}
+.bv-phone h3{font:400 2rem Georgia,serif;letter-spacing:-.05em;margin:21px 0 10px}
+.bv-phone-progress{border-radius:999px;background:#e4e9da;height:9px;overflow:hidden}.bv-phone-progress span{display:block;width:66%;height:100%;background:#6d8c69}
+.bv-phone .bv-task{padding:12px 0;border-bottom:1px solid #e1e5db;display:flex;gap:10px;align-items:center;font:.79rem Arial,sans-serif}
+.bv-task b{border:2px solid #738c76;width:17px;height:17px;border-radius:50%;display:inline-grid;place-items:center;color:#416b50;font-size:.65rem}
+.bv-phone-foot{display:flex;justify-content:space-around;border-top:1px solid #e2e5df;margin-top:22px;padding-top:12px;font:.65rem Arial,sans-serif}
+.bv-explore-demo{background:#1e2421;color:#eaeae1;display:grid;align-content:center;gap:30px;text-align:center;padding:35px}
+.bv-explore-demo h3{font:400 clamp(2.7rem,7vw,4rem)/1 var(--display);letter-spacing:-.07em;margin:0}
+.bv-explore-demo span{font:.76rem Arial,sans-serif;letter-spacing:.11em}
+.bv-tools{display:flex;align-items:center;justify-content:space-between;margin:0 0 12px;gap:12px;flex-wrap:wrap}
+.bv-small-button{background:transparent;border:1px solid #4a584c;padding:9px 13px;font-weight:750;font-size:.8rem}
+.bv-notes h3{font:700 1.14rem Arial,sans-serif;margin:0 0 12px}
+.bv-notes p,.bv-notes li{line-height:1.65;font-size:.96rem;color:#3e4c40}
+.bv-notes ul{padding-left:20px}
+.bv-word{display:grid;grid-template-columns:minmax(100px,.28fr) 1fr;gap:20px;padding:19px 0;border-top:1px solid var(--bv-border)}
+.bv-word strong{font-size:1.03rem}.bv-word p{margin:0;color:#455347}
+.bv-build{display:grid;grid-template-columns:.77fr 1.23fr;gap:30px}
+.bv-input,.bv-prompt{width:100%;display:block;border:1px solid #6b746b;border-radius:0;background:#fffefb;padding:14px;line-height:1.6;font:.94rem var(--sans)}
+.bv-input{min-height:125px;resize:vertical;margin:15px 0}
+.bv-prompt{min-height:280px;resize:vertical;font:.88rem/1.5 ui-monospace,Consolas,monospace}
+.bv-label{font-weight:800;display:block;font-size:.86rem;margin:10px 0}
+.bv-button{display:inline-flex;align-items:center;justify-content:center;background:var(--bv-ink);color:white;text-decoration:none;border:1px solid var(--bv-ink);font-weight:800;padding:14px 21px;min-height:50px;margin-top:12px}
+.bv-button:hover{background:#355340}
+.bv-finish{padding:60px 0 95px}
+.bv-finish h2{font:400 clamp(2.4rem,5vw,4.7rem)/1 var(--display);letter-spacing:-.07em}
+.bv-finish p{max-width:600px;line-height:1.6}
+.bv-links{display:flex;gap:16px;flex-wrap:wrap}
+.bv-footer{padding:25px 0;border-top:1px solid var(--bv-ink);font-size:.83rem}
+.bv-mobile .bv-web-content{display:block}
+.bv-mobile .bv-web-picture{height:145px}
+.bv-mobile .bv-web-top small{display:none}
+.bv-mobile .bv-web-copy{padding:20px 25px}
+.bv-mobile .bv-web-copy h3{font-size:2.4rem}
+@media(max-width:750px){.bv-choices,.bv-visual-layout,.bv-build{grid-template-columns:1fr}.bv-header{align-items:flex-start}.bv-header nav{gap:10px}.bv-hero{padding-top:48px}.bv-choice{min-height:52px}.bv-screen{min-height:330px}.bv-web-content{grid-template-columns:1fr 1fr}.bv-web-copy{padding:18px}.bv-web-copy h3{font-size:2rem}.bv-web-picture::after{font-size:3rem}.bv-visual-frame{box-shadow:5px 5px 0 #d8dbd1}}
+@media(max-width:420px){.bv-web-content{display:block}.bv-web-picture{min-height:145px}.bv-word{grid-template-columns:1fr;gap:5px}.bv-hero h1{font-size:3.6rem}.bv-header nav{font-size:.82rem}}
+@media(prefers-reduced-motion:reduce){.bv-page *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+<script defer src="./start-here.js"></script>
+</head>
+<body class="bv-page"><a class="skip-link" href="#main">Skip to the first step</a>
+<header class="bv-header bv-shell"><a class="bv-wordmark" href="./index.html">PROMPT<br>VAULT.</a><nav aria-label="Simple navigation"><a href="./index.html">Home</a><a href="./websites.html">Website examples</a><a href="./apps.html">App examples</a><a href="./motion-library.html">Motion tools</a></nav></header>
+<main id="main">
+<section class="bv-hero bv-shell"><p class="bv-kicker">Welcome / No experience needed</p><h1>Your first design starts <em>right here.</em></h1><p class="bv-lead">You don't need to know any design words, write code, or create an account. Pick something you'd like to make. We'll show you an example, explain the parts, and give you a starting instruction to copy.</p><a class="bv-button" href="#choose">Choose what to make ↓</a><p class="bv-micro">Free to learn. No sign-up. Nothing you type here is sent to an AI service.</p></section>
+<section class="bv-section bv-shell" id="choose"><div class="bv-index"><span>01</span>Choose one thing</div><h2>What are you thinking of making?</h2><p>There is no wrong choice. You can change it whenever you like.</p><fieldset class="bv-choices" style="border:0;padding:0" aria-label="Choose a first project">
+<label class="bv-choice"><input type="radio" name="path" value="website" checked> A website</label>
+<label class="bv-choice"><input type="radio" name="path" value="app"> An app</label>
+<label class="bv-choice"><input type="radio" name="path" value="explore"> I just want ideas</label>
+</fieldset><p class="bv-guide" id="path-summary" role="status">A website is a collection of pages people visit in a browser. For example, a café menu, personal portfolio, or online store.</p></section>
+<section class="bv-section bv-shell" id="example"><div class="bv-index"><span>02</span>Look before you learn</div><h2>Here's what it could look like.</h2><div class="bv-visual-layout"><div><div class="bv-tools"><span class="bv-kicker">Original live HTML/CSS example</span><button class="bv-small-button" id="device" type="button" aria-pressed="false">View as phone</button></div>
+<div class="bv-visual-frame" id="frame"><div class="bv-browser-bar"><span class="bv-dots" aria-hidden="true"><i></i><i></i><i></i></span> <span id="fake-address">your-first-cafe.example</span></div>
+<div class="bv-screen bv-example-web" id="sample-website"><div class="bv-web-top"><strong>wildflower.</strong><small>MENU &nbsp; OUR STORY &nbsp; VISIT</small></div><div class="bv-web-content"><div class="bv-web-copy"><small>YOUR NEIGHBORHOOD CAFÉ</small><h3>Something good is brewing.</h3><p>Fresh coffee, slow mornings, and good company. A little corner worth visiting.</p><span class="bv-web-button">Explore the menu ↗</span></div><div class="bv-web-picture" role="img" aria-label="Original decorative illustration of a cup of coffee"></div></div></div>
+<div class="bv-screen bv-phone-demo" id="sample-app" hidden><div class="bv-phone"><div class="bv-phone-head"><span>9:41</span><span>● ● ●</span></div><h3>Hi, Sam.</h3><p style="font:.78rem Arial,sans-serif">A little progress goes a long way.</p><div class="bv-phone-progress"><span></span></div><small>2 of 3 habits today</small><div class="bv-task"><b>✓</b> Drink some water</div><div class="bv-task"><b>✓</b> Read for five minutes</div><div class="bv-task"><b></b> Take a short walk</div><div class="bv-phone-foot"><span>Today</span><span>Progress</span><span>You</span></div></div></div>
+<div class="bv-screen bv-explore-demo" id="sample-explore" hidden><span>A PLACE FOR GOOD IDEAS</span><h3>Small beginnings.<br>Remarkable possibilities.</h3><span>WEBSITES · APPS · MOTION · LEARNING</span></div>
+</div></div><div class="bv-notes"><h3 id="preview-title">Example: a small café website</h3><p id="preview-explanation">The top row helps visitors find pages. The large headline explains what this place is. The main button shows what to do next. That's a useful design, even before adding animations.</p><ul><li>This is an illustrative preview, not a deployed business.</li><li>Click through to see many more ideas.</li><li>You can copy the instructions in the next step.</li></ul><a class="text-link" id="preview-link" href="./websites.html">Browse 32 website section previews ↗</a></div></div></section>
+<section class="bv-section bv-shell"><div class="bv-index"><span>03</span>Three useful words</div><h2>Now you know the basics.</h2><div class="bv-word"><strong>Section</strong><p>One part of a website, like its welcome area, pricing, contact details, or reviews.</p></div><div class="bv-word"><strong>Screen / flow</strong><p>A screen is one view of an app. A flow is the series of steps a person takes, such as sign up → choose a goal → see progress.</p></div><div class="bv-word"><strong>Prompt</strong><p>Instructions you give an AI building tool. A strong prompt says what to make, for whom, how it should behave, and what must be checked.</p></div></section>
+<section class="bv-section bv-shell" id="make"><div class="bv-index"><span>04</span>Make something of your own</div><h2>Describe it in one sentence.</h2><div class="bv-build"><div><label class="bv-label" for="project">What would you like to make?</label><textarea class="bv-input" id="project" maxlength="500" placeholder="For example: A simple website for my handmade candle business">A welcoming website for a small neighborhood café</textarea><p class="bv-micro">Write normally. Don't worry about design terminology. This stays on your device and isn't automatically sent anywhere.</p><button class="bv-button" id="copy-prompt" type="button">Copy starting prompt</button><p id="copy-status" role="status" class="bv-micro">Copy the prompt and paste it into your preferred AI coding tool, or read it as a design checklist.</p></div>
+<div><label class="bv-label" for="built-prompt">Your ready-to-use design instructions</label><textarea class="bv-prompt" id="built-prompt" readonly>Design a welcoming website for a small neighborhood café. Start with a welcoming first screen, clear navigation, basic information, and one obvious next step. Use readable typography, a consistent color system, and sensible mobile spacing. Show a working visual preview before asking me to write code. Explain each design decision in simple words. Include mobile, keyboard, and accessibility checks. Avoid fake testimonials or made-up claims.</textarea></div></div></section>
+<section class="bv-finish bv-shell"><div class="bv-index"><span>05</span>Take the next step</div><h2>You have a starting point.</h2><p>Explore a few examples, choose one that fits your idea, then copy its full Design, Build, or Audit instructions. You can always come back here.</p><div class="bv-links"><a class="bv-button" id="next-collection" href="./websites.html">Show me website previews ↗</a><a class="bv-button" style="background:transparent;color:var(--bv-ink)" href="./motion-library.html">Learn animation tools ↗</a></div></section>
+</main>
+<footer class="bv-footer bv-shell"><span>Prompt-Vault Atlas / Free, beginner-friendly design learning</span> · <a href="./index.html">Back to all collections</a> · <a href="https://github.com/kapasainitishreddy/Prompt-Vault">Source on GitHub</a></footer></body></html>
