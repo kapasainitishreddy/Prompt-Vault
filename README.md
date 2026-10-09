@@ -1,5 +1,13 @@
 # Prompt-Vault
 
+## Interactive Atlas website
+
+**New:** browse every pattern through an original [five-page visual gallery](docs/index.html). It includes [32 website section previews](docs/websites.html), [32 separate app UI/UX flow previews](docs/apps.html), [23 motion experiments](docs/motion.html), plus [principles/research](docs/principles.html). Each specimen opens a detailed preview with **three design directions**, explanatory interaction notes and its complete copyable Markdown prompt from the repo. Search, category filters, saved ideas, keyboard-friendly dialog and motion-reduction support are built in.
+
+**Run it:** `python3 -m http.server 8000` from the repository root, then visit `http://localhost:8000/docs/index.html`. To host on GitHub Pages, choose branch `main` and folder `/docs` in Settings → Pages (no Actions workflow or paid extras required). [Deployment notes](docs/README.md).
+
+The demo previews are illustrative originals, **not 87 production-ready templates or finished apps**. External copyrighted/restricted component assets are not included.
+
 **Design Loops: research-backed, reusable prompts for websites and apps that do not look or behave like generic AI output.**
 
 Open-source, model-agnostic, no paid API, no subscription, no required GitHub Actions. The prompts work with a human in ChatGPT, Claude, Gemini, Cursor, Codex, or a local model; a tiny standard-library Python runner can maintain a **bounded** review loop.
