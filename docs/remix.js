@@ -7,11 +7,12 @@ import {composeBuild,composeAudit,clean} from "./remix-core.mjs";
 const $=id=>document.getElementById(id);
 const safe=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const validColor=s=>/^#[\da-f]{6}$/i.test(String(s))?s:"#17251e";
-const state={target:"website",styles:[],selected:null,flows:{website:[],app:[]},blueprints:{website:[],app:[]},query:"",family:"All",limit:12,variant:"balanced",output:"build",loaded:false};
+const state={target:"website",styles:[],selected:null,flows:{website:[],app:[]},blueprints:{website:[],app:[]},concepts:{website:[],app:[]},query:"",family:"All",limit:12,variant:"balanced",output:"build",loaded:false};
 const urlParams=new URLSearchParams(location.search);
 const targetParam=urlParams.get("type");
 const styleParam=urlParams.get("style");
 const sectionParam=urlParams.get("section");
+const conceptParam=urlParams.get("concept");
 if(targetParam==="app"||targetParam==="website")state.target=targetParam;
 const routeId=/^[a-z0-9-]+$/;
 const familyWeb={technical:["terminal","schematic","grid","blueprint"],editorial:["columns","newspaper","index","minimal"],art:["poster","product","orbital","geometry","organic"],collage:["scrapbook","collage","travel","risograph"]};
@@ -127,12 +128,21 @@ function updateBlueprint(){
  state.blueprints[state.target].map(x=>'<option value="'+safe(x.id)+'">'+safe(x.title)+'</option>').join("");
  if(state.blueprints[state.target].some(x=>x.id===desired))select.value=desired;
 }
+function updateConcept(){
+ const select=$("rx-concept"),desired=select.value;
+ const concepts=state.concepts[state.target],families=[...new Set(concepts.map(c=>c.family))];
+ select.innerHTML='<option value="">No extra UX concept</option>'+families.map(f=>{
+   const options=concepts.filter(c=>c.family===f).map(c=>'<option value="'+safe(c.id)+'">'+safe(c.title)+'</option>').join("");
+   return '<optgroup label="'+safe(f)+'">'+options+'</optgroup>';
+ }).join("");
+ if(concepts.some(c=>c.id===desired))select.value=desired;
+}
 function setTarget(target,chosenStyle=""){
  if(!["website","app"].includes(target)||!state.loaded)return;
  state.target=target;state.family="All";state.query="";state.limit=12;
  $("rx-search").value="";
  state.selected=state.styles.find(s=>s.target===target&&s.id===chosenStyle)||state.styles.find(s=>s.target===target);
- renderTargetButtons();renderFamilies();updateFocus();updateBlueprint();renderGallery();renderSelected();renderPrompt();
+ renderTargetButtons();renderFamilies();updateFocus();updateBlueprint();updateConcept();renderGallery();renderSelected();renderPrompt();
  updateShareableUrl();
 }
 function chooseStyle(id){
@@ -145,6 +155,8 @@ function updateShareableUrl(){
  const next=new URL(location.href);next.searchParams.set("type",state.target);next.searchParams.set("style",state.selected?.id||"");
  const chosen=$("rx-scope").value==="section"?$("rx-focus").value:"";
  if(chosen)next.searchParams.set("section",chosen);else next.searchParams.delete("section");
+ const concept=$("rx-concept").value;
+ if(concept)next.searchParams.set("concept",concept);else next.searchParams.delete("concept");
  history.replaceState(null,"",next.pathname+next.search+next.hash);
 }
 function projectInputs(){
@@ -159,7 +171,8 @@ function promptArgs(){
  const blueprintId=$("rx-blueprint").value;
  return {target:state.target,style:state.selected,project:projectInputs(),
   focus:state.flows[state.target].find(x=>x.id===id)||null,
-  blueprint:state.blueprints[state.target].find(x=>x.id===blueprintId)||null};
+  blueprint:state.blueprints[state.target].find(x=>x.id===blueprintId)||null,
+  concept:state.concepts[state.target].find(x=>x.id===$("rx-concept").value)||null};
 }
 function renderPrompt(){
  if(!state.loaded||!state.selected)return;
@@ -224,20 +237,21 @@ function setupEvents(){
 async function init(){
  setupEvents();renderTargetButtons();
  try{
-  const paths=["./data/styles.json","./data/website.json","./data/app.json","./data/guided-websites.json","./data/guided-apps.json"];
+  const paths=["./data/styles.json","./data/website.json","./data/app.json","./data/guided-websites.json","./data/guided-apps.json","./data/concepts-web.json","./data/concepts-app.json"];
   const responses=await Promise.all(paths.map(path=>fetch(path,{cache:"no-cache"})));
   for(let i=0;i<responses.length;i++)if(!responses[i].ok)throw Error("Could not read "+paths[i]);
-  const [styles,web,app,webBlueprints,appBlueprints]=await Promise.all(responses.map(r=>r.json()));
-  if(styles.styles?.length!==48||web.sections?.length!==32||app.flows?.length!==32||webBlueprints.blueprints?.length!==20||appBlueprints.blueprints?.length!==20)throw Error("An expected style or journey catalog is incomplete.");
+  const [styles,web,app,webBlueprints,appBlueprints,webConcepts,appConcepts]=await Promise.all(responses.map(r=>r.json()));
+  if(styles.styles?.length!==48||web.sections?.length!==32||app.flows?.length!==32||webBlueprints.blueprints?.length!==20||appBlueprints.blueprints?.length!==20||webConcepts.concepts?.length!==100||appConcepts.concepts?.length!==100)throw Error("An expected style, journey or concept catalog is incomplete.");
   state.styles=styles.styles.filter(s=>routeId.test(s.id)&&["app","website"].includes(s.target)&&s.palette);
   state.flows.website=web.sections;state.flows.app=app.flows;
   state.blueprints.website=webBlueprints.blueprints;state.blueprints.app=appBlueprints.blueprints;
+  state.concepts.website=webConcepts.concepts;state.concepts.app=appConcepts.concepts;
   state.loaded=true;
   if(sectionParam&&routeId.test(sectionParam)&&state.flows[state.target].some(x=>x.id===sectionParam))$("rx-scope").value="section";
   setTarget(state.target,styleParam||"");
-  if($("rx-scope").value==="section"&&state.flows[state.target].some(x=>x.id===sectionParam)){
-   $("rx-focus").value=sectionParam;renderPrompt();updateShareableUrl();
-  }
+  if($("rx-scope").value==="section"&&state.flows[state.target].some(x=>x.id===sectionParam))$("rx-focus").value=sectionParam;
+  if(state.concepts[state.target].some(x=>x.id===conceptParam))$("rx-concept").value=conceptParam;
+  renderPrompt();updateShareableUrl();
   setAnnouncement("48 original design directions loaded. Select a preview, describe your project, and copy a ready-to-edit prompt.");
  }catch(error){
   $("rx-count").textContent="Design library unavailable";

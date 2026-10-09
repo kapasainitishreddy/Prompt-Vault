@@ -47,7 +47,7 @@ function journeyFor(target,blueprint){
  "Approach: "+useful(blueprint.thesis,"Use the smallest clear path to value."),
  ]);
 }
-function commonBrief({target,style,project,focus,blueprint}){
+function commonBrief({target,style,project,focus,blueprint,concept}){
  const isExisting=project.mode==="existing",wide=project.scope==="full";
  const customPalette=style.palette;
  const brand=useful(project.name,isExisting?"My existing product":"My new project");
@@ -90,6 +90,19 @@ function commonBrief({target,style,project,focus,blueprint}){
  "",
  focus?("## Selected "+(target==="website"?"section":"screen")+"\n"+flowFor(target,focus)+"\n"):"",
  blueprint?"## Product architecture\n"+journeyFor(target,blueprint)+"\n":"",
+ concept?lines([
+  "## Optional UX concept (research-linked guidance, not proof of product outcomes)",
+  "Concept: "+clean(concept.title)+" / "+clean(concept.family),
+  "User need: "+clean(concept.purpose),
+  "Best applied when: "+clean(concept.useWhen),
+  "Avoid when: "+clean(concept.avoidWhen),
+  "Skills to consider: "+(Array.isArray(concept.skills)?concept.skills.map(x=>clean(x)).join(", "):""),
+  "Accessibility: "+clean(concept.accessibility,500),
+  "Recovery: "+clean(concept.recovery,500),
+  "Success question to verify: "+clean(concept.successSignal),
+  "Original concept: https://prompt-vault-atlas.pages.dev/concepts.html#"+encodeURIComponent(concept.id),
+  ""
+ ]):"",
  "## Implementation rules",
  implementation,
  "Create a consistent design system (type scale, spacing, color, surfaces, radii and interaction states) and apply it across every IN-SCOPE screen/section. Avoid repetitive equally sized cards, random gradients, fake glassmorphism, mismatched typefaces or unnecessary shadows.",
@@ -113,7 +126,7 @@ function commonBrief({target,style,project,focus,blueprint}){
  ]);
 }
 export function composeBuild(args){validate(args);return commonBrief(args);}
-export function composeAudit({target,style,project,focus,blueprint}){
+export function composeAudit({target,style,project,focus,blueprint,concept}){
  validate({target,style,project});
  return lines([
  "# Prompt-Vault | Review and polish my "+(target==="app"?"mobile app":"website"),
@@ -122,6 +135,7 @@ export function composeAudit({target,style,project,focus,blueprint}){
  urlLine(project.url),
  "Visual direction: "+style.title+"; target: "+platform[target]+".",
  "Focus: "+useful(focus?.title||blueprint?.title,project.scope==="full"?"End-to-end experience":"Selected component"),
+ concept?"Optional research-linked UX concept: "+clean(concept.title)+"; verify: "+clean(concept.successSignal):"",
  "Audience / user goal: "+useful(project.audience,"General users")+" / "+useful(project.goal,"Complete the primary task easily."),
  "",
  "Inspect actual rendered screens and relevant source. Evaluate:",
