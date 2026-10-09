@@ -199,6 +199,8 @@ async function copyText(text){
  }catch{notify('Copy unavailable here. Select the prompt text and copy manually.');}
 }
 function bindControls(){
+ const mobileButton=document.querySelector(".mobile-menu"), mobileNav=byId("mobile-navigation");
+ if(mobileButton&&mobileNav){mobileButton.addEventListener("click",()=>{const opening=mobileNav.hidden;mobileNav.hidden=!opening;mobileButton.setAttribute("aria-expanded",String(opening));});document.addEventListener("keydown",event=>{if(event.key==="Escape"&&!mobileNav.hidden){mobileNav.hidden=true;mobileButton.setAttribute("aria-expanded","false");mobileButton.focus();}});}
  document.querySelectorAll('[data-track]').forEach(button=>button.addEventListener('click',()=>activate(button.dataset.track,null)));
  document.querySelectorAll('[data-platform]').forEach(button=>button.addEventListener('click',()=>{state.platform=button.dataset.platform;renderPlatformGuidance();renderPreview();renderPrompt();}));
  document.querySelectorAll('[data-device]').forEach(button=>button.addEventListener('click',()=>{state.device=button.dataset.device;renderPreview();}));
