@@ -1,5 +1,16 @@
 # Prompt-Vault
 
+## New: 100 worked design lessons and optional support
+
+**[Practice Studio](docs/studio.html)** · **[Sponsor/support](docs/support.html)** · **[Learning/QA notes](docs/LEARNING-STUDIO.md)**
+
+An additional **100 original plain-English lessons**, with **60 app-first** (iOS/Android) and **40 website** lessons across 20 topics. Each explains the right placement, a real-world scenario, what to avoid, test questions, skills and source limitations. A working original demonstration accompanies each lesson, using 15 interaction-model families, and produces copyable Build/Design/Audit prompts and Markdown export. These are generated study prompts, **not 100 new native apps or 100 full site templates**.
+
+The support page reserves a verified Buy Me a Coffee slot and user-consent-triggered sponsorship video with transcript. Default configuration has **no payment link, no named sponsor, no external video or autoplay** until actually provided/approved; reading stays free.
+
+Local tests: 4 Python checks and 3 Node sponsorship guards passed. Chromium 144 DOM QA with inlined local assets exercised 100 lesson views, 16 interaction scenarios, 20 topic families across four viewport sizes (1440/768/390/360), navigation, prompt export and disabled sponsors with **zero page errors**. This is *not* a successful hosted-origin, native device, WCAG or app-store certification.
+
+
 ## New: 40 complete guided website and app design blueprints
 
 **[Guided Design Atlas with interactive previews](docs/guided.html)** · [20 website architectures](guides/website/README.md) · [20 iOS/Android app journeys](guides/app/README.md) · [37 annotated research sources and 28 open-source ingredients](research/EVIDENCE-ATLAS.md).

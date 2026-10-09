@@ -94,3 +94,22 @@ body.motion-off *,body.motion-off *::before,body.motion-off *::after{transition:
 
 /* Compact site nav for the expanded public atlas: preserve readable links on tablets. */
 @media(min-width:741px) and (max-width:1300px){.masthead .main-nav{display:none}.masthead .mobile-menu{display:flex;align-items:center;gap:7px;min-height:42px;padding:8px 10px;border:1px solid var(--ink);background:transparent;margin-left:auto;font-size:.72rem;font-weight:800}.mobile-navigation:not([hidden]){display:flex;flex-direction:column;gap:0;padding-top:6px;padding-bottom:12px;background:var(--paper);border-bottom:1px solid var(--ink);position:relative;z-index:8}.mobile-navigation a{padding:9px 3px;font-weight:800;font-size:.9rem;text-decoration:none}}
+
+
+.practice-ribbon{background:#e8edda;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.practice-ribbon-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(240px,.9fr);gap:clamp(24px,6vw,90px);padding-top:clamp(36px,5vw,80px);padding-bottom:clamp(36px,5vw,80px)}
+.practice-ribbon .micro{letter-spacing:.13em;font-weight:850;color:#4f6958}
+.practice-ribbon h2{font:500 clamp(3.2rem,6.2vw,6.5rem)/.91 Georgia,serif;letter-spacing:-.08em;margin:22px 0}
+.practice-ribbon h2 em{color:#ad4631;font-weight:400}
+.practice-ribbon p:not(.micro){max-width:39rem;font-size:clamp(.95rem,1.5vw,1.17rem);line-height:1.6;color:#3d5645}
+.practice-ribbon-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:28px}
+.practice-ribbon-actions>a:not(.btn){font-size:.83rem;font-weight:750}
+.practice-ribbon-graphic{background:#d5eb9e;border:1px solid #263b2d;padding:clamp(17px,3vw,30px);display:flex;flex-direction:column;justify-content:space-between;gap:38px}
+.practice-ribbon-ledger{border-top:1px solid #2e4930;border-bottom:1px solid #2e4930;display:grid;grid-template-columns:1fr 1fr;gap:15px;padding:24px 0}
+.practice-ribbon-ledger>span{display:grid;align-content:center;gap:5px}
+.practice-ribbon-ledger strong{font:500 clamp(4.5rem,8vw,8rem)/1 Georgia,serif;letter-spacing:-.08em}
+.practice-ribbon-ledger small{font-size:.78rem;line-height:1.4;font-weight:750}
+.practice-ribbon-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;font-size:.68rem;font-weight:850;letter-spacing:.07em}
+.practice-ribbon-steps span{border-top:1px solid #496547;padding-top:8px}
+@media(max-width:760px){.practice-ribbon-grid{grid-template-columns:1fr}.practice-ribbon h2{font-size:clamp(3.3rem,10vw,6.3rem)}.practice-ribbon-graphic{min-height:250px}.practice-ribbon-ledger strong{font-size:5rem}}
+@media(prefers-reduced-motion:reduce){.practice-ribbon *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
