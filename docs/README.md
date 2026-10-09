@@ -1,3 +1,9 @@
+## Product tours and newcomer FAQ (October 9, 2026)
+
+- [FAQ](faq.html): 23 plain-language questions in four topics; native expanding answers without JavaScript plus optional client-side search. Five answers also appear on the homepage.
+- [Guided tour launcher](tour.js): optional version-pinned [Driver.js 1.9.0](https://github.com/nilbuild/driver.js) MIT product tour. It loads on user interaction and highlights the main Atlas features with Back, Next, progress and close. The fixed Help menu also links to [Start Here](start-here.html) and the FAQ. The tour is never automatic.
+- [Tour styles](tour.css): restrained popovers matching Atlas typography, mobile layout, reduced-motion support. Without the CDN, tour loading fails gracefully and the core library and FAQ still work.
+
 ## MG Styles 15 reference (October 9, 2026)
 
 - [15 real film previews](mg-film-styles.html) from the credited MIT [Vincentwei1021/mg-styles-15](https://github.com/Vincentwei1021/mg-styles-15) source, with actual source-hosted preview frames and optional controlled MP4 playback (10 seconds per film).
