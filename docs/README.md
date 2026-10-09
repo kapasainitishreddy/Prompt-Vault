@@ -2,6 +2,34 @@
 
 A static, dependency-free visual gallery of the original **32 website section**, **32 app UI/UX flow**, and **23 motion recipe** prompts.
 
+## Deep Concept Field Guide (October 2026)
+
+The original [Concept Field Guide](concepts.html) sits alongside the
+[Academy](academy.html). **Website Design** and **App Design** are still the
+only primary tracks, supplemented with 100 granular patterns each.
+The new guided catalog links **50 scoped research records** (including
+12 peer-reviewed papers) and 62 additional source-code references. The
+combined source library has 123 unique upstream URLs, with licensing
+restrictions or unverified status shown rather than assumed MIT.
+
+Files: `concepts.html`, `concepts.css`, `concepts.js`,
+`data/concepts-web.json`, `data/concepts-app.json`,
+`data/deep-research.json`, `data/deep-resources.json`.
+The [Markdown concept index](../catalog/CONCEPT-INDEX.md) and
+[research handbook](../research/concept-field-guide.md) are accessible
+without running JavaScript.
+
+The 200 pattern previews are original HTML/CSS specimen variants built
+from shared renderer families. They're illustrations with local mock
+actions, not 200 independent production websites/mobile apps, live
+model calls, purchases or native-device tests. Switch preview width,
+composition and normal/success/error to study UI states.
+
+**Smoke and integrity checks:** `python3 -m unittest discover -s tests -v`
+from repository root, plus `node --check docs/concepts.js` when Node is
+installed. Check the page in actual browsers at 360, 390, 768 and 1440 px
+and with keyboard/assistive technology before claiming production QA.
+
 ## Guided Design Academy (2026)
 
 [Open the new academy](academy.html) with two primary tracks:
@@ -56,6 +84,6 @@ Original frontend, specimen art and prompts are [MIT licensed](../LICENSE). Thir
 - `skills.html`: the four credited repositories with real license caveats, 16 original focused design workflows, search and three-workflow local prompt composer.
 - Both include the complete source Markdown under `docs/prompts/` and their JSON catalogs under `docs/data/`.
 
-The original eight galleries contain **159 original prompts** and **143 illustrative visual studies**. The additional ninth guided Academy page composes design, build and audit prompts at runtime from 30 new blueprints, so these generated combinations are not counted as standalone hand-authored Markdown prompt files. These are not production apps or reused vendor code. Copy all `docs/` to any static host.
+The original eight galleries contain **159 original prompts** and **143 illustrative visual studies**. The ninth guided Academy page composes design, build and audit prompts at runtime from 30 new blueprints, so these generated combinations are not counted as standalone hand-authored Markdown prompt files. These are not production apps or reused vendor code. Copy all `docs/` to any static host.
 
 - `resources.html`: eight original interactive studies with filters, upstream source links, license-aware details and eight full same-origin prompts under `docs/prompts/references/`. No vendored external components or screenshots.
