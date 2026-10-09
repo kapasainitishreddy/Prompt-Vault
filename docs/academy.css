@@ -157,3 +157,10 @@ html{scroll-behavior:smooth}body.academy-page{margin:0;background:var(--ac-cream
 .ac-signal small{font-size:.62rem;line-height:1.5;color:#806748;border-top:1px solid #c1cfa9;padding-top:10px;margin-top:auto}
 @media(max-width:1100px){.ac-signal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.ac-signal-grid{grid-template-columns:1fr}}
+
+.ac-resource-controls{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:0 0 20px;background:#e6eddf;border:1px solid #a5b8a0;padding:13px}
+.ac-resource-controls label{font-size:.65rem;font-weight:900;letter-spacing:.08em}
+.ac-resource-controls input,.ac-resource-controls select{background:#fffdf8;border:1px solid #859d84;font-size:.74rem;min-height:38px;padding:7px 10px}
+.ac-resource-controls input{width:min(100%,280px)}
+.ac-resource-controls span{font-size:.65rem;color:#52644f;font-weight:800;margin-left:auto}
+@media(max-width:650px){.ac-resource-controls{align-items:stretch}.ac-resource-controls>*{flex-basis:100%;max-width:none!important}.ac-resource-controls input{width:100%}}
