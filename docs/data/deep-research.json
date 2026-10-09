@@ -573,6 +573,84 @@
         "android",
         "design"
       ]
+    },
+    {
+      "id": "cleveland-1984",
+      "title": "Cleveland & McGill (1984): Graphical Perception",
+      "year": 1984,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1080/01621459.1984.10478080",
+      "insight": "Controlled experiments examine how accurately people decode quantitative values using different graphical encodings.",
+      "limitation": "Results apply to tested chart tasks, not a universal ban on pie charts or all ornament.",
+      "tags": [
+        "data",
+        "visualization"
+      ]
+    },
+    {
+      "id": "heer-2007",
+      "title": "Heer & Robertson (2007): Animated Transitions in Statistical Data Graphics",
+      "year": 2007,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1109/TVCG.2007.70539",
+      "insight": "Controlled studies examine how staged animated transitions can assist perception of changes in statistical graphics.",
+      "limitation": "Only certain chart transitions were tested; respect reduced motion and task relevance.",
+      "tags": [
+        "motion",
+        "visualization"
+      ]
+    },
+    {
+      "id": "munzner-2009",
+      "title": "Munzner (2009): Nested Model for Visualization Design and Validation",
+      "year": 2009,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1109/TVCG.2009.111",
+      "insight": "Separates domain problem, task/data abstraction, visual encoding/interaction and algorithm implementation to structure validation.",
+      "limitation": "Framework for visual analysis, not a guarantee that one chart type is optimal.",
+      "tags": [
+        "research",
+        "visualization"
+      ]
+    },
+    {
+      "id": "borkin-2013",
+      "title": "Borkin et al. (2013): What Makes a Visualization Memorable?",
+      "year": 2013,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1109/TVCG.2013.234",
+      "insight": "Study of memorability across sampled static visualizations finds consistent differences across visual forms and features.",
+      "limitation": "Memorability is not equivalent to accuracy, actionability or accessibility.",
+      "tags": [
+        "memory",
+        "visualization"
+      ]
+    },
+    {
+      "id": "hassenzahl-2004",
+      "title": "Hassenzahl (2004): Interplay of Beauty, Goodness and Usability",
+      "year": 2004,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1207/s15327051hci1904_2",
+      "insight": "Studies distinguish perceived usability, hedonic attributes and aesthetic evaluation for tested interface skins.",
+      "limitation": "Small product/skin context; does not quantify revenue or prove attractive designs are usable.",
+      "tags": [
+        "aesthetics",
+        "ux"
+      ]
+    },
+    {
+      "id": "kujala-2011",
+      "title": "Kujala et al. (2011): UX Curve and Long-term Experience",
+      "year": 2011,
+      "type": "peer-reviewed",
+      "url": "https://doi.org/10.1016/j.intcom.2011.06.005",
+      "insight": "A retrospective method helps investigate how users' experiences change with continued product use.",
+      "limitation": "Retrospective recall and sample context require cautious interpretation; not a controlled retention forecast.",
+      "tags": [
+        "research",
+        "longitudinal"
+      ]
     }
   ]
 }
