@@ -2,6 +2,24 @@
 
 A static, dependency-free visual gallery of the original **32 website section**, **32 app UI/UX flow**, and **23 motion recipe** prompts.
 
+## Guided Design Academy (2026)
+
+[Open the new academy](academy.html) with two primary tracks:
+**Website Design** and **App Design**. It adds 16 website blueprints,
+14 complete app journey blueprints, 220 ordered section/screen prompts,
+3 full prompt types (design/build/audit), 16 craft modules, 30 primary
+research/documentation references, 63 source links, original interactive
+code-rendered visual studies, native iOS/Android notes and RevenueCat/
+Sensor Tower evidence with explicit limitations. Supporting motion,
+style, skills and open-source galleries remain intact.
+
+Files: `academy.html`, `academy.css`, `academy.js`,
+`data/academy.json`. Research handbook: `../research/design-academy-2026.md`.
+Run `python3 -m unittest discover -s tests -v` for static tests. A
+browser/device QA pass is still mandatory before calling this production
+validated. Code-rendered examples and their interactions are illustrative;
+there are no real app store purchases or account integrations in the academy.
+
 ## Preview locally
 
 ```bash
@@ -38,6 +56,6 @@ Original frontend, specimen art and prompts are [MIT licensed](../LICENSE). Thir
 - `skills.html`: the four credited repositories with real license caveats, 16 original focused design workflows, search and three-workflow local prompt composer.
 - Both include the complete source Markdown under `docs/prompts/` and their JSON catalogs under `docs/data/`.
 
-Eight static pages; **159 original prompts**, **143 illustrative visual studies**. These are not production apps or reused vendor code. Copy all `docs/` to any static host.
+The original eight galleries contain **159 original prompts** and **143 illustrative visual studies**. The additional ninth guided Academy page composes design, build and audit prompts at runtime from 30 new blueprints, so these generated combinations are not counted as standalone hand-authored Markdown prompt files. These are not production apps or reused vendor code. Copy all `docs/` to any static host.
 
 - `resources.html`: eight original interactive studies with filters, upstream source links, license-aware details and eight full same-origin prompts under `docs/prompts/references/`. No vendored external components or screenshots.
