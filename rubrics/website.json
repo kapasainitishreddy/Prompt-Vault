@@ -1,0 +1,33 @@
+{
+  "track": "website",
+  "version": 1,
+  "min_total": 85,
+  "min_dimension": 7,
+  "special_minimums": {
+    "distinctiveness": 8
+  },
+  "max_iterations": 4,
+  "dimensions": {
+    "clarity": 20,
+    "art_direction": 15,
+    "distinctiveness": 15,
+    "interaction": 15,
+    "responsiveness": 10,
+    "accessibility": 15,
+    "performance": 10
+  },
+  "required_evidence": [
+    "desktop_screenshot",
+    "mobile_screenshot",
+    "functional_scenario",
+    "accessibility_review",
+    "responsive_review",
+    "performance_observation",
+    "license_review"
+  ],
+  "blocking_severities": [
+    "P0",
+    "P1"
+  ],
+  "notes": "Scores are human/design heuristics, not scientific accuracy or an accessibility certificate. Evidence checked by reviewers."
+}

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Design Loops · Prompt-Vault</title>
+<meta name="description" content="Open-source design prompts that fight generic AI-generated websites and app UIs.">
+<style>
+:root{--paper:#f1eee5;--ink:#15281f;--lime:#d5e98b;--clay:#b84027;--line:#a5afa2;--white:#fffef9;color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);margin:0;font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:inherit;text-underline-offset:.2em}
+a:focus-visible,button:focus-visible{outline:3px solid var(--clay);outline-offset:4px}
+.skip{position:absolute;top:-5rem;left:1rem;padding:.7rem;background:var(--lime);z-index:10}
+.skip:focus{top:1rem}
+.wrapper{max-width:1450px;width:calc(100% - 56px);margin:auto}
+header{border-bottom:1px solid var(--ink);min-height:82px;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.wordmark{font-size:1.16rem;font-weight:900;letter-spacing:-.06em;text-decoration:none}
+.wordmark b{background:var(--ink);color:var(--lime);font:700 1.3rem Georgia,serif;padding:.32rem .6rem;display:inline-block;transform:rotate(-6deg);margin-right:.6rem}
+nav{display:flex;gap:clamp(1rem,4vw,3rem);font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em}
+nav a{text-decoration:none}nav a:hover{text-decoration:underline}
+.hero{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(340px,.88fr);border-bottom:1px solid var(--ink);min-height:740px}
+.story{padding:clamp(3rem,7vw,7rem) clamp(2rem,4vw,5rem) 5rem 0;display:flex;align-items:flex-start;flex-direction:column}
+.eyebrow{font-size:.7rem;letter-spacing:.15em;font-weight:850;text-transform:uppercase}
+.story h1{font:500 clamp(4.6rem,8.8vw,10rem)/.86 Georgia,Times New Roman,serif;letter-spacing:-.096em;margin:auto 0 2.3rem;max-width:11ch}
+.story h1 em{display:block;font-weight:400;color:var(--clay);padding:.04em 0}
+.intro{max-width:30rem;font-size:clamp(1.05rem,1.5vw,1.36rem);margin:0 0 2rem;line-height:1.45}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem}
+.cta{padding:1rem 1.2rem;background:var(--ink);color:#fff;min-height:52px;font-size:.86rem;font-weight:800;text-decoration:none;display:inline-flex;gap:1.5rem;align-items:center}
+.cta:hover{background:#365347}
+.secondary{font-weight:800;font-size:.86rem}
+.stage{background:var(--lime);border-left:1px solid var(--ink);padding:2rem clamp(1.2rem,3.5vw,3.7rem);display:flex;flex-direction:column;position:relative;overflow:hidden}
+.stage:before{content:"P/V";position:absolute;font:700 clamp(11rem,28vw,28rem) Georgia,serif;letter-spacing:-.2em;right:1rem;bottom:-9rem;opacity:.055;pointer-events:none}
+.stage-head,.stage-foot{display:flex;justify-content:space-between;gap:1rem;font-size:.67rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;position:relative;z-index:1}
+.stage-head{border-bottom:1px solid var(--ink);padding-bottom:1.3rem}
+.tabs{display:flex;gap:.6rem;margin:2.2rem 0 1rem;position:relative;z-index:1}
+.tabs button{background:transparent;border:1px solid var(--ink);font:800 .76rem system-ui,sans-serif;padding:.7rem 1rem;min-height:44px;color:var(--ink);cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--ink);color:var(--white)}
+.paper{background:var(--white);border:1.5px solid var(--ink);min-height:365px;box-shadow:15px 15px 0 rgba(22,38,31,.18);margin:auto 0;position:relative;z-index:1}
+.paper-head{padding:.7rem 1rem;border-bottom:1px solid var(--ink);display:flex;justify-content:space-between;font-size:.65rem;font-weight:800;letter-spacing:.09em}
+.sample{padding:2.3rem 2rem}
+.sample h2{font:500 clamp(2.8rem,5vw,5rem)/.96 Georgia,serif;letter-spacing:-.075em;margin:.8rem 0 1.6rem}
+.sample h2 span{color:var(--clay)}
+.fake-button{display:inline-block;background:var(--ink);color:#fff;padding:.55rem 1rem;font-size:.68rem;font-weight:850}
+.small-note{border-top:1px solid var(--line);padding-top:.9rem;font-size:.68rem;font-weight:750;text-transform:uppercase;display:flex;justify-content:space-between;gap:1rem;margin-top:1.8rem}
+.app-sample{padding:2rem 1.6rem;display:grid;gap:.8rem}
+.app-sample h2{font:500 2.8rem/.98 Georgia,serif;letter-spacing:-.07em;margin:0 0 1rem}
+.task{display:flex;gap:.8rem;align-items:center;background:var(--paper);padding:.9rem;font-size:.83rem;font-weight:750}
+.check{width:22px;height:22px;display:grid;place-items:center;border:2px solid var(--ink);flex:0 0 auto}
+.done .check{background:var(--ink);color:var(--lime)}
+.stage-foot{border-top:1px solid var(--ink);padding-top:1.2rem}
+[hidden]{display:none!important}
+.principles{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
+.principles li{padding:2.2rem 2rem 2.8rem 0;border-right:1px solid var(--line)}
+.principles li+li{padding-left:2rem}.principles li:last-child{border:0}
+.principles strong{display:block;font:500 clamp(1.7rem,2.7vw,2.5rem) Georgia,serif;letter-spacing:-.06em;margin:1rem 0}
+.principles p{font-size:.85rem;max-width:24rem;margin:0}
+footer{border-top:1px solid var(--ink);padding:1.5rem 0 3rem;font-size:.77rem;display:flex;justify-content:space-between;gap:1rem}
+@media(max-width:950px){.hero{grid-template-columns:1fr}.story{padding:3rem 0 4rem}.story h1{margin:2rem 0;font-size:clamp(4.8rem,11vw,8rem)}.stage{border-left:0;border-top:1px solid var(--ink);min-height:590px}.paper{width:100%;max-width:610px;margin:2rem auto}}
+@media(max-width:640px){.wrapper{width:calc(100% - 32px)}header{min-height:76px}nav{gap:1rem}nav a:first-child{display:none}.story h1{font-size:clamp(4.15rem,13vw,6.6rem)}.stage{padding:1.4rem;min-height:530px}.sample{padding:1.5rem 1.1rem}.sample h2{font-size:2.85rem}.paper{box-shadow:8px 9px 0 rgba(22,38,31,.18)}.principles{grid-template-columns:1fr}.principles li,.principles li+li{padding:1.3rem 0;border:0;border-bottom:1px solid var(--line)}footer{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="wrapper">
+<header><a class="wordmark" href="https://github.com/kapasainitishreddy/Prompt-Vault"><b aria-hidden="true">P</b> PROMPT / VAULT</a>
+<nav aria-label="Main"><a href="#method">Method</a><a href="#specimen">Specimen</a><a href="https://github.com/kapasainitishreddy/Prompt-Vault">Source ↗</a></nav></header>
+<main id="main">
+<section class="hero" aria-labelledby="headline">
+<div class="story">
+<span class="eyebrow">Open design systems / 001</span>
+<h1 id="headline">Design.<em>Not default.</em></h1>
+<p class="intro">Open-source design loops for websites and apps. Less AI sameness. More deliberate, functional interfaces.</p>
+<div class="actions">
+<a class="cta" href="https://github.com/kapasainitishreddy/Prompt-Vault/blob/main/prompts/website/LOOP.md">Website design loop <span aria-hidden="true">↗</span></a>
+<a class="secondary" href="https://github.com/kapasainitishreddy/Prompt-Vault/blob/main/prompts/app/LOOP.md">App design loop →</a>
+</div>
+</div>
+<div class="stage" id="specimen">
+<div class="stage-head"><span>Specimen / 001</span><span>Designed, then tested.</span></div>
+<div class="tabs" role="group" aria-label="Choose illustration">
+<button type="button" data-track="website" aria-pressed="true">Website</button><button type="button" data-track="app" aria-pressed="false">App</button>
+</div>
+<div class="paper" aria-label="Conceptual illustration, not a product screenshot">
+<div class="paper-head"><span>STUDIES IN INTENTION</span><span>01 / 02</span></div>
+<div class="sample" data-panel="website">
+<span class="eyebrow">Design loop / web</span><h2>Make every <span>pixel</span> explain itself.</h2>
+<span class="fake-button" aria-hidden="true">DISCOVER THE METHOD →</span>
+<div class="small-note"><span>Art direction</span><span>Function</span><span>Proof</span></div>
+</div>
+<div class="app-sample" data-panel="app" hidden>
+<span class="eyebrow">Design loop / application</span><h2>Useful at every step.</h2>
+<div class="task"><span class="check" aria-hidden="true"></span>Define the real task</div>
+<div class="task done"><span class="check" aria-hidden="true">✓</span>Build the happy path</div>
+<div class="task"><span class="check" aria-hidden="true"></span>Verify recovery states</div>
+</div>
+</div>
+<p class="stage-foot"><span id="notice" aria-live="polite">Website concept selected.</span><span>Illustration only.</span></p>
+</div>
+</section>
+<ul class="principles" id="method">
+<li><span class="eyebrow">01 / Distinct</span><strong>Different by design.</strong><p>Three real visual directions before implementation. Product-specific character, not a reused template.</p></li>
+<li><span class="eyebrow">02 / Observed</span><strong>More than pretty.</strong><p>Inspect rendered screens, keyboard paths, real tasks, error states and responsive behavior.</p></li>
+<li><span class="eyebrow">03 / Open</span><strong>No lock-in.</strong><p>MIT-licensed prompts and examples. Bring your own model; use the offline bounded loop manager.</p></li>
+</ul>
+</main>
+<footer><span>© 2026 Prompt-Vault contributors · MIT</span><span>Original sample art direction · No fabricated product data</span></footer>
+</div>
+<script>
+(function(){
+var controls=document.querySelectorAll("[data-track]");
+var panels=document.querySelectorAll("[data-panel]");
+var notice=document.getElementById("notice");
+controls.forEach(function(btn){btn.addEventListener("click",function(){
+var selected=btn.getAttribute("data-track");
+controls.forEach(function(b){b.setAttribute("aria-pressed",String(b===btn));});
+panels.forEach(function(p){p.hidden=p.getAttribute("data-panel")!==selected;});
+notice.textContent=selected==="app"?"App concept selected.":"Website concept selected.";
+});});
+})();
+</script>
+</body>
+</html>

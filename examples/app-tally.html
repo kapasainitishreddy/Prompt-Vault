@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tally · A functional Prompt-Vault app specimen</title>
+<style>
+:root{--paper:#f5f1e9;--ink:#18312a;--line:#bcc8be;--accent:#d9e988;--red:#aa3e26;--white:#fffef9;color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.skip{position:absolute;left:1rem;top:-5rem;background:var(--accent);padding:.7rem;z-index:3}.skip:focus{top:1rem}
+.shell{max-width:1150px;margin:auto;min-height:100vh;display:grid;grid-template-columns:230px minmax(0,1fr);border-left:1px solid var(--line);border-right:1px solid var(--line)}
+aside{padding:2rem 1.6rem;background:var(--accent);border-right:1px solid var(--ink);display:flex;flex-direction:column;gap:3rem}
+.brand{font:600 2.8rem Georgia,serif;letter-spacing:-.08em;text-decoration:none;color:inherit}
+.rail-note{border-top:1px solid var(--ink);padding-top:1.2rem;font-size:.85rem;max-width:12rem}
+.rail-bottom{margin-top:auto;font-size:.72rem;font-weight:800;letter-spacing:.09em}
+main{min-width:0;padding:clamp(1.5rem,5vw,4.5rem)}
+.eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.header-line{border-bottom:1px solid var(--ink);padding-bottom:1.1rem;display:flex;justify-content:space-between;gap:1rem}
+h1{font:500 clamp(3.7rem,7vw,6.4rem)/.94 Georgia,serif;letter-spacing:-.085em;margin:2rem 0 1.2rem}
+.intro{font-size:1.16rem;max-width:35rem;margin:0 0 2.5rem}
+label{display:block;margin-bottom:.5rem}
+.capture{display:flex;gap:.6rem;flex-wrap:wrap}
+.capture input{flex:2 1 240px;min-width:0;border:1px solid var(--ink);background:var(--white);padding:1rem;min-height:52px;border-radius:0}
+.primary{flex:1 1 120px;border:1px solid var(--ink);background:var(--ink);color:white;padding:1rem;min-height:52px;font-weight:800}
+.primary:hover{background:#375347}
+#form-error{color:#9e301e;font-weight:750;min-height:1.3rem;margin:.5rem 0 0}
+.help{font-size:.8rem;color:#496157;margin:0 0 2.3rem}
+.controls{border-bottom:1px solid var(--line);padding-bottom:1rem;display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem}
+.filters button{border:1px solid transparent;background:transparent;font-size:.78rem;padding:.6rem .85rem;min-height:44px;font-weight:800}
+.filters [aria-pressed=true]{border-color:var(--ink);background:var(--accent)}
+#count{font-size:.79rem;font-weight:650;color:#496157}
+#items{list-style:none;padding:0;margin:1rem 0;display:grid;gap:.65rem}
+.item{display:flex;justify-content:space-between;align-items:center;gap:1rem;border:1px solid var(--line);background:var(--white);padding:.8rem}
+.item-main{display:flex;align-items:center;gap:.9rem;min-width:0}
+.mark{width:44px;height:44px;border:1px solid var(--ink);background:var(--paper);flex:0 0 auto;font-size:1.2rem}
+.item.done .mark{background:var(--ink);color:var(--accent)}
+.task-text{font-weight:650;overflow-wrap:anywhere}
+.done .task-text{text-decoration:line-through;color:#53695f}
+.remove{border:0;background:transparent;text-decoration:underline;padding:.65rem;min-height:44px;font-size:.77rem;font-weight:750}
+.empty{border:1px dashed var(--line);margin-top:1rem;min-height:220px;padding:2rem;text-align:center;display:grid;place-content:center}
+.empty strong{font:500 2.1rem Georgia,serif}
+.empty p{font-size:.9rem;max-width:22rem;color:#496157;margin:1rem auto 0}
+.toast{margin:1rem 0;border:1px solid var(--ink);background:var(--accent);padding:.7rem 1rem;display:flex;justify-content:space-between;gap:1rem;align-items:center;font-size:.85rem;font-weight:700}
+.toast button{min-height:44px;border:1px solid var(--ink);background:var(--white);padding:.6rem 1rem;font-weight:850}
+.limit{font-size:.78rem;color:#496157;max-width:40rem;margin-top:3rem}
+[hidden]{display:none!important}
+@media(max-width:740px){.shell{display:block;border:0}aside{padding:1rem 1.25rem;flex-direction:row;align-items:center;justify-content:space-between;border:0;border-bottom:1px solid var(--ink)}.brand{font-size:2.2rem}.rail-note{border:0;padding:0;margin:0;font-size:.68rem}.rail-bottom{display:none}main{padding:1.4rem 1.2rem 3rem}h1{font-size:clamp(3.6rem,12vw,5.3rem)}.item{padding:.55rem}.header-line{font-size:.7rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to tasks</a>
+<div class="shell">
+<aside><a class="brand" href="#" aria-label="Tally home">tally.</a>
+<p class="rail-note">A little room for progress. Functional, local-only UX sample.</p>
+<span class="rail-bottom">NO LOGIN · NO SYNC · NO CLOUD</span></aside>
+<main id="main">
+<div class="header-line eyebrow"><span>Workspace / Today</span><span>UI specimen 001</span></div>
+<h1>Make space<br>for doing.</h1>
+<p class="intro">One thing at a time. Capture a task, finish it, change your mind. Progress should feel simple.</p>
+<form id="form" novalidate>
+<label class="eyebrow" for="task">What's your next step?</label>
+<div class="capture"><input id="task" name="task" autocomplete="off" maxlength="100" placeholder="Write one clear thing to do…" aria-describedby="form-error help" required><button class="primary" type="submit">Add task ↗</button></div>
+<p id="form-error" role="alert"></p><p class="help" id="help">Press Enter to add. Your tasks stay in this browser only.</p>
+</form>
+<div class="controls">
+<div class="filters" role="group" aria-label="Task filters"><button type="button" data-filter="all" aria-pressed="true">All</button><button type="button" data-filter="open" aria-pressed="false">To do</button><button type="button" data-filter="done" aria-pressed="false">Done</button></div>
+<span id="count" aria-live="polite">0 tasks</span>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden><span id="toast-text"></span><button type="button" id="undo">Undo</button></div>
+<ul id="items" aria-label="Tasks"></ul>
+<div id="empty" class="empty"><div><strong id="empty-head">Nothing to juggle.</strong><p id="empty-copy">Add a task above. We won't show you fake progress charts.</p></div></div>
+<p class="limit">This is an original open-source interaction example, not a finished native app. Data uses localStorage when allowed, with in-memory fallback; no authentication, synchronization, notifications or remote storage.</p>
+</main>
+</div>
+<script>
+(function(){
+"use strict";
+var storageKey="prompt-vault-tally-v1", tasks=[], view="all", undoAction=null;
+var input=document.getElementById("task"), form=document.getElementById("form");
+var error=document.getElementById("form-error"), list=document.getElementById("items");
+var toast=document.getElementById("toast"), toastText=document.getElementById("toast-text");
+var undoBtn=document.getElementById("undo");
+function message(txt,withUndo){toastText.textContent=txt;undoBtn.hidden=!withUndo;toast.hidden=false;}
+function load(){
+try{var value=JSON.parse(localStorage.getItem(storageKey)||"[]");
+if(Array.isArray(value)){tasks=value.filter(function(t){return t&&typeof t.id==="string"&&typeof t.text==="string"&&typeof t.done==="boolean";}).slice(0,500);}
+}catch(_){tasks=[];}
+}
+function save(){
+try{localStorage.setItem(storageKey,JSON.stringify(tasks));}
+catch(_){message("Storage blocked. Tasks will reset on refresh.",false);}
+}
+function setView(next){
+view=next;
+document.querySelectorAll("[data-filter]").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.filter===view));});
+render();
+}
+function render(){
+list.replaceChildren();
+var shown=tasks.filter(function(t){return view==="all"||(view==="done"?t.done:!t.done);});
+var remaining=tasks.filter(function(t){return !t.done;}).length;
+document.getElementById("count").textContent=remaining+" to do · "+tasks.length+" total";
+document.getElementById("empty").hidden=shown.length!==0;
+document.getElementById("empty-head").textContent=tasks.length&&shown.length===0?"Nothing in this view.":"Nothing to juggle.";
+document.getElementById("empty-copy").textContent=tasks.length&&shown.length===0?"Choose another filter to see your tasks.":"Add a task above. We won't show you fake progress charts.";
+shown.forEach(function(task){
+var li=document.createElement("li");li.className="item"+(task.done?" done":"");
+var main=document.createElement("div");main.className="item-main";
+var mark=document.createElement("button");mark.type="button";mark.className="mark";
+mark.textContent=task.done?"✓":"○";
+mark.setAttribute("aria-label",(task.done?"Reopen task: ":"Complete task: ")+task.text);
+mark.addEventListener("click",function(){
+undoAction={type:"toggle",id:task.id,done:task.done};
+task.done=!task.done;save();render();
+message(task.done?"Task completed.":"Task reopened.",true);undoBtn.focus();
+});
+var name=document.createElement("span");name.className="task-text";name.textContent=task.text;
+main.append(mark,name);
+var remove=document.createElement("button");remove.type="button";remove.className="remove";
+remove.textContent="Remove";remove.setAttribute("aria-label","Remove task: "+task.text);
+remove.addEventListener("click",function(){
+var index=tasks.findIndex(function(item){return item.id===task.id;});
+undoAction={type:"remove",index:index,task:Object.assign({},task)};
+tasks.splice(index,1);save();render();message("Task removed.",true);undoBtn.focus();
+});
+li.append(main,remove);list.append(li);
+});
+}
+form.addEventListener("submit",function(evt){
+evt.preventDefault();var title=input.value.trim();
+if(!title){error.textContent="Please enter a short task first.";input.setAttribute("aria-invalid","true");input.focus();return;}
+error.textContent="";input.removeAttribute("aria-invalid");
+var id=String(Date.now())+"-"+Math.random().toString(36).slice(2);
+tasks.unshift({id:id,text:title,done:false});undoAction=null;toast.hidden=true;input.value="";
+save();setView("all");input.focus();
+});
+input.addEventListener("input",function(){error.textContent="";input.removeAttribute("aria-invalid");});
+document.querySelectorAll("[data-filter]").forEach(function(button){
+button.addEventListener("click",function(){setView(button.getAttribute("data-filter"));});
+});
+undoBtn.addEventListener("click",function(){
+if(!undoAction)return;
+if(undoAction.type==="remove"){tasks.splice(undoAction.index,0,undoAction.task);}
+else{var task=tasks.find(function(t){return t.id===undoAction.id;});if(task)task.done=undoAction.done;}
+undoAction=null;save();render();message("Change undone.",false);input.focus();
+});
+load();render();
+})();
+</script>
+</body>
+</html>
