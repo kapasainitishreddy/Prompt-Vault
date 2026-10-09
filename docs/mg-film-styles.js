@@ -123,7 +123,7 @@
     if (openFilm(link, slug)) event.preventDefault();
   });
   video.addEventListener('error', () => {
-    status.textContent = 'This hosted film could not load. Select “Original film” below to watch it on the creator’s website.';
+    if (dialog.open) status.textContent = 'This hosted film could not load. Select “Original film” below to watch it on the creator’s website.';
   });
   byId('mf-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', () => {
