@@ -234,10 +234,14 @@ function displayResearch(){
  ).join('');
 }
 function displayResources(){
- byId('academy-resources').innerHTML=(state.data?.openSource||[]).map(x=>
+ const q=textFor(byId('academy-resource-search')?.value).toLowerCase();
+ const tag=byId('academy-resource-type')?.value||'all';
+ const arr=(state.data?.openSource||[]).filter(x=>(tag==='all'||x.track===tag)&&[x.name,x.value,x.track].join(' ').toLowerCase().includes(q));
+ byId('academy-resource-count').textContent=arr.length+' / '+(state.data?.openSource?.length||0)+' curated references';
+ byId('academy-resources').innerHTML=arr.length?arr.map(x=>
   '<article class="ac-resource"><strong>'+esc(x.name)+'</strong><span>'+esc(x.track)+' / '+esc(x.value)+'</span><small>'+esc(x.license)+'</small>'+
   (goodUrl(x.url)?'<a target="_blank" rel="noopener noreferrer" href="'+esc(x.url)+'">Upstream source ↗</a>':'')+'</article>'
- ).join('');
+ ).join(''):'<p role="status">No matching tools. Clear the filter to see the full catalog.</p>';
 }
 function displaySignals(){
  byId('academy-signals').innerHTML=(state.data?.marketSignals||[]).map(x=>
@@ -276,6 +280,8 @@ function bindControls(){
   displayModules();
  }));
  byId('academy-search').addEventListener('input',renderBlueprintList);
+ byId('academy-resource-search').addEventListener('input',displayResources);
+ byId('academy-resource-type').addEventListener('change',displayResources);
  byId('copy-prompt').addEventListener('click',()=>copyText(byId('academy-prompt').textContent));
  byId('preview-next').addEventListener('click',()=>{state.step=Math.min(state.step+1,selected().steps.length-1);renderPreview();});
  byId('preview-back').addEventListener('click',()=>{state.step=Math.max(0,state.step-1);renderPreview();});
