@@ -215,7 +215,7 @@ function download(){
  const file=new Blob([content],{type:"text/markdown;charset=utf-8"});
  const url=URL.createObjectURL(file);
  const a=document.createElement("a");a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();
- URL.revokeObjectURL(url);setAnnouncement("Saved "+filename+" on this device.");
+ window.setTimeout(()=>URL.revokeObjectURL(url),1500);setAnnouncement("Saved "+filename+" on this device.");
 }
 function setupEvents(){
  document.querySelectorAll("[data-target]").forEach(b=>b.addEventListener("click",()=>setTarget(b.dataset.target)));
