@@ -294,4 +294,31 @@ async function init(){
   console.error('Guided Atlas catalog load failed:',error);
  }
 }
+
+function initCapabilities(){
+ const routes={
+  skip:["NO AI / DEFAULT","Use direct navigation, useful search and clear forms when they solve the job better than a chatbot."],
+  puter:["CLOUD / PUTER.JS","AI requests run in Puter's cloud with a user-pays account and network connection. This is not private on-device inference."],
+  webllm:["BROWSER-LOCAL / WEBLLM","On supported WebGPU browsers, download an approved model with consent. Expect hardware, memory and model-license limitations."],
+  transformers:["BROWSER-LOCAL / TRANSFORMERS.JS","Run supported text, vision or embedding pipelines on device, subject to model license, browser capability and available memory."],
+  server:["CLOUD / AUTHENTICATED BACKEND","Use scoped server-side AI with private keys, explicit consent, request limits, cited retrieval and human review of consequential actions."]
+ };
+ const buttons=[...document.querySelectorAll('[data-ai-route]')];
+ buttons.forEach(b=>b.addEventListener('click',()=>{
+  const v=routes[b.dataset.aiRoute];if(!v)return;
+  buttons.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+  $('ga-ai-route-label').textContent=v[0];
+  $('ga-ai-route-summary').textContent=v[1];
+ }));
+ let yaw=-25;
+ const cube=$('ga-css3d-box');
+ const status=$('ga-cube-status');
+ document.querySelectorAll('[data-cube-action]').forEach(b=>b.addEventListener('click',()=>{
+  if(b.dataset.cubeAction==='reset')yaw=-25;
+  else yaw+=b.dataset.cubeAction==='left'?-45:45;
+  cube.style.setProperty('--ga-yaw',yaw+'deg');
+  status.textContent='Illustrative 3D object rotated '+Math.abs(yaw)+' degrees '+(yaw<0?'to the left':yaw>0?'to the right':'facing front')+'. Static text and numbered faces remain available.';
+ }));
+}
+initCapabilities();
 init();

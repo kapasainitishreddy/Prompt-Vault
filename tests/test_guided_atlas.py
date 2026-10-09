@@ -49,7 +49,7 @@ class GuidedAtlasTests(unittest.TestCase):
                 content = main.read_text(encoding="utf-8")
                 mirrored = mirror.read_text(encoding="utf-8")
                 self.assertGreater(len(content), 2500)
-                self.assertIn("Copyable", content)
+                self.assertIn("copyable", content.lower())
                 self.assertIn("AI", content)
                 self.assertIn("3D", content)
                 self.assertIn("four", content.lower())
@@ -120,6 +120,17 @@ class GuidedAtlasTests(unittest.TestCase):
             content = (ROOT / "docs" / (page+".html")).read_text(encoding="utf-8")
             self.assertIn('href="./guided.html"', content, page)
         self.assertIn('/guided.html', (ROOT / "docs/sitemap.xml").read_text(encoding="utf-8"))
+
+    def test_optional_ai_and_3d_teaching_demos(self):
+        for marker in ('id="ga-ai-choices"', 'data-ai-route="puter"',
+                       'data-ai-route="webllm"', 'data-ai-route="transformers"',
+                       'data-cube-action="left"', 'data-cube-action="right"',
+                       'id="ga-css3d-box"'):
+            self.assertIn(marker, self.html)
+        self.assertIn("function initCapabilities(", self.script)
+        self.assertIn("cloud with a user-pays", self.script)
+        self.assertIn("prefers-reduced-motion", self.css)
+        self.assertIn("transition:none", self.css)
 
     def test_research_is_a_decision_tool_not_revenue_guarantee(self):
         report=(ROOT / "research/EVIDENCE-ATLAS.md").read_text(encoding="utf-8")

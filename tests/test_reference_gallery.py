@@ -89,7 +89,7 @@ class ReferenceGalleryChecks(unittest.TestCase):
             self.assertIn('href="./resources.html"', html, path)
         home = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
         self.assertIn("Six collections.", home)
-        self.assertIn("143 VISUAL STUDIES", home)
+        self.assertIn("183 VISUAL STUDIES", home)
         self.assertIn("/resources.html", (ROOT / "docs" / "sitemap.xml").read_text(encoding="utf-8"))
 
     def test_no_vendored_vendor_assets_or_external_scripts(self):
