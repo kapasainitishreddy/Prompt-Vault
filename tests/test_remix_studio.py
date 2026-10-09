@@ -100,7 +100,8 @@ class RemixStudioTests(unittest.TestCase):
   self.assertNotIn("https://api.openai.com",self.ui)
   self.assertNotIn("new WebSocket",self.ui)
   self.assertNotIn("fetch(project",self.ui)
-  self.assertIn("Clipboard",self.core+" "+self.ui if "Clipboard" in self.core+" "+self.ui else self.html)
+  self.assertIn("async function copyOutput",self.ui)
+  self.assertIn('id="rx-copy"',self.html)
 
  @unittest.skipUnless(shutil.which("node"),"Node is not installed")
  def test_node_syntax_and_prompt_variations(self):
