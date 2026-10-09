@@ -151,6 +151,7 @@ function chooseStyle(id){
  const style=state.styles.find(x=>x.id===id&&x.target===state.target);
  if(!style)return;
  state.selected=style;renderGallery();renderSelected();renderPrompt();updateShareableUrl();
+ if(window.matchMedia("(max-width:920px)").matches)$("rx-selection-panel").scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
 }
 function updateShareableUrl(){
  // Never put users' private project details into a shareable URL.
