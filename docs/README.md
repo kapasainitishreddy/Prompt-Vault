@@ -1,3 +1,7 @@
+## Signature Mobile Studio (October 9, 2026)
+
+The [Mobile Studio](mobile-studio.html) has 16 purpose-built editorial mobile compositions, linked to the existing 32 patterns and 20 journeys. The [Expo Native Kit](../native-kit/README.md) implements corresponding React Native screens, while `code/` holds source-identical copies for visitor-controlled copy actions. The shared source mirror is validated by `tests/test_signature_gallery.py`. An optional local Playwright script checks interactions and responsive screenshots, but it has not been executed in this environment.
+
 ## Mobile Studio and Expo Native Kit (October 9, 2026)
 
 [Mobile Studio](mobile-studio.html) provides 32 browser-interactive app patterns and 20 ordered app journeys, with real UI interaction demonstrations, source inspector, iOS/Android-inspired frames, light/dark and normal/success/error states and prompt copying. The static default screen stays visible if catalog fetch fails.

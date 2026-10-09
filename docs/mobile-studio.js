@@ -486,7 +486,7 @@ window.addEventListener("pv:open-signature",event=>{
 
 /* Same-origin, versioned original React Native sources for direct copy, not generated stubs. */
 async function copyNativeAsset(assetId,buttonId){
- const paths={flow:"./code/FlowScreen.tsx",signatures:"./code/SignatureScreen.tsx"};
+ const paths={flow:"./code/FlowScreen.tsx",signatures:"./code/SignatureScreen.tsx",components:"./code/components.tsx",tokens:"./code/tokens.ts"};
  const endpoint=paths[assetId],button=document.getElementById(buttonId);
  if(!endpoint||!button)return;
  const original=button.textContent;
@@ -495,7 +495,7 @@ async function copyNativeAsset(assetId,buttonId){
    const result=await fetch(endpoint,{cache:"no-store"});
    if(!result.ok)throw Error("HTTP "+result.status);
    const code=await result.text();
-   if(code.length<2500||!code.includes("react-native"))throw Error("Incomplete source file.");
+   if(code.length<350||!code.includes("react-native")&&assetId!=="tokens")throw Error("Incomplete source file.");
    if(navigator.clipboard?.writeText)await navigator.clipboard.writeText(code);
    else{
      const box=document.createElement("textarea");box.value=code;
@@ -510,3 +510,4 @@ const nativeCopy=document.getElementById("ms-copy-native");
 if(nativeCopy)nativeCopy.addEventListener("click",()=>copyNativeAsset("flow","ms-copy-native"));
 const signatureCopy=document.getElementById("ms-copy-signatures");
 if(signatureCopy)signatureCopy.addEventListener("click",()=>copyNativeAsset("signatures","ms-copy-signatures"));
+for(const id of ["components","tokens"]){const el=document.getElementById("ms-copy-"+id);if(el)el.addEventListener("click",()=>copyNativeAsset(id,"ms-copy-"+id));}

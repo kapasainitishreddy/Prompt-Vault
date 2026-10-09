@@ -54,6 +54,9 @@ def main() -> int:
      for scenario in ["success","error","normal"]:
       page.locator("[data-scenario='"+scenario+"']").click()
       assert page.locator("#ms-phone").get_attribute("data-scenario")==scenario
+      if scenario=="error":
+       page.locator('#ms-phone-screen [data-act="scenario-retry"]').click()
+       assert page.locator("#ms-phone").get_attribute("data-scenario")=="normal"
      for signature_id in ["literary","aviation","learning","finance","social","b2b"]:
       page.locator("[data-signature='"+signature_id+"']").click()
       assert page.locator("#ms-current-flow").text_content().strip(),signature_id
