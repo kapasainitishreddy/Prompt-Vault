@@ -1,3 +1,9 @@
+## MG Styles 15 reference (October 9, 2026)
+
+**[Watch 15 real motion films](docs/mg-film-styles.html)** from [Vincentwei1021/mg-styles-15](https://github.com/Vincentwei1021/mg-styles-15), an MIT-licensed collection of fifteen 10-second code-rendered motion films. Every card contains a real upstream film poster, click-to-play original video (never autoplayed), original production prompt/source links, beginner-friendly guidance, and a local customizable starter prompt. The gallery is also linked from the homepage, Motion Lab, Style Lab, Motion Library, and beginner walkthrough.
+
+**Important:** These are motion-design films, not 15 finished website widgets. They differ from the site's 23 motion recipes and 48 static style compositions. Video MP4s remain on the creator's GitHub Pages site and only stream after user interaction; Atlas does not rehost roughly 420 MB of media. All upstream prompt, video and soundtrack provenance/third-party restrictions are documented at [research/mg-styles-15-integration.md](research/mg-styles-15-integration.md).
+
 ## New visitor experience (October 9, 2026)
 
 **Start Here:** [docs/start-here.html](docs/start-here.html) shows first-time users what websites, app screens, and build prompts mean, with visible real HTML/CSS previews and a local prompt builder. There are no account or model API requirements.

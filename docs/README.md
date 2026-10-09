@@ -1,3 +1,10 @@
+## MG Styles 15 reference (October 9, 2026)
+
+- [15 real film previews](mg-film-styles.html) from the credited MIT [Vincentwei1021/mg-styles-15](https://github.com/Vincentwei1021/mg-styles-15) source, with actual source-hosted preview frames and optional controlled MP4 playback (10 seconds per film).
+- All 15 link to their **full original author prompts** and demos, and include **new original novice-friendly descriptions and copyable customizable starter prompts**. Basic card content is HTML and stays accessible without JavaScript.
+- Film videos and image posters are linked externally, not stored inside this repository. Attributions and third-party asset caveats: [research/mg-styles-15-integration.md](../research/mg-styles-15-integration.md).
+- Source test: `python3 -m unittest tests.test_mg_film_styles -v` or full `python3 -m unittest discover -s tests -v`.
+
 ## First visit: beginner path (October 9, 2026)
 
 - [Start Here](start-here.html): choose Website, App or Exploration; see original visible example screens; learn three plain-English design terms; produce a local, editable/copyable AI-building prompt; and follow a linked route into the right catalog. All works without accounts or external model calls. The initial website example is rendered in HTML/CSS even without JavaScript.
