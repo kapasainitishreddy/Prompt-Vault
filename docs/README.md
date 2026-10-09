@@ -31,3 +31,11 @@ Original frontend, specimen art and prompts are [MIT licensed](../LICENSE). Thir
 4. Test size switcher, user-triggered motion replay and reduced-motion fallback.
 5. Verify all 87 prompt files and 3 catalogs load at their relative same-origin URLs. Check links and mobile navigation.
 6. Run `node --check docs/atlas.js`, HTML audits, and browser/assistive-tech tests as available; unknown is not pass.
+
+## Added separately: visual languages and skills
+
+- `styles.html`: 48 original styles, split 24 website and 24 app, three variants each, responsive illustration previews, search, categories, saved patterns, product name editing, prompt view/copy, and reduced motion.
+- `skills.html`: the four credited repositories with real license caveats, 16 original focused design workflows, search and three-workflow local prompt composer.
+- Both include the complete source Markdown under `docs/prompts/` and their JSON catalogs under `docs/data/`.
+
+Seven static pages; **151 original prompts**, **135 illustrative visual studies**. These are not production apps or reused vendor code. Copy all `docs/` to any static host.
