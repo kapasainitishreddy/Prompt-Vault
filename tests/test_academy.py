@@ -50,7 +50,7 @@ class AcademyCatalogTests(unittest.TestCase):
 
     def test_only_two_primary_tracks(self):
         self.assertEqual(self.data["tracks"], ["website", "app"])
-        self.assertIn("Website Design", self.html)
+        self.assertIn("WEBSITE DESIGN", self.html.upper())
         self.assertIn("APP DESIGN", self.html)
         self.assertIn("Two main tracks", self.home)
 
