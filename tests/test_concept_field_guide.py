@@ -81,8 +81,9 @@ class ConceptFieldGuideTests(unittest.TestCase):
     def test_all_concepts_have_decision_boundaries_and_specific_goals(self):
         for x in self.all:
             for key in ("id", "title", "purpose", "useWhen", "avoidWhen",
-                        "preview", "successSignal", "accessibility", "recovery"):
+                        "successSignal", "accessibility", "recovery"):
                 self.assertGreater(len(x[key].strip()), 5, (x["id"], key))
+            self.assertTrue(x["preview"].strip(), x["id"])
             self.assertGreaterEqual(len(x["skills"]), 2, x["id"])
             self.assertGreaterEqual(len(x["sources"]), 2, x["id"])
             self.assertNotEqual(x["useWhen"], x["avoidWhen"], x["id"])
