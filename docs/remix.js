@@ -105,9 +105,16 @@ function renderHeroArt(){
  root.classList.add("has-scenes");
  root.insertAdjacentHTML("afterbegin",rows);
 }
+const curationPresets={
+ website:[["Editorial","Editorial"],["Developer tools","technical"],["Books & reading","book"],["Calm & minimal","minimal"],["Commerce","commerce"],["Creative","Expressive"]],
+ app:[["Productivity","Productivity"],["Technical","technical"],["Reader","reader"],["Wellness","Wellness"],["Finance & data","Data"],["Creative","Creative"]]
+};
 function renderCurations(){
- document.querySelectorAll("[data-curation]").forEach(button=>{
-   button.setAttribute("aria-pressed",String(state.query.toLowerCase().trim()===button.dataset.curation.toLowerCase()));
+ const presets=curationPresets[state.target]||curationPresets.website;
+ document.querySelectorAll("[data-curation]").forEach((button,index)=>{
+   const [label,query]=presets[index];
+   button.textContent=label;button.dataset.curation=query;
+   button.setAttribute("aria-pressed",String(state.query.toLowerCase().trim()===query.toLowerCase()));
  });
 }
 function renderTargetButtons(){
