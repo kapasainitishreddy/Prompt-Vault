@@ -1,3 +1,20 @@
+## Production browser verification, October 10, 2026 UTC
+
+The October 9 visual overhaul shipped to Cloudflare Pages in main commit `ef07816f4b88d753566758aaa2e32dac824c7ed0`; the ergonomic touch-target follow-up shipped in `2ad1342871cf939a20bb2def5ee651d6389b79dd`. Cloudflare confirmed successful production build and deployment for the latest commit.
+
+The following checks were **actually executed on the deployed Cloudflare Pages origin** in Chromium via Cloudflare Browser Rendering, with script-instrumented DOM and interface interactions:
+
+- Homepage: 6 of 6 curated design links rendered real original artboards and pointed to valid style-selection paths; desktop (1440px) had no horizontal overflow.
+- Remix Studio: its page rendered 12 initial cards and all 3 curated hero scenes without loading placeholders.
+- Visual-gallery interactions: selected and examined **all 48** styles at 390px mobile and again at 1440px desktop. Each had a nonempty rendered scene and a copied-prompt composer including the exact layout contract; zero errors and no horizontal overflow in those runs.
+- Full-size preview: selecting the aviation-inspired mobile style opened and closed the preview dialog, displayed the matching phone artboard and returned to the project brief.
+- Existing-project safeguard: a real browser-generated prompt included the literal preservation instruction **KEEP AUTH AND CHECKOUT INTACT** and a style-specific airport-board layout description (5,290 characters in the instrumented test).
+- Responsive/touch smoke: no horizontal overflow at 360, 390, 768 or 1440px in the exercised views. At 360px, the 11 relevant visible filter, variant, preview and header controls all met the 44px height threshold. A large mobile preview dialog also opened correctly at 768px.
+- The copy callback was exercised using an instrumented browser clipboard object and its payload matched the editable prompt exactly; the Markdown export handler produced a `.md` filename using an instrumented anchor click. The audit-prompt toggle and preservation text also passed. **These handler checks are not a successful clipboard-permission check or a confirmed disk download on a user's physical device.**
+- A headless Chromium capture showed the mobile hero and the first gallery row. Preview artwork was inspected, but no screenshot artifact is bundled in this repository.
+
+**Remaining independent release gates:** a full local Playwright smoke-run with persisted screenshots, measured Core Web Vitals, formal accessibility/assistive-technology audit, native TypeScript/Expo builds and physical Android/iOS tests, cross-browser user testing, and applying an exported prompt against a real customer's project. None are represented as passing here. Do not use a marketing claim of “10/10” until independent usability and device evidence exists.
+
 ## October 9, 2026: original art-direction quality pass
 
 **Implemented:** 48 original purpose-built browser scene renderers (24 websites/24 mobile), source-linked style rationale, precisely specified design composition in each build prompt, a full-size preview inspector, category-appropriate discovery chips and six highlighted home designs. All existing 200 UX concepts, guided journeys, native-kit source, site sections and build/audit prompt handoffs remain intact.
