@@ -41,7 +41,8 @@ def main()->int:
    browser=play.chromium.launch(headless=True)
    context=browser.new_context(accept_downloads=True,permissions=["clipboard-read","clipboard-write"])
    for width in [360,390,768,1440]:
-    page=context.new_page(viewport={"width":width,"height":900})
+    page=context.new_page()
+    page.set_viewport_size({"width":width,"height":900})
     page.on("pageerror",lambda error:report["console_errors"].append(str(error)))
     page.goto(origin+"/remix.html",wait_until="domcontentloaded")
     page.wait_for_function("document.querySelectorAll('#rx-gallery .rx-card').length===12",timeout=15000)
@@ -116,7 +117,8 @@ def main()->int:
      assert "KEEP USER BOOKMARKS AND PAYMENT FLOWS" in page.locator("#rx-prompt").input_value()
     page.close()
 
-   deep=context.new_page(viewport={"width":390,"height":844})
+   deep=context.new_page()
+   deep.set_viewport_size({"width":390,"height":844})
    deep.on("pageerror",lambda error:report["console_errors"].append(str(error)))
    deep.goto(origin+"/remix.html?type=website&style=editorial-atlas&section=hero&concept=web-editorial-first-fold",wait_until="domcontentloaded")
    deep.wait_for_function("document.querySelector('#rx-ready').textContent.includes('ready')",timeout=15000)
@@ -130,7 +132,8 @@ def main()->int:
    allstyles=json.loads((DOCS/"data/styles.json").read_text())["styles"]
    for style in allstyles:
     kind=style["target"]
-    sample=context.new_page(viewport={"width":1280,"height":800})
+    sample=context.new_page()
+    sample.set_viewport_size({"width":1280,"height":800})
     sample.goto(origin+"/remix.html?type="+kind+"&style="+style["id"],wait_until="domcontentloaded")
     sample.wait_for_function("document.querySelector('#rx-ready').textContent.includes('ready')",timeout=15000)
     assert sample.locator("#rx-preview-stage .sc-window, #rx-preview-stage .sc-phone").count()==1,style["id"]
