@@ -90,6 +90,8 @@ class ArtDirectionTests(unittest.TestCase):
   self.assertIn(".rx-full-dialog",self.premium)
   self.assertIn(".rx-hero-scene-one",self.premium)
   self.assertIn("@media(max-width:620px)",self.premium)
+  self.assertIn("Minimum 44px ergonomic targets",self.premium)
+  self.assertIn(".rx-curations button,.rx-variant-buttons button",self.premium)
 
  @unittest.skipUnless(shutil.which("node"),"Node unavailable")
  def test_node_generates_288_studies_and_unique_prompts(self):
