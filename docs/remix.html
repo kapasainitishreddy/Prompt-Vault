@@ -8,6 +8,7 @@
 <title>Design Remix Studio | Prompt-Vault Atlas</title>
 <link rel="stylesheet" href="./remix.css">
 <link rel="stylesheet" href="./remix-scenes.css">
+<link rel="stylesheet" href="./remix-premium.css">
 <script type="module" src="./remix.js"></script>
 </head>
 <body>
@@ -61,6 +62,14 @@
           <label class="rx-input-wrap"><span>Find a design</span><input id="rx-search" type="search" placeholder="Editorial, bold, calm, commerce…" autocomplete="off"></label>
           <label class="rx-input-wrap rx-family-wrap"><span>Style family</span><select id="rx-family"><option value="All">All directions</option></select></label>
         </div>
+        <div id="rx-curations" class="rx-curations" role="group" aria-label="Discover designs by your project">
+  <button type="button" data-curation="Editorial" aria-pressed="false">Editorial</button>
+  <button type="button" data-curation="technical" aria-pressed="false">Developer tools</button>
+  <button type="button" data-curation="book" aria-pressed="false">Books & reading</button>
+  <button type="button" data-curation="calm" aria-pressed="false">Calm & minimal</button>
+  <button type="button" data-curation="commerce" aria-pressed="false">Commerce</button>
+  <button type="button" data-curation="creative" aria-pressed="false">Creative</button>
+</div>
         <div class="rx-results-line"><span id="rx-count" role="status">Loading original designs…</span><button type="button" id="rx-clear">Clear filters</button></div>
         <div id="rx-gallery" class="rx-gallery" aria-label="Original design directions">
           <button class="rx-card" type="button" aria-pressed="true">

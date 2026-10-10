@@ -40,7 +40,7 @@ body{background:var(--rx-paper);font-family:var(--rx-sans);font-size:15px}
 .rx-hero-facts{position:relative;z-index:1;border-top:1px solid #6a846b;color:#dfedd7}
 .rx-hero-facts b{color:#d9e9a7;font:normal 31px var(--rx-serif);vertical-align:baseline}
 .rx-hero-art{display:block;min-height:520px;align-self:stretch;position:relative;overflow:visible}
-.rx-hero-sheet{display:none}
+.rx-hero-art.has-scenes .rx-hero-sheet{display:none}
 .rx-hero-stamp{z-index:5;left:auto;right:0;bottom:35px;background:#d2e7a7;color:#1d3524;font-weight:800;font-size:11px;width:104px;height:104px;box-shadow:6px 8px 0 #081e165b}
 .rx-hero-scene{position:absolute;background:#f9f7e9;box-shadow:18px 25px 0 #00190f45,0 25px 60px #050f0a72;display:block;overflow:hidden;border:1px solid #c6d4b6}
 .rx-hero-scene .rx-visual{height:100%;width:100%;border-radius:0}

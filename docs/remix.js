@@ -78,6 +78,7 @@ function renderGallery(){
  const matched=matching();
  const showing=matched.slice(0,state.limit);
  $("rx-count").textContent=matched.length+" of 24 "+(state.target==="website"?"website":"mobile app")+" designs";
+ renderCurations();
  $("rx-gallery").innerHTML=showing.length?showing.map(s=>{
   return '<button type="button" class="rx-card" data-style="'+safe(s.id)+'" aria-pressed="'+String(state.selected?.id===s.id)+'" aria-label="Select '+safe(s.title)+', '+safe(s.family)+' design">'+
   visual(s,true)+'<span class="rx-card-bottom"><strong>'+safe(s.title)+'</strong><small>'+safe(s.family)+' · '+(state.target==="website"?"WEBSITE":"MOBILE")+'</small></span></button>';
@@ -88,6 +89,26 @@ function renderFamilies(){
  const families=[...new Set(state.styles.filter(s=>s.target===state.target).map(s=>s.family))].sort();
  $("rx-family").innerHTML='<option value="All">All directions</option>'+families.map(f=>'<option value="'+safe(f)+'">'+safe(f)+'</option>').join("");
  $("rx-family").value=state.family;
+}
+
+function renderHeroArt(){
+ const root=document.querySelector(".rx-hero-art");
+ if(!root)return;
+ const choices=["editorial-atlas","airport-planner","neo-bauhaus"];
+ const rows=choices.map((id,i)=>{
+  const s=state.styles.find(x=>x.id===id);
+  if(!s)return "";
+  return '<div class="rx-hero-scene rx-hero-scene-'+["one","two","three"][i]+'" aria-hidden="true">'+
+   sceneFor(s,{mini:false,variant:"balanced"})+'</div>';
+ }).join("");
+ if(!rows)return;
+ root.classList.add("has-scenes");
+ root.insertAdjacentHTML("afterbegin",rows);
+}
+function renderCurations(){
+ document.querySelectorAll("[data-curation]").forEach(button=>{
+   button.setAttribute("aria-pressed",String(state.query.toLowerCase().trim()===button.dataset.curation.toLowerCase()));
+ });
 }
 function renderTargetButtons(){
  document.querySelectorAll("[data-target]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.target===state.target)));
@@ -235,6 +256,11 @@ function closeFullPreview(){if($("rx-preview-dialog").open)$("rx-preview-dialog"
 function setupEvents(){
  document.querySelectorAll("[data-target]").forEach(b=>b.addEventListener("click",()=>setTarget(b.dataset.target)));
  $("rx-search").addEventListener("input",e=>{state.query=e.target.value;state.limit=12;renderGallery();});
+ document.querySelectorAll("[data-curation]").forEach(button=>button.addEventListener("click",()=>{
+  const term=button.dataset.curation;
+  state.query=state.query.toLowerCase()===term.toLowerCase()?"":term;
+  state.family="All";state.limit=12;$("rx-search").value=state.query;$("rx-family").value="All";renderGallery();
+ }));
  $("rx-family").addEventListener("change",e=>{state.family=e.target.value;state.limit=12;renderGallery();});
  $("rx-clear").addEventListener("click",()=>{state.query="";state.family="All";state.limit=12;$("rx-search").value="";$("rx-family").value="All";renderGallery();});
  $("rx-more").addEventListener("click",()=>{state.limit=Math.min(24,state.limit+12);renderGallery();});
@@ -269,6 +295,7 @@ async function init(){
   state.blueprints.website=webBlueprints.blueprints;state.blueprints.app=appBlueprints.blueprints;
   state.concepts.website=webConcepts.concepts;state.concepts.app=appConcepts.concepts;
   state.loaded=true;
+  renderHeroArt();
   if(sectionParam&&routeId.test(sectionParam)&&state.flows[state.target].some(x=>x.id===sectionParam))$("rx-scope").value="section";
   setTarget(state.target,styleParam||"");
   if($("rx-scope").value==="section"&&state.flows[state.target].some(x=>x.id===sectionParam))$("rx-focus").value=sectionParam;
