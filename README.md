@@ -1,3 +1,15 @@
+## Premium art-directed gallery (October 9, 2026)
+
+**What changed:** Instead of rendering 48 design entries through a handful of generic site/app layouts, Remix Studio now uses **48 individually authored product-specific CSS scenes**. All 24 website and 24 mobile entries have distinct composition content and visual structure: magazine editorial, Swiss grid, newspaper, museum, botanic studio, festival poster, technical schematic, bookstore, terminal, commerce, airport departure board, reader, chat, ledger, music, habits, incident management, and more. All sample metrics and actions are explicitly illustrative.
+
+- A redesigned **dark editorial hero** previews three different original scenes, a purpose-driven gallery, and a larger selected-design view. All six quick discovery filters are platform-appropriate and return matching styles.
+- **Full-screen accessible dialog** allows examining the selected website or phone illustration, rationale, palette and original source. Use the selected look to generate a scoped implementation prompt.
+- A curated **six-style homepage gallery** links directly into Remix Studio, preserving the chosen design in a public URL.
+- Every copied redesign prompt now includes a **design-specific composition specification**, not merely colors and general advice. Existing-project mode prioritizes preserving login, payments, state and working behavior.
+- No new paid services, subscriptions, third-party asset packs, authentication or background AI calls. The optional Google Fonts display face has local serif fallback.
+- Source-level QA: **288 preview markup combinations** (48 styles × gallery/full × three variants) parsed and returned unique, non-empty artboards. Both website/app gallery, full-size dialog open/close, three hero preview renders, 48 composition briefs and valid selector references were checked with simulated DOM. These checks do not prove production Chromium screenshots or device QA.
+- For real browser QA on a machine with Playwright/Chromium installed: \`python3 scripts/qa_remix_studio.py\`. The source suite \`python3 -m unittest tests.test_remix_art_direction -v\` validates current artboards and prompt composition using Node. **Running a script and passing its checks are separate claims.**
+
 ## Remix Studio: browse → customize → copy (October 9, 2026)
 
 The new [Design Remix Studio](docs/remix.html) makes the original 48 website/mobile art directions with 200 optional research-linked UX concepts directly useful to someone changing an existing project. People can switch between 24 website and 24 app directions, filter/search the visual gallery, select a distinct live HTML/CSS preview, and choose Balanced/Expressive/Structured composition. They can enter a project description, URL (included as text only), audience, stack, changes, parts to preserve, full vs single-screen scope, and an optional ordered product blueprint.
