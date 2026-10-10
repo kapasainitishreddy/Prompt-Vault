@@ -7,6 +7,7 @@
 <meta name="description" content="Browse 48 original website and mobile app designs, see live illustrative previews, personalize a redesign brief and copy an implementation-ready prompt for your favorite AI coding tool. Free; no account required.">
 <title>Design Remix Studio | Prompt-Vault Atlas</title>
 <link rel="stylesheet" href="./remix.css">
+<link rel="stylesheet" href="./remix-scenes.css">
 <script type="module" src="./remix.js"></script>
 </head>
 <body>
@@ -73,12 +74,13 @@
         <div class="rx-selection-head"><span class="rx-eyebrow">02 / YOUR SELECTED LOOK</span><span id="rx-selected-index">01 / 24</span></div>
         <h3 id="rx-selected-title">Editorial Atlas</h3>
         <p id="rx-selected-purpose">A distinctive original design direction, not a copied commercial screen.</p>
-        <div class="rx-preview-top"><span>ILLUSTRATIVE LIVE CSS PREVIEW</span><span id="rx-preview-platform">RESPONSIVE WEB</span></div>
+        <div class="rx-preview-top"><span>ORIGINAL, FULLY ART-DIRECTED CSS DESIGN STUDY</span><span id="rx-preview-platform">RESPONSIVE WEB</span></div>
         <div class="rx-preview-stage" id="rx-preview-stage">
           <div class="rx-visual rx-web rx-v-balanced" style="--paper:#F1EDE1;--ink:#17251E;--accent:#AE4830;--soft:#CFD2C2">
             <div class="rx-v-header"><strong>YOUR STUDIO</strong><span>WORK　 STORY　 CONTACT</span></div><div class="rx-v-columns"><div><span class="rx-v-kicker">EDITORIAL / STUDY 01</span><h3 class="rx-v-title">Design with intention.</h3><p class="rx-v-sub">An original composition for your product.</p><span class="rx-v-cta">EXPLORE THE WORK ↗</span></div><aside><span>01 / INTENT</span><span>02 / CRAFT</span><span>03 / EVIDENCE</span></aside></div>
           </div>
         </div>
+        <button type="button" id="rx-expand-preview" class="rx-expand-preview">Inspect this design full size <span aria-hidden="true">↗</span></button>
         <div class="rx-direction-control">
           <span class="rx-control-label">Composition strength</span>
           <div class="rx-variant-buttons" role="group" aria-label="Composition"><button type="button" data-variant="balanced" aria-pressed="true">Balanced</button><button type="button" data-variant="expressive" aria-pressed="false">Expressive</button><button type="button" data-variant="compact" aria-pressed="false">Structured</button></div>
@@ -136,5 +138,19 @@
   <section class="rx-next"><div><p class="rx-eyebrow">KEEP EXPLORING</p><h2>More than a pretty picture.<br><em>Learn why it works.</em></h2></div><div class="rx-next-links"><a href="./concepts.html#previews">200 design concepts ↗</a><a href="./guided.html">40 guided website and app journeys ↗</a><a href="./mobile-studio.html">Interactive mobile previews ↗</a><a href="./styles.html">Full style laboratory ↗</a></div></section>
 </main>
 <footer class="rx-footer"><span>© 2026 PROMPT-VAULT</span><span>Original design studies · no sign-in · no paid API needed</span><a href="https://github.com/kapasainitishreddy/Prompt-Vault">Open-source code ↗</a></footer>
+<dialog id="rx-preview-dialog" class="rx-full-dialog" aria-labelledby="rx-full-title">
+  <div class="rx-full-head"><div><span class="rx-eyebrow">PROMPT-VAULT / DESIGN STUDY</span><h2 id="rx-full-title">Selected visual direction</h2><p id="rx-full-desc">Original, illustrative interface composition.</p></div><button id="rx-full-close" type="button" aria-label="Close full preview">✕</button></div>
+  <div class="rx-full-body">
+    <div id="rx-full-stage" class="rx-preview-stage rx-full-stage" aria-label="Large original design example"></div>
+    <aside class="rx-full-side">
+      <p class="rx-eyebrow">LOOK CLOSER</p>
+      <div id="rx-full-palette" class="rx-palette" aria-label="Original design palette"></div>
+      <p id="rx-full-reason"></p>
+      <div class="rx-full-rules"><strong>What you're seeing</strong><p>A bespoke HTML and CSS visual reference. It is not a screenshot of a real business or an independently functioning app.</p></div>
+      <button type="button" id="rx-full-use" class="rx-btn rx-btn-primary">Use this look on my project <span aria-hidden="true">↗</span></button>
+      <a id="rx-full-source" href="./styles.html" target="_blank" rel="noopener noreferrer">View the original source prompt ↗</a>
+    </aside>
+  </div>
+</dialog>
 <noscript><p class="rx-noscript">Interactive filtering and prompt generation need JavaScript. The <a href="./styles.html">visual style library</a> and <a href="./start-here.html">beginner guide</a> remain available.</p></noscript>
 </body></html>

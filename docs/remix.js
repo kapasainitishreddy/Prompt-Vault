@@ -1,4 +1,5 @@
 import {composeBuild,composeAudit,clean} from "./remix-core.mjs";
+import {sceneFor,sceneIds} from "./remix-scenes.mjs";
 
 /** Visual-first, no-login design and prompt handoff. All fetching is local static JSON.
  * A URL pasted into the form is included only as plain text inside the prompt:
@@ -66,11 +67,9 @@ function appVisual(s,name){
   '<div class="rx-device-tab"><span>TODAY</span><span>EXPLORE</span><span>YOU</span></div></div>';
 }
 function visual(s,mini=false){
- const target=s.target,variant=state.variant,name=mini?s.title:getName(s);
- const body=target==="website"?webVisual(s,name,variant):appVisual(s,name);
- return '<div class="rx-visual '+(mini?"rx-mini ":"")+(target==="app"?"rx-app ":"rx-web ")+
-  'rx-v-'+safe(variant)+'" data-layout="'+safe(s.layout)+'" style="'+cssTokens(s)+'">'+body+'</div>';
+ return sceneFor(s,{mini,variant:state.variant,name:mini?s.title:getName(s)});
 }
+
 function matching(){
  const q=state.query.toLowerCase().trim();
  return state.styles.filter(s=>s.target===state.target&&(state.family==="All"||s.family===state.family)&&(!q||[s.title,s.family,s.purpose,s.visual,s.layout,s.typography].join(" ").toLowerCase().includes(q)));
@@ -217,6 +216,22 @@ function download(){
  const a=document.createElement("a");a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();
  window.setTimeout(()=>URL.revokeObjectURL(url),1500);setAnnouncement("Saved "+filename+" on this device.");
 }
+
+function openFullPreview(){
+ if(!state.loaded||!state.selected)return;
+ const s=state.selected;
+ $("rx-full-title").textContent=s.title;
+ $("rx-full-desc").textContent=s.family+" · "+s.purpose;
+ $("rx-full-stage").innerHTML=visual(s);
+ $("rx-full-palette").innerHTML=[s.palette.paper,s.palette.ink,s.palette.accent,s.palette.secondary].map(color=>
+ '<span title="'+safe(color)+'" style="background:'+validColor(color)+'"></span>').join("");
+ $("rx-full-reason").textContent="Typographic direction: "+s.typography+". "+s.motion+". Avoid: "+s.avoid;
+ $("rx-full-source").href="./styles.html#style/"+encodeURIComponent(s.id);
+ $("rx-preview-dialog").showModal();
+ $("rx-full-close").focus();
+}
+function closeFullPreview(){if($("rx-preview-dialog").open)$("rx-preview-dialog").close();}
+
 function setupEvents(){
  document.querySelectorAll("[data-target]").forEach(b=>b.addEventListener("click",()=>setTarget(b.dataset.target)));
  $("rx-search").addEventListener("input",e=>{state.query=e.target.value;state.limit=12;renderGallery();});
@@ -234,6 +249,9 @@ function setupEvents(){
   renderPrompt();
  }));
  $("rx-prompt").addEventListener("input",()=>{$("rx-ready").textContent="Your edits are ready to copy";$("rx-prompt-size").textContent=$("rx-prompt").value.length.toLocaleString()+" characters";});
+ $("rx-expand-preview").addEventListener("click",openFullPreview);
+ $("rx-full-close").addEventListener("click",closeFullPreview);
+ $("rx-full-use").addEventListener("click",()=>{closeFullPreview();$("brief").scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});});
  $("rx-copy").addEventListener("click",copyOutput);
  $("rx-download").addEventListener("click",download);
 }
@@ -246,6 +264,7 @@ async function init(){
   const [styles,web,app,webBlueprints,appBlueprints,webConcepts,appConcepts]=await Promise.all(responses.map(r=>r.json()));
   if(styles.styles?.length!==48||web.sections?.length!==32||app.flows?.length!==32||webBlueprints.blueprints?.length!==20||appBlueprints.blueprints?.length!==20||webConcepts.concepts?.length!==100||appConcepts.concepts?.length!==100)throw Error("An expected style, journey or concept catalog is incomplete.");
   state.styles=styles.styles.filter(s=>routeId.test(s.id)&&["app","website"].includes(s.target)&&s.palette);
+  if(state.styles.some(s=>!sceneIds[s.target]?.includes(s.id)))throw Error("A visual artboard is missing from this release.");
   state.flows.website=web.sections;state.flows.app=app.flows;
   state.blueprints.website=webBlueprints.blueprints;state.blueprints.app=appBlueprints.blueprints;
   state.concepts.website=webConcepts.concepts;state.concepts.app=appConcepts.concepts;
