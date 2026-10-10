@@ -199,3 +199,8 @@ body{background:var(--rx-paper);font-family:var(--rx-sans);font-size:15px}
  .rx-hero-scene-three{height:105px}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition-duration:0s!important}}
+
+/* Minimum 44px ergonomic targets for small but frequently used controls. */
+.rx-curations button,.rx-variant-buttons button,.rx-expand-preview,.rx-header-cta{min-height:44px}
+.rx-header-cta{display:inline-flex;align-items:center}
+.rx-curations button:focus-visible,.rx-variant-buttons button:focus-visible{outline:3px solid #c57a4c;outline-offset:3px}
