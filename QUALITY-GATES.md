@@ -1,3 +1,13 @@
+## October 9, 2026: original art-direction quality pass
+
+**Implemented:** 48 original purpose-built browser scene renderers (24 websites/24 mobile), source-linked style rationale, precisely specified design composition in each build prompt, a full-size preview inspector, category-appropriate discovery chips and six highlighted home designs. All existing 200 UX concepts, guided journeys, native-kit source, site sections and build/audit prompt handoffs remain intact.
+
+**Measured at source level in this change:** 288 unique markup outputs parsed (48 × gallery/full × 3 variants); all 48 style-to-scene and style-to-prompt mappings present; 3 homepage hero artboards rendered; 12 initial card results for website and app, and editable prompt output in both modes; modal open/close and selected preview. No missing selected-page IDs found.
+
+**Not measured here:** visual regression screenshots in real Chromium at 360/390/768/1440, voiceover/TalkBack, real Expo compile, user-centered task completion, Chrome performance metrics, Cloudflare browser-rendering screenshot fidelity, and true storefront/mobile release readiness. The repository includes an optional real Playwright QA script, but source inspections alone do not mean that script has executed.
+
+**Release standard:** inspect the actual deployed Remix Studio and homepage, validate all 48 style links and every copy/download action, check visually that each artboard remains distinctive and usable at phone and desktop width, and run a moderated novice-user test of finding a design and successfully applying the prompt to an existing project. File a defect or revert a regression rather than labelling unresolved problems "10/10".
+
 # Prompt-Vault release and quality gates
 
 This file is an honest status ledger, not a claim that every UI pattern is production-ready or that a subjective "10/10" has already been reached.

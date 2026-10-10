@@ -1,3 +1,11 @@
+## Art-directed original previews, edition two
+
+The [Remix Studio](remix.html) now renders 48 individual original CSS compositions through \`remix-scenes.mjs\` and \`remix-scenes.css\`. The \`remix-premium.css\` layer provides richer visual hierarchy, a large preview dialog, platform-aware discovery chips and three editorial hero artboards. \`home-curated.mjs\` and \`home-curated.css\` expose six browsable styles directly on the homepage.
+
+Full source-linked prompts continue to be generated locally without remote AI or user input uploads. \`remix-core.mjs\` includes a unique composition brief for each of the 48 styles to constrain AI coding output toward the actual preview, not a generic card-based redesign.
+
+Verify using \`python3 -m unittest tests.test_remix_art_direction -v\` (no paid extras). Run \`python3 scripts/qa_remix_studio.py\` with local Playwright/Chromium to conduct real visual and interaction checks. Do not describe source checks as rendered browser or native mobile QA.
+
 ## Remix Studio: design selection and copyable customization
 
 [Open Remix Studio](remix.html). It reads the original 48-style catalog, 32 website sections, 32 mobile flows, and 20 web/20 app guided journeys without external services. The [pure prompt engine](remix-core.mjs) distinguishes existing-project redesigns from new builds and produces a detailed build prompt or post-build audit prompt.

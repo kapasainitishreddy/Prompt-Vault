@@ -1,4 +1,5 @@
 import {composeBuild,composeAudit,clean} from "./remix-core.mjs";
+import {sceneFor,sceneIds} from "./remix-scenes.mjs";
 
 /** Visual-first, no-login design and prompt handoff. All fetching is local static JSON.
  * A URL pasted into the form is included only as plain text inside the prompt:
@@ -66,11 +67,9 @@ function appVisual(s,name){
   '<div class="rx-device-tab"><span>TODAY</span><span>EXPLORE</span><span>YOU</span></div></div>';
 }
 function visual(s,mini=false){
- const target=s.target,variant=state.variant,name=mini?s.title:getName(s);
- const body=target==="website"?webVisual(s,name,variant):appVisual(s,name);
- return '<div class="rx-visual '+(mini?"rx-mini ":"")+(target==="app"?"rx-app ":"rx-web ")+
-  'rx-v-'+safe(variant)+'" data-layout="'+safe(s.layout)+'" style="'+cssTokens(s)+'">'+body+'</div>';
+ return sceneFor(s,{mini,variant:state.variant,name:mini?s.title:getName(s)});
 }
+
 function matching(){
  const q=state.query.toLowerCase().trim();
  return state.styles.filter(s=>s.target===state.target&&(state.family==="All"||s.family===state.family)&&(!q||[s.title,s.family,s.purpose,s.visual,s.layout,s.typography].join(" ").toLowerCase().includes(q)));
@@ -79,6 +78,7 @@ function renderGallery(){
  const matched=matching();
  const showing=matched.slice(0,state.limit);
  $("rx-count").textContent=matched.length+" of 24 "+(state.target==="website"?"website":"mobile app")+" designs";
+ renderCurations();
  $("rx-gallery").innerHTML=showing.length?showing.map(s=>{
   return '<button type="button" class="rx-card" data-style="'+safe(s.id)+'" aria-pressed="'+String(state.selected?.id===s.id)+'" aria-label="Select '+safe(s.title)+', '+safe(s.family)+' design">'+
   visual(s,true)+'<span class="rx-card-bottom"><strong>'+safe(s.title)+'</strong><small>'+safe(s.family)+' · '+(state.target==="website"?"WEBSITE":"MOBILE")+'</small></span></button>';
@@ -89,6 +89,33 @@ function renderFamilies(){
  const families=[...new Set(state.styles.filter(s=>s.target===state.target).map(s=>s.family))].sort();
  $("rx-family").innerHTML='<option value="All">All directions</option>'+families.map(f=>'<option value="'+safe(f)+'">'+safe(f)+'</option>').join("");
  $("rx-family").value=state.family;
+}
+
+function renderHeroArt(){
+ const root=document.querySelector(".rx-hero-art");
+ if(!root)return;
+ const choices=["editorial-atlas","airport-planner","neo-bauhaus"];
+ const rows=choices.map((id,i)=>{
+  const s=state.styles.find(x=>x.id===id);
+  if(!s)return "";
+  return '<div class="rx-hero-scene rx-hero-scene-'+["one","two","three"][i]+'" aria-hidden="true">'+
+   sceneFor(s,{mini:false,variant:"balanced"})+'</div>';
+ }).join("");
+ if(!rows)return;
+ root.classList.add("has-scenes");
+ root.insertAdjacentHTML("afterbegin",rows);
+}
+const curationPresets={
+ website:[["Editorial","Editorial"],["Developer tools","technical"],["Books & reading","book"],["Calm & minimal","minimal"],["Commerce","commerce"],["Creative","Expressive"]],
+ app:[["Productivity","Productivity"],["Technical","technical"],["Reader","reader"],["Wellness","Wellness"],["Finance & data","Data"],["Creative","Creative"]]
+};
+function renderCurations(){
+ const presets=curationPresets[state.target]||curationPresets.website;
+ document.querySelectorAll("[data-curation]").forEach((button,index)=>{
+   const [label,query]=presets[index];
+   button.textContent=label;button.dataset.curation=query;
+   button.setAttribute("aria-pressed",String(state.query.toLowerCase().trim()===query.toLowerCase()));
+ });
 }
 function renderTargetButtons(){
  document.querySelectorAll("[data-target]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.target===state.target)));
@@ -217,9 +244,30 @@ function download(){
  const a=document.createElement("a");a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();
  window.setTimeout(()=>URL.revokeObjectURL(url),1500);setAnnouncement("Saved "+filename+" on this device.");
 }
+
+function openFullPreview(){
+ if(!state.loaded||!state.selected)return;
+ const s=state.selected;
+ $("rx-full-title").textContent=s.title;
+ $("rx-full-desc").textContent=s.family+" · "+s.purpose;
+ $("rx-full-stage").innerHTML=visual(s);
+ $("rx-full-palette").innerHTML=[s.palette.paper,s.palette.ink,s.palette.accent,s.palette.secondary].map(color=>
+ '<span title="'+safe(color)+'" style="background:'+validColor(color)+'"></span>').join("");
+ $("rx-full-reason").textContent="Typographic direction: "+s.typography+". "+s.motion+". Avoid: "+s.avoid;
+ $("rx-full-source").href="./styles.html#style/"+encodeURIComponent(s.id);
+ $("rx-preview-dialog").showModal();
+ $("rx-full-close").focus();
+}
+function closeFullPreview(){if($("rx-preview-dialog").open)$("rx-preview-dialog").close();}
+
 function setupEvents(){
  document.querySelectorAll("[data-target]").forEach(b=>b.addEventListener("click",()=>setTarget(b.dataset.target)));
  $("rx-search").addEventListener("input",e=>{state.query=e.target.value;state.limit=12;renderGallery();});
+ document.querySelectorAll("[data-curation]").forEach(button=>button.addEventListener("click",()=>{
+  const term=button.dataset.curation;
+  state.query=state.query.toLowerCase()===term.toLowerCase()?"":term;
+  state.family="All";state.limit=12;$("rx-search").value=state.query;$("rx-family").value="All";renderGallery();
+ }));
  $("rx-family").addEventListener("change",e=>{state.family=e.target.value;state.limit=12;renderGallery();});
  $("rx-clear").addEventListener("click",()=>{state.query="";state.family="All";state.limit=12;$("rx-search").value="";$("rx-family").value="All";renderGallery();});
  $("rx-more").addEventListener("click",()=>{state.limit=Math.min(24,state.limit+12);renderGallery();});
@@ -234,6 +282,9 @@ function setupEvents(){
   renderPrompt();
  }));
  $("rx-prompt").addEventListener("input",()=>{$("rx-ready").textContent="Your edits are ready to copy";$("rx-prompt-size").textContent=$("rx-prompt").value.length.toLocaleString()+" characters";});
+ $("rx-expand-preview").addEventListener("click",openFullPreview);
+ $("rx-full-close").addEventListener("click",closeFullPreview);
+ $("rx-full-use").addEventListener("click",()=>{closeFullPreview();$("brief").scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});});
  $("rx-copy").addEventListener("click",copyOutput);
  $("rx-download").addEventListener("click",download);
 }
@@ -246,10 +297,12 @@ async function init(){
   const [styles,web,app,webBlueprints,appBlueprints,webConcepts,appConcepts]=await Promise.all(responses.map(r=>r.json()));
   if(styles.styles?.length!==48||web.sections?.length!==32||app.flows?.length!==32||webBlueprints.blueprints?.length!==20||appBlueprints.blueprints?.length!==20||webConcepts.concepts?.length!==100||appConcepts.concepts?.length!==100)throw Error("An expected style, journey or concept catalog is incomplete.");
   state.styles=styles.styles.filter(s=>routeId.test(s.id)&&["app","website"].includes(s.target)&&s.palette);
+  if(state.styles.some(s=>!sceneIds[s.target]?.includes(s.id)))throw Error("A visual artboard is missing from this release.");
   state.flows.website=web.sections;state.flows.app=app.flows;
   state.blueprints.website=webBlueprints.blueprints;state.blueprints.app=appBlueprints.blueprints;
   state.concepts.website=webConcepts.concepts;state.concepts.app=appConcepts.concepts;
   state.loaded=true;
+  renderHeroArt();
   if(sectionParam&&routeId.test(sectionParam)&&state.flows[state.target].some(x=>x.id===sectionParam))$("rx-scope").value="section";
   setTarget(state.target,styleParam||"");
   if($("rx-scope").value==="section"&&state.flows[state.target].some(x=>x.id===sectionParam))$("rx-focus").value=sectionParam;
